@@ -8,7 +8,7 @@ import 'package:salon_app/utils/color_res.dart';
 import 'package:salon_app/utils/page_res.dart';
 import 'package:salon_app/utils/string.dart';
 
-Future alert(context) {
+Future alert(context, {String? flow}) {
   return showDialog(
     context: context,
     builder: (context) {
@@ -63,7 +63,7 @@ Future alert(context) {
   );
 }
 
-Future success(context) {
+Future success(context, {String? flow}) {
   return showDialog(
     context: context,
     builder: (context) {
@@ -105,7 +105,9 @@ Future success(context) {
               ),
               const SizedBox(height: 20),
               commonButton(
-                  onTap: () => Get.toNamed(PageRes.dashBoardScreen),
+                  onTap: () => (flow == "admin")
+                      ? Get.toNamed(PageRes.adminDashBoardScreen)
+                      : Get.toNamed(PageRes.dashBoardScreen),
                   title: Strings.ok,
                   textColor: ColorRes.white,
                   backgroundColor: ColorRes.indicator)
@@ -117,7 +119,7 @@ Future success(context) {
   );
 }
 
-Future password(context) {
+Future password(context, {String? flow}) {
   return showDialog(
     context: context,
     builder: (context) {
@@ -159,7 +161,9 @@ Future password(context) {
               ),
               const SizedBox(height: 20),
               commonButton(
-                  onTap: () => Get.toNamed(PageRes.forgotPassword),
+                  onTap: () => (flow == "admin")
+                      ? Get.toNamed(PageRes.adminForgotPassword)
+                      : Get.toNamed(PageRes.forgotPassword),
                   title: Strings.forgotPassword,
                   textColor: ColorRes.white,
                   backgroundColor: ColorRes.indicator),
@@ -183,7 +187,7 @@ Future password(context) {
   );
 }
 
-Future reset(context) {
+Future reset(context, {String? flow}) {
   return showDialog(
     context: context,
     builder: (context) {
