@@ -68,11 +68,16 @@ class HomeScreen extends StatelessWidget {
                               ],
                             ),
                             SizedBox(width: Get.width * 0.3733),
-                            const CircleAvatar(
-                              backgroundColor: ColorRes.white,
-                              radius: 25,
-                              child: Image(
-                                image: AssetImage(AssetRes.filter),
+                            InkWell(
+                              onTap: () {
+                                settingModalBottomSheet(context);
+                              },
+                              child: const CircleAvatar(
+                                backgroundColor: ColorRes.white,
+                                radius: 25,
+                                child: Image(
+                                  image: AssetImage(AssetRes.filter),
+                                ),
                               ),
                             ),
                           ],
@@ -203,7 +208,7 @@ class HomeScreen extends StatelessWidget {
                   return Container(
                     height: 157,
                     width: 325,
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       image: DecorationImage(
                         image: AssetImage(AssetRes.bener),
                       ),
@@ -241,4 +246,6 @@ class HomeScreen extends StatelessWidget {
       ),
     );
   }
+
+
 }

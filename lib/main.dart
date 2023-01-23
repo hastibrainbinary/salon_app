@@ -12,8 +12,10 @@ import 'package:salon_app/screen/user_part/auth/phone_otp/phone_otp_screen.dart'
 import 'package:salon_app/screen/user_part/auth/sign_up/sign_up_screen.dart';
 import 'package:salon_app/screen/user_part/auth/sign_up_mobile/sign_up_phone.dart';
 import 'package:salon_app/screen/user_part/bookings/booking_screen.dart';
+import 'package:salon_app/screen/user_part/bookings/booking_user_details/booking_user_screen.dart';
 import 'package:salon_app/screen/user_part/dashboard/dashboard_screen.dart';
 import 'package:salon_app/screen/user_part/dashboard/home/home_screen.dart';
+import 'package:salon_app/screen/user_part/dashboard/most_book/most_book_details_screen.dart';
 import 'package:salon_app/screen/user_part/dashboard/most_book/most_book_screen.dart';
 import 'package:salon_app/sign_up&login_intro/sign_up_login_screen.dart';
 import 'package:salon_app/utils/page_res.dart';
@@ -61,8 +63,13 @@ class MyApp extends StatelessWidget {
               name: PageRes.newPasswordScreen, page: () => NewPasswordScreen()),
           GetPage(name: PageRes.dashBoardScreen, page: () => DashBoardScreen()),
           GetPage(name: PageRes.homeScreen, page: () => HomeScreen()),
-          GetPage(name: PageRes.mostBook, page: () => const MostBookScreen()),
-          GetPage(name: PageRes.bookings, page: () =>  BookingScreen()),
+          GetPage(name: PageRes.mostBook, page: () => MostBookScreen()),
+          GetPage(
+              name: PageRes.mostBookDetailsScreen,
+              page: () => MostBookDetailsScreen()),
+          GetPage(name: PageRes.bookings, page: () => BookingScreen()),
+          GetPage(
+              name: PageRes.bookingDetails, page: () => BookingUserDetails()),
         ]);
   }
 }

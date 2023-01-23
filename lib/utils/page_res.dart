@@ -16,4 +16,6 @@ class PageRes {
   static String homeScreen = "/HomeScreen";
   static String mostBook = "/mostBook";
   static String bookings="/bookings";
+  static String mostBookDetailsScreen="/mostBookDetailsScreen";
+  static String bookingDetails="/bookingDetails";
 }

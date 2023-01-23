@@ -26,8 +26,11 @@ class AssetRes {
   static const bener = "${images}bener.png";
   static const mostBook = "${images}mostBook.png";
   static const nearbySalon = "${images}nearbySalon.png";
-  static const mostBookBack="${images}mostBookBack.png";
-  static const detailsScreen="${images}detailsScreen.png";
+  static const mostBookBack = "${images}mostBookBack.png";
+  static const detailsScreen = "${images}detailsScreen.png";
+  static const staff = "${images}staff.png";
+  static const imageStyel = "${images}imageStyel.png";
+  static const bookingUser="${images}bookingUser.png";
 
   ///------------------------------icons------------------------------------------------------
   static const phoneIcon = '${icons}phoneIcon.png';
@@ -46,4 +49,7 @@ class AssetRes {
   static const chatDark = "${icons}chatDark.png";
   static const userL = "${icons}userL.png";
   static const hairCut = "${icons}hairCut.png";
+  static const arrow = "${icons}arrow.png";
+  static const heart="${icons}heart.png";
+  static const reply="${icons}reply.png";
 }

@@ -68,5 +68,22 @@ class Strings {
   static const serenitySalon = "Serenity Salon";
   static const open = "Open";
   static const nearbySalon = "Nearby Salon";
-  static const todayBookings="Today’s Bookings";
+  static const todayBookings = "Today’s Bookings";
+  static const about = "About";
+  static const reviews = "Reviews";
+  static const openingHours = "Opening Hours";
+  static const location = "Location";
+  static const ourStaff = "Our Staff";
+  static const lorem =
+      "Lorem ipsum dolor sit amet, consectetur adipi scing elit. Morbi gravida posuere arcu sit amet pharetra. Vivamus et sagittis eros. Sed eu tristi que felis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nulla ipsum tellus, maxi mus in suscipit sit amet, consectetur ut nisi. Phasellus eleifend lacus at nisi molestie efficitur.";
+  static const images = "Images";
+  static const bookAppointment="Book Appointment";
+  static const timeSchedule="Time Schedule";
+  static const availableSlots="available slots";
+  static const bookingList="Booking List";
+  static const filter="Filter";
+  static const category="Category";
+  static const ratting="Ratting";
+  static const distance="Distance";
+  static const loremIpsum ="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi gravida posuere arcu sit amet pharetra. Vivamus et sagittis eros.";
 }

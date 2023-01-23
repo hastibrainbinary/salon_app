@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:salon_app/screen/user_part/dashboard/most_book/widget.dart';
+import 'package:salon_app/screen/user_part/dashboard/most_book/most_book_controller.dart';
 import 'package:salon_app/utils/app_style.dart';
 import 'package:salon_app/utils/asset_res.dart';
 import 'package:salon_app/utils/color_res.dart';
+import 'package:salon_app/utils/page_res.dart';
 import 'package:salon_app/utils/string.dart';
 
 class MostBookScreen extends StatelessWidget {
-  const MostBookScreen({Key? key}) : super(key: key);
+  MostBookScreen({Key? key}) : super(key: key);
+  final MostBookController mostBookController = Get.put(MostBookController());
 
   @override
   Widget build(BuildContext context) {
@@ -20,25 +22,26 @@ class MostBookScreen extends StatelessWidget {
                 image: AssetImage(AssetRes.mostBookBack),
               ),
               Positioned(
-                  top: 60,
-                  left: 15,
-                  child: Row(
-                    children: [
-                      const Icon(Icons.arrow_back_ios_new_rounded,
+                top: 60,
+                left: 15,
+                child: Row(
+                  children: [
+                    const Icon(Icons.arrow_back_ios_new_rounded,
+                        color: ColorRes.white),
+                    const SizedBox(width: 50),
+                    Text(
+                      Strings.mostBookedSalons,
+                      style: appTextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.w500,
                           color: ColorRes.white),
-                      const SizedBox(width: 50),
-                      Text(
-                        Strings.mostBookedSalons,
-                        style: appTextStyle(
-                            fontSize: 20,
-                            fontWeight: FontWeight.w500,
-                            color: ColorRes.white),
-                      )
-                    ],
-                  )),
+                    )
+                  ],
+                ),
+              ),
             ],
           ),
-          SizedBox(height: Get.height * 0.0307),
+            SizedBox(height: Get.height * 0.0307),
           Expanded(
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 18.0),
@@ -51,9 +54,7 @@ class MostBookScreen extends StatelessWidget {
                 itemCount: 10,
                 itemBuilder: (context, index) {
                   return InkWell(
-                    onTap: () {
-                      Get.to(mostBookDetails());
-                    },
+                    onTap: () => Get.toNamed(PageRes.mostBookDetailsScreen),
                     child: Container(
                       /* height: 139,
                       width: 155,*/
