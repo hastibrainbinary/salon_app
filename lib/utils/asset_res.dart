@@ -28,6 +28,9 @@ class AssetRes {
   static const nearbySalon = "${images}nearbySalon.png";
   static const mostBookBack = "${images}mostBookBack.png";
   static const detailsScreen = "${images}detailsScreen.png";
+  static const staff = "${images}staff.png";
+  static const imageStyel = "${images}imageStyel.png";
+  static const bookingUser = "${images}bookingUser.png";
 
   ///------------------------------icons------------------------------------------------------
   static const phoneIcon = '${icons}phoneIcon.png';
@@ -68,4 +71,8 @@ class AssetRes {
 
   ///____________________ images ___________________
   static const adminProfilePic = "${images}admin_dp.png";
+
+  static const arrow = "${icons}arrow.png";
+  static const heart = "${icons}heart.png";
+  static const reply = "${icons}reply.png";
 }

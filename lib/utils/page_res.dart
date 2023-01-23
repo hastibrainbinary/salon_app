@@ -15,6 +15,7 @@ class PageRes {
   static String dashBoardScreen = "/dashBoardScreen";
   static String homeScreen = "/HomeScreen";
   static String mostBook = "/mostBook";
+
   static String bookings = "/bookings";
 
   ///_______________________________ admin part _____________________________
@@ -26,4 +27,8 @@ class PageRes {
   static String adminNewPasswordScreen = "/adminNewPasswordScreen";
   static String adminPhoneOtpScreen = "/adminPhoneOtpScreen";
   static String adminDashBoardScreen = "/adminDashBoardScreen";
+
+  // static String bookings="/bookings";
+  static String mostBookDetailsScreen = "/mostBookDetailsScreen";
+  static String bookingDetails = "/bookingDetails";
 }
