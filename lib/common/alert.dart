@@ -105,9 +105,7 @@ Future success(context, {String? flow}) {
               ),
               const SizedBox(height: 20),
               commonButton(
-                  onTap: () => (flow == "admin")
-                      ? Get.toNamed(PageRes.adminDashBoardScreen)
-                      : Get.toNamed(PageRes.profileScreen),
+                  onTap: () => Get.toNamed(PageRes.profileScreen),
                   title: Strings.ok,
                   textColor: ColorRes.white,
                   backgroundColor: ColorRes.indicator)
@@ -239,5 +237,3 @@ Future reset(context, {String? flow}) {
     },
   );
 }
-
-

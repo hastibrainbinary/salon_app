@@ -81,7 +81,7 @@ class IntroductionScreen extends StatelessWidget {
                   bottom: Get.height * 0.91,
                   left: 310,
                   child: InkWell(
-                    onTap: () => Get.toNamed(PageRes.selectTypeScreen),
+                    onTap: () => Get.offAndToNamed(PageRes.selectTypeScreen),
                     child: Text(
                       Strings.skip,
                       style: appTextStyle(

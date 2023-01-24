@@ -74,9 +74,12 @@ class AssetRes {
   static const addBankAccountIcon = "${icons}add_bank_account_icon.png";
   static const cancelAppointmentIcon = "${icons}cancel_appointment_detail.png";
   static const staffDetailIcon = "${icons}staff_detail_icon.png";
+  static const editIcon = "${icons}edit_icon.png";
 
   ///____________________ images ___________________
   static const adminProfilePic = "${images}admin_dp.png";
+  static const bookAppointment = "${images}book_appointment.png";
+  static const cancelAppointment = "${images}cancel_appointment.png";
 
   static const arrow = "${icons}arrow.png";
   static const heart="${icons}heart.png";

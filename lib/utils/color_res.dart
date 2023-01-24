@@ -10,7 +10,14 @@ class ColorRes {
   static const invalidColor = Color(0xffFEEFEF);
   static const starColor = Color(0xffDA1414);
   static const star = Color(0xffF8B60E);
-  static const green= Color(0xff11800F);
-  static const like=Color(0xffF9595F);
-  static const gray= Color(0xffD9D9D9);
+
+  static const green = Color(0xff11800F);
+
+  ///_____________________ M _______________________
+  static const color94674F = Color(0xff94674F);
+
+  // static const green= Color(0xff11800F);
+
+  static const like = Color(0xffF9595F);
+  static const gray = Color(0xffD9D9D9);
 }

@@ -103,6 +103,7 @@ class Strings {
   static const lorem =
       "Lorem ipsum dolor sit amet, consectetur adipi scing elit. Morbi gravida posuere arcu sit amet pharetra. Vivamus et sagittis eros. Sed eu tristi que felis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nulla ipsum tellus, maxi mus in suscipit sit amet, consectetur ut nisi. Phasellus eleifend lacus at nisi molestie efficitur.";
   static const images = "Images";
+<<<<<<<<< Temporary merge branch 1
   static const bookAppointment = "Book Appointment";
   static const timeSchedule = "Time Schedule";
   static const availableSlots = "available slots";

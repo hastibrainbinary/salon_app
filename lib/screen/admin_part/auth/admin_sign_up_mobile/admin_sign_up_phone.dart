@@ -115,7 +115,7 @@ class AdminSignUpMobileNumberScreen extends StatelessWidget {
               commonButton(
                   onTap: () {
                     if (controller.validator()) {
-                      Get.toNamed(PageRes.adminPhoneOtpScreen);
+                      Get.offAndToNamed(PageRes.adminPhoneOtpScreen);
                     }
                   },
                   title: Strings.Continue,
@@ -134,7 +134,7 @@ class AdminSignUpMobileNumberScreen extends StatelessWidget {
                         color: const Color(0xff555555)),
                   ),
                   InkWell(
-                    onTap: () => Get.toNamed(PageRes.adminLogInScreen),
+                    onTap: () => Get.offAndToNamed(PageRes.adminLogInScreen),
                     child: Text(
                       Strings.signIn,
                       style: appTextStyle(

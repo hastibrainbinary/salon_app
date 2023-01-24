@@ -9,16 +9,18 @@ Widget containerWithTitle(
     required VoidCallback onTap}) {
   return Container(
     height: 55,
-    width: 325,
+    // width: 325,
+    margin: EdgeInsets.only(left: Get.width * 0.055, right: Get.width * 0.055),
     padding: EdgeInsets.only(left: Get.width * 0.08, right: Get.width * 0.07),
     decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10),
         color: ColorRes.white,
         boxShadow: [
           BoxShadow(
-              blurRadius: 2,
+              blurRadius: 10,
               spreadRadius: 1,
-              color: Colors.grey.withOpacity(0.1)),
+              offset: Offset(0, 4),
+              color: ColorRes.indicator.withOpacity(0.15)),
         ]),
     child: Row(children: [
       SizedBox(
