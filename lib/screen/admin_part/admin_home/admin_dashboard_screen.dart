@@ -11,9 +11,12 @@ class AdminDashboardScreen extends StatelessWidget {
       Get.put(AdminDashboardController());
   @override
   Widget build(BuildContext context) {
+    dynamic args = ModalRoute.of(context)!.settings.arguments;
     return Scaffold(
       body: Obx(() => adminDashboardController.selectedIndex.value == 0
-          ? const AdminHomeScreen()
+          ? AdminHomeScreen(
+              args: args,
+            )
           : adminDashboardController.selectedIndex.value == 1
               ? const Center(
                   child: Text("appointments"),

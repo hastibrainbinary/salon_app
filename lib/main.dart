@@ -11,6 +11,7 @@ import 'package:salon_app/screen/admin_part/auth/admin_new_password/admin_new_pa
 import 'package:salon_app/screen/admin_part/auth/admin_phone_otp/admin_phone_otp_screen.dart';
 import 'package:salon_app/screen/admin_part/auth/admin_sign_up/admin_sign_up_screen.dart';
 import 'package:salon_app/screen/admin_part/auth/admin_sign_up_mobile/admin_sign_up_phone.dart';
+import 'package:salon_app/screen/admin_part/profile/profile_screen.dart';
 import 'package:salon_app/screen/get_started/get_started_screen.dart';
 import 'package:salon_app/screen/introduction_screen/introduction_screen.dart';
 import 'package:salon_app/screen/select_type/select_type_screen.dart';
@@ -87,6 +88,7 @@ class MyApp extends StatelessWidget {
           GetPage(name: PageRes.selectGender, page: () => SelectGenderScreen()),
           GetPage(
               name: PageRes.nearBySalonScreen, page: () => NearBySalonScreen()),
+
           GetPage(
               name: PageRes.appointmentBookingScreen,
               page: () => AppointmentBookingScreen()),
@@ -98,6 +100,10 @@ class MyApp extends StatelessWidget {
           GetPage(
               name: PageRes.notificationScreen,
               page: () => NotificationScreen()),
+
+          GetPage(
+              name: PageRes.adminProfileScreen,
+              page: () => AdminProfileScreen()),
 
           GetPage(
               name: PageRes.addYourBankAccountScreen,

@@ -69,17 +69,15 @@ class Strings {
   static const open = "Open";
   static const nearbySalon = "Nearby Salon";
   static const todayBookings = "Today’s Bookings";
-  static const myAppointments="My Appointments";
-  static const upcoming="Upcoming";
-  static const past="Past";
-  static const cancelled="Cancelled";
-  static const barber="Barber:";
-  static const cancel="Cancel";
-  static const book="Book";
-  static const cancelAppointment="Cancel appointment";
 
-
-
+  static const myAppointments = "My Appointments";
+  static const upcoming = "Upcoming";
+  static const past = "Past";
+  static const cancelled = "Cancelled";
+  static const barber = "Barber:";
+  static const cancel = "Cancel";
+  static const book = "Book";
+  static const cancelAppointment = "Cancel appointment";
 
   ///_________________________________________ admin part ___________________________________
   static const shopName = "Shop name";
@@ -95,6 +93,10 @@ class Strings {
   static const time = "Time";
   static const appointments = "Appointments";
 
+
+  ///_________________________________________ admin part ___________________________________
+
+
   static const about = "About";
   static const reviews = "Reviews";
   static const openingHours = "Opening Hours";
@@ -103,7 +105,7 @@ class Strings {
   static const lorem =
       "Lorem ipsum dolor sit amet, consectetur adipi scing elit. Morbi gravida posuere arcu sit amet pharetra. Vivamus et sagittis eros. Sed eu tristi que felis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nulla ipsum tellus, maxi mus in suscipit sit amet, consectetur ut nisi. Phasellus eleifend lacus at nisi molestie efficitur.";
   static const images = "Images";
-<<<<<<<<< Temporary merge branch 1
+
   static const bookAppointment = "Book Appointment";
   static const timeSchedule = "Time Schedule";
   static const availableSlots = "available slots";
@@ -134,4 +136,26 @@ class Strings {
   static const uploadFromGallery = "upload from  \n      gallery";
   static const selectGender="Select Gender";
   static const bookingId="Booking ID :";
+
+
+  ///_________________________________________ ADMIN PART -M ___________________________________
+
+  static const viewMore = "View more";
+  static const viewLess = "View less";
+  static const notification = "Notification";
+  static const bankAccount = "Bank account";
+  static const bookAppointmentNotification = "Rohan Surve Book Appointment.";
+  static const cancelAppointmentNotification =
+      "Rohan Surve Cancel Appointment.";
+  static const accountHoldersName = "Account Holder’s Name :";
+  static const accountNumber = "Account Number :";
+  static const reEnterAccountNumber = 'Re Enter Account Number :';
+  static const businessBankAccount = "Business Bank Account?";
+  static const editBankAccount = "Edit Bank account";
+  static const submit = "Submit";
+  static const service = "Service";
+
+  ///__________________________________________ THE END ADMIN PART -M ________________________________________________
+
+
 }

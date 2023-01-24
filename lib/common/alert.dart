@@ -105,7 +105,11 @@ Future success(context, {String? flow}) {
               ),
               const SizedBox(height: 20),
               commonButton(
-                  onTap: () => Get.toNamed(PageRes.profileScreen),
+
+                  onTap: () => (flow == "admin")
+                      ? Get.offAndToNamed(PageRes.adminProfileScreen)
+                      : Get.toNamed(PageRes.profileScreen),
+
                   title: Strings.ok,
                   textColor: ColorRes.white,
                   backgroundColor: ColorRes.indicator)

@@ -4,6 +4,7 @@ import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:salon_app/common/common_btn.dart';
+import 'package:salon_app/screen/admin_part/profile/profile_controller.dart';
 import 'package:salon_app/screen/introduction_screen/widget/widget.dart';
 import 'package:salon_app/screen/user_part/profile/profile_controller.dart';
 import 'package:salon_app/utils/app_style.dart';
@@ -12,9 +13,10 @@ import 'package:salon_app/utils/color_res.dart';
 import 'package:salon_app/utils/page_res.dart';
 import 'package:salon_app/utils/string.dart';
 
-class ProfileScreen extends StatelessWidget {
-  ProfileScreen({Key? key}) : super(key: key);
-  final ProfileController profileController = Get.put(ProfileController());
+class AdminProfileScreen extends StatelessWidget {
+  AdminProfileScreen({Key? key}) : super(key: key);
+  final AdminProfileController profileController =
+      Get.put(AdminProfileController());
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +29,7 @@ class ProfileScreen extends StatelessWidget {
             SizedBox(height: Get.height * 0.0738),
             Obx(
               () => (profileController.imgPath.value != "")
-                  ? SizedBox()
+                  ? const SizedBox()
                   : const Padding(
                       padding: EdgeInsets.only(left: 25),
                       child: Icon(
@@ -126,7 +128,9 @@ class ProfileScreen extends StatelessWidget {
               () => (profileController.imgPath.value != "")
                   ? Center(
                       child: commonButton(
-                          onTap: () => Get.toNamed(PageRes.selectGender),
+                          onTap: () => Get.offAndToNamed(
+                              PageRes.adminDashBoardScreen,
+                              arguments: profileController.imgPath.value),
                           title: Strings.Continue,
                           textColor: ColorRes.white,
                           backgroundColor: ColorRes.indicator),
@@ -143,9 +147,10 @@ class ProfileScreen extends StatelessWidget {
             ),
             SizedBox(height: Get.height * 0.0184),
             Obx(() => (profileController.imgPath.value != "")
-                ? SizedBox()
+                ? const SizedBox()
                 : InkWell(
-                    onTap: () => Get.toNamed(PageRes.selectGender),
+                    onTap: () => Get.offAndToNamed(PageRes.adminDashBoardScreen,
+                        arguments: profileController.imgPath.value),
                     child: Center(
                       child: Text(
                         Strings.skip,
@@ -164,7 +169,8 @@ class ProfileScreen extends StatelessWidget {
 }
 
 Future settingModalBottomSheet(context) {
-  final ProfileController profileController = Get.put(ProfileController());
+  final AdminProfileController profileController =
+      Get.put(AdminProfileController());
   return showModalBottomSheet(
     context: context,
     backgroundColor: Colors.transparent,

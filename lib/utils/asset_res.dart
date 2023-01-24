@@ -49,12 +49,13 @@ class AssetRes {
   static const chatDark = "${icons}chatDark.png";
   static const userL = "${icons}userL.png";
   static const hairCut = "${icons}hairCut.png";
-  static const gallery="${icons}gallery.png";
-  static const girl="${icons}girl.png";
-  static const men="${icons}men.png";
-  static const msg="${icons}msg.png";
-  static const timer="${icons}timer.png";
-  static const menuIcon="${icons}menuIcon.png";
+
+  static const gallery = "${icons}gallery.png";
+  static const girl = "${icons}girl.png";
+  static const men = "${icons}men.png";
+  static const msg = "${icons}msg.png";
+  static const timer = "${icons}timer.png";
+  static const menuIcon = "${icons}menuIcon.png";
 
   ///____________________________ admin part _______________________________
 
@@ -82,9 +83,11 @@ class AssetRes {
   static const cancelAppointment = "${images}cancel_appointment.png";
 
   static const arrow = "${icons}arrow.png";
+
   static const heart="${icons}heart.png";
   static const reply="${icons}reply.png";
   static const male="${icons}male.png";
   static const female="${icons}female.png";
+
 
 }
