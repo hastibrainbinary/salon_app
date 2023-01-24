@@ -30,7 +30,7 @@ class AssetRes {
   static const detailsScreen = "${images}detailsScreen.png";
   static const staff = "${images}staff.png";
   static const imageStyel = "${images}imageStyel.png";
-  static const bookingUser="${images}bookingUser.png";
+  static const bookingUser = "${images}bookingUser.png";
 
   ///------------------------------icons------------------------------------------------------
   static const phoneIcon = '${icons}phoneIcon.png';
@@ -49,9 +49,34 @@ class AssetRes {
   static const chatDark = "${icons}chatDark.png";
   static const userL = "${icons}userL.png";
   static const hairCut = "${icons}hairCut.png";
+
+  ///____________________________ admin part _______________________________
+
+  ///____________________ icons ____________________
+  static const locationIcon = "${icons}location.png";
+  static const homeIcon = "${icons}home_icon.png";
+  static const homeFillIcon = "${icons}home_select_icon.png";
+  static const chatIcon = "${icons}chat_icon.png";
+  static const chatFillIcon = "${icons}chat_fill_icon.png";
+  static const appointmentIcon = "${icons}appoinment_icon.png";
+  static const appointmentFillIcon = "${icons}appointment_fill_icon.png";
+  static const shopIcon = "${icons}shop_icon.png";
+  static const shopFillIcon = "${icons}shop_fill_icon.png";
+  static const notificationIcon = "${icons}notification_icon.png";
+  static const addAdvertisementPostIcon = "${icons}add_post_icon.png";
+  static const addServiceIcon = "${icons}add_service_icon.png";
+  static const addBankAccountIcon = "${icons}add_bank_account_icon.png";
+  static const cancelAppointmentIcon = "${icons}cancel_appointment_detail.png";
+  static const staffDetailIcon = "${icons}staff_detail_icon.png";
+
+  ///____________________ images ___________________
+  static const adminProfilePic = "${images}admin_dp.png";
+
   static const arrow = "${icons}arrow.png";
   static const heart="${icons}heart.png";
   static const reply="${icons}reply.png";
   static const male="${icons}male.png";
   static const female="${icons}female.png";
+  static const heart = "${icons}heart.png";
+  static const reply = "${icons}reply.png";
 }

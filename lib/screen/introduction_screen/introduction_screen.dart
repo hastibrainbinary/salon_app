@@ -35,39 +35,42 @@ class IntroductionScreen extends StatelessWidget {
               alignment: Alignment.bottomLeft,
               children: [
                 PageView.builder(
+                  // scrollDirection: Axis.horizontal,
                   controller: controller.pageController,
                   itemCount: 3,
                   itemBuilder: (context, i) {
-                    return controller.currentPage.value == 0
-                        ? pageViewPart(
-                            image: AssetRes.introduction1,
-                            title: Strings.findNearBySalonsBookServices,
-                            description: Strings.loremIpsumDolorSitAmet,
-                            textColor: (Theme.of(context).brightness ==
-                                    Brightness.dark)
-                                ? ColorRes.black
-                                : ColorRes.white,
-                            context)
-                        : controller.currentPage.value == 1
-                            ? pageViewPart(
-                                image: AssetRes.introduction2,
-                                title: Strings.styleThatFitYourDailyLifeStyle,
-                                description: Strings.loremIpsumDolorSitAmet,
-                                textColor: (Theme.of(context).brightness ==
-                                        Brightness.dark)
-                                    ? ColorRes.black
-                                    : ColorRes.white,
-                                context)
-                            : pageViewPart(
-                                image: AssetRes.introduction3,
-                                title:
-                                    Strings.theProfessionalSpecialistsInNearBy,
-                                description: Strings.loremIpsumDolorSitAmet,
-                                textColor: (Theme.of(context).brightness ==
-                                        Brightness.dark)
-                                    ? ColorRes.black
-                                    : ColorRes.white,
-                                context);
+                    return Obx(
+                      () => controller.currentPage.value == 0
+                          ? pageViewPart(
+                              image: AssetRes.introduction1,
+                              title: Strings.findNearBySalonsBookServices,
+                              description: Strings.loremIpsumDolorSitAmet,
+                              textColor: (Theme.of(context).brightness ==
+                                      Brightness.dark)
+                                  ? ColorRes.black
+                                  : ColorRes.white,
+                              context)
+                          : controller.currentPage.value == 1
+                              ? pageViewPart(
+                                  image: AssetRes.introduction2,
+                                  title: Strings.styleThatFitYourDailyLifeStyle,
+                                  description: Strings.loremIpsumDolorSitAmet,
+                                  textColor: (Theme.of(context).brightness ==
+                                          Brightness.dark)
+                                      ? ColorRes.black
+                                      : ColorRes.white,
+                                  context)
+                              : pageViewPart(
+                                  image: AssetRes.introduction3,
+                                  title: Strings
+                                      .theProfessionalSpecialistsInNearBy,
+                                  description: Strings.loremIpsumDolorSitAmet,
+                                  textColor: (Theme.of(context).brightness ==
+                                          Brightness.dark)
+                                      ? ColorRes.black
+                                      : ColorRes.white,
+                                  context),
+                    );
                   },
                   onPageChanged: (val) {
                     controller.selectIndicator.value = val;
@@ -75,7 +78,7 @@ class IntroductionScreen extends StatelessWidget {
                   },
                 ),
                 Positioned(
-                  bottom: 600,
+                  bottom: Get.height * 0.91,
                   left: 310,
                   child: InkWell(
                     onTap: () => Get.toNamed(PageRes.selectTypeScreen),
@@ -91,22 +94,25 @@ class IntroductionScreen extends StatelessWidget {
                     ),
                   ),
                 ),
-                Positioned(
-                  bottom: 100,
-                  left: 130,
-                  child: Obx(
-                    () => Row(
+                Obx(
+                  () => Padding(
+                    padding: EdgeInsets.only(bottom: Get.height * 0.08),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: List<Widget>.generate(
                         3,
                         (index) {
                           return AnimatedContainer(
                             duration: const Duration(microseconds: 500),
-                            margin: const EdgeInsets.all(5),
+                            margin: const EdgeInsets.only(
+                                top: 5, bottom: 5, right: 1, left: 1),
                             height: 2,
-                            width: 20,
-                            color: index == controller.currentPage.value
-                                ? ColorRes.indicator
-                                : ColorRes.introLine,
+                            width: 18,
+                            decoration: BoxDecoration(
+                                color: index == controller.currentPage.value
+                                    ? ColorRes.indicator
+                                    : ColorRes.introLine,
+                                borderRadius: BorderRadius.circular(4)),
                           );
                         },
                       ),

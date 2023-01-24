@@ -5,14 +5,14 @@ class Strings {
 
   static const getStarted = "Get Started";
   static const findNearBySalonsBookServices =
-      "Find near by Salons & \n        book services";
+      "Find near by Salons &\nbook services";
   static const loremIpsumDolorSitAmet =
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt";
+      "Lorem ipsum dolor sit amet, consectetur\nadipiscing elit, sed do eiusmod tempor incididunt";
   static const styleThatFitYourDailyLifeStyle =
       "Style that fit your daily \nlifestyle";
   static const theProfessionalSpecialistsInNearBy =
-      "The Professional \nSpecialists in near by";
-  static const bookAnAppointmentForSalon = "Book an Appointment for \nSalon";
+      "The Professional\nSpecialists in near by";
+  static const bookAnAppointmentForSalon = "Book an Appointment for\nSalon";
   static const discoverServices = "Discover Services";
   static const setUpYourBusiness = "Set Up Your Business";
   static const logIn = "Log In";
@@ -69,14 +69,39 @@ class Strings {
   static const open = "Open";
   static const nearbySalon = "Nearby Salon";
   static const todayBookings = "Today’s Bookings";
+
+  ///_________________________________________ admin part ___________________________________
+  static const shopName = "Shop name";
+  static const emailID = "Email ID";
+  static const location = "Location";
+  static const createAccount = "Create account";
+  static const addyourBankaccount = "Add your Bank account";
+  static const addService = "Add Service";
+  static const addAdvertisementPost = "Add Advertisement Post";
+  static const staffDetails = "Staff Details";
+  static const cancelAppointmentDetails = "Cancel Appointment Details";
+  static const todaySchedule = "Today Schedule";
+  static const time = "Time";
+  static const appointments = "Appointments";
+
   static const about = "About";
   static const reviews = "Reviews";
   static const openingHours = "Opening Hours";
-  static const location = "Location";
+  // static const location = "Location";
   static const ourStaff = "Our Staff";
   static const lorem =
       "Lorem ipsum dolor sit amet, consectetur adipi scing elit. Morbi gravida posuere arcu sit amet pharetra. Vivamus et sagittis eros. Sed eu tristi que felis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nulla ipsum tellus, maxi mus in suscipit sit amet, consectetur ut nisi. Phasellus eleifend lacus at nisi molestie efficitur.";
   static const images = "Images";
+  static const bookAppointment = "Book Appointment";
+  static const timeSchedule = "Time Schedule";
+  static const availableSlots = "available slots";
+  static const bookingList = "Booking List";
+  static const filter = "Filter";
+  static const category = "Category";
+  static const ratting = "Ratting";
+  static const distance = "Distance";
+  static const loremIpsum =
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi gravida posuere arcu sit amet pharetra. Vivamus et sagittis eros.";
   static const bookAppointment="Book Appointment";
   static const timeSchedule="Time Schedule";
   static const availableSlots="available slots";

@@ -25,6 +25,7 @@ Widget pageViewPart(BuildContext context,
     required String description,
     required Color textColor}) {
   return Stack(
+    alignment: Alignment.bottomCenter,
     children: [
       Image.asset(
         image,
@@ -32,7 +33,26 @@ Widget pageViewPart(BuildContext context,
         height: Get.height,
         fit: BoxFit.cover,
       ),
-      Positioned(
+      Column(
+        children: [
+          const Spacer(),
+          Text(
+            textAlign: TextAlign.center,
+            title,
+            style: appTextStyle(
+                fontSize: 26, fontWeight: FontWeight.w600, color: textColor),
+          ),
+          Text(description,
+              style: appTextStyle(
+                  fontSize: 13, fontWeight: FontWeight.w400, color: textColor),
+              textAlign: TextAlign.center),
+          SizedBox(
+            height: Get.height * 0.12,
+          )
+        ],
+      ),
+
+      /* Positioned(
         top: 500,
         // left: 20,
         right: 20,
@@ -42,8 +62,8 @@ Widget pageViewPart(BuildContext context,
           style: appTextStyle(
               fontSize: 26, fontWeight: FontWeight.w600, color: textColor),
         ),
-      ),
-      Positioned(
+      ), */
+      /* Positioned(
         top: 580,
         left: 15,
         right: 15,
@@ -51,7 +71,7 @@ Widget pageViewPart(BuildContext context,
             style: appTextStyle(
                 fontSize: 13, fontWeight: FontWeight.w400, color: textColor),
             textAlign: TextAlign.center),
-      ),
+      ), */
     ],
   );
 }

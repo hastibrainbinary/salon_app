@@ -15,6 +15,22 @@ class PageRes {
   static String dashBoardScreen = "/dashBoardScreen";
   static String homeScreen = "/HomeScreen";
   static String mostBook = "/mostBook";
+
+  static String bookings = "/bookings";
+
+  ///_______________________________ admin part _____________________________
+  static String adminSignUpScreen = "/adminSignUpScreen";
+  static String adminSignUpMobileScreen = "/adminSignUpMobileScreen";
+  static String adminForgotOtpScreen = '/adminForgotOtpScreen';
+  static String adminForgotPassword = "/adminForgotPassword";
+  static String adminLogInScreen = "/adminLogInScreen";
+  static String adminNewPasswordScreen = "/adminNewPasswordScreen";
+  static String adminPhoneOtpScreen = "/adminPhoneOtpScreen";
+  static String adminDashBoardScreen = "/adminDashBoardScreen";
+
+  // static String bookings="/bookings";
+  static String mostBookDetailsScreen = "/mostBookDetailsScreen";
+  static String bookingDetails = "/bookingDetails";
   static String bookings="/bookings";
   static String mostBookDetailsScreen="/mostBookDetailsScreen";
   static String bookingDetails="/bookingDetails";

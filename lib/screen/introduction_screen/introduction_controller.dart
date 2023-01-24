@@ -13,9 +13,9 @@ class IntroductionController extends GetxController {
 
   init() {
     Future.delayed(const Duration(seconds: 3), () {
-      currentPage++;
-      update(["pageView"]);
+      currentPage.value = currentPage.value++;
 
+      update(["pageView"]);
     });
     /* void onSkipTap(){
     Get.toNamed(
