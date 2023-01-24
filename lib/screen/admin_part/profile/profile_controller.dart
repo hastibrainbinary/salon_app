@@ -2,7 +2,7 @@ import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
 import 'dart:io';
 
-class ProfileController extends GetxController {
+class AdminProfileController extends GetxController {
   ImagePicker picker = ImagePicker();
   Rx<File>? image;
   RxBool isImg = false.obs;

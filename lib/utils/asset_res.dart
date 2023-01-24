@@ -49,6 +49,9 @@ class AssetRes {
   static const chatDark = "${icons}chatDark.png";
   static const userL = "${icons}userL.png";
   static const hairCut = "${icons}hairCut.png";
+  static const gallery = "${icons}gallery.png";
+  static const girl = "${icons}girl.png";
+  static const men = "${icons}men.png";
 
   ///____________________________ admin part _______________________________
 

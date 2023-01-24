@@ -69,6 +69,11 @@ class Strings {
   static const open = "Open";
   static const nearbySalon = "Nearby Salon";
   static const todayBookings = "Today’s Bookings";
+  static const myAppointments = "My Appointments";
+  static const upcoming = "Upcoming";
+  static const past = "Past";
+  static const cancelled = "Cancelled";
+  static const barber = "Barber:";
 
   static const about = "About";
   static const reviews = "Reviews";
@@ -136,4 +141,7 @@ class Strings {
 
   ///__________________________________________ THE END ADMIN PART -M ________________________________________________
 
+  static const captureFromCamera = "capture from \n      camera";
+  static const uploadFromGallery = "upload from  \n      gallery";
+  static const selectGender = "Select Gender";
 }

@@ -85,7 +85,7 @@ class FilterScreen extends StatelessWidget {
                                         blurRadius: 23.0,
                                       )
                                     ]),
-                                child: Image(
+                                child: const Image(
                                   image: AssetImage(AssetRes.hairCut),
                                 ),
                               ),
