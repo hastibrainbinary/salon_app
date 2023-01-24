@@ -3,7 +3,6 @@ import 'package:get/get.dart';
 import 'package:salon_app/common/alert.dart';
 import 'package:salon_app/common/common_btn.dart';
 import 'package:salon_app/screen/admin_part/auth/admin_log_in/admin_log_in_controller.dart';
-import 'package:salon_app/screen/user_part/auth/log_in/log_in_controller.dart';
 import 'package:salon_app/utils/app_style.dart';
 import 'package:salon_app/utils/asset_res.dart';
 import 'package:salon_app/utils/color_res.dart';

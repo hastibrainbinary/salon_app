@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:pinput/pinput.dart';
 import 'package:salon_app/screen/admin_part/auth/admin_forgot_otp/admin_forgot_otp_controller.dart';
-import 'package:salon_app/screen/user_part/auth/forgot_otp/forgot_otp_controller.dart';
 import 'package:salon_app/utils/app_style.dart';
 import 'package:salon_app/utils/color_res.dart';
 import 'package:salon_app/utils/page_res.dart';

@@ -107,7 +107,7 @@ Future success(context, {String? flow}) {
               commonButton(
                   onTap: () => (flow == "admin")
                       ? Get.toNamed(PageRes.adminDashBoardScreen)
-                      : Get.toNamed(PageRes.dashBoardScreen),
+                      : Get.toNamed(PageRes.profileScreen),
                   title: Strings.ok,
                   textColor: ColorRes.white,
                   backgroundColor: ColorRes.indicator)

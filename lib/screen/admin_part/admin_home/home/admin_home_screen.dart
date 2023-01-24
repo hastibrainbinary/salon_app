@@ -144,19 +144,19 @@ class AdminHomeScreen extends StatelessWidget {
                         Row(
                           children: [
                             Text(
-                              "${Strings.time}",
+                              Strings.time,
                               style: appTextStyle(
-                                  color: ColorRes.color94674F,
+                                  color: ColorRes.indicator,
                                   fontSize: 15,
                                   fontWeight: FontWeight.w500),
                             ),
-                            SizedBox(
+                            const SizedBox(
                               width: 58,
                             ),
                             Text(
-                              "${Strings.appointments}",
+                              Strings.appointments,
                               style: appTextStyle(
-                                  color: ColorRes.color94674F,
+                                  color: ColorRes.indicator,
                                   fontSize: 15,
                                   fontWeight: FontWeight.w500),
                             ),

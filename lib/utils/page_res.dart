@@ -17,6 +17,8 @@ class PageRes {
   static String mostBook = "/mostBook";
 
   static String bookings = "/bookings";
+  static String selectGender="/selectGender";
+  static String nearBySalonScreen="/nearBySalonScreen";
 
   ///_______________________________ admin part _____________________________
   static String adminSignUpScreen = "/adminSignUpScreen";
@@ -31,9 +33,7 @@ class PageRes {
   // static String bookings="/bookings";
   static String mostBookDetailsScreen = "/mostBookDetailsScreen";
   static String bookingDetails = "/bookingDetails";
-  static String bookings="/bookings";
-  static String mostBookDetailsScreen="/mostBookDetailsScreen";
-  static String bookingDetails="/bookingDetails";
+
   static String filterScreen="/filterScreen";
   static String bookAppointmentScreen="/bookAppointmentScreen";
   static String appointmentScreen="/appointmentScreen";

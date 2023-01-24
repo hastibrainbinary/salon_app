@@ -322,11 +322,11 @@ class BookAppointmentScreen extends StatelessWidget {
                   Obx(
                     () => bookAppointmentController.isSelect.value ==
                             Strings.about
-                        ? Text("about")
+                        ? const Text("about")
                         : bookAppointmentController.isSelect.value ==
                                 Strings.services
                             ? bookServices()
-                            : Text("reviews"),
+                            : const Text("reviews"),
                   ),
                 ],
               ),

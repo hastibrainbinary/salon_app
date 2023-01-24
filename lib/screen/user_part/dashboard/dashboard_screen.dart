@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:salon_app/screen/user_part/dashboard/dashboard_controller.dart';
 import 'package:salon_app/screen/user_part/dashboard/home/home_screen.dart';
+import 'package:salon_app/screen/user_part/my_appointment/my_appointment_screen.dart';
+import 'package:salon_app/screen/user_part/nearby_salons/nearby_salons_screen.dart';
 import 'package:salon_app/utils/asset_res.dart';
 import 'package:salon_app/utils/color_res.dart';
 
@@ -16,13 +18,9 @@ class DashBoardScreen extends StatelessWidget {
       body: Obx(() => dashBoardController.selectedIndex.value == 0
           ? HomeScreen()
           : dashBoardController.selectedIndex.value == 1
-              ? const Center(
-                  child: Text("location"),
-                )
+              ? NearBySalonScreen()
               : dashBoardController.selectedIndex.value == 2
-                  ? const Center(
-                      child: Text("appointments"),
-                    )
+                  ? MyAppointmentScreen()
                   : dashBoardController.selectedIndex.value == 3
                       ? const Center(
                           child: Text("chat"),

@@ -3,7 +3,6 @@ import 'package:get/get.dart';
 import 'package:salon_app/screen/admin_part/admin_home/admin_dashboard_controller.dart';
 import 'package:salon_app/screen/admin_part/admin_home/home/admin_home_screen.dart';
 import 'package:salon_app/utils/asset_res.dart';
-import 'package:salon_app/utils/color_res.dart';
 
 class AdminDashboardScreen extends StatelessWidget {
   AdminDashboardScreen({super.key});
@@ -14,7 +13,7 @@ class AdminDashboardScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Obx(() => adminDashboardController.selectedIndex.value == 0
-          ? AdminHomeScreen()
+          ? const AdminHomeScreen()
           : adminDashboardController.selectedIndex.value == 1
               ? const Center(
                   child: Text("appointments"),

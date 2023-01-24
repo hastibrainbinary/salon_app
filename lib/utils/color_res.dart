@@ -12,4 +12,5 @@ class ColorRes {
   static const star = Color(0xffF8B60E);
   static const green= Color(0xff11800F);
   static const like=Color(0xffF9595F);
+  static const gray= Color(0xffD9D9D9);
 }
