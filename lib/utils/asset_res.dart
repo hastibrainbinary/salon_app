@@ -52,4 +52,6 @@ class AssetRes {
   static const arrow = "${icons}arrow.png";
   static const heart="${icons}heart.png";
   static const reply="${icons}reply.png";
+  static const male="${icons}male.png";
+  static const female="${icons}female.png";
 }

@@ -85,5 +85,20 @@ class Strings {
   static const category="Category";
   static const ratting="Ratting";
   static const distance="Distance";
+  static const gender="Gender";
+  static const female="Female";
+  static const male="Male";
+  static const applyFilter="Apply Filter";
+  static const resetFilter="Reset Filter";
+  static const chooseService="Choose service";
+  static const appointment="Appointment";
+  static const payment="Payment";
+  static const summary="Summary";
+  static const next="Next";
+  static const profilePhoto="Profile Photo";
+  static const addYourProfilePhoto="add your profile photo";
+  static const addProfilePhoto="Add profile photo";
+  static const addPhoto="Add Photo";
+  static const selectAContent ="select a content type";
   static const loremIpsum ="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi gravida posuere arcu sit amet pharetra. Vivamus et sagittis eros.";
 }

@@ -105,7 +105,7 @@ Future success(context) {
               ),
               const SizedBox(height: 20),
               commonButton(
-                  onTap: () => Get.toNamed(PageRes.dashBoardScreen),
+                  onTap: () => Get.toNamed(PageRes.profileScreen),
                   title: Strings.ok,
                   textColor: ColorRes.white,
                   backgroundColor: ColorRes.indicator)
