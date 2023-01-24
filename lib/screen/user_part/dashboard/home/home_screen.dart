@@ -6,6 +6,7 @@ import 'package:salon_app/screen/user_part/dashboard/home/widget.dart';
 import 'package:salon_app/utils/app_style.dart';
 import 'package:salon_app/utils/asset_res.dart';
 import 'package:salon_app/utils/color_res.dart';
+import 'package:salon_app/utils/page_res.dart';
 import 'package:salon_app/utils/string.dart';
 
 // ignore: must_be_immutable
@@ -69,9 +70,7 @@ class HomeScreen extends StatelessWidget {
                             ),
                             SizedBox(width: Get.width * 0.3733),
                             InkWell(
-                              onTap: () {
-                                settingModalBottomSheet(context);
-                              },
+                              onTap: () => Get.toNamed(PageRes.filterScreen),
                               child: const CircleAvatar(
                                 backgroundColor: ColorRes.white,
                                 radius: 25,

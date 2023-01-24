@@ -92,6 +92,7 @@ class Strings {
   static const lorem =
       "Lorem ipsum dolor sit amet, consectetur adipi scing elit. Morbi gravida posuere arcu sit amet pharetra. Vivamus et sagittis eros. Sed eu tristi que felis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nulla ipsum tellus, maxi mus in suscipit sit amet, consectetur ut nisi. Phasellus eleifend lacus at nisi molestie efficitur.";
   static const images = "Images";
+
   static const bookAppointment = "Book Appointment";
   static const timeSchedule = "Time Schedule";
   static const availableSlots = "available slots";
@@ -102,4 +103,20 @@ class Strings {
   static const distance = "Distance";
   static const loremIpsum =
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi gravida posuere arcu sit amet pharetra. Vivamus et sagittis eros.";
+
+  static const gender = "Gender";
+  static const female = "Female";
+  static const male = "Male";
+  static const applyFilter = "Apply Filter";
+  static const resetFilter = "Reset Filter";
+  static const chooseService = "Choose service";
+  static const appointment = "Appointment";
+  static const payment = "Payment";
+  static const summary = "Summary";
+  static const next = "Next";
+  static const profilePhoto = "Profile Photo";
+  static const addYourProfilePhoto = "add your profile photo";
+  static const addProfilePhoto = "Add profile photo";
+  static const addPhoto = "Add Photo";
+  static const selectAContent = "select a content type";
 }

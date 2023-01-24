@@ -31,4 +31,8 @@ class PageRes {
   // static String bookings="/bookings";
   static String mostBookDetailsScreen = "/mostBookDetailsScreen";
   static String bookingDetails = "/bookingDetails";
+  static String filterScreen = "/filterScreen";
+  static String bookAppointmentScreen = "/bookAppointmentScreen";
+  static String appointmentScreen = "/appointmentScreen";
+  static String profileScreen = "/profileScreen";
 }

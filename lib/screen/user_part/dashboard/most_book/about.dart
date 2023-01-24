@@ -260,28 +260,31 @@ Widget about() {
                 ),
               ),
               SizedBox(width: Get.width * 0.0533),
-              Container(
-                height: 50,
-                width: 245,
-                decoration: BoxDecoration(
-                    color: ColorRes.indicator,
-                    borderRadius: BorderRadius.circular(8)),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(
-                      Strings.bookAppointment,
-                      style: appTextStyle(
-                          color: ColorRes.white,
-                          fontSize: 15,
-                          fontWeight: FontWeight.w600),
-                    ),
-                    SizedBox(width: Get.width * 0.0186),
-                    const Image(
-                      image: AssetImage(AssetRes.arrow),
-                      height: 15,
-                    )
-                  ],
+              InkWell(
+                onTap: () => Get.toNamed(PageRes.bookAppointmentScreen),
+                child: Container(
+                  height: 50,
+                  width: 245,
+                  decoration: BoxDecoration(
+                      color: ColorRes.indicator,
+                      borderRadius: BorderRadius.circular(8)),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        Strings.bookAppointment,
+                        style: appTextStyle(
+                            color: ColorRes.white,
+                            fontSize: 15,
+                            fontWeight: FontWeight.w600),
+                      ),
+                      SizedBox(width: Get.width * 0.0186),
+                      const Image(
+                        image: AssetImage(AssetRes.arrow),
+                        height: 15,
+                      )
+                    ],
+                  ),
                 ),
               )
             ],
