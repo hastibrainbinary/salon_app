@@ -69,11 +69,29 @@ class Strings {
   static const open = "Open";
   static const nearbySalon = "Nearby Salon";
   static const todayBookings = "Today’s Bookings";
+
   static const myAppointments = "My Appointments";
   static const upcoming = "Upcoming";
   static const past = "Past";
   static const cancelled = "Cancelled";
   static const barber = "Barber:";
+  static const cancel = "Cancel";
+  static const book = "Book";
+  static const cancelAppointment = "Cancel appointment";
+
+  ///_________________________________________ admin part ___________________________________
+  static const shopName = "Shop name";
+  static const emailID = "Email ID";
+  static const location = "Location";
+  static const createAccount = "Create account";
+  static const addyourBankaccount = "Add your Bank account";
+  static const addService = "Add Service";
+  static const addAdvertisementPost = "Add Advertisement Post";
+  static const staffDetails = "Staff Details";
+  static const cancelAppointmentDetails = "Cancel Appointment Details";
+  static const todaySchedule = "Today Schedule";
+  static const time = "Time";
+  static const appointments = "Appointments";
 
   static const about = "About";
   static const reviews = "Reviews";
@@ -112,18 +130,18 @@ class Strings {
   static const selectAContent = "select a content type";
 
   ///_________________________________________ ADMIN PART -M ___________________________________
-  static const shopName = "Shop name";
-  static const emailID = "Email ID";
-  static const location = "Location";
-  static const createAccount = "Create account";
-  static const addyourBankaccount = "Add your Bank account";
-  static const addService = "Add Service";
-  static const addAdvertisementPost = "Add Advertisement Post";
-  static const staffDetails = "Staff Details";
-  static const cancelAppointmentDetails = "Cancel Appointment Details";
-  static const todaySchedule = "Today Schedule";
-  static const time = "Time";
-  static const appointments = "Appointments";
+  // static const shopName = "Shop name";
+  // static const emailID = "Email ID";
+  // static const location = "Location";
+  // static const createAccount = "Create account";
+  // static const addyourBankaccount = "Add your Bank account";
+  // static const addService = "Add Service";
+  // static const addAdvertisementPost = "Add Advertisement Post";
+  // static const staffDetails = "Staff Details";
+  // static const cancelAppointmentDetails = "Cancel Appointment Details";
+  // static const todaySchedule = "Today Schedule";
+  // static const time = "Time";
+  // static const appointments = "Appointments";
   static const viewMore = "View more";
   static const viewLess = "View less";
   static const notification = "Notification";
@@ -143,5 +161,8 @@ class Strings {
 
   static const captureFromCamera = "capture from \n      camera";
   static const uploadFromGallery = "upload from  \n      gallery";
+
   static const selectGender = "Select Gender";
+
+  static const bookingId = "Booking ID :";
 }
