@@ -18,7 +18,7 @@ class PageRes {
 
   static String bookings = "/bookings";
 
-  ///_______________________________ admin part _____________________________
+  ///_______________________________ ADMIN PART -M _____________________________
   static String adminSignUpScreen = "/adminSignUpScreen";
   static String adminSignUpMobileScreen = "/adminSignUpMobileScreen";
   static String adminForgotOtpScreen = '/adminForgotOtpScreen';
@@ -27,6 +27,9 @@ class PageRes {
   static String adminNewPasswordScreen = "/adminNewPasswordScreen";
   static String adminPhoneOtpScreen = "/adminPhoneOtpScreen";
   static String adminDashBoardScreen = "/adminDashBoardScreen";
+  static String notificationScreen = "/notificationScreen";
+  static String addYourBankAccountScreen = "/addYourBankAccountScreen";
+  static String editBankAccountScreen = "/editBankAccountScreen";
 
   // static String bookings="/bookings";
   static String mostBookDetailsScreen = "/mostBookDetailsScreen";

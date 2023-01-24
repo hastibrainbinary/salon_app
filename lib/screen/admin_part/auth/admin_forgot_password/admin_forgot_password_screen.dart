@@ -128,7 +128,7 @@ class AdminForgotPasswordScreen extends StatelessWidget {
               commonButton(
                   onTap: () {
                     if (controller.validator()) {
-                      Get.toNamed(PageRes.adminForgotOtpScreen);
+                      Get.offAndToNamed(PageRes.adminForgotOtpScreen);
                     }
                   },
                   title: Strings.Continue,

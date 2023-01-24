@@ -160,7 +160,7 @@ Future password(context, {String? flow}) {
               const SizedBox(height: 20),
               commonButton(
                   onTap: () => (flow == "admin")
-                      ? Get.toNamed(PageRes.adminForgotPassword)
+                      ? Get.offAndToNamed(PageRes.adminForgotPassword)
                       : Get.toNamed(PageRes.forgotPassword),
                   title: Strings.forgotPassword,
                   textColor: ColorRes.white,

@@ -70,20 +70,6 @@ class Strings {
   static const nearbySalon = "Nearby Salon";
   static const todayBookings = "Today’s Bookings";
 
-  ///_________________________________________ admin part ___________________________________
-  static const shopName = "Shop name";
-  static const emailID = "Email ID";
-  static const location = "Location";
-  static const createAccount = "Create account";
-  static const addyourBankaccount = "Add your Bank account";
-  static const addService = "Add Service";
-  static const addAdvertisementPost = "Add Advertisement Post";
-  static const staffDetails = "Staff Details";
-  static const cancelAppointmentDetails = "Cancel Appointment Details";
-  static const todaySchedule = "Today Schedule";
-  static const time = "Time";
-  static const appointments = "Appointments";
-
   static const about = "About";
   static const reviews = "Reviews";
   static const openingHours = "Opening Hours";
@@ -119,4 +105,35 @@ class Strings {
   static const addProfilePhoto = "Add profile photo";
   static const addPhoto = "Add Photo";
   static const selectAContent = "select a content type";
+
+  ///_________________________________________ ADMIN PART -M ___________________________________
+  static const shopName = "Shop name";
+  static const emailID = "Email ID";
+  static const location = "Location";
+  static const createAccount = "Create account";
+  static const addyourBankaccount = "Add your Bank account";
+  static const addService = "Add Service";
+  static const addAdvertisementPost = "Add Advertisement Post";
+  static const staffDetails = "Staff Details";
+  static const cancelAppointmentDetails = "Cancel Appointment Details";
+  static const todaySchedule = "Today Schedule";
+  static const time = "Time";
+  static const appointments = "Appointments";
+  static const viewMore = "View more";
+  static const viewLess = "View less";
+  static const notification = "Notification";
+  static const bankAccount = "Bank account";
+  static const bookAppointmentNotification = "Rohan Surve Book Appointment.";
+  static const cancelAppointmentNotification =
+      "Rohan Surve Cancel Appointment.";
+  static const accountHoldersName = "Account Holder’s Name :";
+  static const accountNumber = "Account Number :";
+  static const reEnterAccountNumber = 'Re Enter Account Number :';
+  static const businessBankAccount = "Business Bank Account?";
+  static const editBankAccount = "Edit Bank account";
+  static const submit = "Submit";
+  static const service = "Service";
+
+  ///__________________________________________ THE END ADMIN PART -M ________________________________________________
+
 }

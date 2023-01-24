@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:salon_app/screen/admin_part/admin_home/admin_dashboard_screen.dart';
+import 'package:salon_app/screen/admin_part/admin_home/home/screens/add_your_bank_account/add_your_bank_account_screen.dart';
+import 'package:salon_app/screen/admin_part/admin_home/home/screens/add_your_bank_account/edit_account/edit_account.dart';
+import 'package:salon_app/screen/admin_part/admin_home/home/screens/notifocation/notification_screen.dart';
 import 'package:salon_app/screen/admin_part/auth/admin_forgot_otp/admin_forgot_otp_screen.dart';
 import 'package:salon_app/screen/admin_part/auth/admin_forgot_password/admin_forgot_password_screen.dart';
 import 'package:salon_app/screen/admin_part/auth/admin_log_in/admin_log_in_screen.dart';
@@ -81,6 +84,18 @@ class MyApp extends StatelessWidget {
           ///_____________________________________ admin ____________________________________
           GetPage(
               name: PageRes.adminSignUpScreen, page: () => AdminSignUpScreen()),
+
+          GetPage(
+              name: PageRes.notificationScreen,
+              page: () => NotificationScreen()),
+
+          GetPage(
+              name: PageRes.addYourBankAccountScreen,
+              page: () => AddYourBankAccountScreen()),
+
+          GetPage(
+              name: PageRes.editBankAccountScreen,
+              page: () => EditBankAccountScreen()),
           GetPage(
               name: PageRes.adminSignUpMobileScreen,
               page: () => AdminSignUpMobileNumberScreen()),
