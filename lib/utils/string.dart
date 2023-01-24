@@ -74,6 +74,10 @@ class Strings {
   static const past="Past";
   static const cancelled="Cancelled";
   static const barber="Barber:";
+  static const cancel="Cancel";
+  static const book="Book";
+  static const cancelAppointment="Cancel appointment";
+
 
 
 
@@ -128,4 +132,5 @@ class Strings {
   static const captureFromCamera = "capture from \n      camera";
   static const uploadFromGallery = "upload from  \n      gallery";
   static const selectGender="Select Gender";
+  static const bookingId="Booking ID :";
 }

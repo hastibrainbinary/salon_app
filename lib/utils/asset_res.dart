@@ -52,6 +52,9 @@ class AssetRes {
   static const gallery="${icons}gallery.png";
   static const girl="${icons}girl.png";
   static const men="${icons}men.png";
+  static const msg="${icons}msg.png";
+  static const timer="${icons}timer.png";
+  static const menuIcon="${icons}menuIcon.png";
 
   ///____________________________ admin part _______________________________
 

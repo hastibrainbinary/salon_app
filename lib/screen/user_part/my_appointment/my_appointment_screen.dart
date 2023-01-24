@@ -142,10 +142,31 @@ class MyAppointmentScreen extends StatelessWidget {
         SizedBox(height: Get.height * 0.0369),
         Obx(
           () => myAppointmentController.isSelect.value == Strings.upcoming
-              ? upComing()
+              ? Expanded(
+                child: ListView.separated(itemBuilder: (context, index) {
+                  return upComing();
+                }, separatorBuilder:
+                (context, index) {
+                  return const SizedBox(height: 30);
+                }, itemCount: 3),
+              )
               : myAppointmentController.isSelect.value == Strings.past
-                  ? Text("past")
-                  : Text("cancelled"),
+                  ? Expanded(
+            child: ListView.separated(itemBuilder: (context, index) {
+              return past();
+            }, separatorBuilder:
+                (context, index) {
+              return const SizedBox(height: 30);
+            }, itemCount: 3),
+          )
+                  : Expanded(
+            child: ListView.separated(itemBuilder: (context, index) {
+              return cancelled();
+            }, separatorBuilder:
+                (context, index) {
+              return const SizedBox(height: 30);
+            }, itemCount: 3),
+          ),
         )
       ]),
     );

@@ -38,4 +38,5 @@ class PageRes {
   static String bookAppointmentScreen="/bookAppointmentScreen";
   static String appointmentScreen="/appointmentScreen";
   static String profileScreen="/profileScreen";
+  static String appointmentBookingScreen="/AppointmentBookingScreen";
 }
