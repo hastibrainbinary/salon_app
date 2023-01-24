@@ -73,6 +73,7 @@ class Strings {
   static const upcoming="Upcoming";
   static const past="Past";
   static const cancelled="Cancelled";
+  static const barber="Barber:";
 
 
 
