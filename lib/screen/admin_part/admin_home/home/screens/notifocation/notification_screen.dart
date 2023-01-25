@@ -20,12 +20,12 @@ class NotificationScreen extends StatelessWidget {
             alignment: Alignment.center,
             children: [
               Container(
-                height:
-                    Get.height > 800 ? Get.height * 0.3 : Get.height * 0.289,
+                // height:
+                //     Get.height > 800 ? Get.height * 0.3 : Get.height * 0.289,
                 width: Get.width,
                 child: const Image(
-                  image: AssetImage(AssetRes.homeDesign),
-                  fit: BoxFit.fill,
+                  image: AssetImage(AssetRes.mostBookBack),
+                  // fit: BoxFit.fill,
                 ),
               ),
               Padding(
@@ -65,7 +65,7 @@ class NotificationScreen extends StatelessWidget {
           ),
           Padding(
             padding: EdgeInsets.only(
-              top: Get.height * 0.3,
+              top: Get.height * 0.2,
             ),
             child: ListView.builder(
                 itemCount: 7,
@@ -106,7 +106,7 @@ class NotificationScreen extends StatelessWidget {
                                   bottom: Get.height * 0.02),
                               padding: EdgeInsets.only(
                                 left: Get.width * 0.055,
-                                right: Get.width * 0.055,
+                                // right: Get.width * 0.055,
                               ),
                               decoration: BoxDecoration(
                                   color: ColorRes.white,
@@ -115,7 +115,8 @@ class NotificationScreen extends StatelessWidget {
                                     BoxShadow(
                                         spreadRadius: 1,
                                         blurRadius: 10,
-                                        color: Colors.grey.withOpacity(0.1))
+                                        color: ColorRes.indicator
+                                            .withOpacity(0.12))
                                   ]),
                               child: Row(children: [
                                 SizedBox(
@@ -134,6 +135,7 @@ class NotificationScreen extends StatelessWidget {
                                   (index == 4)
                                       ? Strings.cancelAppointmentNotification
                                       : Strings.bookAppointmentNotification,
+                                  overflow: TextOverflow.ellipsis,
                                   style: appTextStyle(
                                       fontSize: 13,
                                       fontWeight: FontWeight.w500,

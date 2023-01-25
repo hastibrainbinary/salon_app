@@ -6,6 +6,7 @@ Widget commonButton(
     required Color textColor,
     required Color backgroundColor,
     VoidCallback? onTap,
+    TextStyle? style,
     double? width}) {
   return InkWell(
     onTap: onTap ?? () {},
@@ -19,8 +20,10 @@ Widget commonButton(
       ),
       child: Text(
         title,
-        style: appTextStyle(
-            fontSize: 16, fontWeight: FontWeight.w500, color: textColor),
+        style: (style == null)
+            ? appTextStyle(
+                fontSize: 16, fontWeight: FontWeight.w500, color: textColor)
+            : style,
       ),
     ),
   );

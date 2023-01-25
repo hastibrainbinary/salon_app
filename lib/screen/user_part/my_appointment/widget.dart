@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:salon_app/common/common_btn.dart';
 import 'package:salon_app/utils/app_style.dart';
 import 'package:salon_app/utils/asset_res.dart';
 import 'package:salon_app/utils/color_res.dart';
 import 'package:salon_app/utils/page_res.dart';
 import 'package:salon_app/utils/string.dart';
 
-Widget upComing() {
+Widget upComing({required BuildContext context}) {
   return Padding(
-    padding: const EdgeInsets.only(left: 25 ),
+    padding: const EdgeInsets.only(left: 25),
     child: Column(
       children: [
         Stack(
@@ -43,7 +44,8 @@ Widget upComing() {
                                 borderRadius: BorderRadius.circular(23),
                               ),
                               child: Padding(
-                                padding: const EdgeInsets.only(left: 80, top: 10),
+                                padding:
+                                    const EdgeInsets.only(left: 80, top: 10),
                                 child: Column(
                                   mainAxisAlignment: MainAxisAlignment.start,
                                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -56,7 +58,8 @@ Widget upComing() {
                                           color: ColorRes.black),
                                     ),
                                     Row(
-                                      mainAxisAlignment: MainAxisAlignment.start,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.start,
                                       crossAxisAlignment:
                                           CrossAxisAlignment.center,
                                       children: [
@@ -79,7 +82,8 @@ Widget upComing() {
                                       ],
                                     ),
                                     Padding(
-                                      padding: const EdgeInsets.only(left: 38.0),
+                                      padding:
+                                          const EdgeInsets.only(left: 38.0),
                                       child: Column(
                                         mainAxisAlignment:
                                             MainAxisAlignment.start,
@@ -108,12 +112,113 @@ Widget upComing() {
                                     SizedBox(height: Get.height * 0.0221),
                                     Row(
                                       children: [
-                                        Text(
-                                          Strings.cancel,
-                                          style: appTextStyle(
-                                              color: ColorRes.red,
-                                              fontSize: 11,
-                                              fontWeight: FontWeight.w500),
+                                        InkWell(
+                                          onTap: () {
+                                            showDialog(
+                                                barrierDismissible: false,
+                                                barrierColor: ColorRes.black
+                                                    .withOpacity(0.8),
+                                                context: context,
+                                                builder:
+                                                    (context) => AlertDialog(
+                                                          actionsPadding:
+                                                              const EdgeInsets
+                                                                  .all(0),
+                                                          contentPadding:
+                                                              EdgeInsets.all(0),
+                                                          elevation: 0,
+                                                          backgroundColor:
+                                                              Colors
+                                                                  .transparent,
+                                                          content: Stack(
+                                                              alignment:
+                                                                  const Alignment(
+                                                                      1.2,
+                                                                      -1.3),
+                                                              children: [
+                                                                Container(
+                                                                  alignment:
+                                                                      Alignment
+                                                                          .center,
+                                                                  height: 194,
+                                                                  // width: 301,
+                                                                  decoration: BoxDecoration(
+                                                                      color: ColorRes
+                                                                          .white,
+                                                                      borderRadius:
+                                                                          BorderRadius.circular(
+                                                                              5)),
+                                                                  child: Column(
+                                                                      mainAxisAlignment:
+                                                                          MainAxisAlignment
+                                                                              .center,
+                                                                      children: [
+                                                                        Text(
+                                                                          Strings
+                                                                              .cancelAppointmentTxt,
+                                                                          textAlign:
+                                                                              TextAlign.center,
+                                                                          style: appTextStyle(
+                                                                              fontSize: 15,
+                                                                              color: ColorRes.black,
+                                                                              fontWeight: FontWeight.w500),
+                                                                        ),
+                                                                        SizedBox(
+                                                                          height:
+                                                                              Get.height * 0.03,
+                                                                        ),
+                                                                        SizedBox(
+                                                                          height:
+                                                                              45,
+                                                                          width:
+                                                                              219,
+                                                                          child: commonButton(
+                                                                              style: appTextStyle(fontSize: 11, fontWeight: FontWeight.w600),
+                                                                              title: Strings.yesCancelAppointment,
+                                                                              textColor: ColorRes.white,
+                                                                              backgroundColor: ColorRes.indicator),
+                                                                        ),
+                                                                      ]),
+                                                                ),
+                                                                InkWell(
+                                                                  onTap: () {
+                                                                    print(
+                                                                        "tapped....");
+                                                                    Get.back();
+                                                                  },
+                                                                  child:
+                                                                      Container(
+                                                                    alignment:
+                                                                        const Alignment(
+                                                                            1,
+                                                                            -1),
+                                                                    height: 50,
+                                                                    width: 50,
+                                                                    color: Colors
+                                                                        .transparent,
+                                                                    child: Transform.scale(
+                                                                        scale: 0.6,
+                                                                        // height: 30,
+                                                                        // width: 30,
+                                                                        // margin: EdgeInsets.all(2),
+                                                                        child: Image.asset(
+                                                                          AssetRes
+                                                                              .closeIcon,
+                                                                          // fit: BoxFit
+                                                                          //     .cover,
+                                                                        )),
+                                                                  ),
+                                                                ),
+                                                              ]),
+                                                        ));
+                                          },
+                                          child: Text(
+                                            Strings.cancel,
+                                            style: appTextStyle(
+                                                color: ColorRes.red,
+                                                fontSize: 11,
+                                                fontWeight: FontWeight.w500),
+                                          ),
                                         ),
                                         SizedBox(width: Get.width * 0.1813),
                                         const Image(
@@ -172,9 +277,10 @@ Widget upComing() {
     ),
   );
 }
+
 Widget past() {
   return Padding(
-    padding: const EdgeInsets.only(left: 25 ),
+    padding: const EdgeInsets.only(left: 25),
     child: Column(
       children: [
         Stack(
@@ -209,7 +315,8 @@ Widget past() {
                                 borderRadius: BorderRadius.circular(23),
                               ),
                               child: Padding(
-                                padding: const EdgeInsets.only(left: 80, top: 10),
+                                padding:
+                                    const EdgeInsets.only(left: 80, top: 10),
                                 child: Column(
                                   mainAxisAlignment: MainAxisAlignment.start,
                                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -222,9 +329,10 @@ Widget past() {
                                           color: ColorRes.black),
                                     ),
                                     Row(
-                                      mainAxisAlignment: MainAxisAlignment.start,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.start,
                                       crossAxisAlignment:
-                                      CrossAxisAlignment.center,
+                                          CrossAxisAlignment.center,
                                       children: [
                                         Text(
                                           Strings.barber,
@@ -245,12 +353,13 @@ Widget past() {
                                       ],
                                     ),
                                     Padding(
-                                      padding: const EdgeInsets.only(left: 38.0),
+                                      padding:
+                                          const EdgeInsets.only(left: 38.0),
                                       child: Column(
                                         mainAxisAlignment:
-                                        MainAxisAlignment.start,
+                                            MainAxisAlignment.start,
                                         crossAxisAlignment:
-                                        CrossAxisAlignment.start,
+                                            CrossAxisAlignment.start,
                                         children: [
                                           Text(
                                             "Hair cut and Beard trim",
@@ -338,9 +447,10 @@ Widget past() {
     ),
   );
 }
+
 Widget cancelled() {
   return Padding(
-    padding: const EdgeInsets.only(left: 25 ),
+    padding: const EdgeInsets.only(left: 25),
     child: Column(
       children: [
         Stack(
@@ -375,7 +485,8 @@ Widget cancelled() {
                                 borderRadius: BorderRadius.circular(23),
                               ),
                               child: Padding(
-                                padding: const EdgeInsets.only(left: 80, top: 10),
+                                padding:
+                                    const EdgeInsets.only(left: 80, top: 10),
                                 child: Column(
                                   mainAxisAlignment: MainAxisAlignment.start,
                                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -388,9 +499,10 @@ Widget cancelled() {
                                           color: ColorRes.black),
                                     ),
                                     Row(
-                                      mainAxisAlignment: MainAxisAlignment.start,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.start,
                                       crossAxisAlignment:
-                                      CrossAxisAlignment.center,
+                                          CrossAxisAlignment.center,
                                       children: [
                                         Text(
                                           Strings.barber,
@@ -411,12 +523,13 @@ Widget cancelled() {
                                       ],
                                     ),
                                     Padding(
-                                      padding: const EdgeInsets.only(left: 38.0),
+                                      padding:
+                                          const EdgeInsets.only(left: 38.0),
                                       child: Column(
                                         mainAxisAlignment:
-                                        MainAxisAlignment.start,
+                                            MainAxisAlignment.start,
                                         crossAxisAlignment:
-                                        CrossAxisAlignment.start,
+                                            CrossAxisAlignment.start,
                                         children: [
                                           Text(
                                             "Hair cut and Beard trim",

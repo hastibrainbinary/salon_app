@@ -50,6 +50,9 @@ class AssetRes {
   static const chatDark = "${icons}chatDark.png";
   static const userL = "${icons}userL.png";
   static const hairCut = "${icons}hairCut.png";
+  static const closeIcon = "${icons}close_icon.png";
+  static const pinIcon = "${icons}pin_icon.png";
+  static const sendIcon = "${icons}send_icon.png";
 
   static const gallery = "${icons}gallery.png";
   static const girl = "${icons}girl.png";
@@ -64,7 +67,7 @@ class AssetRes {
   static const resetPassword="${icons}resetPassword.png";
   static const logout="${icons}logout.png";
 
-  ///____________________________ admin part _______________________________
+  ///____________________________ ADMIN PART -M _______________________________
 
   ///____________________ icons ____________________
   static const locationIcon = "${icons}location.png";

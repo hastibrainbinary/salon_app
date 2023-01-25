@@ -14,63 +14,172 @@ class ServiceScreen extends StatelessWidget {
       body: SizedBox(
         height: Get.height,
         width: Get.width,
-          child: Stack(
-        children: [
-          Stack(
-            alignment: Alignment.center,
-            children: [
-              Container(
-                height:
-                    Get.height > 800 ? Get.height * 0.3 : Get.height * 0.289,
-                width: Get.width,
-                child: const Image(
-                  image: AssetImage(AssetRes.homeDesign),
-                  fit: BoxFit.fill,
+        child: Stack(
+          children: [
+            Stack(
+              alignment: Alignment.center,
+              children: [
+                Container(
+                  // height:
+                  //     Get.height > 800 ? Get.height * 0.3 : Get.height * 0.25,
+                  width: Get.width,
+                  child: const Image(
+                    image: AssetImage(AssetRes.mostBookBack),
+                    fit: BoxFit.fill,
+                  ),
                 ),
-              ),
-              Padding(
+                Padding(
+                  padding: EdgeInsets.only(
+                      left: Get.width * 0.055, right: Get.width * 0.055),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      InkWell(
+                        onTap: () {
+                          Get.back();
+                        },
+                        child: const Icon(Icons.arrow_back_ios_new_rounded,
+                            color: ColorRes.white, size: 20),
+                      ),
+                      const Spacer(),
+                      Text(
+                        Strings.service,
+                        style: appTextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                      const Spacer(),
+                      InkWell(
+                        onTap: () {
+                          Get.back();
+                        },
+                        child: const Icon(Icons.more_vert,
+                            color: ColorRes.white, size: 20),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+            Padding(
                 padding: EdgeInsets.only(
-                    left: Get.width * 0.055, right: Get.width * 0.055),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
+                  top: Get.height * 0.25,
+                ),
+                child: Column(
                   children: [
-                    InkWell(
-                      onTap: () {
-                        Get.back();
-                      },
-                      child: const Icon(Icons.arrow_back_ios_new_rounded,
-                          color: ColorRes.white, size: 20),
-                    ),
-                    const Spacer(),
-                    Text(
-                      Strings.service,
-                      style: appTextStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeight.w500,
+                    Container(
+                      width: 320,
+                      height: 100,
+                      /*  decoration: BoxDecoration(
+                         border: Border.all()
+                        ),*/
+                      child: ListView.separated(
+                        scrollDirection: Axis.horizontal,
+                        physics: const AlwaysScrollableScrollPhysics(),
+                        shrinkWrap: true,
+                        itemCount: 10,
+                        itemBuilder: (BuildContext context, int index) {
+                          return Column(
+                            children: [
+                              Container(
+                                height: 70,
+                                width: 70,
+                                padding: const EdgeInsets.all(16),
+                                decoration: BoxDecoration(
+                                    color: ColorRes.white,
+                                    borderRadius: BorderRadius.circular(70),
+                                    boxShadow: [
+                                      BoxShadow(
+                                        color: const Color(0xff94674F)
+                                            .withOpacity(0.2),
+                                        offset: const Offset(0.0, 4),
+                                        blurRadius: 23.0,
+                                      ),
+                                    ]),
+                                child: const Image(
+                                  image: AssetImage(AssetRes.hairCut),
+                                ),
+                              ),
+
+                              /*  const CircleAvatar(
+                  backgroundColor: ColorRes.white,
+                  radius: 35,
+                  child: Image(
+                    image: AssetImage(AssetRes.hairCut),
+                    height: 45,
+                  ),
+                ),*/
+                              Text(
+                                "Hair cut",
+                                style: appTextStyle(
+                                    color: ColorRes.black,
+                                    fontSize: 10,
+                                    fontWeight: FontWeight.w400),
+                              )
+                            ],
+                          );
+                        },
+                        separatorBuilder: (BuildContext context, int index) {
+                          return const SizedBox(width: 12);
+                        },
                       ),
                     ),
-                    const Spacer(),
-                    const Visibility(
-                      visible: false,
-                      maintainSize: true,
-                      maintainState: true,
-                      maintainAnimation: true,
-                      child: Icon(Icons.arrow_back_ios_new_rounded,
-                          color: ColorRes.white, size: 15),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 30),
+                      child: SizedBox(
+                        height: Get.height * 0.56,
+                        width: Get.width,
+                        child: ListView.separated(
+                          itemCount: 8,
+                          // shrinkWrap: true,
+                          physics: const BouncingScrollPhysics(),
+                          itemBuilder: (context, index) {
+                            return Row(
+                              children: [
+                                Container(
+                                  height: 60,
+                                  width: 60,
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(10),
+                                  ),
+                                  child: const Image(
+                                      image: AssetImage(AssetRes.imageStyel)),
+                                ),
+                                SizedBox(width: Get.width * 0.0533),
+                                Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      "Hair Cut",
+                                      style: appTextStyle(
+                                          fontSize: 13,
+                                          fontWeight: FontWeight.w400,
+                                          color: ColorRes.black),
+                                    ),
+                                    Text(
+                                      "\$50.00",
+                                      style: appTextStyle(
+                                          color: ColorRes.black,
+                                          fontSize: 12,
+                                          fontWeight: FontWeight.w400),
+                                    )
+                                  ],
+                                )
+                              ],
+                            );
+                          },
+                          separatorBuilder: (BuildContext context, int index) {
+                            return const SizedBox(height: 15);
+                          },
+                        ),
+                      ),
                     ),
+                    SizedBox(height: Get.height * 0.0369),
                   ],
-                ),
-              ),
-            ],
-          ),
-          Padding(
-            padding: EdgeInsets.only(
-              top: Get.height * 0.3,
-            ),
-            child:Column()      ),
-        ],
-      ),
-  
+                )),
+          ],
+        ),
       ),
     );
   }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:salon_app/screen/admin_part/admin_chat/messages_screen.dart';
 import 'package:salon_app/screen/admin_part/admin_home/admin_dashboard_controller.dart';
 import 'package:salon_app/screen/admin_part/admin_home/home/admin_home_screen.dart';
 import 'package:salon_app/utils/asset_res.dart';
@@ -22,9 +23,7 @@ class AdminDashboardScreen extends StatelessWidget {
                   child: Text("appointments"),
                 )
               : adminDashboardController.selectedIndex.value == 2
-                  ? const Center(
-                      child: Text("chat"),
-                    )
+                  ? AdminMessagesScreen()
                   : const Center(
                       child: Text("shop"),
                     )),

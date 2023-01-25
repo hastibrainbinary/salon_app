@@ -1,4 +1,4 @@
-class   Strings {
+class Strings {
   ///-----------------------introductionScreen-------------------------------------------
 
   static const skip = "Skip";
@@ -154,10 +154,15 @@ class   Strings {
   static const addProfilePhoto = "Add profile photo";
   static const addPhoto = "Add Photo";
   static const selectAContent = "select a content type";
+
   static const captureFromCamera = "capture from \n      camera";
   static const uploadFromGallery = "upload from  \n      gallery";
-  static const selectGender = "Select Gender";
-  static const bookingId = "Booking ID :";
+  static const selectGender="Select Gender";
+  static const bookingId="Booking ID :";
+
+  static const cancelAppointmentTxt =
+      "Are you sure,\nyou want to cancel your\nappointment?";
+  static const yesCancelAppointment = "Yes, Cancel appointment";
 
   ///_________________________________________ ADMIN PART -M ___________________________________
 
@@ -177,5 +182,6 @@ class   Strings {
   static const service = "Service";
 
   ///__________________________________________ THE END ADMIN PART -M ________________________________________________
+
 
 }
