@@ -169,7 +169,7 @@ class MessagesScreen extends StatelessWidget {
               ],
             ),
           ),
-          SizedBox(height: Get.height * 0.0369),
+          SizedBox(height: Get.height * 0.0123),
           Obx(() => messagesController.isSelect.value == Strings.messages
               ? Expanded(
                   child: ListView.separated(
@@ -181,7 +181,16 @@ class MessagesScreen extends StatelessWidget {
                       },
                       itemCount: 9),
                 )
-              : Text("call"))
+              : Expanded(
+                  child: ListView.separated(
+                      itemBuilder: (context, index) {
+                        return call();
+                      },
+                      separatorBuilder: (context, index) {
+                        return SizedBox(height: 30);
+                      },
+                      itemCount: 9),
+                )),
         ],
       ),
     );

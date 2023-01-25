@@ -68,3 +68,53 @@ Widget messages() {
     ],
   );
 }
+Widget call() {
+  return Column(
+    children: [
+      Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 25),
+        child: Row(
+          children: [
+            Container(
+              height: 50,
+              width: 50,
+              decoration: BoxDecoration(
+                  image: const DecorationImage(
+                      image: AssetImage(AssetRes.detailsScreen),
+                      fit: BoxFit.cover),
+                  borderRadius: BorderRadius.circular(50)),
+            ),
+            SizedBox(width: Get.width * 0.04),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  Strings.serenitySalon,
+                  style: appTextStyle(
+                      color: ColorRes.black,
+                      fontWeight: FontWeight.w500,
+                      fontSize: 14),
+                ),
+                Text(
+                  "Incoming",
+                  style: appTextStyle(
+                      color: ColorRes.black,
+                      fontWeight: FontWeight.w400,
+                      fontSize: 10),
+                )
+              ],
+            ),
+            SizedBox(width: Get.width * 0.3466),
+            Text(
+              Strings.now,
+              style: appTextStyle(
+                  color: ColorRes.indicator,
+                  fontWeight: FontWeight.w500,
+                  fontSize: 11),
+            )
+          ],
+        ),
+      )
+    ],
+  );
+}
