@@ -31,6 +31,7 @@ class AssetRes {
   static const staff = "${images}staff.png";
   static const imageStyel = "${images}imageStyel.png";
   static const bookingUser = "${images}bookingUser.png";
+  static const profileBack = "${images}profileBack.png";
 
   ///------------------------------icons------------------------------------------------------
   static const phoneIcon = '${icons}phoneIcon.png';
@@ -56,6 +57,12 @@ class AssetRes {
   static const msg = "${icons}msg.png";
   static const timer = "${icons}timer.png";
   static const menuIcon = "${icons}menuIcon.png";
+  static const notification = "${icons}notification.png";
+  static const filterU = "${icons}filterU.png";
+  static const payment = "${icons}payment.png";
+  static const language = "${icons}language.png";
+  static const resetPassword="${icons}resetPassword.png";
+  static const logout="${icons}logout.png";
 
   ///____________________________ admin part _______________________________
 
@@ -84,10 +91,9 @@ class AssetRes {
 
   static const arrow = "${icons}arrow.png";
 
-  static const heart="${icons}heart.png";
-  static const reply="${icons}reply.png";
-  static const male="${icons}male.png";
-  static const female="${icons}female.png";
-
-
+  static const heart = "${icons}heart.png";
+  static const reply = "${icons}reply.png";
+  static const male = "${icons}male.png";
+  static const female = "${icons}female.png";
+  static const inviteFriend = "${icons}inviteFriend.png";
 }

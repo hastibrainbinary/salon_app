@@ -33,6 +33,11 @@ import 'package:salon_app/screen/user_part/dashboard/most_book/most_book_screen.
 import 'package:salon_app/screen/user_part/my_appointment/appointment_booking/appointment_booking_screen.dart';
 import 'package:salon_app/screen/user_part/nearby_salons/nearby_salons_screen.dart';
 import 'package:salon_app/screen/user_part/profile/profile_screen.dart';
+import 'package:salon_app/screen/user_part/profile_user/filter/filter_screen_user.dart';
+import 'package:salon_app/screen/user_part/profile_user/invite_friend/invite_friend_screen.dart';
+import 'package:salon_app/screen/user_part/profile_user/notificationU/notification_user_Screen.dart';
+import 'package:salon_app/screen/user_part/profile_user/privacy_policy/privacy_policy_screen.dart';
+import 'package:salon_app/screen/user_part/profile_user/reset_password_user/reset_password_user_screen.dart';
 import 'package:salon_app/screen/user_part/select_gender/select_gender_screen.dart';
 import 'package:salon_app/sign_up&login_intro/sign_up_login_screen.dart';
 import 'package:salon_app/utils/page_res.dart';
@@ -96,6 +101,14 @@ class MyApp extends StatelessWidget {
               page: () => AppointmentBookingScreen()),
 
           GetPage(name: PageRes.messagesScreen, page: () => MessagesScreen()),
+          GetPage(name: PageRes.notificationUserScreen, page: () => NotificationUserScreen()),
+          GetPage(name: PageRes.filterScreenUser, page: () => FilterScreenUser()),
+          GetPage(name: PageRes.resetPasswordsScreen, page: () => ResetPasswordsScreen()),
+          GetPage(name: PageRes.inviteFriendScreen, page: () => InviteFriendScreen()),
+          GetPage(name: PageRes.privacyPolicyScreen, page:()=> PrivacyPolicyScreen()),
+
+
+
 
           ///_____________________________________ admin ____________________________________
           GetPage(

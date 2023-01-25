@@ -5,6 +5,7 @@ import 'package:salon_app/screen/user_part/dashboard/home/home_screen.dart';
 import 'package:salon_app/screen/user_part/messages/messages_screen.dart';
 import 'package:salon_app/screen/user_part/my_appointment/my_appointment_screen.dart';
 import 'package:salon_app/screen/user_part/nearby_salons/nearby_salons_screen.dart';
+import 'package:salon_app/screen/user_part/profile_user/profile_user_screen.dart';
 import 'package:salon_app/utils/asset_res.dart';
 import 'package:salon_app/utils/color_res.dart';
 
@@ -24,9 +25,7 @@ class DashBoardScreen extends StatelessWidget {
                   ? MyAppointmentScreen()
                   : dashBoardController.selectedIndex.value == 3
                       ? MessagesScreen()
-                      : const Center(
-                          child: Text("user"),
-                        )),
+                      :  ProfileUserScreen()),
       bottomNavigationBar: ClipRRect(
           borderRadius: const BorderRadius.only(
             topLeft: Radius.circular(30.0),

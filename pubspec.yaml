@@ -43,6 +43,7 @@ dependencies:
   weekly_date_picker: ^1.3.0
   dotted_border: ^2.0.0+3
   image_picker: ^0.8.6+1
+  flutter_switch: ^0.3.2
 
   # _____________ ui - M ________________
   flutter_dash: ^1.0.0

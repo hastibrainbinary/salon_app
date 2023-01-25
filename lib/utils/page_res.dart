@@ -21,6 +21,10 @@ class PageRes {
   static String selectGender = "/selectGender";
   static String nearBySalonScreen = "/nearBySalonScreen";
   static String messagesScreen="/messagesScreen";
+  static String filterScreenUser="/filterScreenUser";
+  static String resetPasswordsScreen="/resetPasswordsScreen";
+  static String inviteFriendScreen="/inviteFriendScreen";
+  static String privacyPolicyScreen="/privacyPolicyScreen";
 
   ///_______________________________ ADMIN PART -M _____________________________
   static String adminSignUpScreen = "/adminSignUpScreen";
@@ -46,6 +50,7 @@ class PageRes {
   static String appointmentScreen="/appointmentScreen";
   static String profileScreen="/profileScreen";
   static String appointmentBookingScreen="/AppointmentBookingScreen";
+  static String notificationUserScreen="/notificationUserScreen";
 
 
 

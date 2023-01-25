@@ -3,14 +3,13 @@ import 'package:get/get.dart';
 import 'package:salon_app/utils/app_style.dart';
 import 'package:salon_app/utils/color_res.dart';
 
-Widget containerWithTitle(
+Widget containerWithTitleProfile(
     {required String title,
     required String icon,
-      
+      String? language,
     required VoidCallback onTap}) {
   return Container(
     height: 55,
-    // width: 325,
     margin: EdgeInsets.only(left: Get.width * 0.055, right: Get.width * 0.055),
     padding: EdgeInsets.only(left: Get.width * 0.08, right: Get.width * 0.07),
     decoration: BoxDecoration(
@@ -20,16 +19,18 @@ Widget containerWithTitle(
           BoxShadow(
               blurRadius: 10,
               spreadRadius: 1,
-              offset: Offset(0, 4),
+              offset: const Offset(0, 4),
               color: ColorRes.indicator.withOpacity(0.15)),
         ]),
     child: Row(children: [
       SizedBox(
-          height: 25,
-          width: 25,
-          child: Image.asset(
-            icon,
-          )),
+        height: 24,
+        width: 24,
+        child: Image.asset(
+          icon,
+          color: ColorRes.black,
+        ),
+      ),
       SizedBox(
         width: Get.width * 0.05,
       ),
@@ -42,18 +43,27 @@ Widget containerWithTitle(
         ),
       ),
       const Spacer(),
-      InkWell(
-        onTap: onTap,
-        child: Container(
-          alignment: Alignment.centerRight,
-          color: Colors.transparent,
-          height: 15,
-          width: 15,
-          child: const Icon(
-            Icons.arrow_forward_ios_rounded,
-            size: 12,
+      Row(
+        children: [
+          language==null?SizedBox():
+          Text(language, style: appTextStyle(
+              color: ColorRes.black,
+              fontSize: 12,
+              fontWeight: FontWeight.w500)),
+          InkWell(
+            onTap: onTap,
+            child: Container(
+              alignment: Alignment.centerRight,
+              color: Colors.transparent,
+              height: 15,
+              width: 15,
+              child: const Icon(
+                Icons.arrow_forward_ios_rounded,
+                size: 12,
+              ),
+            ),
           ),
-        ),
+        ],
       )
     ]),
   );
