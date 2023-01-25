@@ -78,6 +78,9 @@ class Strings {
   static const cancel = "Cancel";
   static const book = "Book";
   static const cancelAppointment = "Cancel appointment";
+  static const messages="Messages";
+  static const call="Call";
+  static const now="Now";
 
   ///_________________________________________ admin part ___________________________________
   static const shopName = "Shop name";

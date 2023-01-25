@@ -1,5 +1,5 @@
+import 'dart:io';
 import 'package:flutter/material.dart';
-import 'package:flutter_dash/flutter_dash.dart';
 import 'package:get/get.dart';
 import 'package:salon_app/screen/admin_part/admin_home/home/admin_home_controller.dart';
 import 'package:salon_app/screen/admin_part/admin_home/home/widgets/commons.dart';
@@ -23,9 +23,7 @@ class AdminHomeScreen extends StatelessWidget {
         width: Get.width,
         child: SingleChildScrollView(
           child: Stack(
-            // alignment: Alignment.topCenter,
             children: [
-              // ignore: sized_box_for_whitespace
               Container(
                 height:
                     Get.height > 800 ? Get.height * 0.3 : Get.height * 0.289,
@@ -38,9 +36,7 @@ class AdminHomeScreen extends StatelessWidget {
               Column(
                 children: [
                   SizedBox(
-                    height:
-                        // 55
-                        Get.height * 0.072,
+                    height: Get.height * 0.072,
                   ),
                   Padding(
                     padding: EdgeInsets.only(
@@ -178,17 +174,17 @@ class AdminHomeScreen extends StatelessWidget {
                             Row(
                               children: [
                                 Text(
-                                  "${Strings.time}",
+                                  Strings.time,
                                   style: appTextStyle(
                                       color: ColorRes.color94674F,
                                       fontSize: 15,
                                       fontWeight: FontWeight.w500),
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   width: 58,
                                 ),
                                 Text(
-                                  "${Strings.appointments}",
+                                  Strings.appointments,
                                   style: appTextStyle(
                                       color: ColorRes.color94674F,
                                       fontSize: 15,

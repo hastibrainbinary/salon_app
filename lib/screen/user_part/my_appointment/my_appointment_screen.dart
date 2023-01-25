@@ -143,30 +143,36 @@ class MyAppointmentScreen extends StatelessWidget {
         Obx(
           () => myAppointmentController.isSelect.value == Strings.upcoming
               ? Expanded(
-                child: ListView.separated(itemBuilder: (context, index) {
-                  return upComing();
-                }, separatorBuilder:
-                (context, index) {
-                  return const SizedBox(height: 30);
-                }, itemCount: 3),
-              )
+                  child: ListView.separated(
+                      itemBuilder: (context, index) {
+                        return upComing();
+                      },
+                      separatorBuilder: (context, index) {
+                        return const SizedBox(height: 30);
+                      },
+                      itemCount: 3),
+                )
               : myAppointmentController.isSelect.value == Strings.past
                   ? Expanded(
-            child: ListView.separated(itemBuilder: (context, index) {
-              return past();
-            }, separatorBuilder:
-                (context, index) {
-              return const SizedBox(height: 30);
-            }, itemCount: 3),
-          )
+                      child: ListView.separated(
+                          itemBuilder: (context, index) {
+                            return past();
+                          },
+                          separatorBuilder: (context, index) {
+                            return const SizedBox(height: 30);
+                          },
+                          itemCount: 3),
+                    )
                   : Expanded(
-            child: ListView.separated(itemBuilder: (context, index) {
-              return cancelled();
-            }, separatorBuilder:
-                (context, index) {
-              return const SizedBox(height: 30);
-            }, itemCount: 3),
-          ),
+                      child: ListView.separated(
+                          itemBuilder: (context, index) {
+                            return cancelled();
+                          },
+                          separatorBuilder: (context, index) {
+                            return const SizedBox(height: 30);
+                          },
+                          itemCount: 3),
+                    ),
         )
       ]),
     );

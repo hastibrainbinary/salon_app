@@ -1,12 +1,9 @@
 import 'dart:io';
-
 import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:salon_app/common/common_btn.dart';
 import 'package:salon_app/screen/admin_part/profile/profile_controller.dart';
-import 'package:salon_app/screen/introduction_screen/widget/widget.dart';
-import 'package:salon_app/screen/user_part/profile/profile_controller.dart';
 import 'package:salon_app/utils/app_style.dart';
 import 'package:salon_app/utils/asset_res.dart';
 import 'package:salon_app/utils/color_res.dart';
@@ -146,21 +143,24 @@ class AdminProfileScreen extends StatelessWidget {
                     ),
             ),
             SizedBox(height: Get.height * 0.0184),
-            Obx(() => (profileController.imgPath.value != "")
-                ? const SizedBox()
-                : InkWell(
-                    onTap: () => Get.offAndToNamed(PageRes.adminDashBoardScreen,
-                        arguments: profileController.imgPath.value),
-                    child: Center(
-                      child: Text(
-                        Strings.skip,
-                        style: appTextStyle(
-                            color: ColorRes.black.withOpacity(0.5),
-                            fontSize: 15,
-                            fontWeight: FontWeight.w500),
+            Obx(
+              () => (profileController.imgPath.value != "")
+                  ? const SizedBox()
+                  : InkWell(
+                      onTap: () => Get.offAndToNamed(
+                          PageRes.adminDashBoardScreen,
+                          arguments: profileController.imgPath.value),
+                      child: Center(
+                        child: Text(
+                          Strings.skip,
+                          style: appTextStyle(
+                              color: ColorRes.black.withOpacity(0.5),
+                              fontSize: 15,
+                              fontWeight: FontWeight.w500),
+                        ),
                       ),
                     ),
-                  )),
+            ),
           ],
         ),
       ),

@@ -20,6 +20,7 @@ class PageRes {
   static String bookings = "/bookings";
   static String selectGender = "/selectGender";
   static String nearBySalonScreen = "/nearBySalonScreen";
+  static String messagesScreen="/messagesScreen";
 
   ///_______________________________ ADMIN PART -M _____________________________
   static String adminSignUpScreen = "/adminSignUpScreen";

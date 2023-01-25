@@ -38,6 +38,8 @@ import 'package:salon_app/sign_up&login_intro/sign_up_login_screen.dart';
 import 'package:salon_app/utils/page_res.dart';
 import 'package:salon_app/screen/user_part/bookings/booking_screen.dart';
 
+import 'screen/user_part/messages/messages_screen.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -92,6 +94,8 @@ class MyApp extends StatelessWidget {
           GetPage(
               name: PageRes.appointmentBookingScreen,
               page: () => AppointmentBookingScreen()),
+
+          GetPage(name: PageRes.messagesScreen, page: () => MessagesScreen()),
 
           ///_____________________________________ admin ____________________________________
           GetPage(

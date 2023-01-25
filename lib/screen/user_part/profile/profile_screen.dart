@@ -1,10 +1,8 @@
 import 'dart:io';
-
 import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:salon_app/common/common_btn.dart';
-import 'package:salon_app/screen/introduction_screen/widget/widget.dart';
 import 'package:salon_app/screen/user_part/profile/profile_controller.dart';
 import 'package:salon_app/utils/app_style.dart';
 import 'package:salon_app/utils/asset_res.dart';
