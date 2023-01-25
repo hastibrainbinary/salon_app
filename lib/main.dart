@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:salon_app/screen/admin_part/admin_chat/message_detail/message_detail_screen.dart';
+import 'package:salon_app/screen/admin_part/admin_chat/messages_screen.dart';
 import 'package:salon_app/screen/admin_part/admin_home/admin_dashboard_screen.dart';
+import 'package:salon_app/screen/admin_part/admin_home/home/screens/add_service/service_screen.dart';
 import 'package:salon_app/screen/admin_part/admin_home/home/screens/add_your_bank_account/add_your_bank_account_screen.dart';
 import 'package:salon_app/screen/admin_part/admin_home/home/screens/add_your_bank_account/edit_account/edit_account.dart';
 import 'package:salon_app/screen/admin_part/admin_home/home/screens/notifocation/notification_screen.dart';
@@ -30,6 +33,7 @@ import 'package:salon_app/screen/user_part/dashboard/home/filtter_screen.dart';
 import 'package:salon_app/screen/user_part/dashboard/home/home_screen.dart';
 import 'package:salon_app/screen/user_part/dashboard/most_book/most_book_details_screen.dart';
 import 'package:salon_app/screen/user_part/dashboard/most_book/most_book_screen.dart';
+import 'package:salon_app/screen/user_part/messages/message_detail/message_detail_screen.dart';
 import 'package:salon_app/screen/user_part/my_appointment/appointment_booking/appointment_booking_screen.dart';
 import 'package:salon_app/screen/user_part/nearby_salons/nearby_salons_screen.dart';
 import 'package:salon_app/screen/user_part/profile/profile_screen.dart';
@@ -97,10 +101,20 @@ class MyApp extends StatelessWidget {
 
           GetPage(name: PageRes.messagesScreen, page: () => MessagesScreen()),
 
-          ///_____________________________________ admin ____________________________________
+          GetPage(
+              name: PageRes.messageDetailScreen,
+              page: () => MessageDetailScreen()),
+
+          ///_____________________________________ ADMIN PART -M ____________________________________
           GetPage(
               name: PageRes.adminSignUpScreen, page: () => AdminSignUpScreen()),
-
+          GetPage(
+              name: PageRes.adminMessagesScreen,
+              page: () => AdminMessagesScreen()),
+          GetPage(
+              name: PageRes.adminMessageDetailScreen,
+              page: () => AdminMessageDetailScreen()),
+          GetPage(name: PageRes.addSeviceScreen, page: () => ServiceScreen()),
           GetPage(
               name: PageRes.notificationScreen,
               page: () => NotificationScreen()),

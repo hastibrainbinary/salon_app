@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:salon_app/screen/user_part/messages/messages_controller.dart';
+import 'package:salon_app/screen/admin_part/admin_chat/messages_controller.dart';
 import 'package:salon_app/screen/user_part/messages/widget.dart';
 import 'package:salon_app/utils/app_style.dart';
 import 'package:salon_app/utils/asset_res.dart';
@@ -8,9 +8,10 @@ import 'package:salon_app/utils/color_res.dart';
 import 'package:salon_app/utils/page_res.dart';
 import 'package:salon_app/utils/string.dart';
 
-class MessagesScreen extends StatelessWidget {
-  MessagesScreen({Key? key}) : super(key: key);
-  final MessagesController messagesController = Get.put(MessagesController());
+class AdminMessagesScreen extends StatelessWidget {
+  AdminMessagesScreen({Key? key}) : super(key: key);
+  final AdminMessagesController messagesController =
+      Get.put(AdminMessagesController());
 
   @override
   Widget build(BuildContext context) {

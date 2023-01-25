@@ -78,27 +78,9 @@ class Strings {
   static const cancel = "Cancel";
   static const book = "Book";
   static const cancelAppointment = "Cancel appointment";
-  static const messages="Messages";
-  static const call="Call";
-  static const now="Now";
-
-  ///_________________________________________ admin part ___________________________________
-  static const shopName = "Shop name";
-  static const emailID = "Email ID";
-  static const location = "Location";
-  static const createAccount = "Create account";
-  static const addyourBankaccount = "Add your Bank account";
-  static const addService = "Add Service";
-  static const addAdvertisementPost = "Add Advertisement Post";
-  static const staffDetails = "Staff Details";
-  static const cancelAppointmentDetails = "Cancel Appointment Details";
-  static const todaySchedule = "Today Schedule";
-  static const time = "Time";
-  static const appointments = "Appointments";
-
-
-  ///_________________________________________ admin part ___________________________________
-
+  static const messages = "Messages";
+  static const call = "Call";
+  static const now = "Now";
 
   static const about = "About";
   static const reviews = "Reviews";
@@ -135,13 +117,29 @@ class Strings {
   static const addProfilePhoto = "Add profile photo";
   static const addPhoto = "Add Photo";
   static const selectAContent = "select a content type";
+
   static const captureFromCamera = "capture from \n      camera";
   static const uploadFromGallery = "upload from  \n      gallery";
-  static const selectGender="Select Gender";
-  static const bookingId="Booking ID :";
+  static const selectGender = "Select Gender";
+  static const bookingId = "Booking ID :";
 
+  static const cancelAppointmentTxt =
+      "Are you sure,\nyou want to cancel your\nappointment?";
+  static const yesCancelAppointment = "Yes, Cancel appointment";
 
   ///_________________________________________ ADMIN PART -M ___________________________________
+  static const shopName = "Shop name";
+  static const emailID = "Email ID";
+  static const location = "Location";
+  static const createAccount = "Create account";
+  static const addyourBankaccount = "Add your Bank account";
+  static const addService = "Add Service";
+  static const addAdvertisementPost = "Add Advertisement Post";
+  static const staffDetails = "Staff Details";
+  static const cancelAppointmentDetails = "Cancel Appointment Details";
+  static const todaySchedule = "Today Schedule";
+  static const time = "Time";
+  static const appointments = "Appointments";
 
   static const viewMore = "View more";
   static const viewLess = "View less";
@@ -159,6 +157,5 @@ class Strings {
   static const service = "Service";
 
   ///__________________________________________ THE END ADMIN PART -M ________________________________________________
-
 
 }

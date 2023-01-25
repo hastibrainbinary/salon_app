@@ -49,6 +49,9 @@ class AssetRes {
   static const chatDark = "${icons}chatDark.png";
   static const userL = "${icons}userL.png";
   static const hairCut = "${icons}hairCut.png";
+  static const closeIcon = "${icons}close_icon.png";
+  static const pinIcon = "${icons}pin_icon.png";
+  static const sendIcon = "${icons}send_icon.png";
 
   static const gallery = "${icons}gallery.png";
   static const girl = "${icons}girl.png";
@@ -57,7 +60,7 @@ class AssetRes {
   static const timer = "${icons}timer.png";
   static const menuIcon = "${icons}menuIcon.png";
 
-  ///____________________________ admin part _______________________________
+  ///____________________________ ADMIN PART -M _______________________________
 
   ///____________________ icons ____________________
   static const locationIcon = "${icons}location.png";
@@ -84,10 +87,8 @@ class AssetRes {
 
   static const arrow = "${icons}arrow.png";
 
-  static const heart="${icons}heart.png";
-  static const reply="${icons}reply.png";
-  static const male="${icons}male.png";
-  static const female="${icons}female.png";
-
-
+  static const heart = "${icons}heart.png";
+  static const reply = "${icons}reply.png";
+  static const male = "${icons}male.png";
+  static const female = "${icons}female.png";
 }

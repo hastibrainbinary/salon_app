@@ -145,7 +145,7 @@ class MyAppointmentScreen extends StatelessWidget {
               ? Expanded(
                   child: ListView.separated(
                       itemBuilder: (context, index) {
-                        return upComing();
+                        return upComing(context: context);
                       },
                       separatorBuilder: (context, index) {
                         return const SizedBox(height: 30);

@@ -16,11 +16,11 @@ class PageRes {
   static String homeScreen = "/HomeScreen";
   static String mostBook = "/mostBook";
 
-
   static String bookings = "/bookings";
   static String selectGender = "/selectGender";
   static String nearBySalonScreen = "/nearBySalonScreen";
-  static String messagesScreen="/messagesScreen";
+  static String messagesScreen = "/messagesScreen";
+  static String messageDetailScreen = "/messageDetailScreen";
 
   ///_______________________________ ADMIN PART -M _____________________________
   static String adminSignUpScreen = "/adminSignUpScreen";
@@ -35,18 +35,17 @@ class PageRes {
   static String addYourBankAccountScreen = "/addYourBankAccountScreen";
   static String editBankAccountScreen = "/editBankAccountScreen";
   static String adminProfileScreen = "/adminProfileScreen";
+  static String adminMessagesScreen = "/messagesScreen";
+  static String adminMessageDetailScreen = "/messageDetailScreen";
+  static String addSeviceScreen = "/addSeviceScreen";
 
   // static String bookings="/bookings";
   static String mostBookDetailsScreen = "/mostBookDetailsScreen";
   static String bookingDetails = "/bookingDetails";
 
-
-  static String filterScreen="/filterScreen";
-  static String bookAppointmentScreen="/bookAppointmentScreen";
-  static String appointmentScreen="/appointmentScreen";
-  static String profileScreen="/profileScreen";
-  static String appointmentBookingScreen="/AppointmentBookingScreen";
-
-
-
+  static String filterScreen = "/filterScreen";
+  static String bookAppointmentScreen = "/bookAppointmentScreen";
+  static String appointmentScreen = "/appointmentScreen";
+  static String profileScreen = "/profileScreen";
+  static String appointmentBookingScreen = "/AppointmentBookingScreen";
 }

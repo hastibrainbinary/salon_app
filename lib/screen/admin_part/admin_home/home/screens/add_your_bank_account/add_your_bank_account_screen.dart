@@ -26,11 +26,11 @@ class AddYourBankAccountScreen extends StatelessWidget {
             alignment: Alignment.center,
             children: [
               Container(
-                height:
-                    Get.height > 800 ? Get.height * 0.3 : Get.height * 0.289,
+                // height:
+                //     Get.height > 800 ? Get.height * 0.3 : Get.height * 0.289,
                 width: Get.width,
                 child: const Image(
-                  image: AssetImage(AssetRes.homeDesign),
+                  image: AssetImage(AssetRes.mostBookBack),
                   fit: BoxFit.fill,
                 ),
               ),
@@ -74,7 +74,7 @@ class AddYourBankAccountScreen extends StatelessWidget {
           ),
           Padding(
               padding: EdgeInsets.only(
-                top: Get.height * 0.3,
+                top: Get.height * 0.25,
                 left: Get.width * 0.055,
                 right: Get.width * 0.055,
               ),
