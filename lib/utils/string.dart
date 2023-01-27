@@ -9,16 +9,12 @@ class Strings {
   static const selectTime="Select Time";
   static const selectStaff="Select Staff";
 
-
-
   static const update = "Update";
   static const myCard = "My Card";
   static const addNewCard = "Add New Card";
   static const cardHolderName = "Card Holder Name*";
   static const expirationDate = "Expiration Date*";
   static const bookingConfirmed="Booking Confirmed";
-
-
 
   static const getStarted = "Get Started";
   static const findNearBySalonsBookServices =
@@ -62,7 +58,7 @@ class Strings {
   static const successfullyCreate = "Successfully Create Your Account";
   static const successfullyCreateYourAccount =
       "successfully create your account now enjoy our apps";
-  static const yourPassword ="Your password has been reset Successfully ";
+  static const yourPassword = "Your password has been reset Successfully ";
   static const ok = "Ok";
   static const alreadyHaveAccount = "Already have an account?";
   static const signIn = "Sign in";
@@ -75,7 +71,7 @@ class Strings {
   static const enterYourEmailId =
       "enter your email id or mobile number to reset \nyour password";
   static const newPassword = "New Password";
-  static const yesLogout="Yes, Logout";
+  static const yesLogout = "Yes, Logout";
   static const passwordReset = "Password Reset";
   static const yourPasswordReset = "Your password has been reset Successfully ";
   static const done = "Done";
@@ -113,16 +109,16 @@ class Strings {
   static const invite = "Invite";
 
   static const cardNumber = "Card number*";
-  static const suggested="Suggested";
-  static const englishUs="English (US)";
-  static const englishUk="English (UK)";
-  static const arabic ="Arabic";
-  static const bengali="Bengali";
-  static const chinese="Chinese";
-  static const french="French";
-  static const german="German";
-  static const hindi="Hindi";
-  static const spain="Spain";
+  static const suggested = "Suggested";
+  static const englishUs = "English (US)";
+  static const englishUk = "English (UK)";
+  static const arabic = "Arabic";
+  static const bengali = "Bengali";
+  static const chinese = "Chinese";
+  static const french = "French";
+  static const german = "German";
+  static const hindi = "Hindi";
+  static const spain = "Spain";
 
   ///_________________________________________ admin part ___________________________________
   static const shopName = "Shop name";
@@ -137,12 +133,13 @@ class Strings {
   static const todaySchedule = "Today Schedule";
   static const time = "Time";
   static const appointments = "Appointments";
-  static const logout="Logout";
-  static const generalNotification ="General Notification";
-  static const sound="Sound";
-  static const vibrate="Vibrate";
-  static const specialOffers="Special Offers";
-  static const appUpdates="App Updates";
+  static const logout = "Logout";
+  static const generalNotification = "General Notification";
+  static const sound = "Sound";
+  static const vibrate = "Vibrate";
+  static const specialOffers = "Special Offers";
+  static const appUpdates = "App Updates";
+
   ///_________________________________________ admin part ___________________________________
 
   static const about = "About";
@@ -184,9 +181,8 @@ class Strings {
   static const captureFromCamera = "capture from \n      camera";
   static const uploadFromGallery = "upload from  \n      gallery";
 
-  static const selectGender="Select Gender";
-  static const bookingId="Booking ID :";
-
+  static const selectGender = "Select Gender";
+  static const bookingId = "Booking ID :";
 
   static const cancelAppointmentTxt =
       "Are you sure,\nyou want to cancel your\nappointment?";
@@ -214,6 +210,5 @@ class Strings {
   static const price = "Price";
 
   ///__________________________________________ THE END ADMIN PART -M ________________________________________________
-
 
 }
