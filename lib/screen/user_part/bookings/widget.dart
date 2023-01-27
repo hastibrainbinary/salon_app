@@ -25,7 +25,6 @@ Widget bookingList() {
           itemBuilder: (context, index) {
             return InkWell(
               onTap: () => Get.toNamed(PageRes.bookingDetails),
-
               child: Row(
                 children: [
                   const CircleAvatar(
@@ -56,12 +55,13 @@ Widget bookingList() {
                                   fontSize: 10,
                                 )),
                             TextSpan(
-                                text: '9:00 AM',
-                                style: appTextStyle(
-                                  color: ColorRes.black.withOpacity(0.6),
-                                  fontWeight: FontWeight.w400,
-                                  fontSize: 10,
-                                )),
+                              text: '9:00 AM',
+                              style: appTextStyle(
+                                color: ColorRes.black.withOpacity(0.6),
+                                fontWeight: FontWeight.w400,
+                                fontSize: 10,
+                              ),
+                            ),
                           ],
                         ),
                       ),

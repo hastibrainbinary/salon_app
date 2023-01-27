@@ -27,6 +27,8 @@ class PageRes {
   static String paymentScreen = "/paymentScreen";
   static String callRingScreen = "/callRingScreen";
   static String languageScreen = "/languageScreen";
+  static String bookAppointmentSliderScree="/bookAppointmentSliderScree";
+  static String paymentMethodScreen="/paymentMethodScreen";
 
 
   ///_______________________________ ADMIN PART -M _____________________________

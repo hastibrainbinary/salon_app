@@ -169,7 +169,7 @@ Widget bookServices() {
                 onTap: () {
                   bookAppointmentController.appointment.value = true;
 
-                  Get.toNamed(PageRes.appointmentBookingScreen);
+                  Get.toNamed(PageRes.bookAppointmentSliderScree);
                 },
                 child: Container(
                   width: 153,

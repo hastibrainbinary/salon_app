@@ -98,6 +98,7 @@ class AssetRes {
   static const adminProfilePic = "${images}admin_dp.png";
   static const bookAppointment = "${images}book_appointment.png";
   static const cancelAppointment = "${images}cancel_appointment.png";
+  static const confirmPayment="${images}confirmPayment.png";
 
   static const arrow = "${icons}arrow.png";
 

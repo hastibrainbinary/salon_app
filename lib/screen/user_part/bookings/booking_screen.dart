@@ -24,7 +24,7 @@ class BookingScreen extends StatelessWidget {
                 ),
                 Positioned(
                   top: 60,
-                  left: 15,
+                  left: 20,
                   child: Row(
                     children: [
                       const Icon(Icons.arrow_back_ios_new_rounded,
@@ -56,7 +56,7 @@ class BookingScreen extends StatelessWidget {
             SizedBox(
               height: 270,
               child: Padding(
-                padding: const EdgeInsets.only(left: 27,right: 25),
+                padding: const EdgeInsets.only(left: 27, right: 25),
                 child: GridView.builder(
                   physics: const NeverScrollableScrollPhysics(),
                   gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
@@ -101,15 +101,16 @@ class BookingScreen extends StatelessWidget {
                       borderRadius: BorderRadius.circular(4),
                     ),
                   ),
-                  Text(Strings.availableSlots,
-                      style: appTextStyle(
-                          fontWeight: FontWeight.w500,
-                          fontSize: 13,
-                          color: ColorRes.indicator))
+                  Text(
+                    Strings.availableSlots,
+                    style: appTextStyle(
+                        fontWeight: FontWeight.w500,
+                        fontSize: 13,
+                        color: ColorRes.indicator),
+                  )
                 ],
               ),
             ),
-
             bookingList(),
           ],
         ),

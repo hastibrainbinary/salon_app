@@ -4,6 +4,10 @@ class Strings {
   static const skip = "Skip";
   static const areYouSure = "Are you sure you want to Logout?";
   static const typesOfDate = "1. Types of Date We Collect";
+  static const aConfirmationMessage ="A confirmation message has sent to your registered mobile number";
+  static const bookingDetails="Booking Details";
+  static const selectTime="Select Time";
+  static const selectStaff="Select Staff";
 
 
 
@@ -12,6 +16,7 @@ class Strings {
   static const addNewCard = "Add New Card";
   static const cardHolderName = "Card Holder Name*";
   static const expirationDate = "Expiration Date*";
+  static const bookingConfirmed="Booking Confirmed";
 
 
 
