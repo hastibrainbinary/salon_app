@@ -25,7 +25,7 @@ class ProfileScreen extends StatelessWidget {
             SizedBox(height: Get.height * 0.0738),
             Obx(
               () => (profileController.imgPath.value != "")
-                  ? SizedBox()
+                  ? const SizedBox()
                   : const Padding(
                       padding: EdgeInsets.only(left: 25),
                       child: Icon(
@@ -73,7 +73,6 @@ class ProfileScreen extends StatelessWidget {
                       ? Padding(
                           padding: const EdgeInsets.all(21),
                           child: ClipRRect(
-                            // margin: const EdgeInsets.all(21),
                             borderRadius: BorderRadius.circular(226),
                             child: Container(
                               height: 226,
@@ -141,7 +140,7 @@ class ProfileScreen extends StatelessWidget {
             ),
             SizedBox(height: Get.height * 0.0184),
             Obx(() => (profileController.imgPath.value != "")
-                ? SizedBox()
+                ? const SizedBox()
                 : InkWell(
                     onTap: () => Get.toNamed(PageRes.selectGender),
                     child: Center(

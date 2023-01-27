@@ -74,7 +74,7 @@ class ProfileUserScreen extends StatelessWidget {
                     containerWithTitleProfile(
                       title: Strings.editProfile,
                       icon: AssetRes.userL,
-                      onTap: () {},
+                      onTap: () => Get.toNamed(PageRes.editProfileScreen),
                     ),
                     SizedBox(height: Get.height * 0.0307),
                     containerWithTitleProfile(
@@ -92,7 +92,7 @@ class ProfileUserScreen extends StatelessWidget {
                     containerWithTitleProfile(
                       title: Strings.payment,
                       icon: AssetRes.payment,
-                      onTap: () {},
+                      onTap: () => Get.toNamed(PageRes.paymentScreen),
                     ),
                     SizedBox(height: Get.height * 0.0307),
                     containerWithTitleProfile(
@@ -121,7 +121,7 @@ class ProfileUserScreen extends StatelessWidget {
                     ),
                     SizedBox(height: Get.height * 0.0369),
                     InkWell(
-                      onTap: (){
+                      onTap: () {
                         logout(context);
                       },
                       child: Container(

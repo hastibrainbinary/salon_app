@@ -4,6 +4,7 @@ import 'package:salon_app/screen/user_part/messages/message_detail/message_detai
 import 'package:salon_app/utils/app_style.dart';
 import 'package:salon_app/utils/asset_res.dart';
 import 'package:salon_app/utils/color_res.dart';
+import 'package:salon_app/utils/page_res.dart';
 
 class MessageDetailScreen extends StatelessWidget {
   MessageDetailScreen({super.key});
@@ -90,9 +91,7 @@ class MessageDetailScreen extends StatelessWidget {
                 ),
                 const Spacer(),
                 InkWell(
-                    onTap: () {
-                      // Get.back();
-                    },
+                   onTap: () => Get.toNamed(PageRes.callRingScreen),
                     child: SizedBox(
                       height: 20,
                       width: 20,

@@ -4,7 +4,6 @@ class PageRes {
   static String getStartedScreen = "/getStartedScreen";
   static String selectTypeScreen = "/selectTypeScreen";
   static String signUpSignInScreen = "/signUpSignInScreen";
-
   static String signUpMobileScreen = "/signUpMobileScreen";
   static String phoneOtpScreen = "/phoneOtpScreen";
   static String signUpScreen = "/signUpScreen";
@@ -25,6 +24,8 @@ class PageRes {
   static String inviteFriendScreen = "/inviteFriendScreen";
   static String privacyPolicyScreen = "/privacyPolicyScreen";
   static String messageDetailScreen = "/messageDetailScreen";
+  static String paymentScreen = "/paymentScreen";
+  static String callRingScreen = "/callRingScreen";
 
   ///_______________________________ ADMIN PART -M _____________________________
   static String adminSignUpScreen = "/adminSignUpScreen";
@@ -42,6 +43,7 @@ class PageRes {
   static String adminMessagesScreen = "/messagesScreen";
   static String adminMessageDetailScreen = "/messageDetailScreen";
   static String addSeviceScreen = "/addSeviceScreen";
+
   static String seviceAddScreen = "/seviceAddScreen";
 
   // static String bookings="/bookings";
@@ -54,4 +56,6 @@ class PageRes {
   static String profileScreen = "/profileScreen";
   static String appointmentBookingScreen = "/AppointmentBookingScreen";
   static String notificationUserScreen = "/notificationUserScreen";
+
+  static String editProfileScreen = "/editProfileScreen";
 }
