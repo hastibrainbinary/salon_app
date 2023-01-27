@@ -23,51 +23,47 @@ class ProfileUserScreen extends StatelessWidget {
         width: Get.width,
         child: Column(
           children: [
+      /*      Container(
+              height: 250,
+              width: Get.width,
+              color: Colors.transparent,
+            ),*/
             Stack(
+              alignment: Alignment(-0.015, Get.height*0.0075),
               children: [
-                Container(
-                  height: 250,
-                  width: Get.width,
-                  color: Colors.transparent,
+                const Image(
+                  image: AssetImage(AssetRes.profileBack),
                 ),
-                Stack(
-                  alignment: const Alignment(0, 8),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    const Image(
-                      image: AssetImage(AssetRes.profileBack),
+                    Text(
+                      Strings.profile,
+                      style: appTextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.w500,
+                          color: ColorRes.white),
                     ),
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text(
-                          Strings.profile,
-                          style: appTextStyle(
-                              fontSize: 20,
-                              fontWeight: FontWeight.w500,
-                              color: ColorRes.white),
-                        ),
-                        SizedBox(height: Get.height * 0.0246),
-                        Container(
-                          height: 121,
-                          width: 121,
-                          decoration: BoxDecoration(
-                            color: ColorRes.gray,
-                            border:
-                                Border.all(color: ColorRes.white, width: 2.5),
-                            image: const DecorationImage(
-                                image: AssetImage(AssetRes.imageStyel),
-                                fit: BoxFit.cover),
-                            borderRadius: BorderRadius.circular(121),
-                          ),
-                        ),
-                      ],
+                    SizedBox(height: Get.height * 0.0246),
+                    Container(
+                      height: 121,
+                      width: 121,
+                      decoration: BoxDecoration(
+                        color: ColorRes.gray,
+                        border:
+                            Border.all(color: ColorRes.white, width: 2.5),
+                        image: const DecorationImage(
+                            image: AssetImage(AssetRes.imageStyel),
+                            fit: BoxFit.cover),
+                        borderRadius: BorderRadius.circular(121),
+                      ),
                     ),
                   ],
                 ),
               ],
             ),
-            SizedBox(height: Get.height * 0.03),
+            SizedBox(height: Get.height * 0.1),
             Text(
               "Rohan survey",
               style: appTextStyle(
