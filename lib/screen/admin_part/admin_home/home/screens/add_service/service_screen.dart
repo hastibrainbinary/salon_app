@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:salon_app/utils/app_style.dart';
 import 'package:salon_app/utils/asset_res.dart';
 import 'package:salon_app/utils/color_res.dart';
+import 'package:salon_app/utils/page_res.dart';
 import 'package:salon_app/utils/string.dart';
 
 class ServiceScreen extends StatelessWidget {
@@ -52,7 +53,79 @@ class ServiceScreen extends StatelessWidget {
                       const Spacer(),
                       InkWell(
                         onTap: () {
-                          Get.back();
+                          showDialog(
+                            barrierColor: ColorRes.black.withOpacity(0.8),
+                            context: context,
+                            builder: (context) => AlertDialog(
+                              elevation: 0,
+                              contentPadding: EdgeInsets.zero,
+                              backgroundColor: Colors.transparent,
+                              insetPadding: EdgeInsets.only(
+                                  bottom: Get.height * 0.75,
+                                  left: Get.width * 0.6),
+                              content: Padding(
+                                padding: const EdgeInsets.only(top: 30),
+                                child: Align(
+                                  alignment: Alignment.topRight,
+                                  child: Container(
+                                    alignment: Alignment.center,
+                                    margin: EdgeInsets.only(
+                                        top: 5, right: Get.width * 0.055),
+                                    height: 101,
+                                    width: 128,
+                                    color: ColorRes.white,
+                                    child: Column(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.spaceEvenly,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        children: [
+                                          InkWell(
+                                            onTap: () {
+                                              Get.back();
+                                              Get.toNamed(
+                                                  PageRes.seviceAddScreen);
+                                            },
+                                            child: Text(
+                                              Strings.addService,
+                                              style: appTextStyle(
+                                                  color: ColorRes.black,
+                                                  fontSize: 11,
+                                                  fontWeight: FontWeight.w400),
+                                            ),
+                                          ),
+                                          InkWell(
+                                            onTap: () {
+                                              print(
+                                                  "_____________________DELETE SERVICE -M______________________");
+                                            },
+                                            child: Text(
+                                              Strings.deleteService,
+                                              style: appTextStyle(
+                                                  color: ColorRes.black,
+                                                  fontSize: 11,
+                                                  fontWeight: FontWeight.w400),
+                                            ),
+                                          ),
+                                          InkWell(
+                                            onTap: () {
+                                              print(
+                                                  "_____________________EDIT SERVICE -M______________________");
+                                            },
+                                            child: Text(
+                                              Strings.editService,
+                                              style: appTextStyle(
+                                                  color: ColorRes.black,
+                                                  fontSize: 11,
+                                                  fontWeight: FontWeight.w400),
+                                            ),
+                                          )
+                                        ]),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          );
                         },
                         child: const Icon(Icons.more_vert,
                             color: ColorRes.white, size: 20),
@@ -69,6 +142,7 @@ class ServiceScreen extends StatelessWidget {
                 child: Column(
                   children: [
                     Container(
+                      color: Colors.transparent,
                       width: 320,
                       height: 100,
                       /*  decoration: BoxDecoration(

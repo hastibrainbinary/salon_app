@@ -4,6 +4,7 @@ class PageRes {
   static String getStartedScreen = "/getStartedScreen";
   static String selectTypeScreen = "/selectTypeScreen";
   static String signUpSignInScreen = "/signUpSignInScreen";
+
   static String signUpMobileScreen = "/signUpMobileScreen";
   static String phoneOtpScreen = "/phoneOtpScreen";
   static String signUpScreen = "/signUpScreen";
@@ -14,14 +15,17 @@ class PageRes {
   static String dashBoardScreen = "/dashBoardScreen";
   static String homeScreen = "/HomeScreen";
   static String mostBook = "/mostBook";
+
+
   static String bookings = "/bookings";
   static String selectGender = "/selectGender";
   static String nearBySalonScreen = "/nearBySalonScreen";
+  static String messagesScreen="/messagesScreen";
+  static String filterScreenUser="/filterScreenUser";
+  static String resetPasswordsScreen="/resetPasswordsScreen";
+  static String inviteFriendScreen="/inviteFriendScreen";
+  static String privacyPolicyScreen="/privacyPolicyScreen";
   static String messagesScreen = "/messagesScreen";
-  static String filterScreenUser = "/filterScreenUser";
-  static String resetPasswordsScreen = "/resetPasswordsScreen";
-  static String inviteFriendScreen = "/inviteFriendScreen";
-  static String privacyPolicyScreen = "/privacyPolicyScreen";
   static String messageDetailScreen = "/messageDetailScreen";
   static String paymentScreen="/paymentScreen";
   static String callRingScreen="/callRingScreen";
@@ -41,6 +45,8 @@ class PageRes {
   static String adminMessagesScreen = "/messagesScreen";
   static String adminMessageDetailScreen = "/messageDetailScreen";
   static String addSeviceScreen = "/addSeviceScreen";
+  static String seviceAddScreen = "/seviceAddScreen";
+
   // static String bookings="/bookings";
   static String mostBookDetailsScreen = "/mostBookDetailsScreen";
   static String bookingDetails = "/bookingDetails";

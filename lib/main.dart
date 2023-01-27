@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:salon_app/screen/admin_part/admin_chat/message_detail/message_detail_screen.dart';
 import 'package:salon_app/screen/admin_part/admin_chat/messages_screen.dart';
 import 'package:salon_app/screen/admin_part/admin_home/admin_dashboard_screen.dart';
+import 'package:salon_app/screen/admin_part/admin_home/home/screens/add_service/screens/add_service/add_service_screen.dart';
 import 'package:salon_app/screen/admin_part/admin_home/home/screens/add_service/service_screen.dart';
 import 'package:salon_app/screen/admin_part/admin_home/home/screens/add_your_bank_account/add_your_bank_account_screen.dart';
 import 'package:salon_app/screen/admin_part/admin_home/home/screens/add_your_bank_account/edit_account/edit_account.dart';
@@ -136,6 +137,9 @@ class MyApp extends StatelessWidget {
           GetPage(
               name: PageRes.adminMessagesScreen,
               page: () => AdminMessagesScreen()),
+
+          GetPage(
+              name: PageRes.seviceAddScreen, page: () => AddServiceScreen()),
           GetPage(
               name: PageRes.adminMessageDetailScreen,
               page: () => AdminMessageDetailScreen()),
@@ -143,35 +147,44 @@ class MyApp extends StatelessWidget {
           GetPage(
               name: PageRes.notificationScreen,
               page: () => NotificationScreen()),
+
           GetPage(
               name: PageRes.adminProfileScreen,
               page: () => AdminProfileScreen()),
+
           GetPage(
               name: PageRes.addYourBankAccountScreen,
               page: () => AddYourBankAccountScreen()),
+
           GetPage(
               name: PageRes.editBankAccountScreen,
               page: () => EditBankAccountScreen()),
           GetPage(
               name: PageRes.adminSignUpMobileScreen,
               page: () => AdminSignUpMobileNumberScreen()),
+
           GetPage(
               name: PageRes.adminForgotOtpScreen,
               page: () => AdminForgotOtpScreen()),
+
           GetPage(
               name: PageRes.adminForgotPassword,
               page: () => AdminForgotPasswordScreen()),
+
           GetPage(
               name: PageRes.adminLogInScreen, page: () => AdminLogInScreen()),
+
           GetPage(
               name: PageRes.adminNewPasswordScreen,
               page: () => AdminNewPasswordScreen()),
           GetPage(
               name: PageRes.adminPhoneOtpScreen,
               page: () => AdminPhoneOtpScreen()),
+
           GetPage(
               name: PageRes.adminDashBoardScreen,
               page: () => AdminDashboardScreen()),
+
           GetPage(name: PageRes.mostBook, page: () => MostBookScreen()),
           GetPage(
               name: PageRes.mostBookDetailsScreen,

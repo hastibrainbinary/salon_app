@@ -15,6 +15,12 @@ class BookAppointmentScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    bookAppointmentController.ischooseServices.value = true;
+    bookAppointmentController.isappointment.value = false;
+    bookAppointmentController.ispayment.value = false;
+    bookAppointmentController.issummary.value = false;
+    bookAppointmentController.appointment.value = false;
+
     return Scaffold(
       body: Column(
         children: [
@@ -59,32 +65,6 @@ class BookAppointmentScreen extends StatelessWidget {
                   width: 69,
                   height: 4,
                   decoration: BoxDecoration(
-                    color:
-                        bookAppointmentController.chooseServices.value == true
-                            ? ColorRes.indicator
-                            : ColorRes.gray,
-                  ),
-                ),
-                InkWell(
-                  onTap: () {
-                    bookAppointmentController.chooseServices.value = true;
-
-                    Get.toNamed(PageRes.appointmentScreen);
-                  },
-                  child: Container(
-                    height: 16,
-                    width: 16,
-                    decoration: BoxDecoration(
-                        color: bookAppointmentController.chooseServices.value
-                            ? ColorRes.indicator
-                            : ColorRes.gray,
-                        borderRadius: BorderRadius.circular(16)),
-                  ),
-                ),
-                Container(
-                  width: 69,
-                  height: 4,
-                  decoration: BoxDecoration(
                     color: bookAppointmentController.appointment.value == true
                         ? ColorRes.indicator
                         : ColorRes.gray,
@@ -93,6 +73,12 @@ class BookAppointmentScreen extends StatelessWidget {
                 InkWell(
                   onTap: () {
                     bookAppointmentController.appointment.value = true;
+                    bookAppointmentController.isappointment.value = true;
+                    bookAppointmentController.ischooseServices.value = false;
+                    bookAppointmentController.ispayment.value = false;
+                    bookAppointmentController.issummary.value = false;
+
+                    Get.toNamed(PageRes.appointmentBookingScreen);
                   },
                   child: Container(
                     height: 16,
@@ -115,6 +101,10 @@ class BookAppointmentScreen extends StatelessWidget {
                 ),
                 InkWell(
                   onTap: () {
+                    bookAppointmentController.isappointment.value = false;
+                    bookAppointmentController.ischooseServices.value = false;
+                    bookAppointmentController.ispayment.value = true;
+                    bookAppointmentController.issummary.value = false;
                     bookAppointmentController.payment.value = true;
                   },
                   child: Container(
@@ -127,56 +117,84 @@ class BookAppointmentScreen extends StatelessWidget {
                         borderRadius: BorderRadius.circular(16)),
                   ),
                 ),
+                Container(
+                  width: 69,
+                  height: 4,
+                  decoration: BoxDecoration(
+                    color: bookAppointmentController.summary.value == true
+                        ? ColorRes.indicator
+                        : ColorRes.gray,
+                  ),
+                ),
+                InkWell(
+                  onTap: () {
+                    bookAppointmentController.summary.value = true;
+                    bookAppointmentController.isappointment.value = false;
+                    bookAppointmentController.ischooseServices.value = false;
+                    bookAppointmentController.ispayment.value = false;
+                    bookAppointmentController.issummary.value = true;
+                  },
+                  child: Container(
+                    height: 16,
+                    width: 16,
+                    decoration: BoxDecoration(
+                        color: bookAppointmentController.summary.value
+                            ? ColorRes.indicator
+                            : ColorRes.gray,
+                        borderRadius: BorderRadius.circular(16)),
+                  ),
+                ),
               ],
             ),
           ),
           SizedBox(height: Get.height * 0.0123),
           Obx(
             () => Row(
-              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                SizedBox(width: Get.width * 0.088),
+                SizedBox(width: Get.width * 0.055),
                 Text(
                   Strings.chooseService,
                   style: appTextStyle(
+                      color: bookAppointmentController.ischooseServices.value ==
+                              true
+                          ? ColorRes.indicator
+                          : ColorRes.gray,
+                      fontWeight: FontWeight.w400,
+                      fontSize: 10),
+                ),
+                // SizedBox(width: Get.width * 0.0293),
+                Text(
+                  Strings.appointment,
+                  style: appTextStyle(
                       color:
-                          bookAppointmentController.chooseServices.value == true
+                          bookAppointmentController.isappointment.value == true
                               ? ColorRes.indicator
                               : ColorRes.gray,
                       fontWeight: FontWeight.w400,
                       fontSize: 10),
                 ),
-                SizedBox(width: Get.width * 0.0293),
-                Text(
-                  Strings.appointment,
-                  style: appTextStyle(
-                      color: bookAppointmentController.appointment.value == true
-                          ? ColorRes.indicator
-                          : ColorRes.gray,
-                      fontWeight: FontWeight.w400,
-                      fontSize: 10),
-                ),
-                SizedBox(width: Get.width * 0.072),
+                // SizedBox(width: Get.width * 0.072),
                 Text(
                   Strings.payment,
                   style: appTextStyle(
-                      color: bookAppointmentController.payment.value == true
+                      color: bookAppointmentController.ispayment.value == true
                           ? ColorRes.indicator
                           : ColorRes.gray,
                       fontWeight: FontWeight.w400,
                       fontSize: 10),
                 ),
-                SizedBox(width: Get.width * 0.096),
+                // SizedBox(width: Get.width * 0.096),
                 Text(
                   Strings.summary,
                   style: appTextStyle(
-                      color: bookAppointmentController.summary.value == true
+                      color: bookAppointmentController.issummary.value == true
                           ? ColorRes.indicator
                           : ColorRes.gray,
                       fontWeight: FontWeight.w400,
                       fontSize: 10),
                 ),
-                SizedBox(width: Get.width * 0.088),
+                SizedBox(width: Get.width * 0.055),
               ],
             ),
           ),
@@ -219,6 +237,7 @@ class BookAppointmentScreen extends StatelessWidget {
               ),
             ),
             child: SingleChildScrollView(
+              physics: const BouncingScrollPhysics(),
               child: Column(
                 children: [
                   SizedBox(height: Get.height * .0369),
