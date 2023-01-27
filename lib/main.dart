@@ -28,6 +28,7 @@ import 'package:salon_app/screen/user_part/auth/sign_up/sign_up_screen.dart';
 import 'package:salon_app/screen/user_part/auth/sign_up_mobile/sign_up_phone.dart';
 import 'package:salon_app/screen/user_part/book_appointment/book_appointment_screen.dart';
 import 'package:salon_app/screen/user_part/bookings/booking_user_details/booking_user_screen.dart';
+import 'package:salon_app/screen/user_part/call/call_ring_screen.dart';
 import 'package:salon_app/screen/user_part/dashboard/dashboard_screen.dart';
 import 'package:salon_app/screen/user_part/dashboard/home/filtter_screen.dart';
 import 'package:salon_app/screen/user_part/dashboard/home/home_screen.dart';
@@ -40,14 +41,15 @@ import 'package:salon_app/screen/user_part/profile/profile_screen.dart';
 import 'package:salon_app/screen/user_part/profile_user/filter/filter_screen_user.dart';
 import 'package:salon_app/screen/user_part/profile_user/invite_friend/invite_friend_screen.dart';
 import 'package:salon_app/screen/user_part/profile_user/notificationU/notification_user_Screen.dart';
+import 'package:salon_app/screen/user_part/profile_user/payment/payment_screeen.dart';
 import 'package:salon_app/screen/user_part/profile_user/privacy_policy/privacy_policy_screen.dart';
 import 'package:salon_app/screen/user_part/profile_user/reset_password_user/reset_password_user_screen.dart';
 import 'package:salon_app/screen/user_part/select_gender/select_gender_screen.dart';
 import 'package:salon_app/sign_up&login_intro/sign_up_login_screen.dart';
 import 'package:salon_app/utils/page_res.dart';
 import 'package:salon_app/screen/user_part/bookings/booking_screen.dart';
-
 import 'screen/user_part/messages/messages_screen.dart';
+import 'screen/user_part/profile_user/edit_profile/edit_profile_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -105,18 +107,28 @@ class MyApp extends StatelessWidget {
               page: () => AppointmentBookingScreen()),
 
           GetPage(name: PageRes.messagesScreen, page: () => MessagesScreen()),
-          GetPage(name: PageRes.notificationUserScreen, page: () => NotificationUserScreen()),
-          GetPage(name: PageRes.filterScreenUser, page: () => FilterScreenUser()),
-          GetPage(name: PageRes.resetPasswordsScreen, page: () => ResetPasswordsScreen()),
-          GetPage(name: PageRes.inviteFriendScreen, page: () => InviteFriendScreen()),
-          GetPage(name: PageRes.privacyPolicyScreen, page:()=> PrivacyPolicyScreen()),
-
-
-
-
+          GetPage(
+              name: PageRes.notificationUserScreen,
+              page: () => NotificationUserScreen()),
+          GetPage(
+              name: PageRes.filterScreenUser, page: () => FilterScreenUser()),
+          GetPage(
+              name: PageRes.resetPasswordsScreen,
+              page: () => ResetPasswordsScreen()),
+          GetPage(
+              name: PageRes.inviteFriendScreen,
+              page: () => InviteFriendScreen()),
+          GetPage(
+              name: PageRes.privacyPolicyScreen,
+              page: () => PrivacyPolicyScreen()),
+          GetPage(
+              name: PageRes.editProfileScreen, page: () => EditProfileScreen()),
           GetPage(
               name: PageRes.messageDetailScreen,
               page: () => MessageDetailScreen()),
+
+          GetPage(name: PageRes.callRingScreen, page: () => CallRingScreen()),
+          GetPage(name: PageRes.paymentScreen, page: () => PaymentScreen()),
 
           ///_____________________________________ ADMIN PART -M ____________________________________
           GetPage(
@@ -131,44 +143,35 @@ class MyApp extends StatelessWidget {
           GetPage(
               name: PageRes.notificationScreen,
               page: () => NotificationScreen()),
-
           GetPage(
               name: PageRes.adminProfileScreen,
               page: () => AdminProfileScreen()),
-
           GetPage(
               name: PageRes.addYourBankAccountScreen,
               page: () => AddYourBankAccountScreen()),
-
           GetPage(
               name: PageRes.editBankAccountScreen,
               page: () => EditBankAccountScreen()),
           GetPage(
               name: PageRes.adminSignUpMobileScreen,
               page: () => AdminSignUpMobileNumberScreen()),
-
           GetPage(
               name: PageRes.adminForgotOtpScreen,
               page: () => AdminForgotOtpScreen()),
-
           GetPage(
               name: PageRes.adminForgotPassword,
               page: () => AdminForgotPasswordScreen()),
-
           GetPage(
               name: PageRes.adminLogInScreen, page: () => AdminLogInScreen()),
-
           GetPage(
               name: PageRes.adminNewPasswordScreen,
               page: () => AdminNewPasswordScreen()),
           GetPage(
               name: PageRes.adminPhoneOtpScreen,
               page: () => AdminPhoneOtpScreen()),
-
           GetPage(
               name: PageRes.adminDashBoardScreen,
               page: () => AdminDashboardScreen()),
-
           GetPage(name: PageRes.mostBook, page: () => MostBookScreen()),
           GetPage(
               name: PageRes.mostBookDetailsScreen,

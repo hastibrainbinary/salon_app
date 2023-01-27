@@ -66,6 +66,10 @@ class AssetRes {
   static const language = "${icons}language.png";
   static const resetPassword="${icons}resetPassword.png";
   static const logout="${icons}logout.png";
+  static const photo="${icons}photo.png";
+  static const line="${icons}line.png";
+  static const card="${icons}card.png";
+  static const ringBack="${images}ringBack.png";
 
   ///____________________________ ADMIN PART -M _______________________________
 
