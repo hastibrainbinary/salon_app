@@ -113,7 +113,7 @@ class NearBySalonScreen extends StatelessWidget {
               child: GridView.builder(
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                     crossAxisCount: 2,
-                    childAspectRatio: 3 / 2.5,
+                    childAspectRatio: 3 / 2.6,
                     crossAxisSpacing: 10,
                     mainAxisSpacing: 10),
                 itemCount: 10,

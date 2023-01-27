@@ -23,13 +23,8 @@ class ProfileUserScreen extends StatelessWidget {
         width: Get.width,
         child: Column(
           children: [
-      /*      Container(
-              height: 250,
-              width: Get.width,
-              color: Colors.transparent,
-            ),*/
             Stack(
-              alignment: Alignment(-0.015, Get.height*0.0075),
+              alignment: Alignment(-0.015, Get.height * 0.0075),
               children: [
                 const Image(
                   image: AssetImage(AssetRes.profileBack),
@@ -51,8 +46,7 @@ class ProfileUserScreen extends StatelessWidget {
                       width: 121,
                       decoration: BoxDecoration(
                         color: ColorRes.gray,
-                        border:
-                            Border.all(color: ColorRes.white, width: 2.5),
+                        border: Border.all(color: ColorRes.white, width: 2.5),
                         image: const DecorationImage(
                             image: AssetImage(AssetRes.imageStyel),
                             fit: BoxFit.cover),

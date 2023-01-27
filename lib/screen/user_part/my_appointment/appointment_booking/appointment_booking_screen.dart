@@ -28,13 +28,13 @@ class AppointmentBookingScreen extends StatelessWidget {
                           color: ColorRes.white),
                       SizedBox(width: Get.width * 0.1466),
                       Text(
-                        Strings.bookAppointment,
+                        Strings.bookingDetails,
                         style: appTextStyle(
                             fontSize: 20,
                             fontWeight: FontWeight.w500,
                             color: ColorRes.white),
                       ),
-                      SizedBox(width: Get.width * 0.16),
+                      SizedBox(width: Get.width * 0.21),
                       InkWell(
                         onTap: () {
 

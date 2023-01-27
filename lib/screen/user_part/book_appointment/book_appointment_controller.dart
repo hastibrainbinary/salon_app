@@ -14,4 +14,12 @@ class BookAppointmentController extends GetxController {
   void changeTitle(String str) {
     isSelect.value = str;
   }
+  RxBool availableSlots = false.obs;
+
+  void onAvailableSlots(bool? value) {
+    if (value != null) {
+      availableSlots.value = value;
+
+    }
+  }
 }

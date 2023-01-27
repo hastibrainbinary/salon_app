@@ -352,7 +352,43 @@ Future logout(context) {
                         fontSize: 12),
                   ),
                 )
+              ],
+            ),
+          ),
+        );
+      });
+}
 
+Future bookingConfirmed(context) {
+  return showDialog(
+      context: context,
+      builder: (context) {
+        return BackdropFilter(
+          filter: ImageFilter.blur(sigmaX: 2, sigmaY: 2),
+          child: AlertDialog(
+            content: Column(
+              children: [
+                const Image(
+                  image: AssetImage(AssetRes.confirmPayment),
+                ),
+                const SizedBox(height: 25),
+                Text(
+                  Strings.bookingConfirmed,
+                  style: appTextStyle(
+                      color: ColorRes.indicator,
+                      fontWeight: FontWeight.w500,
+                      fontSize: 20),
+                ),
+                const SizedBox(height: 5),
+                Text(
+                  textAlign: TextAlign.center,
+                  Strings.aConfirmationMessage,
+                  style: appTextStyle(
+                    fontWeight: FontWeight.w400,
+                    fontSize: 12,
+                    color: ColorRes.black.withOpacity(0.5),
+                  ),
+                ),
               ],
             ),
           ),
