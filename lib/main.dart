@@ -51,6 +51,7 @@ import 'package:salon_app/utils/page_res.dart';
 import 'package:salon_app/screen/user_part/bookings/booking_screen.dart';
 import 'screen/user_part/messages/messages_screen.dart';
 import 'screen/user_part/profile_user/edit_profile/edit_profile_screen.dart';
+import 'screen/user_part/profile_user/language/language_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -97,7 +98,7 @@ class MyApp extends StatelessWidget {
           GetPage(name: PageRes.homeScreen, page: () => HomeScreen()),
 
           GetPage(name: PageRes.mostBook, page: () => MostBookScreen()),
-          GetPage(name: PageRes.bookings, page: () => BookingScreen()),
+          /*   GetPage(name: PageRes.bookings, page: () => BookingScreen()),*/
           GetPage(name: PageRes.profileScreen, page: () => ProfileScreen()),
           GetPage(name: PageRes.selectGender, page: () => SelectGenderScreen()),
           GetPage(
@@ -132,6 +133,7 @@ class MyApp extends StatelessWidget {
 
           GetPage(name: PageRes.callRingScreen, page: () => CallRingScreen()),
           GetPage(name: PageRes.paymentScreen, page: () => PaymentScreen()),
+          GetPage(name: PageRes.languageScreen, page: () => LanguageScreen()),
 
           ///_____________________________________ ADMIN PART -M ____________________________________
           GetPage(
@@ -140,8 +142,8 @@ class MyApp extends StatelessWidget {
               name: PageRes.adminMessagesScreen,
               page: () => AdminMessagesScreen()),
 
-          GetPage(
-              name: PageRes.seviceAddScreen, page: () => AddServiceScreen()),
+          /*    GetPage(
+              name: PageRes.seviceAddScreen, page: () => AddServiceScreen()),*/
           GetPage(
               name: PageRes.adminMessageDetailScreen,
               page: () => AdminMessageDetailScreen()),
@@ -192,7 +194,7 @@ class MyApp extends StatelessWidget {
               name: PageRes.mostBookDetailsScreen,
               page: () => MostBookDetailsScreen()),
           // GetPage(name: PageRes.bookings, page: () => BookingScreen()),
-          GetPage(name: PageRes.filterScreen, page: () => FilterScreen()),
+          /*  GetPage(name: PageRes.filterScreen, page: () => FilterScreen()),*/
           GetPage(
               name: PageRes.bookingDetails, page: () => BookingUserDetails()),
           GetPage(
