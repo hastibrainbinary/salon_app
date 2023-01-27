@@ -97,7 +97,7 @@ class MyApp extends StatelessWidget {
           GetPage(name: PageRes.homeScreen, page: () => HomeScreen()),
 
           GetPage(name: PageRes.mostBook, page: () => MostBookScreen()),
-          GetPage(name: PageRes.bookings, page: () => BookingScreen()),
+       /*   GetPage(name: PageRes.bookings, page: () => BookingScreen()),*/
           GetPage(name: PageRes.profileScreen, page: () => ProfileScreen()),
           GetPage(name: PageRes.selectGender, page: () => SelectGenderScreen()),
           GetPage(
@@ -122,8 +122,18 @@ class MyApp extends StatelessWidget {
           GetPage(
               name: PageRes.privacyPolicyScreen,
               page: () => PrivacyPolicyScreen()),
+
+
           GetPage(
               name: PageRes.editProfileScreen, page: () => EditProfileScreen()),
+
+
+
+          GetPage(
+              name: PageRes.editProfileScreen, page: () => EditProfileScreen()),
+
+
+
           GetPage(
               name: PageRes.messageDetailScreen,
               page: () => MessageDetailScreen()),
@@ -138,8 +148,8 @@ class MyApp extends StatelessWidget {
               name: PageRes.adminMessagesScreen,
               page: () => AdminMessagesScreen()),
 
-          GetPage(
-              name: PageRes.seviceAddScreen, page: () => AddServiceScreen()),
+      /*    GetPage(
+              name: PageRes.seviceAddScreen, page: () => AddServiceScreen()),*/
           GetPage(
               name: PageRes.adminMessageDetailScreen,
               page: () => AdminMessageDetailScreen()),
@@ -190,7 +200,7 @@ class MyApp extends StatelessWidget {
               name: PageRes.mostBookDetailsScreen,
               page: () => MostBookDetailsScreen()),
           // GetPage(name: PageRes.bookings, page: () => BookingScreen()),
-          GetPage(name: PageRes.filterScreen, page: () => FilterScreen()),
+        /*  GetPage(name: PageRes.filterScreen, page: () => FilterScreen()),*/
           GetPage(
               name: PageRes.bookingDetails, page: () => BookingUserDetails()),
           GetPage(

@@ -4,11 +4,17 @@ class Strings {
   static const skip = "Skip";
   static const areYouSure = "Are you sure you want to Logout?";
   static const typesOfDate = "1. Types of Date We Collect";
+
+
+
   static const update = "Update";
   static const myCard = "My Card";
   static const addNewCard = "Add New Card";
   static const cardHolderName = "Card Holder Name*";
   static const expirationDate = "Expiration Date*";
+
+
+
   static const getStarted = "Get Started";
   static const findNearBySalonsBookServices =
       "Find near by Salons &\nbook services";
@@ -100,6 +106,7 @@ class Strings {
   static const inviteFriends = "Invite Friends";
   static const updatePassword = "Update Password";
   static const invite = "Invite";
+
   static const cardNumber = "Card number*";
 
   ///_________________________________________ admin part ___________________________________
@@ -161,9 +168,11 @@ class Strings {
 
   static const captureFromCamera = "capture from \n      camera";
   static const uploadFromGallery = "upload from  \n      gallery";
+
   static const selectGender="Select Gender";
   static const bookingId="Booking ID :";
 
+  
   static const cancelAppointmentTxt =
       "Are you sure,\nyou want to cancel your\nappointment?";
   static const yesCancelAppointment = "Yes, Cancel appointment";

@@ -24,39 +24,49 @@ class ProfileUserScreen extends StatelessWidget {
         child: Column(
           children: [
             Stack(
-              alignment: const Alignment(-0.015, 4.2),
               children: [
-                const Image(
-                  image: AssetImage(AssetRes.profileBack),
+                Container(
+                  height: 250,
+                  width: Get.width,
+                  color: Colors.transparent,
                 ),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  mainAxisAlignment: MainAxisAlignment.center,
+                Stack(
+                  alignment: const Alignment(0, 8),
                   children: [
-                    Text(
-                      Strings.profile,
-                      style: appTextStyle(
-                          fontSize: 20,
-                          fontWeight: FontWeight.w500,
-                          color: ColorRes.white),
+                    const Image(
+                      image: AssetImage(AssetRes.profileBack),
                     ),
-                    SizedBox(height: Get.height * 0.0246),
-                    Container(
-                      height: 121,
-                      width: 121,
-                      decoration: BoxDecoration(
-                          color: ColorRes.gray,
-                          border: Border.all(color: ColorRes.white, width: 2.5),
-                          image: const DecorationImage(
-                              image: AssetImage(AssetRes.imageStyel),
-                              fit: BoxFit.cover),
-                          borderRadius: BorderRadius.circular(121)),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          Strings.profile,
+                          style: appTextStyle(
+                              fontSize: 20,
+                              fontWeight: FontWeight.w500,
+                              color: ColorRes.white),
+                        ),
+                        SizedBox(height: Get.height * 0.0246),
+                        Container(
+                          height: 121,
+                          width: 121,
+                          decoration: BoxDecoration(
+                              color: ColorRes.gray,
+                              border:
+                                  Border.all(color: ColorRes.white, width: 2.5),
+                              image: const DecorationImage(
+                                  image: AssetImage(AssetRes.imageStyel),
+                                  fit: BoxFit.cover),
+                              borderRadius: BorderRadius.circular(121)),
+                        ),
+                      ],
                     ),
                   ],
                 ),
               ],
             ),
-            SizedBox(height: Get.height * 0.0615),
+            SizedBox(height: Get.height * 0.03),
             Text(
               "Rohan survey",
               style: appTextStyle(
@@ -65,7 +75,7 @@ class ProfileUserScreen extends StatelessWidget {
                   fontWeight: FontWeight.w500),
             ),
             SizedBox(
-              height: Get.height * 0.55,
+              height: Get.height * 0.5,
               child: SingleChildScrollView(
                 physics: const BouncingScrollPhysics(),
                 child: Column(
