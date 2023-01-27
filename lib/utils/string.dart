@@ -4,13 +4,15 @@ class Strings {
   static const skip = "Skip";
   static const areYouSure = "Are you sure you want to Logout?";
   static const typesOfDate = "1. Types of Date We Collect";
-
+<<<<<<<<< Temporary merge branch 1
   static const update = "Update";
   static const myCard = "My Card";
   static const addNewCard = "Add New Card";
   static const cardHolderName = "Card Holder Name*";
   static const expirationDate = "Expiration Date*";
+=========
 
+>>>>>>>>> Temporary merge branch 2
   static const getStarted = "Get Started";
   static const findNearBySalonsBookServices =
       "Find near by Salons &\nbook services";
@@ -53,7 +55,7 @@ class Strings {
   static const successfullyCreate = "Successfully Create Your Account";
   static const successfullyCreateYourAccount =
       "successfully create your account now enjoy our apps";
-  static const yourPassword = "Your password has been reset Successfully ";
+  static const yourPassword ="Your password has been reset Successfully ";
   static const ok = "Ok";
   static const alreadyHaveAccount = "Already have an account?";
   static const signIn = "Sign in";
@@ -66,7 +68,7 @@ class Strings {
   static const enterYourEmailId =
       "enter your email id or mobile number to reset \nyour password";
   static const newPassword = "New Password";
-  static const yesLogout = "Yes, Logout";
+  static const yesLogout="Yes, Logout";
   static const passwordReset = "Password Reset";
   static const yourPasswordReset = "Your password has been reset Successfully ";
   static const done = "Done";
@@ -102,7 +104,7 @@ class Strings {
   static const inviteFriends = "Invite Friends";
   static const updatePassword = "Update Password";
   static const invite = "Invite";
-
+<<<<<<<<< Temporary merge branch 1
   static const cardNumber = "Card number*";
 
   ///_________________________________________ admin part ___________________________________
@@ -118,13 +120,12 @@ class Strings {
   static const todaySchedule = "Today Schedule";
   static const time = "Time";
   static const appointments = "Appointments";
-  static const logout = "Logout";
-  static const generalNotification = "General Notification";
-  static const sound = "Sound";
-  static const vibrate = "Vibrate";
-  static const specialOffers = "Special Offers";
-  static const appUpdates = "App Updates";
-
+  static const logout="Logout";
+  static const generalNotification ="General Notification";
+  static const sound="Sound";
+  static const vibrate="Vibrate";
+  static const specialOffers="Special Offers";
+  static const appUpdates="App Updates";
   ///_________________________________________ admin part ___________________________________
 
   static const about = "About";
@@ -140,6 +141,7 @@ class Strings {
   static const timeSchedule = "Time Schedule";
   static const availableSlots = "available slots";
   static const bookingList = "Booking List";
+
   static const category = "Category";
   static const ratting = "Ratting";
   static const distance = "Distance";
@@ -153,6 +155,7 @@ class Strings {
   static const resetFilter = "Reset Filter";
   static const chooseService = "Choose service";
   static const appointment = "Appointment";
+
   static const summary = "Summary";
   static const next = "Next";
   static const profilePhoto = "Profile Photo";
@@ -160,10 +163,13 @@ class Strings {
   static const addProfilePhoto = "Add profile photo";
   static const addPhoto = "Add Photo";
   static const selectAContent = "select a content type";
+
   static const captureFromCamera = "capture from \n      camera";
   static const uploadFromGallery = "upload from  \n      gallery";
   static const selectGender = "Select Gender";
   static const bookingId = "Booking ID :";
+<<<<<<<<< Temporary merge branch 1
+=========
 
   static const cancelAppointmentTxt =
       "Are you sure,\nyou want to cancel your\nappointment?";
@@ -173,6 +179,7 @@ class Strings {
 
   static const viewMore = "View more";
   static const viewLess = "View less";
+
   static const bankAccount = "Bank account";
   static const bookAppointmentNotification = "Rohan Surve Book Appointment.";
   static const cancelAppointmentNotification =
@@ -190,5 +197,6 @@ class Strings {
   static const price = "Price";
 
   ///__________________________________________ THE END ADMIN PART -M ________________________________________________
+
 
 }

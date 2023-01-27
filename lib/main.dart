@@ -149,35 +149,44 @@ class MyApp extends StatelessWidget {
           GetPage(
               name: PageRes.notificationScreen,
               page: () => NotificationScreen()),
+
           GetPage(
               name: PageRes.adminProfileScreen,
               page: () => AdminProfileScreen()),
+
           GetPage(
               name: PageRes.addYourBankAccountScreen,
               page: () => AddYourBankAccountScreen()),
+
           GetPage(
               name: PageRes.editBankAccountScreen,
               page: () => EditBankAccountScreen()),
           GetPage(
               name: PageRes.adminSignUpMobileScreen,
               page: () => AdminSignUpMobileNumberScreen()),
+
           GetPage(
               name: PageRes.adminForgotOtpScreen,
               page: () => AdminForgotOtpScreen()),
+
           GetPage(
               name: PageRes.adminForgotPassword,
               page: () => AdminForgotPasswordScreen()),
+
           GetPage(
               name: PageRes.adminLogInScreen, page: () => AdminLogInScreen()),
+
           GetPage(
               name: PageRes.adminNewPasswordScreen,
               page: () => AdminNewPasswordScreen()),
           GetPage(
               name: PageRes.adminPhoneOtpScreen,
               page: () => AdminPhoneOtpScreen()),
+
           GetPage(
               name: PageRes.adminDashBoardScreen,
               page: () => AdminDashboardScreen()),
+
           GetPage(name: PageRes.mostBook, page: () => MostBookScreen()),
           GetPage(
               name: PageRes.mostBookDetailsScreen,
