@@ -108,6 +108,16 @@ class Strings {
   static const invite = "Invite";
 
   static const cardNumber = "Card number*";
+  static const suggested="Suggested";
+  static const englishUs="English (US)";
+  static const englishUk="English (UK)";
+  static const arabic ="Arabic";
+  static const bengali="Bengali";
+  static const chinese="Chinese";
+  static const french="French";
+  static const german="German";
+  static const hindi="Hindi";
+  static const spain="Spain";
 
   ///_________________________________________ admin part ___________________________________
   static const shopName = "Shop name";

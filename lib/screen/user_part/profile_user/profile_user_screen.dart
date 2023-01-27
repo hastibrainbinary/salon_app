@@ -52,13 +52,14 @@ class ProfileUserScreen extends StatelessWidget {
                           height: 121,
                           width: 121,
                           decoration: BoxDecoration(
-                              color: ColorRes.gray,
-                              border:
-                                  Border.all(color: ColorRes.white, width: 2.5),
-                              image: const DecorationImage(
-                                  image: AssetImage(AssetRes.imageStyel),
-                                  fit: BoxFit.cover),
-                              borderRadius: BorderRadius.circular(121)),
+                            color: ColorRes.gray,
+                            border:
+                                Border.all(color: ColorRes.white, width: 2.5),
+                            image: const DecorationImage(
+                                image: AssetImage(AssetRes.imageStyel),
+                                fit: BoxFit.cover),
+                            borderRadius: BorderRadius.circular(121),
+                          ),
                         ),
                       ],
                     ),
@@ -115,7 +116,7 @@ class ProfileUserScreen extends StatelessWidget {
                       language: "English (US)",
                       title: Strings.language,
                       icon: AssetRes.language,
-                      onTap: () {},
+                      onTap: () => Get.toNamed(PageRes.languageScreen),
                     ),
                     SizedBox(height: Get.height * 0.0307),
                     containerWithTitleProfile(

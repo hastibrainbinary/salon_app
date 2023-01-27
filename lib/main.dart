@@ -51,6 +51,7 @@ import 'package:salon_app/utils/page_res.dart';
 import 'package:salon_app/screen/user_part/bookings/booking_screen.dart';
 import 'screen/user_part/messages/messages_screen.dart';
 import 'screen/user_part/profile_user/edit_profile/edit_profile_screen.dart';
+import 'screen/user_part/profile_user/language/language_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -140,6 +141,8 @@ class MyApp extends StatelessWidget {
 
           GetPage(name: PageRes.callRingScreen, page: () => CallRingScreen()),
           GetPage(name: PageRes.paymentScreen, page: () => PaymentScreen()),
+          GetPage(name: PageRes.languageScreen, page: () => LanguageScreen()),
+
 
           ///_____________________________________ ADMIN PART -M ____________________________________
           GetPage(
