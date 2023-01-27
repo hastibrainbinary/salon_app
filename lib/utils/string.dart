@@ -8,6 +8,10 @@ class Strings {
   static const bookingDetails="Booking Details";
   static const selectTime="Select Time";
   static const selectStaff="Select Staff";
+  static const bankDetails="Bank Details";
+  static const accountHolder="Account Holder’s Name :";
+  static const businessBank ="Business Bank Account?";
+  static const editBank="Edit Bank account";
 
   static const update = "Update";
   static const myCard = "My Card";

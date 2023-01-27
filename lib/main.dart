@@ -3,11 +3,17 @@ import 'package:get/get.dart';
 import 'package:salon_app/screen/admin_part/admin_chat/message_detail/message_detail_screen.dart';
 import 'package:salon_app/screen/admin_part/admin_chat/messages_screen.dart';
 import 'package:salon_app/screen/admin_part/admin_home/admin_dashboard_screen.dart';
-import 'package:salon_app/screen/admin_part/admin_home/home/screens/add_service/screens/add_service/add_service_screen.dart';
 import 'package:salon_app/screen/admin_part/admin_home/home/screens/add_service/service_screen.dart';
 import 'package:salon_app/screen/admin_part/admin_home/home/screens/add_your_bank_account/add_your_bank_account_screen.dart';
 import 'package:salon_app/screen/admin_part/admin_home/home/screens/add_your_bank_account/edit_account/edit_account.dart';
 import 'package:salon_app/screen/admin_part/admin_home/home/screens/notifocation/notification_screen.dart';
+import 'package:salon_app/screen/admin_part/admin_shop_profile/bank_details/admin_bank_details_screen.dart';
+import 'package:salon_app/screen/admin_part/admin_shop_profile/edit_bank_details/edit_bank_details_screen.dart';
+import 'package:salon_app/screen/admin_part/admin_shop_profile/language/admin_language_screen.dart';
+import 'package:salon_app/screen/admin_part/admin_shop_profile/notification/admin_notification_screen.dart';
+import 'package:salon_app/screen/admin_part/admin_shop_profile/privacy_police/admin_privacy_police_Screen.dart';
+import 'package:salon_app/screen/admin_part/admin_shop_profile/reset_password/admin_reset_password_screen.dart';
+import 'package:salon_app/screen/admin_part/admin_shop_profile/shop_profile/shop_profile_screen.dart';
 import 'package:salon_app/screen/admin_part/auth/admin_forgot_otp/admin_forgot_otp_screen.dart';
 import 'package:salon_app/screen/admin_part/auth/admin_forgot_password/admin_forgot_password_screen.dart';
 import 'package:salon_app/screen/admin_part/auth/admin_log_in/admin_log_in_screen.dart';
@@ -103,8 +109,6 @@ class MyApp extends StatelessWidget {
 
           GetPage(name: PageRes.bookings, page: () => BookingScreen()),
 
-
-
           GetPage(name: PageRes.profileScreen, page: () => ProfileScreen()),
           GetPage(name: PageRes.selectGender, page: () => SelectGenderScreen()),
           GetPage(
@@ -133,10 +137,8 @@ class MyApp extends StatelessWidget {
           GetPage(
               name: PageRes.editProfileScreen, page: () => EditProfileScreen()),
 
-
           GetPage(
               name: PageRes.editProfileScreen, page: () => EditProfileScreen()),
-
 
           GetPage(
               name: PageRes.messageDetailScreen,
@@ -145,8 +147,12 @@ class MyApp extends StatelessWidget {
           GetPage(name: PageRes.callRingScreen, page: () => CallRingScreen()),
           GetPage(name: PageRes.paymentScreen, page: () => PaymentScreen()),
           GetPage(name: PageRes.languageScreen, page: () => LanguageScreen()),
-          GetPage(name: PageRes.bookAppointmentSliderScree, page: ()=>BookAppointmentSliderScreen()),
-          GetPage(name: PageRes.paymentMethodScreen, page: ()=>PaymentMethodScreen()),
+          GetPage(
+              name: PageRes.bookAppointmentSliderScree,
+              page: () => BookAppointmentSliderScreen()),
+          GetPage(
+              name: PageRes.paymentMethodScreen,
+              page: () => PaymentMethodScreen()),
 
           ///_____________________________________ ADMIN PART -M ____________________________________
           GetPage(
@@ -208,7 +214,7 @@ class MyApp extends StatelessWidget {
               page: () => MostBookDetailsScreen()),
           // GetPage(name: PageRes.bookings, page: () => BookingScreen()),
 
-            GetPage(name: PageRes.filterScreen, page: () => FilterScreen()),
+          GetPage(name: PageRes.filterScreen, page: () => FilterScreen()),
 
           /*  GetPage(name: PageRes.filterScreen, page: () => FilterScreen()),*/
 
@@ -217,6 +223,20 @@ class MyApp extends StatelessWidget {
           GetPage(
               name: PageRes.bookAppointmentScreen,
               page: () => BookAppointmentScreen()),
+          GetPage(
+              name: PageRes.shopProfileScreen, page: () => ShopProfileScreen()),
+          GetPage(
+              name: PageRes.adminResetPasswordsScreen, page: () => AdminResetPasswordsScreen()),
+          GetPage(
+              name: PageRes.adminLanguageScreen, page: () => AdminLanguageScreen()),
+          GetPage(
+              name: PageRes.adminNotificationScreen, page: () => AdminNotificationScreen()),
+          GetPage(
+              name: PageRes.adminBankDetailsScreen, page: () => AdminBankDetailsScreen()),
+          GetPage(
+              name: PageRes.editBankDetailsScreen, page: () => EditBankDetailsScreen()),
+          GetPage(
+              name: PageRes.adminPrivacyPoliceScreen, page: () => AdminPrivacyPoliceScreen()),
         ]);
   }
 }

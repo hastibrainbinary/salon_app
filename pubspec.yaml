@@ -45,6 +45,7 @@ dependencies:
   image_picker: ^0.8.6+1
   flutter_switch: ^0.3.2
 
+
   # _____________ ui - M ________________
   flutter_dash: ^1.0.0
 

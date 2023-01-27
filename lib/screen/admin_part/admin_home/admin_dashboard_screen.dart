@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:salon_app/screen/admin_part/admin_chat/messages_screen.dart';
 import 'package:salon_app/screen/admin_part/admin_home/admin_dashboard_controller.dart';
 import 'package:salon_app/screen/admin_part/admin_home/home/admin_home_screen.dart';
+import 'package:salon_app/screen/admin_part/admin_shop_profile/shop_profile/shop_profile_screen.dart';
 import 'package:salon_app/utils/asset_res.dart';
 
 class AdminDashboardScreen extends StatelessWidget {
@@ -24,9 +25,7 @@ class AdminDashboardScreen extends StatelessWidget {
                 )
               : adminDashboardController.selectedIndex.value == 2
                   ? AdminMessagesScreen()
-                  : const Center(
-                      child: Text("shop"),
-                    )),
+                  : ShopProfileScreen()),
       bottomNavigationBar: ClipRRect(
           borderRadius: const BorderRadius.only(
             topLeft: Radius.circular(30.0),

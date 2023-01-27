@@ -32,6 +32,7 @@ class AssetRes {
   static const imageStyel = "${images}imageStyel.png";
   static const bookingUser = "${images}bookingUser.png";
   static const profileBack = "${images}profileBack.png";
+  static const privacyPolice ="${images}privacyPolice.png";
 
   ///------------------------------icons------------------------------------------------------
   static const phoneIcon = '${icons}phoneIcon.png';
@@ -54,6 +55,7 @@ class AssetRes {
   static const pinIcon = "${icons}pin_icon.png";
   static const sendIcon = "${icons}send_icon.png";
   static const plusIcon = "${icons}plus_icon.png";
+  static const bankIcon="${icons}bankIcon.png";
 
   static const gallery = "${icons}gallery.png";
   static const girl = "${icons}girl.png";

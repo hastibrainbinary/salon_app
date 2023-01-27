@@ -47,10 +47,16 @@ class PageRes {
   static String adminMessagesScreen = "/messagesScreen";
   static String adminMessageDetailScreen = "/messageDetailScreen";
   static String addSeviceScreen = "/addSeviceScreen";
-
-  // static String bookings="/bookings";
+  static String adminNotificationScreen="/adminNotificationScreen";
+  static String adminResetPasswordsScreen="/adminResetPasswordsScreen";
+  static String adminLanguageScreen="/adminLanguageScreen";
+  static String adminPrivacyPoliceScreen="/adminPrivacyPoliceScreen";
+  static String adminBankDetailsScreen="/adminBankDetailsScreen";
+  static String editBankDetailsScreen="/editBankDetailsScreen";
+     // static String bookings="/bookings";
   static String mostBookDetailsScreen = "/mostBookDetailsScreen";
   static String bookingDetails = "/bookingDetails";
+  static String shopProfileScreen="/shopProfileScreen";
 
   static String seviceAddScreen = "/seviceAddScreen";
 

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:salon_app/common/alert.dart';
-import 'package:salon_app/screen/user_part/profile_user/profile_user_controller.dart';
 import 'package:salon_app/screen/user_part/profile_user/widget.dart';
 import 'package:salon_app/utils/app_style.dart';
 import 'package:salon_app/utils/asset_res.dart';
@@ -9,15 +8,12 @@ import 'package:salon_app/utils/color_res.dart';
 import 'package:salon_app/utils/page_res.dart';
 import 'package:salon_app/utils/string.dart';
 
-class ProfileUserScreen extends StatelessWidget {
-  ProfileUserScreen({Key? key}) : super(key: key);
-  final ProfileUserController profileUserController =
-      Get.put(ProfileUserController());
+class ShopProfileScreen extends StatelessWidget {
+  const ShopProfileScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      resizeToAvoidBottomInset: false,
       body: SizedBox(
         height: Get.height,
         width: Get.width,
@@ -81,44 +77,32 @@ class ProfileUserScreen extends StatelessWidget {
                     containerWithTitleProfile(
                       title: Strings.notification,
                       icon: AssetRes.notification,
-                      onTap: () => Get.toNamed(PageRes.notificationUserScreen),
+                      onTap: () => Get.toNamed(PageRes.adminNotificationScreen),
                     ),
                     SizedBox(height: Get.height * 0.0307),
                     containerWithTitleProfile(
-                      title: Strings.filter,
-                      icon: AssetRes.filterU,
-                      onTap: () => Get.toNamed(PageRes.filterScreenUser),
-                    ),
-                    SizedBox(height: Get.height * 0.0307),
-                    containerWithTitleProfile(
-                      title: Strings.payment,
+                      title: Strings.bankDetails,
                       icon: AssetRes.payment,
-                      onTap: () => Get.toNamed(PageRes.paymentScreen),
+                      onTap: () => Get.toNamed(PageRes.adminBankDetailsScreen),
                     ),
                     SizedBox(height: Get.height * 0.0307),
                     containerWithTitleProfile(
                       title: Strings.resetPassword,
                       icon: AssetRes.resetPassword,
-                      onTap: () => Get.toNamed(PageRes.resetPasswordsScreen),
+                      onTap: () => Get.toNamed(PageRes.adminResetPasswordsScreen),
                     ),
                     SizedBox(height: Get.height * 0.0307),
                     containerWithTitleProfile(
                       language: "English (US)",
                       title: Strings.language,
                       icon: AssetRes.language,
-                      onTap: () => Get.toNamed(PageRes.languageScreen),
+                      onTap: () => Get.toNamed(PageRes.adminLanguageScreen),
                     ),
                     SizedBox(height: Get.height * 0.0307),
                     containerWithTitleProfile(
                       title: Strings.privacyPolicy,
                       icon: AssetRes.privacyPolice,
-                      onTap: () => Get.toNamed(PageRes.privacyPolicyScreen),
-                    ),
-                    SizedBox(height: Get.height * 0.0307),
-                    containerWithTitleProfile(
-                      title: Strings.inviteFriends,
-                      icon: AssetRes.inviteFriend,
-                      onTap: () => Get.toNamed(PageRes.inviteFriendScreen),
+                      onTap: () => Get.toNamed(PageRes.adminPrivacyPoliceScreen),
                     ),
                     SizedBox(height: Get.height * 0.0369),
                     InkWell(
