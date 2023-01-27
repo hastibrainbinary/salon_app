@@ -172,7 +172,7 @@ class Strings {
   static const selectGender="Select Gender";
   static const bookingId="Booking ID :";
 
-  
+
   static const cancelAppointmentTxt =
       "Are you sure,\nyou want to cancel your\nappointment?";
   static const yesCancelAppointment = "Yes, Cancel appointment";
