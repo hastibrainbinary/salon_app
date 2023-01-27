@@ -15,5 +15,16 @@ class EditProfileController extends GetxController {
     // dropDownValue.value = genderController.text;
   }
 
+  RxString gender = "Male".obs;
+  RxBool isGender = false.obs;
+
+  onTapGender() {
+    if (isGender.value == true) {
+      isGender.value = false;
+    } else {
+      isGender.value = true;
+    }
+  }
+
   RxList items = [Strings.male, Strings.female].obs;
 }

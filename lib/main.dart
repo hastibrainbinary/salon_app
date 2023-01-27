@@ -137,8 +137,10 @@ class MyApp extends StatelessWidget {
           GetPage(
               name: PageRes.editProfileScreen, page: () => EditProfileScreen()),
 
+
           GetPage(
               name: PageRes.editProfileScreen, page: () => EditProfileScreen()),
+
 
           GetPage(
               name: PageRes.messageDetailScreen,
@@ -216,7 +218,7 @@ class MyApp extends StatelessWidget {
 
           GetPage(name: PageRes.filterScreen, page: () => FilterScreen()),
 
-          /*  GetPage(name: PageRes.filterScreen, page: () => FilterScreen()),*/
+
 
           GetPage(
               name: PageRes.bookingDetails, page: () => BookingUserDetails()),

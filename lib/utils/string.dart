@@ -4,6 +4,7 @@ class Strings {
   static const skip = "Skip";
   static const areYouSure = "Are you sure you want to Logout?";
   static const typesOfDate = "1. Types of Date We Collect";
+
   static const aConfirmationMessage ="A confirmation message has sent to your registered mobile number";
   static const bookingDetails="Booking Details";
   static const selectTime="Select Time";
@@ -13,12 +14,15 @@ class Strings {
   static const businessBank ="Business Bank Account?";
   static const editBank="Edit Bank account";
 
+
+
+
   static const update = "Update";
   static const myCard = "My Card";
   static const addNewCard = "Add New Card";
   static const cardHolderName = "Card Holder Name*";
   static const expirationDate = "Expiration Date*";
-  static const bookingConfirmed="Booking Confirmed";
+  static const bookingConfirmed = "Booking Confirmed";
 
   static const getStarted = "Get Started";
   static const findNearBySalonsBookServices =
@@ -111,7 +115,6 @@ class Strings {
   static const inviteFriends = "Invite Friends";
   static const updatePassword = "Update Password";
   static const invite = "Invite";
-
   static const cardNumber = "Card number*";
   static const suggested = "Suggested";
   static const englishUs = "English (US)";

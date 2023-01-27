@@ -23,176 +23,171 @@ class HomeScreen extends StatelessWidget {
           children: [
             Stack(
               children: [
-                Container(
-                  height: 330,
-                  width: Get.width,
-                  decoration: BoxDecoration(
-                      border: Border.all(color: Colors.transparent)),
-                ),
                 const Image(
                   image: AssetImage(AssetRes.homeDesign),
                 ),
-                Positioned(
-                  top: 50,
-                  left: 15,
-                  child: Column(
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.only(right: 20),
-                        child: Row(
-                          children: [
-                            const CircleAvatar(
-                              radius: 28,
-                              child: Image(
-                                image: AssetImage(AssetRes.person),
+                Column(
+                  children: [
+                    SizedBox(
+                      height: Get.height * 0.05,
+                    ),
+                    Padding(
+                      padding: EdgeInsets.only(
+                          left: Get.width * 0.055, right: Get.width * 0.055),
+                      child: Row(
+                        children: [
+                          const CircleAvatar(
+                            radius: 28,
+                            child: Image(
+                              image: AssetImage(AssetRes.person),
+                            ),
+                          ),
+                          SizedBox(width: Get.width * 0.04),
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                Strings.rohan,
+                                style: appTextStyle(
+                                    color: ColorRes.white,
+                                    fontSize: 13,
+                                    fontWeight: FontWeight.w500),
                               ),
-                            ),
-                            SizedBox(width: Get.width * 0.04),
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  Strings.rohan,
-                                  style: appTextStyle(
-                                      color: ColorRes.white,
-                                      fontSize: 13,
-                                      fontWeight: FontWeight.w500),
-                                ),
-                                SizedBox(height: Get.height * 0.0026),
-                                Text(
-                                  Strings.unitedStates,
-                                  style: appTextStyle(
-                                      color: ColorRes.white,
-                                      fontSize: 10,
-                                      fontWeight: FontWeight.w300),
-                                ),
-                              ],
-                            ),
-                            SizedBox(width: Get.width * 0.3733),
-                            InkWell(
-                              onTap: () => Get.toNamed(PageRes.filterScreen),
-                              child: const CircleAvatar(
-                                backgroundColor: ColorRes.white,
-                                radius: 25,
-                                child: Image(
-                                  image: AssetImage(AssetRes.filter),
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                      SizedBox(height: Get.height * 0.0246),
-                      Container(
-                        height: 40,
-                        width: 270,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(20),
-                          color: Colors.white,
-                        ),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            SizedBox(
-                              width: 230,
-                              child: TextFormField(
-                                controller: homeController.searchController,
-                                decoration: InputDecoration(
-                                  border: const OutlineInputBorder(
-                                    borderRadius: BorderRadius.all(
-                                      Radius.circular(20),
-                                    ),
-                                    borderSide: BorderSide(
-                                      width: 0,
-                                      style: BorderStyle.none,
-                                    ),
-                                  ),
-                                  hintText: 'search for services...',
-                                  fillColor: Colors.white,
-                                  filled: true,
-                                  hintStyle: appTextStyle(
-                                    fontWeight: FontWeight.w400,
+                              SizedBox(height: Get.height * 0.0026),
+                              Text(
+                                Strings.unitedStates,
+                                style: appTextStyle(
+                                    color: ColorRes.white,
                                     fontSize: 10,
-                                    color: ColorRes.indicator,
+                                    fontWeight: FontWeight.w300),
+                              ),
+                            ],
+                          ),
+                          Spacer(),
+                          InkWell(
+                            onTap: () => Get.toNamed(PageRes.filterScreen),
+                            child: const CircleAvatar(
+                              backgroundColor: ColorRes.white,
+                              radius: 25,
+                              child: Image(
+                                image: AssetImage(AssetRes.filter),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    SizedBox(height: Get.height * 0.0246),
+                    Container(
+                      height: 40,
+                      width: 230,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(20),
+                        color: Colors.white,
+                      ),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          SizedBox(
+                            width: 190,
+                            child: TextFormField(
+                              controller: homeController.searchController,
+                              decoration: InputDecoration(
+                                border: const OutlineInputBorder(
+                                  borderRadius: BorderRadius.all(
+                                    Radius.circular(20),
                                   ),
+                                  borderSide: BorderSide(
+                                    width: 0,
+                                    style: BorderStyle.none,
+                                  ),
+                                ),
+                                hintText: 'search for services...',
+                                fillColor: Colors.white,
+                                filled: true,
+                                hintStyle: appTextStyle(
+                                  fontWeight: FontWeight.w400,
+                                  fontSize: 10,
+                                  color: ColorRes.indicator,
                                 ),
                               ),
                             ),
-                            Container(
-                              height: 40,
-                              width: 40,
-                              decoration: BoxDecoration(
-                                color: ColorRes.white,
-                                shape: BoxShape.circle,
-                                boxShadow: [
-                                  BoxShadow(
-                                    color: ColorRes.black.withOpacity(0.2),
-                                    blurRadius: 6.0,
-                                    spreadRadius: 1.0,
-                                    /*offset: Offset(0.0, 0.0),*/
-                                  )
-                                ],
-                              ),
-                              child: const Center(
-                                  child: Icon(Icons.search_outlined,
-                                      color: ColorRes.indicator)),
-                            ),
-                          ],
-                        ),
-                      ),
-                      SizedBox(height: Get.height * 0.0270),
-                      Container(
-                        width: 300,
-                        alignment: Alignment.centerLeft,
-                        child: Text(
-                          textAlign: TextAlign.start,
-                          Strings.services,
-                          style: appTextStyle(
+                          ),
+                          Container(
+                            height: 40,
+                            width: 40,
+                            decoration: BoxDecoration(
                               color: ColorRes.white,
-                              fontWeight: FontWeight.w500,
-                              fontSize: 16),
-                        ),
-                      ),
-                      SizedBox(height: Get.height * 0.0246),
-                      Container(
-                        width: 320,
-                        height: 200,
-                        /* decoration: BoxDecoration(
-                          color: ColorRes.black,
-                        ),*/
-                        child: ListView.separated(
-                          scrollDirection: Axis.horizontal,
-                          physics: const AlwaysScrollableScrollPhysics(),
-                          shrinkWrap: true,
-                          itemCount: 10,
-                          itemBuilder: (BuildContext context, int index) {
-                            return Column(
-                              children: [
-                                const CircleAvatar(
-                                  backgroundColor: ColorRes.white,
-                                  radius: 35,
-                                  child: Image(
-                                    image: AssetImage(AssetRes.hairCut),
-                                    height: 45,
-                                  ),
-                                ),
-                                Text(
-                                  "Hair cut",
-                                  style: appTextStyle(
-                                      color: ColorRes.black,
-                                      fontSize: 10,
-                                      fontWeight: FontWeight.w400),
+                              shape: BoxShape.circle,
+                              boxShadow: [
+                                BoxShadow(
+                                  color: ColorRes.black.withOpacity(0.2),
+                                  blurRadius: 6.0,
+                                  spreadRadius: 1.0,
+                                  /*offset: Offset(0.0, 0.0),*/
                                 )
                               ],
-                            );
-                          },
-                          separatorBuilder: (BuildContext context, int index) {
-                            return const SizedBox(width: 12);
-                          },
-                        ),
+                            ),
+                            child: const Center(
+                                child: Icon(Icons.search_outlined,
+                                    color: ColorRes.indicator)),
+                          ),
+                        ],
                       ),
-                    ],
-                  ),
+                    ),
+                    SizedBox(height: Get.height * 0.0270),
+                    Container(
+                      width: 300,
+                      alignment: Alignment.centerLeft,
+                      child: Text(
+                        textAlign: TextAlign.start,
+                        Strings.services,
+                        style: appTextStyle(
+                            color: ColorRes.white,
+                            fontWeight: FontWeight.w500,
+                            fontSize: 16),
+                      ),
+                    ),
+                    SizedBox(height: Get.height * 0.0246),
+                    Container(
+                      width: 320,
+                      height: 100,
+                      color: Colors.transparent,
+                      /* decoration: BoxDecoration(
+                        color: ColorRes.black,
+                      ),*/
+                      child: ListView.separated(
+                        scrollDirection: Axis.horizontal,
+                        physics: const AlwaysScrollableScrollPhysics(),
+                        shrinkWrap: true,
+                        itemCount: 10,
+                        itemBuilder: (BuildContext context, int index) {
+                          return Column(
+                            children: [
+                              const CircleAvatar(
+                                backgroundColor: ColorRes.white,
+                                radius: 35,
+                                child: Image(
+                                  image: AssetImage(AssetRes.hairCut),
+                                  height: 45,
+                                ),
+                              ),
+                              Text(
+                                "Hair cut",
+                                style: appTextStyle(
+                                    color: ColorRes.black,
+                                    fontSize: 10,
+                                    fontWeight: FontWeight.w400),
+                              )
+                            ],
+                          );
+                        },
+                        separatorBuilder: (BuildContext context, int index) {
+                          return const SizedBox(width: 12);
+                        },
+                      ),
+                    ),
+                  ],
                 ),
               ],
             ),
@@ -201,6 +196,9 @@ class HomeScreen extends StatelessWidget {
               width: 325,
               height: 157,
               child: PageView.builder(
+                onPageChanged: (value) {
+                  controller.selectIndicator.value = value;
+                },
                 controller: homePageController,
                 itemCount: 3,
                 itemBuilder: (context, index) {
@@ -245,6 +243,4 @@ class HomeScreen extends StatelessWidget {
       ),
     );
   }
-
-
 }
