@@ -167,9 +167,15 @@ Widget bookServices() {
               SizedBox(width: Get.width * 0.2666),
               InkWell(
                 onTap: () {
-                  bookAppointmentController.appointment.value = true;
+                  bookAppointmentController.ischooseServices.value = false;
+                  bookAppointmentController.isappointment.value = true;
+                  bookAppointmentController.ispayment.value = false;
+                  bookAppointmentController.issummary.value = false;
 
-                  Get.toNamed(PageRes.bookAppointmentSliderScree);
+                  bookAppointmentController.chooseServices.value = true;
+                  bookAppointmentController.appointment.value = true;
+                  // bookAppointmentController.isServiceNext.value = true;
+                  // Get.toNamed(PageRes.bookAppointmentSliderScree);
                 },
                 child: Container(
                   width: 153,

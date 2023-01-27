@@ -12,7 +12,8 @@ Widget indicator(bool isActive, Color activeIndicatorColor) {
       duration: const Duration(milliseconds: 150),
       width: 17,
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(10),
+        // borderRadius: BorderRadius.circular(10),
+        shape: BoxShape.circle,
         color: isActive ? activeIndicatorColor : Colors.grey,
       ),
     ),

@@ -166,37 +166,98 @@ class EditProfileScreen extends StatelessWidget {
                     ),
                   ),
                   SizedBox(height: Get.height * 0.0246),
-                  Container(
-                    height: 51,
-                    width: 325,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(5),
-                      border: Border.all(color: ColorRes.indicator),
-                    ),
-                    child: Obx(
-                      () => DropdownButton(
-                          isExpanded: true,
-                          value: editProfileController.dropDownValue.value,
-                          iconSize: 25.0,
-                          iconEnabledColor: ColorRes.black.withOpacity(0.7),
-                          iconDisabledColor: ColorRes.black.withOpacity(0.7),
-                          underline: Container(),
-                          icon: const Icon(Icons.keyboard_arrow_down_rounded),
-                          items: editProfileController.items.obs.value.map(
-                            (val) {
-                              return DropdownMenuItem<String>(
-                                value: val,
-                                child: Padding(
-                                  padding: const EdgeInsets.symmetric(
-                                      horizontal: 10),
-                                  child: Text(val),
-                                ),
-                              );
-                            },
-                          ).toList(),
-                          onChanged: (String? val) {
-                            editProfileController.changeDropDown(val: val!);
-                          }),
+                  Obx(
+                    () => Container(
+                      alignment: Alignment.center,
+                      height: (editProfileController.isGender.value == true)
+                          ? 80
+                          : 51,
+                      width: 325,
+                      padding: const EdgeInsets.only(left: 10, right: 10),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(5),
+                        border: Border.all(color: ColorRes.indicator),
+                      ),
+                      child: Row(
+                        // mainAxisAlignment: MainAxisAlignment.start,
+                        crossAxisAlignment:
+                            (editProfileController.isGender.value == true)
+                                ? CrossAxisAlignment.start
+                                : CrossAxisAlignment.center,
+                        children: [
+                          (editProfileController.isGender.value == true)
+                              ? Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    InkWell(
+                                        onTap: () {
+                                          editProfileController.gender.value =
+                                              "Male";
+                                          editProfileController.onTapGender();
+                                        },
+                                        child: const Text("Male")),
+                                    const SizedBox(
+                                      height: 20,
+                                    ),
+                                    InkWell(
+                                        onTap: () {
+                                          editProfileController.gender.value =
+                                              "Female";
+                                          editProfileController.onTapGender();
+                                        },
+                                        child: const Text("Female")),
+                                  ],
+                                )
+                              : Text(editProfileController.gender.value),
+                          const Spacer(),
+                          InkWell(
+                              onTap: () {
+                                editProfileController.onTapGender();
+                              },
+                              child: (editProfileController.isGender.value ==
+                                      true)
+                                  ? const Padding(
+                                      padding: EdgeInsets.only(top: 5),
+
+                                      // padding: const EdgeInsets.all(8.0),
+                                      child:
+                                          Icon(Icons.keyboard_arrow_up_rounded),
+                                    )
+                                  : const Icon(
+                                      Icons.keyboard_arrow_down_rounded)),
+                        ],
+                      ),
+                      /*  Obx(
+                        () => DropdownButton(
+                            isExpanded: true,
+                            elevation: 0,
+                            // borderRadius: BorderRadius.circular(5),
+                  
+                            value: editProfileController.dropDownValue.value,
+                            iconSize: 25.0,
+                            iconEnabledColor: ColorRes.black.withOpacity(0.7),
+                            iconDisabledColor: ColorRes.black.withOpacity(0.7),
+                            underline: Container(),
+                            icon: const Icon(Icons.keyboard_arrow_down_rounded),
+                            items: editProfileController.items.obs.value.map(
+                              (val) {
+                                return DropdownMenuItem<String>(
+                                  value: val,
+                                  child: Container(
+                                    child: Padding(
+                                      padding: const EdgeInsets.symmetric(
+                                          horizontal: 10),
+                                      child: Text(val),
+                                    ),
+                                  ),
+                                );
+                              },
+                            ).toList(),
+                            onChanged: (String? val) {
+                              editProfileController.changeDropDown(val: val!);
+                            }),
+                      ), */
                     ),
                   ),
                   SizedBox(height: Get.height * 0.0246),
