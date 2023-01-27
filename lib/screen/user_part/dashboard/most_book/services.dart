@@ -34,7 +34,7 @@ Widget services() {
                           color: const Color(0xff94674F).withOpacity(0.2),
                           offset: const Offset(0.0, 4),
                           blurRadius: 23.0,
-                        )
+                        ),
                       ]),
                   child: const Image(
                     image: AssetImage(AssetRes.hairCut),

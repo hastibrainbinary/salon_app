@@ -20,7 +20,7 @@ Widget mostBook() {
                   fontWeight: FontWeight.w600,
                   fontSize: 15),
             ),
-            SizedBox(width: Get.width * 0.3466),
+            const Spacer(),
             InkWell(
               onTap: () => Get.toNamed(PageRes.mostBook),
               child: Text(
@@ -42,8 +42,8 @@ Widget mostBook() {
             Row(
               children: [
                 Container(
-                  height: 139,
-                  width: 155,
+                  height: Get.height * 0.2,
+                  width: Get.width * 0.4,
                   decoration: BoxDecoration(
                     color: ColorRes.white,
                     borderRadius: BorderRadius.circular(10),
@@ -62,8 +62,8 @@ Widget mostBook() {
                               image: AssetImage(AssetRes.mostBook),
                             ),
                             Positioned(
-                              top: 70,
-                              left: 85,
+                              top: 65,
+                              left: 75,
                               child: Container(
                                 height: 18,
                                 width: 50,
@@ -147,8 +147,8 @@ Widget mostBook() {
                 ),
                 SizedBox(width: Get.width * 0.0533),
                 Container(
-                  height: 139,
-                  width: 155,
+                  height: Get.height * 0.2,
+                  width: Get.width * 0.4,
                   decoration: BoxDecoration(
                     color: ColorRes.white,
                     borderRadius: BorderRadius.circular(10),
@@ -167,8 +167,8 @@ Widget mostBook() {
                               image: AssetImage(AssetRes.mostBook),
                             ),
                             Positioned(
-                              top: 70,
-                              left: 85,
+                              top: 65,
+                              left: 75,
                               child: Container(
                                 height: 18,
                                 width: 50,
@@ -273,7 +273,7 @@ Widget nearbySalon() {
                   fontWeight: FontWeight.w600,
                   fontSize: 15),
             ),
-            SizedBox(width: Get.width * 0.4746),
+            const Spacer(),
             Text(
               Strings.viewAll,
               style: appTextStyle(
@@ -292,8 +292,8 @@ Widget nearbySalon() {
             Row(
               children: [
                 Container(
-                  height: 139,
-                  width: 155,
+                  height: Get.height * 0.2,
+                  width: Get.width * 0.4,
                   decoration: BoxDecoration(
                     color: ColorRes.white,
                     borderRadius: BorderRadius.circular(10),
@@ -312,8 +312,8 @@ Widget nearbySalon() {
                               image: AssetImage(AssetRes.nearbySalon),
                             ),
                             Positioned(
-                              top: 70,
-                              left: 85,
+                              top: 65,
+                              left: 75,
                               child: Container(
                                 height: 18,
                                 width: 50,
@@ -397,8 +397,8 @@ Widget nearbySalon() {
                 ),
                 SizedBox(width: Get.width * 0.0533),
                 Container(
-                  height: 139,
-                  width: 155,
+                  height: Get.height * 0.2,
+                  width: Get.width * 0.4,
                   decoration: BoxDecoration(
                     color: ColorRes.white,
                     borderRadius: BorderRadius.circular(10),
@@ -417,8 +417,8 @@ Widget nearbySalon() {
                               image: AssetImage(AssetRes.nearbySalon),
                             ),
                             Positioned(
-                              top: 70,
-                              left: 85,
+                              top: 65,
+                              left: 75,
                               child: Container(
                                 height: 18,
                                 width: 50,

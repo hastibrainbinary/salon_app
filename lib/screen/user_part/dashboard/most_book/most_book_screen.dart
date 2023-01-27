@@ -41,14 +41,14 @@ class MostBookScreen extends StatelessWidget {
               ),
             ],
           ),
-            SizedBox(height: Get.height * 0.0307),
+          SizedBox(height: Get.height * 0.0307),
           Expanded(
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 18.0),
               child: GridView.builder(
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                     crossAxisCount: 2,
-                    childAspectRatio: 3 / 2.5,
+                    childAspectRatio: 3 / 2.6,
                     crossAxisSpacing: 10,
                     mainAxisSpacing: 10),
                 itemCount: 10,

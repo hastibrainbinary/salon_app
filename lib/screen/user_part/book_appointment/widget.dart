@@ -1,13 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:salon_app/screen/user_part/book_appointment/book_appointment_controller.dart';
 import 'package:salon_app/utils/app_style.dart';
 import 'package:salon_app/utils/asset_res.dart';
 import 'package:salon_app/utils/color_res.dart';
+import 'package:salon_app/utils/page_res.dart';
 import 'package:salon_app/utils/string.dart';
 
-Widget bookServices() {
+BookAppointmentController bookAppointmentController =
+    Get.put(BookAppointmentController());
 
+Widget bookServices() {
   return SingleChildScrollView(
+    physics: const BouncingScrollPhysics(),
     child: Column(
       children: [
         Container(
@@ -64,6 +69,7 @@ Widget bookServices() {
             scrollDirection: Axis.vertical,
             itemCount: 10,
             shrinkWrap: true,
+            physics: const NeverScrollableScrollPhysics(),
             itemBuilder: (context, index) {
               return Row(
                 children: [
@@ -159,28 +165,35 @@ Widget bookServices() {
                 ),
               ),
               SizedBox(width: Get.width * 0.2666),
-              Container(
-                width: 153,
-                height: 45,
-                decoration: BoxDecoration(
-                    color: ColorRes.indicator,
-                    borderRadius: BorderRadius.circular(8)),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(
-                      Strings.next,
-                      style: appTextStyle(
-                          color: ColorRes.white,
-                          fontWeight: FontWeight.w600,
-                          fontSize: 14),
-                    ),
-                    SizedBox(width: Get.width * 0.0186),
-                    const Image(
-                      image: AssetImage(AssetRes.arrow),
-                      height: 12,
-                    )
-                  ],
+              InkWell(
+                onTap: () {
+                  bookAppointmentController.appointment.value = true;
+
+                  Get.toNamed(PageRes.appointmentBookingScreen);
+                },
+                child: Container(
+                  width: 153,
+                  height: 45,
+                  decoration: BoxDecoration(
+                      color: ColorRes.indicator,
+                      borderRadius: BorderRadius.circular(8)),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        Strings.next,
+                        style: appTextStyle(
+                            color: ColorRes.white,
+                            fontWeight: FontWeight.w600,
+                            fontSize: 14),
+                      ),
+                      SizedBox(width: Get.width * 0.0186),
+                      const Image(
+                        image: AssetImage(AssetRes.arrow),
+                        height: 12,
+                      )
+                    ],
+                  ),
                 ),
               )
             ],

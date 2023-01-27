@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:salon_app/screen/admin_part/admin_chat/message_detail/message_detail_screen.dart';
 import 'package:salon_app/screen/admin_part/admin_chat/messages_screen.dart';
 import 'package:salon_app/screen/admin_part/admin_home/admin_dashboard_screen.dart';
+import 'package:salon_app/screen/admin_part/admin_home/home/screens/add_service/screens/add_service/add_service_screen.dart';
 import 'package:salon_app/screen/admin_part/admin_home/home/screens/add_service/service_screen.dart';
 import 'package:salon_app/screen/admin_part/admin_home/home/screens/add_your_bank_account/add_your_bank_account_screen.dart';
 import 'package:salon_app/screen/admin_part/admin_home/home/screens/add_your_bank_account/edit_account/edit_account.dart';
@@ -105,14 +106,20 @@ class MyApp extends StatelessWidget {
               page: () => AppointmentBookingScreen()),
 
           GetPage(name: PageRes.messagesScreen, page: () => MessagesScreen()),
-          GetPage(name: PageRes.notificationUserScreen, page: () => NotificationUserScreen()),
-          GetPage(name: PageRes.filterScreenUser, page: () => FilterScreenUser()),
-          GetPage(name: PageRes.resetPasswordsScreen, page: () => ResetPasswordsScreen()),
-          GetPage(name: PageRes.inviteFriendScreen, page: () => InviteFriendScreen()),
-          GetPage(name: PageRes.privacyPolicyScreen, page:()=> PrivacyPolicyScreen()),
-
-
-
+          GetPage(
+              name: PageRes.notificationUserScreen,
+              page: () => NotificationUserScreen()),
+          GetPage(
+              name: PageRes.filterScreenUser, page: () => FilterScreenUser()),
+          GetPage(
+              name: PageRes.resetPasswordsScreen,
+              page: () => ResetPasswordsScreen()),
+          GetPage(
+              name: PageRes.inviteFriendScreen,
+              page: () => InviteFriendScreen()),
+          GetPage(
+              name: PageRes.privacyPolicyScreen,
+              page: () => PrivacyPolicyScreen()),
 
           GetPage(
               name: PageRes.messageDetailScreen,
@@ -124,6 +131,9 @@ class MyApp extends StatelessWidget {
           GetPage(
               name: PageRes.adminMessagesScreen,
               page: () => AdminMessagesScreen()),
+
+          GetPage(
+              name: PageRes.seviceAddScreen, page: () => AddServiceScreen()),
           GetPage(
               name: PageRes.adminMessageDetailScreen,
               page: () => AdminMessageDetailScreen()),

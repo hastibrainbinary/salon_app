@@ -44,8 +44,7 @@ class MostBookDetailsScreen extends StatelessWidget {
                   SizedBox(
                     height: Get.height * 0.3189,
                   ),
-                  Container
-                    (
+                  Container(
                     height: Get.height - (Get.height * 0.3189),
                     width: Get.width,
                     decoration: const BoxDecoration(
@@ -72,7 +71,7 @@ class MostBookDetailsScreen extends StatelessWidget {
                                       fontWeight: FontWeight.w500,
                                       fontSize: 20),
                                 ),
-                                SizedBox(width: Get.width * 0.312),
+                                const Spacer(),
                                 const Icon(
                                   Icons.circle,
                                   size: 8,
@@ -96,7 +95,8 @@ class MostBookDetailsScreen extends StatelessWidget {
                               children: [
                                 InkWell(
                                   onTap: () {
-                                    mostBookController.changeTitle(Strings.about);
+                                    mostBookController
+                                        .changeTitle(Strings.about);
                                   },
                                   child: Container(
                                     height: 25,
@@ -187,14 +187,13 @@ class MostBookDetailsScreen extends StatelessWidget {
                           ),
                           SizedBox(height: Get.height * 0.0369),
                           Obx(
-                            () =>
-                                mostBookController.isSelect.value == Strings.about
-                                    ? about()
-                                    : mostBookController.isSelect.value ==
-                                            Strings.services
-                                        ? services()
-                                        : reviews(),
-
+                            () => mostBookController.isSelect.value ==
+                                    Strings.about
+                                ? about()
+                                : mostBookController.isSelect.value ==
+                                        Strings.services
+                                    ? services()
+                                    : reviews(),
                           )
                         ],
                       ),

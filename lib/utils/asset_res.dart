@@ -53,6 +53,7 @@ class AssetRes {
   static const closeIcon = "${icons}close_icon.png";
   static const pinIcon = "${icons}pin_icon.png";
   static const sendIcon = "${icons}send_icon.png";
+  static const plusIcon = "${icons}plus_icon.png";
 
   static const gallery = "${icons}gallery.png";
   static const girl = "${icons}girl.png";
@@ -64,8 +65,8 @@ class AssetRes {
   static const filterU = "${icons}filterU.png";
   static const payment = "${icons}payment.png";
   static const language = "${icons}language.png";
-  static const resetPassword="${icons}resetPassword.png";
-  static const logout="${icons}logout.png";
+  static const resetPassword = "${icons}resetPassword.png";
+  static const logout = "${icons}logout.png";
 
   ///____________________________ ADMIN PART -M _______________________________
 
