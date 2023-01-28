@@ -9,6 +9,7 @@ Future pickImgBottomSheet(context,
     {required VoidCallback ontapCamera, required VoidCallback ontapGallery}) {
   return showModalBottomSheet(
     context: context,
+    barrierColor: ColorRes.black.withOpacity(0.8),
     backgroundColor: Colors.transparent,
     builder: (BuildContext bc) {
       return Container(

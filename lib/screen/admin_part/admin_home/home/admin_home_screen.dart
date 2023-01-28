@@ -106,10 +106,11 @@ class AdminHomeScreen extends StatelessWidget {
                                     shape: BoxShape.circle,
                                     color: ColorRes.white),
                                 child: Transform.scale(
-                                    scale: 0.4,
-                                    child: Image.asset(
-                                      AssetRes.notificationIcon,
-                                    )),
+                                  scale: 0.4,
+                                  child: Image.asset(
+                                    AssetRes.notificationIcon,
+                                  ),
+                                ),
                               ),
                             )
                           ],
@@ -138,12 +139,14 @@ class AdminHomeScreen extends StatelessWidget {
                               }),
                           const SizedBox(
                             height: 20,
-                            // Get.height * 0.02,
+
                           ),
                           containerWithTitle(
                               title: Strings.addAdvertisementPost,
                               icon: AssetRes.addAdvertisementPostIcon,
-                              onTap: () {}),
+                              onTap: () {
+                                Get.toNamed(PageRes.addAdvertisementPostScreen);
+                              }),
                           const SizedBox(
                             height: 20,
                             // Get.height * 0.02,
@@ -151,7 +154,9 @@ class AdminHomeScreen extends StatelessWidget {
                           containerWithTitle(
                               title: Strings.staffDetails,
                               icon: AssetRes.staffDetailIcon,
-                              onTap: () {}),
+                              onTap: () {
+                                Get.toNamed(PageRes.staffDetailsScreen);
+                              }),
                           const SizedBox(
                             height: 20,
                             // Get.height * 0.02,

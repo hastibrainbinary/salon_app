@@ -3,10 +3,14 @@ import 'package:get/get.dart';
 import 'package:salon_app/screen/admin_part/admin_chat/message_detail/message_detail_screen.dart';
 import 'package:salon_app/screen/admin_part/admin_chat/messages_screen.dart';
 import 'package:salon_app/screen/admin_part/admin_home/admin_dashboard_screen.dart';
+import 'package:salon_app/screen/admin_part/admin_home/home/screens/add_advertisement_post/add_advertisment_post_screen.dart';
+import 'package:salon_app/screen/admin_part/admin_home/home/screens/add_advertisement_post/add_post_screen.dart';
+import 'package:salon_app/screen/admin_part/admin_home/home/screens/add_advertisement_post/delete_post_screen.dart';
 import 'package:salon_app/screen/admin_part/admin_home/home/screens/add_service/service_screen.dart';
 import 'package:salon_app/screen/admin_part/admin_home/home/screens/add_your_bank_account/add_your_bank_account_screen.dart';
 import 'package:salon_app/screen/admin_part/admin_home/home/screens/add_your_bank_account/edit_account/edit_account.dart';
 import 'package:salon_app/screen/admin_part/admin_home/home/screens/notifocation/notification_screen.dart';
+import 'package:salon_app/screen/admin_part/admin_home/home/screens/staff_details/staff_details_screen.dart';
 import 'package:salon_app/screen/admin_part/admin_shop_profile/bank_details/admin_bank_details_screen.dart';
 import 'package:salon_app/screen/admin_part/admin_shop_profile/edit_bank_details/edit_bank_details_screen.dart';
 import 'package:salon_app/screen/admin_part/admin_shop_profile/language/admin_language_screen.dart';
@@ -243,6 +247,14 @@ class MyApp extends StatelessWidget {
               name: PageRes.editBankDetailsScreen, page: () => EditBankDetailsScreen()),
           GetPage(
               name: PageRes.adminPrivacyPoliceScreen, page: () => AdminPrivacyPoliceScreen()),
+          GetPage(
+              name: PageRes.addAdvertisementPostScreen, page: () => AddAdvertisementPostScreen()),
+          GetPage(
+              name: PageRes.addPostScreen, page: () => AddPostScreen()),
+          GetPage(
+              name: PageRes.deletePostScreen, page: () => DeletePostScreen()),
+          GetPage(
+              name: PageRes.staffDetailsScreen, page: () => StaffDetailsScreen()),
         ]);
   }
 }

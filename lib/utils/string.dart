@@ -23,6 +23,9 @@ class Strings {
   static const addBookingNotes="Add Booking Notes";
   static const confirm="Confirm";
   static const swipeUpToTurnOff="Swipe up to turn off";
+  static const advertisementPost="Advertisement Post";
+  static const addPost="Add Post";
+  static const deletePost="Delete Post";
 
 
 

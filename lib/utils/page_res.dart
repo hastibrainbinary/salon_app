@@ -68,4 +68,8 @@ class PageRes {
   static String appointmentBookingScreen = "/AppointmentBookingScreen";
   static String notificationUserScreen = "/notificationUserScreen";
   static String editProfileScreen = "/editProfileScreen";
+  static String addAdvertisementPostScreen="/addAdvertisementPostScreen";
+  static String addPostScreen="/addPostScreen";
+  static String deletePostScreen="/deletePostScreen";
+  static String staffDetailsScreen="/staffDetailsScreen";
 }

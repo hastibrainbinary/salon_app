@@ -104,7 +104,7 @@ class AddServiceScreen extends StatelessWidget {
                                       borderRadius: BorderRadius.circular(70),
                                       boxShadow: [
                                         BoxShadow(
-                                          color: const Color(0xff94674F)
+                                          color: ColorRes.indicator
                                               .withOpacity(0.2),
                                           offset: const Offset(0.0, 4),
                                           blurRadius: 23.0,
