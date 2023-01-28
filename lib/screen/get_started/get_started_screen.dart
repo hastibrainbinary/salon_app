@@ -27,33 +27,34 @@ class GetStartedScreen extends StatelessWidget {
                   image: AssetImage(AssetRes.backImage), fit: BoxFit.fill),
             ),
           ),
-          Positioned(
-            top: 500,
-            left: 15,
-            right: 15,
-            child: Center(
-              child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 4.0),
-                child: Text(
-                  textAlign: TextAlign.center,
-                  Strings.bookAnAppointmentForSalon,
-                  style: appTextStyle(
-                      fontSize: 24,
-                      fontWeight: FontWeight.w600,
-                      color: ColorRes.white),
+          Column(
+            children: [
+              const Spacer(),
+              Center(
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 4.0),
+                  child: Text(
+                    textAlign: TextAlign.center,
+                    Strings.bookAnAppointmentForSalon,
+                    style: appTextStyle(
+                        fontSize: 24,
+                        fontWeight: FontWeight.w600,
+                        color: ColorRes.white),
+                  ),
                 ),
               ),
-            ),
-          ),
-          Positioned(
-            top: 590,
-            left: 29,
-            right: 29,
-            child: commonButton(
-                onTap: () => Get.toNamed(PageRes.signUpSignInScreen),
-                title: Strings.getStarted,
-                textColor: ColorRes.indicator,
-                backgroundColor: ColorRes.white),
+              SizedBox(
+                height: Get.height * 0.03,
+              ),
+              commonButton(
+                  onTap: () => Get.toNamed(PageRes.signUpSignInScreen),
+                  title: Strings.getStarted,
+                  textColor: ColorRes.indicator,
+                  backgroundColor: ColorRes.white),
+              SizedBox(
+                height: Get.height * 0.05,
+              ),
+            ],
           ),
         ],
       ),
