@@ -20,6 +20,8 @@ class BookAppointmentController extends GetxController {
   RxBool isServiceNext = false.obs;
   RxBool isAppointmentNext = false.obs;
 
+  Rx<DateTime> month = DateTime.now().obs;
+
   void changeTitle(String str) {
     isSelect.value = str;
   }

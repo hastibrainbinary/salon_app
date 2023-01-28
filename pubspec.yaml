@@ -49,6 +49,9 @@ dependencies:
 
   # _____________ ui - M ________________
   flutter_dash: ^1.0.0
+  flutter_switch: ^0.3.2
+  month_picker_dialog_2: ^0.6.1+2
+  intl: ^0.17.0
 
 
 dev_dependencies:

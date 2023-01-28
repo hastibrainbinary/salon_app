@@ -105,6 +105,9 @@ class Strings {
   static const open = "Open";
   static const nearbySalon = "Nearby Salon";
   static const todayBookings = "Today’s Bookings";
+  static const selectDate = "Select Date";
+
+  static const cVV = "CVV*";
 
   static const myAppointments = "My Appointments";
   static const upcoming = "Upcoming";

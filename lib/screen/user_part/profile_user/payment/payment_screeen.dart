@@ -56,7 +56,7 @@ class PaymentScreen extends StatelessWidget {
                     fontSize: 18,
                   ),
                 ),
-                SizedBox(width: Get.width * 0.6),
+                Spacer(),
                 InkWell(
                   onTap: () {
                     Navigator.push(
