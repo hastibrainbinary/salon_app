@@ -4,7 +4,6 @@ import 'package:salon_app/screen/user_part/book_appointment/book_appointment_con
 import 'package:salon_app/utils/app_style.dart';
 import 'package:salon_app/utils/asset_res.dart';
 import 'package:salon_app/utils/color_res.dart';
-import 'package:salon_app/utils/page_res.dart';
 import 'package:salon_app/utils/string.dart';
 
 BookAppointmentController bookAppointmentController =

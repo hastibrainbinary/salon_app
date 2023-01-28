@@ -367,17 +367,23 @@ Future bookingConfirmed(context) {
           filter: ImageFilter.blur(sigmaX: 2, sigmaY: 2),
           child: AlertDialog(
             content: Column(
+              mainAxisSize: MainAxisSize.min,
               children: [
                 const Image(
                   image: AssetImage(AssetRes.confirmPayment),
                 ),
                 const SizedBox(height: 25),
-                Text(
-                  Strings.bookingConfirmed,
-                  style: appTextStyle(
-                      color: ColorRes.indicator,
-                      fontWeight: FontWeight.w500,
-                      fontSize: 20),
+                InkWell(onTap:
+                  () {
+                    Get.toNamed(PageRes.appointmentBookingScreen);
+                  },
+                  child: Text(
+                    Strings.bookingConfirmed,
+                    style: appTextStyle(
+                        color: ColorRes.indicator,
+                        fontWeight: FontWeight.w500,
+                        fontSize: 20),
+                  ),
                 ),
                 const SizedBox(height: 5),
                 Text(

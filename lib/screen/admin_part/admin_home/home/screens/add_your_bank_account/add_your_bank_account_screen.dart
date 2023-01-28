@@ -1,5 +1,5 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_switch/flutter_switch.dart';
 import 'package:get/get.dart';
 import 'package:salon_app/screen/admin_part/admin_home/home/screens/add_your_bank_account/add_your_bank_account_controller.dart';
 import 'package:salon_app/utils/app_style.dart';
@@ -109,16 +109,8 @@ class AddYourBankAccountScreen extends StatelessWidget {
                         child: TextFormField(
                           controller: addYourBankAccountController
                               .accountHolderNameController.value,
-                          // obscureText: controller.show.value,
                           decoration: InputDecoration(
                             border: InputBorder.none,
-                            // prefixIcon: const Padding(
-                            //   padding: EdgeInsets.all(14.0),
-                            //   child: Image(
-                            //     image: AssetImage(AssetRes.locationIcon),
-                            //     color: ColorRes.indicator,
-                            //   ),
-                            // ),
                             hintText: 'Albert Flores',
                             fillColor: Colors.transparent,
                             filled: true,
@@ -131,37 +123,6 @@ class AddYourBankAccountScreen extends StatelessWidget {
                         ),
                       ),
                     ),
-                    // controller.locationError.value == ""
-                    //         ? SizedBox(height: Get.height * 0.0197)
-                    //         : Container(
-                    //             width: 350,
-                    //             height: 28,
-                    //             margin: const EdgeInsets.symmetric(vertical: 10),
-                    //             decoration: BoxDecoration(
-                    //                 borderRadius: BorderRadius.circular(50),
-                    //                 color: ColorRes.invalidColor),
-                    //             padding: const EdgeInsets.only(left: 15),
-                    //             child: Row(
-                    //               mainAxisAlignment: MainAxisAlignment.start,
-                    //               crossAxisAlignment: CrossAxisAlignment.center,
-                    //               children: [
-                    //                 const Image(
-                    //                   image: AssetImage(
-                    //                     AssetRes.invalid,
-                    //                   ),
-                    //                   height: 14,
-                    //                 ),
-                    //                 const SizedBox(width: 10),
-                    //                 Text(
-                    //                   controller.locationError.value,
-                    //                   style: appTextStyle(
-                    //                       fontSize: 9,
-                    //                       fontWeight: FontWeight.w400,
-                    //                       color: ColorRes.starColor),
-                    //                 ),
-                    //               ],
-                    //             ),
-                    //           ),
                     const SizedBox(
                       height: 20,
                     ),
@@ -218,7 +179,6 @@ class AddYourBankAccountScreen extends StatelessWidget {
                     const SizedBox(
                       height: 20,
                     ),
-
                     Row(
                       children: [
                         Text(
@@ -274,22 +234,26 @@ class AddYourBankAccountScreen extends StatelessWidget {
                     ),
                     Row(
                       children: [
-                        Text(
-                          Strings.businessBankAccount,
-                          style: appTextStyle(
-                              fontSize: 15,
-                              fontWeight: FontWeight.w500,
-                              color: ColorRes.black),
+                        Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 10),
+                          child: Text(
+                            Strings.businessBank,
+                            style: appTextStyle(
+                                color: ColorRes.black,
+                                fontWeight: FontWeight.w500,
+                                fontSize: 15),
+                          ),
                         ),
-                        const Spacer(),
-                        Transform.scale(
-                          scale: 0.6,
-                          child: CupertinoSwitch(
-                            activeColor: ColorRes.color94674F,
-                            value: addYourBankAccountController.isSwitch.value,
-                            onChanged: (v) {
-                              addYourBankAccountController.onSwitchChange(v);
-                            },
+                        SizedBox(width: Get.width * 0.208),
+                        Obx(
+                          () => FlutterSwitch(
+                            height: 23,
+                            width: 39,
+                            value: addYourBankAccountController.isAccount.value,
+                            activeColor: ColorRes.indicator,
+                            toggleSize: 16,
+                            onToggle: (value) => addYourBankAccountController
+                                .onchangeAccount(value),
                           ),
                         ),
                       ],

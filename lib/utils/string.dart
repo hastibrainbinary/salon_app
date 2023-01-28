@@ -4,7 +4,14 @@ class Strings {
   static const skip = "Skip";
   static const areYouSure = "Are you sure you want to Logout?";
   static const typesOfDate = "1. Types of Date We Collect";
-
+  static const debitOrCreditCard="Debit or Credit card";
+  static const uPI="UPI";
+  static const reviewAndConfirm="Review and Confirm";
+  static const pickingTime="Picking Time :";
+  static const barberShop="Barber Shop :";
+  static const service1="Service             :";
+  static const barber1="Barber            :";
+  static const location1="Location          :";
   static const aConfirmationMessage ="A confirmation message has sent to your registered mobile number";
   static const bookingDetails="Booking Details";
   static const selectTime="Select Time";
@@ -13,6 +20,9 @@ class Strings {
   static const accountHolder="Account Holder’s Name :";
   static const businessBank ="Business Bank Account?";
   static const editBank="Edit Bank account";
+  static const addBookingNotes="Add Booking Notes";
+  static const confirm="Confirm";
+  static const swipeUpToTurnOff="Swipe up to turn off";
 
 
 
@@ -126,6 +136,8 @@ class Strings {
   static const german = "German";
   static const hindi = "Hindi";
   static const spain = "Spain";
+  static const selectPayment="Select Payment Method";
+  static const payment1="Payment                 :";
 
   ///_________________________________________ admin part ___________________________________
   static const shopName = "Shop name";
@@ -152,17 +164,14 @@ class Strings {
   static const about = "About";
   static const reviews = "Reviews";
   static const openingHours = "Opening Hours";
-  // static const location = "Location";
   static const ourStaff = "Our Staff";
   static const lorem =
       "Lorem ipsum dolor sit amet, consectetur adipi scing elit. Morbi gravida posuere arcu sit amet pharetra. Vivamus et sagittis eros. Sed eu tristi que felis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nulla ipsum tellus, maxi mus in suscipit sit amet, consectetur ut nisi. Phasellus eleifend lacus at nisi molestie efficitur.";
   static const images = "Images";
-
   static const bookAppointment = "Book Appointment";
   static const timeSchedule = "Time Schedule";
   static const availableSlots = "available slots";
   static const bookingList = "Booking List";
-
   static const category = "Category";
   static const ratting = "Ratting";
   static const distance = "Distance";
@@ -176,7 +185,6 @@ class Strings {
   static const resetFilter = "Reset Filter";
   static const chooseService = "Choose service";
   static const appointment = "Appointment";
-
   static const summary = "Summary";
   static const next = "Next";
   static const profilePhoto = "Profile Photo";
@@ -184,13 +192,10 @@ class Strings {
   static const addProfilePhoto = "Add profile photo";
   static const addPhoto = "Add Photo";
   static const selectAContent = "select a content type";
-
   static const captureFromCamera = "capture from \n      camera";
   static const uploadFromGallery = "upload from  \n      gallery";
-
   static const selectGender = "Select Gender";
   static const bookingId = "Booking ID :";
-
   static const cancelAppointmentTxt =
       "Are you sure,\nyou want to cancel your\nappointment?";
   static const yesCancelAppointment = "Yes, Cancel appointment";

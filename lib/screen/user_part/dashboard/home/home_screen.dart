@@ -63,7 +63,7 @@ class HomeScreen extends StatelessWidget {
                               ),
                             ],
                           ),
-                          Spacer(),
+                          const Spacer(),
                           InkWell(
                             onTap: () => Get.toNamed(PageRes.filterScreen),
                             child: const CircleAvatar(

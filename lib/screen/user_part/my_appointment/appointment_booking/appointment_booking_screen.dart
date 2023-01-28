@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:salon_app/common/common_btn.dart';
 import 'package:salon_app/utils/app_style.dart';
 import 'package:salon_app/utils/asset_res.dart';
 import 'package:salon_app/utils/color_res.dart';
+import 'package:salon_app/utils/page_res.dart';
 import 'package:salon_app/utils/string.dart';
 
 class AppointmentBookingScreen extends StatelessWidget {
@@ -21,30 +23,13 @@ class AppointmentBookingScreen extends StatelessWidget {
                 ),
                 Positioned(
                   top: 60,
-                  left: 15,
-                  child: Row(
-                    children: [
-                      const Icon(Icons.arrow_back_ios_new_rounded,
-                          color: ColorRes.white),
-                      SizedBox(width: Get.width * 0.1466),
-                      Text(
-                        Strings.bookingDetails,
-                        style: appTextStyle(
-                            fontSize: 20,
-                            fontWeight: FontWeight.w500,
-                            color: ColorRes.white),
-                      ),
-                      SizedBox(width: Get.width * 0.21),
-                      InkWell(
-                        onTap: () {
-
-                        },
-                        child: const Image(
-                          image: AssetImage(AssetRes.menuIcon),
-                          height: 25,
-                        ),
-                      )
-                    ],
+                  left: 110,
+                  child: Text(
+                    Strings.bookingDetails,
+                    style: appTextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.w500,
+                        color: ColorRes.white),
                   ),
                 ),
               ],
@@ -63,7 +48,14 @@ class AppointmentBookingScreen extends StatelessWidget {
             bookAppointment("Location :", " 1901 Thornier Cir.,"),
             SizedBox(height: Get.height * 0.0246),
             bookAppointment("Payment :", "  Pay at store\n  \$ 100"),
+            SizedBox(height: Get.height * 0.0492),
+            commonButton(
+                title: Strings.done, textColor: ColorRes.white, backgroundColor: ColorRes.indicator,onTap: () {
+
+                  Get.toNamed(PageRes. remindScreen);
+                },),
             SizedBox(height: Get.height * 0.0246),
+
           ],
         ),
       ),

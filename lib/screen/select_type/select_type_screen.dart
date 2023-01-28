@@ -55,7 +55,7 @@ class SelectTypeScreen extends StatelessWidget {
                   right: 29,
                   child: commonButton(
                     onTap: () {
-                      // alert(context);
+
                       Get.offAndToNamed(PageRes.adminSignUpMobileScreen);
                     },
                     title: Strings.setUpYourBusiness,
@@ -69,7 +69,7 @@ class SelectTypeScreen extends StatelessWidget {
                   right: 29,
                   child: commonButton(
                     onTap: () {
-                      alert(context);
+                      Get.offAndToNamed(PageRes.logInScreen);
                     },
                     title: Strings.logIn,
                     backgroundColor: ColorRes.white,

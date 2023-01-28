@@ -1,7 +1,9 @@
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:salon_app/utils/string.dart';
 
 class BookAppointmentController extends GetxController {
+  TextEditingController typeMsgController  =TextEditingController();
   RxString isSelect = Strings.about.obs;
   RxBool chooseServices = true.obs;
   RxBool appointment = false.obs;

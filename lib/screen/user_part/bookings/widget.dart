@@ -48,12 +48,13 @@ Widget bookingList() {
                         text: TextSpan(
                           children: <TextSpan>[
                             TextSpan(
-                                text: 'Time :',
-                                style: appTextStyle(
-                                  color: ColorRes.black,
-                                  fontWeight: FontWeight.w400,
-                                  fontSize: 10,
-                                )),
+                              text: 'Time :',
+                              style: appTextStyle(
+                                color: ColorRes.black,
+                                fontWeight: FontWeight.w400,
+                                fontSize: 10,
+                              ),
+                            ),
                             TextSpan(
                               text: '9:00 AM',
                               style: appTextStyle(
@@ -69,19 +70,21 @@ Widget bookingList() {
                         text: TextSpan(
                           children: <TextSpan>[
                             TextSpan(
-                                text: 'Service :',
-                                style: appTextStyle(
-                                  color: ColorRes.black,
-                                  fontWeight: FontWeight.w400,
-                                  fontSize: 10,
-                                )),
+                              text: 'Service :',
+                              style: appTextStyle(
+                                color: ColorRes.black,
+                                fontWeight: FontWeight.w400,
+                                fontSize: 10,
+                              ),
+                            ),
                             TextSpan(
-                                text: 'Hair cutting',
-                                style: appTextStyle(
-                                  color: ColorRes.black.withOpacity(0.6),
-                                  fontWeight: FontWeight.w400,
-                                  fontSize: 10,
-                                )),
+                              text: 'Hair cutting',
+                              style: appTextStyle(
+                                color: ColorRes.black.withOpacity(0.6),
+                                fontWeight: FontWeight.w400,
+                                fontSize: 10,
+                              ),
+                            ),
                           ],
                         ),
                       ),
@@ -89,19 +92,21 @@ Widget bookingList() {
                         text: TextSpan(
                           children: <TextSpan>[
                             TextSpan(
-                                text: 'Staff :',
-                                style: appTextStyle(
-                                  color: ColorRes.black,
-                                  fontWeight: FontWeight.w400,
-                                  fontSize: 10,
-                                )),
+                              text: 'Staff :',
+                              style: appTextStyle(
+                                color: ColorRes.black,
+                                fontWeight: FontWeight.w400,
+                                fontSize: 10,
+                              ),
+                            ),
                             TextSpan(
-                                text: 'Jane Cooper',
-                                style: appTextStyle(
-                                  color: ColorRes.black.withOpacity(0.6),
-                                  fontWeight: FontWeight.w400,
-                                  fontSize: 10,
-                                )),
+                              text: 'Jane Cooper',
+                              style: appTextStyle(
+                                color: ColorRes.black.withOpacity(0.6),
+                                fontWeight: FontWeight.w400,
+                                fontSize: 10,
+                              ),
+                            ),
                           ],
                         ),
                       ),

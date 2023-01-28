@@ -14,6 +14,7 @@ class PageRes {
   static String dashBoardScreen = "/dashBoardScreen";
   static String homeScreen = "/HomeScreen";
   static String mostBook = "/mostBook";
+  static String remindScreen="/remindScreen";
 
   static String bookings = "/bookings";
   static String selectGender = "/selectGender";

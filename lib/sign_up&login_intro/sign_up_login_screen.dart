@@ -221,15 +221,18 @@ class SignUpLogIngScreen extends StatelessWidget {
             ],
           ),
           SizedBox(height: Get.height * 0.0246),
-          const Center(
-            child: Text(
-              textAlign: TextAlign.center,
-              Strings.skip,
-              style: TextStyle(
-                  color: ColorRes.indicator,
-                  fontWeight: FontWeight.w600,
-                  fontSize: 15,
-                  decoration: TextDecoration.underline),
+          InkWell(
+            onTap: () => Get.toNamed(PageRes.homeScreen),
+            child: const Center(
+              child: Text(
+                textAlign: TextAlign.center,
+                Strings.skip,
+                style: TextStyle(
+                    color: ColorRes.indicator,
+                    fontWeight: FontWeight.w600,
+                    fontSize: 15,
+                    decoration: TextDecoration.underline),
+              ),
             ),
           )
         ],

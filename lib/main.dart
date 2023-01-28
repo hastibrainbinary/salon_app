@@ -44,6 +44,7 @@ import 'package:salon_app/screen/user_part/dashboard/most_book/most_book_details
 import 'package:salon_app/screen/user_part/dashboard/most_book/most_book_screen.dart';
 import 'package:salon_app/screen/user_part/messages/message_detail/message_detail_screen.dart';
 import 'package:salon_app/screen/user_part/my_appointment/appointment_booking/appointment_booking_screen.dart';
+import 'package:salon_app/screen/user_part/my_appointment/remind_appointment/remind_appointment_screen.dart';
 import 'package:salon_app/screen/user_part/nearby_salons/nearby_salons_screen.dart';
 import 'package:salon_app/screen/user_part/profile/profile_screen.dart';
 import 'package:salon_app/screen/user_part/profile_user/filter/filter_screen_user.dart';
@@ -155,6 +156,9 @@ class MyApp extends StatelessWidget {
           GetPage(
               name: PageRes.paymentMethodScreen,
               page: () => PaymentMethodScreen()),
+          GetPage(
+              name: PageRes.remindScreen,
+              page: () => RemindScreen()),
 
           ///_____________________________________ ADMIN PART -M ____________________________________
           GetPage(
