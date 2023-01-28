@@ -154,16 +154,10 @@ class AddYourBankAccountScreen extends StatelessWidget {
                         child: TextFormField(
                           controller: addYourBankAccountController
                               .accountNumberController.value,
-                          // obscureText: controller.show.value,
+
                           decoration: InputDecoration(
                             border: InputBorder.none,
-                            // prefixIcon: const Padding(
-                            //   padding: EdgeInsets.all(14.0),
-                            //   child: Image(
-                            //     image: AssetImage(AssetRes.locationIcon),
-                            //     color: ColorRes.indicator,
-                            //   ),
-                            // ),
+
                             hintText: '1234 5678 9012 3456',
                             fillColor: Colors.transparent,
                             filled: true,
