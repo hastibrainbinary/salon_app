@@ -34,6 +34,8 @@ class AssetRes {
   static const profileBack = "${images}profileBack.png";
   static const privacyPolice ="${images}privacyPolice.png";
   static const ringBack = "${images}ringBack.png";
+  static const adminBack="${images}adminBack.png";
+  static const phoneBoder="${images}phoneBoder.png";
 
   ///------------------------------icons------------------------------------------------------
   static const phoneIcon = '${icons}phoneIcon.png';

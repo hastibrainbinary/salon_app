@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:salon_app/screen/admin_part/admin_appointment/admin_appointment_screen.dart';
+import 'package:salon_app/screen/admin_part/admin_appointment/admin_staff_details_Screen.dart';
 import 'package:salon_app/screen/admin_part/admin_chat/message_detail/message_detail_screen.dart';
 import 'package:salon_app/screen/admin_part/admin_chat/messages_screen.dart';
 import 'package:salon_app/screen/admin_part/admin_home/admin_dashboard_screen.dart';
@@ -255,6 +257,10 @@ class MyApp extends StatelessWidget {
               name: PageRes.deletePostScreen, page: () => DeletePostScreen()),
           GetPage(
               name: PageRes.staffDetailsScreen, page: () => StaffDetailsScreen()),
+          GetPage(
+              name: PageRes.adminAppointmentScreen, page: () => AdminAppointmentScreen()),
+          GetPage(
+              name: PageRes.adminStaffDetailsScreen, page: () => AdminStaffDetailsScreen()),
         ]);
   }
 }

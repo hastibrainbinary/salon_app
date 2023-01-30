@@ -26,6 +26,12 @@ class Strings {
   static const advertisementPost="Advertisement Post";
   static const addPost="Add Post";
   static const deletePost="Delete Post";
+  static const date="Date";
+  static const date1="Date :";
+  static const appointmentDetails="Appointment Details";
+  static const staff ="Staff :";
+  static const totalCharge="Total charge :";
+  static const callList="Call List";
 
 
 
@@ -125,6 +131,7 @@ class Strings {
   static const notification = "Notification";
   static const filter = "Filter";
   static const payment = "Payment";
+  static const payment1="Payment :";
   static const resetPassword = "Reset Password";
   static const language = "Language";
   static const privacyPolicy = "Privacy Policy";
@@ -143,7 +150,7 @@ class Strings {
   static const hindi = "Hindi";
   static const spain = "Spain";
   static const selectPayment="Select Payment Method";
-  static const payment1="Payment                 :";
+  static const paymentU="Payment :";
 
   ///_________________________________________ admin part ___________________________________
   static const shopName = "Shop name";
@@ -157,6 +164,7 @@ class Strings {
   static const cancelAppointmentDetails = "Cancel Appointment Details";
   static const todaySchedule = "Today Schedule";
   static const time = "Time";
+  static const time1 = "Time :";
   static const appointments = "Appointments";
   static const logout = "Logout";
   static const generalNotification = "General Notification";
@@ -222,6 +230,7 @@ class Strings {
   static const editBankAccount = "Edit Bank account";
   static const submit = "Submit";
   static const service = "Service";
+  static const services1 ="Service :";
   static const editService = "Edit Service";
   static const deleteService = "Delete Service";
   static const serviceName = "Service Name";

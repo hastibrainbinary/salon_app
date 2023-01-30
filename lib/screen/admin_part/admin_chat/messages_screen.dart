@@ -49,7 +49,7 @@ class AdminMessagesScreen extends StatelessWidget {
                                   color: ColorRes.white),
                             )
                           : Text(
-                              Strings.call,
+                              Strings.callList,
                               style: appTextStyle(
                                   fontSize: 20,
                                   fontWeight: FontWeight.w500,

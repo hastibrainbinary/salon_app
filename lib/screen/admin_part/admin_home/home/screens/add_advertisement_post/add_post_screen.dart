@@ -47,7 +47,7 @@ class AddPostScreen extends StatelessWidget {
                       ),
                       const Spacer(),
                       Text(
-                        Strings.service,
+                        Strings.addPost,
                         style: appTextStyle(
                           fontSize: 20,
                           fontWeight: FontWeight.w500,

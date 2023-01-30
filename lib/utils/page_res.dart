@@ -72,4 +72,6 @@ class PageRes {
   static String addPostScreen="/addPostScreen";
   static String deletePostScreen="/deletePostScreen";
   static String staffDetailsScreen="/staffDetailsScreen";
+  static String adminAppointmentScreen="/adminAppointmentScreen";
+  static String adminStaffDetailsScreen="/adminStaffDetailsScreen";
 }
