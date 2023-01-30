@@ -7,7 +7,7 @@ import 'package:salon_app/screen/user_part/book_appointment/widget.dart';
 import 'package:salon_app/utils/app_style.dart';
 import 'package:salon_app/utils/asset_res.dart';
 import 'package:salon_app/utils/color_res.dart';
-import 'package:salon_app/utils/page_res.dart';
+
 import 'package:salon_app/utils/string.dart';
 
 class BookAppointmentScreen extends StatelessWidget {
@@ -204,7 +204,7 @@ class BookAppointmentScreen extends StatelessWidget {
               physics: BouncingScrollPhysics(),
               child: Obx(() => (bookAppointmentController.issummary.value ==
                       true)
-                  ? summarySlider()
+                  ? summarySlider(context)
                   : (bookAppointmentController.ispayment.value == true)
                       ? paymentMethodSlider()
                       : (bookAppointmentController.isappointment.value == true)

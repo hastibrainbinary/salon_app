@@ -44,7 +44,7 @@ dependencies:
   dotted_border: ^2.0.0+3
   image_picker: ^0.8.6+1
   status_change: ^2.0.0
-  flutter_switch: ^0.3.2
+
 
 
   # _____________ ui - M ________________
