@@ -74,4 +74,7 @@ class PageRes {
   static String staffDetailsScreen="/staffDetailsScreen";
   static String adminAppointmentScreen="/adminAppointmentScreen";
   static String adminStaffDetailsScreen="/adminStaffDetailsScreen";
+  static String deleteServiceScreen="/deleteServiceScreen";
+  static String editServiceScreen="/editServiceScreen";
+  static String adminDetailsStaffScreen="/adminDetailsStaffScreen";
 }

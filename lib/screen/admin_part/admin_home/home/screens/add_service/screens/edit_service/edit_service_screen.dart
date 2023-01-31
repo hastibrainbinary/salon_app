@@ -1,14 +1,12 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:salon_app/common/common_btn.dart';
 import 'package:salon_app/utils/app_style.dart';
 import 'package:salon_app/utils/asset_res.dart';
 import 'package:salon_app/utils/color_res.dart';
 import 'package:salon_app/utils/string.dart';
 
-class DeleteServiceScreen extends StatelessWidget {
-  const DeleteServiceScreen({super.key});
+class EditServiceScreen extends StatelessWidget {
+  const EditServiceScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -45,7 +43,7 @@ class DeleteServiceScreen extends StatelessWidget {
                       ),
                       const Spacer(),
                       Text(
-                        Strings.deleteService,
+                        Strings.editService,
                         style: appTextStyle(
                           fontSize: 20,
                           fontWeight: FontWeight.w500,
@@ -118,7 +116,7 @@ class DeleteServiceScreen extends StatelessWidget {
                         padding: const EdgeInsets.symmetric(horizontal: 30),
                         child: ListView.separated(
                           scrollDirection: Axis.vertical,
-                          itemCount: 6,
+                          itemCount: 5,
                           shrinkWrap: true,
                           physics: const NeverScrollableScrollPhysics(),
                           itemBuilder: (context, index) {
@@ -176,122 +174,24 @@ class DeleteServiceScreen extends StatelessWidget {
                         ),
                       ),
                       SizedBox(height: Get.height * 0.0369),
-                      InkWell(
-                        onTap: () {
-                          showDialog(
-                            barrierDismissible: false,
-                            barrierColor: ColorRes.black.withOpacity(0.8),
-                            context: context,
-                            builder: (context) => AlertDialog(
-                              actionsPadding: const EdgeInsets.all(0),
-                              contentPadding: const EdgeInsets.all(0),
-                              elevation: 0,
-                              backgroundColor: Colors.transparent,
-                              content: Stack(
-                                alignment: const Alignment(1.2, -1.3),
-                                children: [
-                                  Container(
-                                    alignment: Alignment.center,
-                                    height: 194,
-                                    // width: 301,
-                                    decoration: BoxDecoration(
-                                        color: ColorRes.white,
-                                        borderRadius: BorderRadius.circular(5)),
-                                    child: Column(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.center,
-                                      children: [
-                                        Text(
-                                          Strings.areYouSureDelete,
-                                          textAlign: TextAlign.center,
-                                          style: appTextStyle(
-                                              fontSize: 15,
-                                              color: ColorRes.black,
-                                              fontWeight: FontWeight.w500),
-                                        ),
-                                        SizedBox(
-                                          height: Get.height * 0.03,
-                                        ),
-                                        SizedBox(
-                                          height: 45,
-                                          width: 219,
-                                          child: commonButton(
-                                              style: appTextStyle(
-                                                  fontSize: 11,
-                                                  fontWeight: FontWeight.w600),
-                                              title: Strings.yesDeleteService,
-                                              textColor: ColorRes.white,
-                                              backgroundColor:
-                                                  ColorRes.indicator),
-                                        ),
-                                      ],
-                                    ),
-                                  ),
-                                  InkWell(
-                                    onTap: () {
-                                      if (kDebugMode) {
-                                        print("tapped....");
-                                      }
-                                      Get.back();
-                                    },
-                                    child: Container(
-                                      alignment: const Alignment(1, -1),
-                                      height: 50,
-                                      width: 50,
-                                      color: Colors.transparent,
-                                      child: Transform.scale(
-                                        scale: 0.6,
-                                        child: Image.asset(
-                                          AssetRes.closeIcon,
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          );
-                        },
-                        child: Container(
-                          width: 153,
-                          height: 45,
-                          decoration: BoxDecoration(
-                            color: ColorRes.indicator,
-                            borderRadius: BorderRadius.circular(8),
-                          ),
-                          child: Center(
-                            child: Text(
-                              Strings.delete,
-                              style: appTextStyle(
-                                  color: ColorRes.white,
-                                  fontWeight: FontWeight.w600,
-                                  fontSize: 14),
-                            ),
+                      Container(
+                        width: 153,
+                        height: 45,
+                        decoration: BoxDecoration(
+                          color: ColorRes.indicator,
+                          borderRadius: BorderRadius.circular(8),
+                        ),
+                        child: Center(
+                          child: Text(
+                            Strings.open,
+                            style: appTextStyle(
+                                color: ColorRes.white,
+                                fontWeight: FontWeight.w600,
+                                fontSize: 14),
                           ),
                         ),
-                        /* InkWell(
-                        onTap: (){
-
-                        },
-                        child: Container(
-                          width: 153,
-                          height: 45,
-                          decoration: BoxDecoration(
-                            color: ColorRes.indicator,
-                            borderRadius: BorderRadius.circular(8),
-                          ),
-                          child: Center(
-                            child: Text(
-                              Strings.delete,
-                              style: appTextStyle(
-                                  color: ColorRes.white,
-                                  fontWeight: FontWeight.w600,
-                                  fontSize: 14),
-                            ),
-                          ),
-                        ),
-                      )*/
                       ),
+                      SizedBox(height: Get.height * 0.0369),
                     ],
                   ),
                 ),

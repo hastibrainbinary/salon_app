@@ -96,8 +96,9 @@ class ServiceScreen extends StatelessWidget {
                                           ),
                                           InkWell(
                                             onTap: () {
-                                              print(
-                                                  "_____________________DELETE SERVICE -M______________________");
+                                              Get.back();
+                                              Get.toNamed(
+                                                  PageRes.deleteServiceScreen);
                                             },
                                             child: Text(
                                               Strings.deleteService,
@@ -108,9 +109,10 @@ class ServiceScreen extends StatelessWidget {
                                             ),
                                           ),
                                           InkWell(
-                                            onTap: () {
-                                              print(
-                                                  "_____________________EDIT SERVICE -M______________________");
+                                            onTap: (){
+                                              Get.back();
+                                              Get.toNamed(
+                                                  PageRes.editServiceScreen);
                                             },
                                             child: Text(
                                               Strings.editService,

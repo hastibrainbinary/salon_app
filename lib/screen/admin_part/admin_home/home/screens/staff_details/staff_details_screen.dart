@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:salon_app/utils/app_style.dart';
 import 'package:salon_app/utils/asset_res.dart';
 import 'package:salon_app/utils/color_res.dart';
+import 'package:salon_app/utils/page_res.dart';
 import 'package:salon_app/utils/string.dart';
 
 class StaffDetailsScreen extends StatelessWidget {
@@ -58,53 +59,77 @@ class StaffDetailsScreen extends StatelessWidget {
               ],
             ),
             Padding(
-              padding:
-                  EdgeInsets.only(top: Get.height * 0.25, left: 25, right: 25),
-              child: Column(
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.only(),
-                    child: Row(
-                      children: [
-                        Container(
-                          height: 50,
-                          width: 50,
-                          decoration: BoxDecoration(
-                            image: const DecorationImage(
-                                image: AssetImage(AssetRes.detailsScreen),
-                                fit: BoxFit.cover),
-                            borderRadius: BorderRadius.circular(50),
-                          ),
+              padding: EdgeInsets.only(
+                top: Get.height * 0.25,
+              ),
+              child: SizedBox(
+                height: Get.height * 0.8,
+                child: SingleChildScrollView(
+                  child: Column(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 30),
+                        child: ListView.separated(
+                          scrollDirection: Axis.vertical,
+                          itemCount: 15,
+                          shrinkWrap: true,
+                          physics: const NeverScrollableScrollPhysics(),
+                          itemBuilder: (context, index) {
+                            return InkWell(
+                              onTap: () {
+                                Get.toNamed(PageRes.adminDetailsStaffScreen);
+                              },
+                              child: Row(
+                                children: [
+                                  Container(
+                                    height: 50,
+                                    width: 50,
+                                    decoration: BoxDecoration(
+                                      image: const DecorationImage(
+                                          image:
+                                              AssetImage(AssetRes.imageStyel),
+                                          fit: BoxFit.cover),
+                                      borderRadius: BorderRadius.circular(50),
+                                    ),
+                                  ),
+                                  SizedBox(width: Get.width * 0.04),
+                                  Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                        "Robert Fox",
+                                        style: appTextStyle(
+                                            color: ColorRes.black,
+                                            fontWeight: FontWeight.w500,
+                                            fontSize: 16),
+                                      ),
+                                      Text(
+                                        "Hair stylist ",
+                                        style: appTextStyle(
+                                            color: ColorRes.black,
+                                            fontWeight: FontWeight.w300,
+                                            fontSize: 12),
+                                      )
+                                    ],
+                                  ),
+                                  const Spacer(),
+                                  const Icon(
+                                    Icons.arrow_forward_ios_rounded,
+                                    size: 10,
+                                  ),
+                                ],
+                              ),
+                            );
+                          },
+                          separatorBuilder: (BuildContext context, int index) {
+                            return const SizedBox(height: 15);
+                          },
                         ),
-                        SizedBox(width: Get.width * 0.04),
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              "Robert Fox",
-                              style: appTextStyle(
-                                  color: ColorRes.black,
-                                  fontWeight: FontWeight.w500,
-                                  fontSize: 16),
-                            ),
-                            Text(
-                              "Hair stylist ",
-                              style: appTextStyle(
-                                  color: ColorRes.black,
-                                  fontWeight: FontWeight.w300,
-                                  fontSize: 12),
-                            )
-                          ],
-                        ),
-                        const Spacer(),
-                        const Icon(
-                          Icons.arrow_forward_ios_rounded,
-                          size: 10,
-                        ),
-                      ],
-                    ),
-                  )
-                ],
+                      ),
+                    ],
+                  ),
+                ),
               ),
             ),
           ],

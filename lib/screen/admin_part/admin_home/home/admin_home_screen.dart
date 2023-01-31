@@ -201,7 +201,7 @@ class AdminHomeScreen extends StatelessWidget {
                                   child: Row(
                                     children: [
                                       Text(
-                                        "${Strings.time}",
+                                        Strings.time,
                                         style: appTextStyle(
                                             color: ColorRes.color94674F,
                                             fontSize: 15,
@@ -211,7 +211,7 @@ class AdminHomeScreen extends StatelessWidget {
                                         width: 58,
                                       ),
                                       Text(
-                                        "${Strings.appointments}",
+                                        Strings.appointments,
                                         style: appTextStyle(
                                             color: ColorRes.color94674F,
                                             fontSize: 15,

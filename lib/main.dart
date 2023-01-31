@@ -8,10 +8,13 @@ import 'package:salon_app/screen/admin_part/admin_home/admin_dashboard_screen.da
 import 'package:salon_app/screen/admin_part/admin_home/home/screens/add_advertisement_post/add_advertisment_post_screen.dart';
 import 'package:salon_app/screen/admin_part/admin_home/home/screens/add_advertisement_post/add_post_screen.dart';
 import 'package:salon_app/screen/admin_part/admin_home/home/screens/add_advertisement_post/delete_post_screen.dart';
+import 'package:salon_app/screen/admin_part/admin_home/home/screens/add_service/screens/delete_service/delete_service_screen.dart';
+import 'package:salon_app/screen/admin_part/admin_home/home/screens/add_service/screens/edit_service/edit_service_screen.dart';
 import 'package:salon_app/screen/admin_part/admin_home/home/screens/add_service/service_screen.dart';
 import 'package:salon_app/screen/admin_part/admin_home/home/screens/add_your_bank_account/add_your_bank_account_screen.dart';
 import 'package:salon_app/screen/admin_part/admin_home/home/screens/add_your_bank_account/edit_account/edit_account.dart';
 import 'package:salon_app/screen/admin_part/admin_home/home/screens/notifocation/notification_screen.dart';
+import 'package:salon_app/screen/admin_part/admin_home/home/screens/staff_details/admin_details_staff_screen.dart';
 import 'package:salon_app/screen/admin_part/admin_home/home/screens/staff_details/staff_details_screen.dart';
 import 'package:salon_app/screen/admin_part/admin_shop_profile/bank_details/admin_bank_details_screen.dart';
 import 'package:salon_app/screen/admin_part/admin_shop_profile/edit_bank_details/edit_bank_details_screen.dart';
@@ -144,10 +147,8 @@ class MyApp extends StatelessWidget {
           GetPage(
               name: PageRes.editProfileScreen, page: () => EditProfileScreen()),
 
-
           GetPage(
               name: PageRes.editProfileScreen, page: () => EditProfileScreen()),
-
 
           GetPage(
               name: PageRes.messageDetailScreen,
@@ -162,9 +163,7 @@ class MyApp extends StatelessWidget {
           GetPage(
               name: PageRes.paymentMethodScreen,
               page: () => PaymentMethodScreen()),
-          GetPage(
-              name: PageRes.remindScreen,
-              page: () => RemindScreen()),
+          GetPage(name: PageRes.remindScreen, page: () => RemindScreen()),
 
           ///_____________________________________ ADMIN PART -M ____________________________________
           GetPage(
@@ -228,8 +227,6 @@ class MyApp extends StatelessWidget {
 
           GetPage(name: PageRes.filterScreen, page: () => FilterScreen()),
 
-
-
           GetPage(
               name: PageRes.bookingDetails, page: () => BookingUserDetails()),
           GetPage(
@@ -238,29 +235,45 @@ class MyApp extends StatelessWidget {
           GetPage(
               name: PageRes.shopProfileScreen, page: () => ShopProfileScreen()),
           GetPage(
-              name: PageRes.adminResetPasswordsScreen, page: () => AdminResetPasswordsScreen()),
+              name: PageRes.adminResetPasswordsScreen,
+              page: () => AdminResetPasswordsScreen()),
           GetPage(
-              name: PageRes.adminLanguageScreen, page: () => AdminLanguageScreen()),
+              name: PageRes.adminLanguageScreen,
+              page: () => AdminLanguageScreen()),
           GetPage(
-              name: PageRes.adminNotificationScreen, page: () => AdminNotificationScreen()),
+              name: PageRes.adminNotificationScreen,
+              page: () => AdminNotificationScreen()),
           GetPage(
-              name: PageRes.adminBankDetailsScreen, page: () => AdminBankDetailsScreen()),
+              name: PageRes.adminBankDetailsScreen,
+              page: () => AdminBankDetailsScreen()),
           GetPage(
-              name: PageRes.editBankDetailsScreen, page: () => EditBankDetailsScreen()),
+              name: PageRes.editBankDetailsScreen,
+              page: () => EditBankDetailsScreen()),
           GetPage(
-              name: PageRes.adminPrivacyPoliceScreen, page: () => AdminPrivacyPoliceScreen()),
+              name: PageRes.adminPrivacyPoliceScreen,
+              page: () => AdminPrivacyPoliceScreen()),
           GetPage(
-              name: PageRes.addAdvertisementPostScreen, page: () => AddAdvertisementPostScreen()),
-          GetPage(
-              name: PageRes.addPostScreen, page: () => AddPostScreen()),
+              name: PageRes.addAdvertisementPostScreen,
+              page: () => AddAdvertisementPostScreen()),
+          GetPage(name: PageRes.addPostScreen, page: () => AddPostScreen()),
           GetPage(
               name: PageRes.deletePostScreen, page: () => DeletePostScreen()),
           GetPage(
-              name: PageRes.staffDetailsScreen, page: () => StaffDetailsScreen()),
+              name: PageRes.staffDetailsScreen,
+              page: () => StaffDetailsScreen()),
           GetPage(
-              name: PageRes.adminAppointmentScreen, page: () => AdminAppointmentScreen()),
+              name: PageRes.adminAppointmentScreen,
+              page: () => AdminAppointmentScreen()),
           GetPage(
-              name: PageRes.adminStaffDetailsScreen, page: () => AdminStaffDetailsScreen()),
+              name: PageRes.adminStaffDetailsScreen,
+              page: () => AdminStaffDetailsScreen()),
+          GetPage(
+              name: PageRes.deleteServiceScreen,
+              page: () => DeleteServiceScreen()),
+          GetPage(
+              name: PageRes.editServiceScreen, page: () => EditServiceScreen()),
+          GetPage(
+              name: PageRes.adminDetailsStaffScreen, page: () => AdminDetailsStaffScreen()),
         ]);
   }
 }

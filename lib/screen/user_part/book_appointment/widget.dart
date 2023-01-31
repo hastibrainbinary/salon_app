@@ -180,8 +180,9 @@ Widget bookServices() {
                   width: 153,
                   height: 45,
                   decoration: BoxDecoration(
-                      color: ColorRes.indicator,
-                      borderRadius: BorderRadius.circular(8)),
+                    color: ColorRes.indicator,
+                    borderRadius: BorderRadius.circular(8),
+                  ),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [

@@ -4,37 +4,39 @@ class Strings {
   static const skip = "Skip";
   static const areYouSure = "Are you sure you want to Logout?";
   static const typesOfDate = "1. Types of Date We Collect";
-  static const debitOrCreditCard="Debit or Credit card";
-  static const uPI="UPI";
-  static const reviewAndConfirm="Review and Confirm";
-  static const pickingTime="Picking Time :";
-  static const barberShop="Barber Shop :";
-  static const service1="Service             :";
-  static const barber1="Barber            :";
-  static const location1="Location          :";
-  static const aConfirmationMessage ="A confirmation message has sent to your registered mobile number";
-  static const bookingDetails="Booking Details";
-  static const selectTime="Select Time";
-  static const selectStaff="Select Staff";
-  static const bankDetails="Bank Details";
-  static const accountHolder="Account Holder’s Name :";
-  static const businessBank ="Business Bank Account?";
-  static const editBank="Edit Bank account";
-  static const addBookingNotes="Add Booking Notes";
-  static const confirm="Confirm";
-  static const swipeUpToTurnOff="Swipe up to turn off";
-  static const advertisementPost="Advertisement Post";
-  static const addPost="Add Post";
-  static const deletePost="Delete Post";
-  static const date="Date";
-  static const date1="Date :";
-  static const appointmentDetails="Appointment Details";
-  static const staff ="Staff :";
-  static const totalCharge="Total charge :";
-  static const callList="Call List";
-
-
-
+  static const debitOrCreditCard = "Debit or Credit card";
+  static const uPI = "UPI";
+  static const reviewAndConfirm = "Review and Confirm";
+  static const pickingTime = "Picking Time :";
+  static const barberShop = "Barber Shop :";
+  static const service1 = "Service             :";
+  static const barber1 = "Barber            :";
+  static const location1 = "Location          :";
+  static const aConfirmationMessage =
+      "A confirmation message has sent to your registered mobile number";
+  static const bookingDetails = "Booking Details";
+  static const selectTime = "Select Time";
+  static const selectStaff = "Select Staff";
+  static const bankDetails = "Bank Details";
+  static const accountHolder = "Account Holder’s Name :";
+  static const businessBank = "Business Bank Account?";
+  static const editBank = "Edit Bank account";
+  static const addBookingNotes = "Add Booking Notes";
+  static const confirm = "Confirm";
+  static const swipeUpToTurnOff = "Swipe up to turn off";
+  static const advertisementPost = "Advertisement Post";
+  static const addPost = "Add Post";
+  static const deletePost = "Delete Post";
+  static const date = "Date";
+  static const date1 = "Date :";
+  static const appointmentDetails = "Appointment Details";
+  static const staff = "Staff :";
+  static const totalCharge = "Total charge :";
+  static const callList = "Call List";
+  static const deleteService = "Delete Service";
+  static const delete = "Delete";
+  static const areYouSureDelete = "Are you sure,\nyou want to delete Service?";
+  static const yesDeleteService = "Yes, Delete service";
 
   static const update = "Update";
   static const myCard = "My Card";
@@ -131,7 +133,7 @@ class Strings {
   static const notification = "Notification";
   static const filter = "Filter";
   static const payment = "Payment";
-  static const payment1="Payment :";
+  static const payment1 = "Payment :";
   static const resetPassword = "Reset Password";
   static const language = "Language";
   static const privacyPolicy = "Privacy Policy";
@@ -149,8 +151,8 @@ class Strings {
   static const german = "German";
   static const hindi = "Hindi";
   static const spain = "Spain";
-  static const selectPayment="Select Payment Method";
-  static const paymentU="Payment :";
+  static const selectPayment = "Select Payment Method";
+  static const paymentU = "Payment :";
 
   ///_________________________________________ admin part ___________________________________
   static const shopName = "Shop name";
@@ -230,9 +232,9 @@ class Strings {
   static const editBankAccount = "Edit Bank account";
   static const submit = "Submit";
   static const service = "Service";
-  static const services1 ="Service :";
+  static const services1 = "Service :";
   static const editService = "Edit Service";
-  static const deleteService = "Delete Service";
+
   static const serviceName = "Service Name";
   static const price = "Price";
 
