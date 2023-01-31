@@ -13,11 +13,13 @@ import 'package:salon_app/screen/admin_part/admin_home/home/screens/add_service/
 import 'package:salon_app/screen/admin_part/admin_home/home/screens/add_service/service_screen.dart';
 import 'package:salon_app/screen/admin_part/admin_home/home/screens/add_your_bank_account/add_your_bank_account_screen.dart';
 import 'package:salon_app/screen/admin_part/admin_home/home/screens/add_your_bank_account/edit_account/edit_account.dart';
+import 'package:salon_app/screen/admin_part/admin_home/home/screens/cancel_appointment_details/cancel_appointment_screen.dart';
 import 'package:salon_app/screen/admin_part/admin_home/home/screens/notifocation/notification_screen.dart';
 import 'package:salon_app/screen/admin_part/admin_home/home/screens/staff_details/admin_details_staff_screen.dart';
 import 'package:salon_app/screen/admin_part/admin_home/home/screens/staff_details/staff_details_screen.dart';
 import 'package:salon_app/screen/admin_part/admin_shop_profile/bank_details/admin_bank_details_screen.dart';
 import 'package:salon_app/screen/admin_part/admin_shop_profile/edit_bank_details/edit_bank_details_screen.dart';
+import 'package:salon_app/screen/admin_part/admin_shop_profile/edit_profile/admin_edit_Profile_Screen.dart';
 import 'package:salon_app/screen/admin_part/admin_shop_profile/language/admin_language_screen.dart';
 import 'package:salon_app/screen/admin_part/admin_shop_profile/notification/admin_notification_screen.dart';
 import 'package:salon_app/screen/admin_part/admin_shop_profile/privacy_police/admin_privacy_police_Screen.dart';
@@ -274,6 +276,10 @@ class MyApp extends StatelessWidget {
               name: PageRes.editServiceScreen, page: () => EditServiceScreen()),
           GetPage(
               name: PageRes.adminDetailsStaffScreen, page: () => AdminDetailsStaffScreen()),
+          GetPage(
+              name: PageRes.cancelAppointmentScreen, page: () => CancelAppointmentScreen()),
+          GetPage(
+              name: PageRes.adminEditProfileScreen, page: () => AdminEditProfileScreen()),
         ]);
   }
 }

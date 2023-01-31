@@ -71,7 +71,7 @@ class ShopProfileScreen extends StatelessWidget {
                     containerWithTitleProfile(
                       title: Strings.editProfile,
                       icon: AssetRes.userL,
-                      onTap: () => Get.toNamed(PageRes.editProfileScreen),
+                      onTap: () => Get.toNamed(PageRes.adminEditProfileScreen),
                     ),
                     SizedBox(height: Get.height * 0.0307),
                     containerWithTitleProfile(
@@ -89,7 +89,8 @@ class ShopProfileScreen extends StatelessWidget {
                     containerWithTitleProfile(
                       title: Strings.resetPassword,
                       icon: AssetRes.resetPassword,
-                      onTap: () => Get.toNamed(PageRes.adminResetPasswordsScreen),
+                      onTap: () =>
+                          Get.toNamed(PageRes.adminResetPasswordsScreen),
                     ),
                     SizedBox(height: Get.height * 0.0307),
                     containerWithTitleProfile(
@@ -102,7 +103,8 @@ class ShopProfileScreen extends StatelessWidget {
                     containerWithTitleProfile(
                       title: Strings.privacyPolicy,
                       icon: AssetRes.privacyPolice,
-                      onTap: () => Get.toNamed(PageRes.adminPrivacyPoliceScreen),
+                      onTap: () =>
+                          Get.toNamed(PageRes.adminPrivacyPoliceScreen),
                     ),
                     SizedBox(height: Get.height * 0.0369),
                     InkWell(

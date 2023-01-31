@@ -131,9 +131,7 @@ Widget about() {
         child: Text(
           Strings.about,
           style: appTextStyle(
-              color: ColorRes.black,
-              fontWeight: FontWeight.w500,
-              fontSize: 15),
+              color: ColorRes.black, fontWeight: FontWeight.w500, fontSize: 15),
         ),
       ),
       SizedBox(height: Get.height * 0.0246),
@@ -155,9 +153,7 @@ Widget about() {
         child: Text(
           Strings.ourStaff,
           style: appTextStyle(
-              color: ColorRes.black,
-              fontWeight: FontWeight.w500,
-              fontSize: 15),
+              color: ColorRes.black, fontWeight: FontWeight.w500, fontSize: 15),
         ),
       ),
       SizedBox(height: Get.height * 0.0246),
@@ -207,9 +203,7 @@ Widget about() {
         child: Text(
           Strings.images,
           style: appTextStyle(
-              color: ColorRes.black,
-              fontWeight: FontWeight.w500,
-              fontSize: 15),
+              color: ColorRes.black, fontWeight: FontWeight.w500, fontSize: 15),
         ),
       ),
       SizedBox(height: Get.height * 0.0246),

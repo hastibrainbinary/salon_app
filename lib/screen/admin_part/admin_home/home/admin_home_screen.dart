@@ -139,7 +139,6 @@ class AdminHomeScreen extends StatelessWidget {
                               }),
                           const SizedBox(
                             height: 20,
-
                           ),
                           containerWithTitle(
                               title: Strings.addAdvertisementPost,
@@ -164,7 +163,9 @@ class AdminHomeScreen extends StatelessWidget {
                           containerWithTitle(
                               title: Strings.cancelAppointmentDetails,
                               icon: AssetRes.cancelAppointmentIcon,
-                              onTap: () {}),
+                              onTap: () {
+                                Get.toNamed(PageRes.cancelAppointmentScreen);
+                              }),
                           const SizedBox(
                             height: 25,
                             // Get.height * 0.02,
