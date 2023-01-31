@@ -133,7 +133,7 @@ class SignUpMobileNumberScreen extends StatelessWidget {
                         color: const Color(0xff555555)),
                   ),
                   InkWell(
-                    onTap: () => Get.toNamed(PageRes.logInScreen),
+                    onTap: () => Get.offAllNamed(PageRes.logInScreen),
                     child: Text(
                       Strings.signIn,
                       style: appTextStyle(

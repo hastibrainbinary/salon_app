@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:week_of_year/week_of_year.dart';
 import "package:weekly_date_picker/datetime_apis.dart";
 import 'package:google_fonts/google_fonts.dart';
-import 'package:get/get.dart';
+
 
 class WeeklyDatePicker extends StatefulWidget {
   WeeklyDatePicker({
@@ -178,7 +178,7 @@ class _WeeklyDatePickerState extends State<WeeklyDatePicker> {
           width: 42,
           height: 59,
           // Bugfix, the transparent container makes the GestureDetector fill the Expanded
-          margin: EdgeInsets.only(
+          margin: const EdgeInsets.only(
             right: 15,
           ),
           // padding: EdgeInsets.symmetric(horizontal: 10),
@@ -188,7 +188,7 @@ class _WeeklyDatePickerState extends State<WeeklyDatePicker> {
               border: isSelected
                   ? Border.all(style: BorderStyle.none)
                   : Border.all(
-                      color: Color(0xff94674F),
+                      color: const Color(0xff94674F),
                     )),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -222,12 +222,12 @@ class _WeeklyDatePickerState extends State<WeeklyDatePicker> {
                 ),
               ),
               Padding(
-                padding: EdgeInsets.only(top: 4.0),
+                padding: const EdgeInsets.only(top: 4.0),
                 child: Text(
-                  '$weekday',
+                  weekday,
                   style: GoogleFonts.poppins(
                       fontSize: 8.0,
-                      color: isSelected ? Colors.white : Color(0xff94674F)),
+                      color: isSelected ? Colors.white : const Color(0xff94674F)),
                 ),
               ),
             ],

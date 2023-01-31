@@ -73,7 +73,8 @@ class CancelAppointmentScreen extends StatelessWidget {
                           itemBuilder: (context, index) {
                             return InkWell(
                               onTap: () {
-                                Get.toNamed(PageRes.adminStaffDetailsScreen);
+                                Get.offAllNamed(
+                                    PageRes.adminStaffDetailsScreen);
                               },
                               child: Row(
                                 children: [

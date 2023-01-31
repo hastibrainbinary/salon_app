@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
@@ -89,7 +90,9 @@ class AdminAppointmentScreen extends StatelessWidget {
                                   adminAppointmentController.month.value =
                                       selected!;
                                 } catch (e) {
-                                  print(e);
+                                  if (kDebugMode) {
+                                    print(e);
+                                  }
                                 }
                               },
                               child: Container(

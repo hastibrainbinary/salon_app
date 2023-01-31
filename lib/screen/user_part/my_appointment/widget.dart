@@ -261,7 +261,7 @@ Widget upComing({required BuildContext context}) {
               top: 62,
               right: 47,
               child: InkWell(
-                onTap: () => Get.toNamed(PageRes.appointmentBookingScreen),
+                onTap: () => Get.toNamed(PageRes.detailsScreen),
                 child: Container(
                   height: 28,
                   width: 28,
@@ -310,109 +310,107 @@ Widget past() {
                       Stack(
                         children: [
                           Container(
-                              width: 261,
-                              height: 121,
-                              decoration: BoxDecoration(
-                                color: ColorRes.white,
-                                borderRadius: BorderRadius.circular(23),
-                              ),
-                              child: Padding(
-                                padding:
-                                    const EdgeInsets.only(left: 60, top: 10),
-                                child: Column(
-                                  mainAxisAlignment: MainAxisAlignment.start,
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text(
-                                      Strings.serenitySalon,
-                                      style: appTextStyle(
-                                          fontSize: 13,
+                            width: 261,
+                            height: 121,
+                            decoration: BoxDecoration(
+                              color: ColorRes.white,
+                              borderRadius: BorderRadius.circular(23),
+                            ),
+                            child: Padding(
+                              padding: const EdgeInsets.only(left: 60, top: 10),
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    Strings.serenitySalon,
+                                    style: appTextStyle(
+                                        fontSize: 13,
+                                        fontWeight: FontWeight.w500,
+                                        color: ColorRes.black),
+                                  ),
+                                  Row(
+                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
+                                    children: [
+                                      Text(
+                                        Strings.barber,
+                                        style: appTextStyle(
+                                          color: ColorRes.black,
+                                          fontSize: 10,
                                           fontWeight: FontWeight.w500,
-                                          color: ColorRes.black),
-                                    ),
-                                    Row(
+                                        ),
+                                      ),
+                                      Text(
+                                        Strings.rohan,
+                                        style: appTextStyle(
+                                          color: ColorRes.black,
+                                          fontSize: 10,
+                                          fontWeight: FontWeight.w400,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.only(left: 38.0),
+                                    child: Column(
                                       mainAxisAlignment:
                                           MainAxisAlignment.start,
                                       crossAxisAlignment:
-                                          CrossAxisAlignment.center,
+                                          CrossAxisAlignment.start,
                                       children: [
                                         Text(
-                                          Strings.barber,
+                                          "Hair cut and Beard trim",
                                           style: appTextStyle(
-                                            color: ColorRes.black,
-                                            fontSize: 10,
-                                            fontWeight: FontWeight.w500,
-                                          ),
+                                              color: ColorRes.black
+                                                  .withOpacity(0.5),
+                                              fontWeight: FontWeight.w400,
+                                              fontSize: 10),
                                         ),
                                         Text(
-                                          Strings.rohan,
+                                          "July 3    04:00 PM",
                                           style: appTextStyle(
-                                            color: ColorRes.black,
-                                            fontSize: 10,
-                                            fontWeight: FontWeight.w400,
-                                          ),
+                                              color: ColorRes.black
+                                                  .withOpacity(0.5),
+                                              fontWeight: FontWeight.w400,
+                                              fontSize: 10),
                                         ),
                                       ],
                                     ),
-                                    Padding(
-                                      padding:
-                                          const EdgeInsets.only(left: 38.0),
-                                      child: Column(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.start,
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.start,
-                                        children: [
-                                          Text(
-                                            "Hair cut and Beard trim",
-                                            style: appTextStyle(
-                                                color: ColorRes.black
-                                                    .withOpacity(0.5),
-                                                fontWeight: FontWeight.w400,
-                                                fontSize: 10),
-                                          ),
-                                          Text(
-                                            "July 3    04:00 PM",
-                                            style: appTextStyle(
-                                                color: ColorRes.black
-                                                    .withOpacity(0.5),
-                                                fontWeight: FontWeight.w400,
-                                                fontSize: 10),
-                                          ),
-                                        ],
+                                  ),
+                                  SizedBox(height: Get.height * 0.0221),
+                                  Row(
+                                    children: [
+                                      InkWell(
+                                        onTap: () {
+                                          Get.toNamed(
+                                              PageRes.bookAppointmentScreen);
+                                        },
+                                        child: Text(
+                                          Strings.book,
+                                          style: appTextStyle(
+                                              color: ColorRes.indicator,
+                                              fontSize: 11,
+                                              fontWeight: FontWeight.w500),
+                                        ),
                                       ),
-                                    ),
-                                    SizedBox(height: Get.height * 0.0221),
-                                    Row(
-                                      children: [
-                                        InkWell(
-                                          onTap: () {
-                                            Get.toNamed(
-                                                PageRes.bookAppointmentScreen);
-                                          },
-                                          child: Text(
-                                            Strings.book,
-                                            style: appTextStyle(
-                                                color: ColorRes.indicator,
-                                                fontSize: 11,
-                                                fontWeight: FontWeight.w500),
-                                          ),
-                                        ),
-                                        SizedBox(width: Get.width * 0.1813),
-                                        const Image(
-                                          image: AssetImage(AssetRes.msg),
-                                          height: 20,
-                                        ),
-                                        SizedBox(width: Get.width * 0.0293),
-                                        const Image(
-                                          image: AssetImage(AssetRes.timer),
-                                          height: 20,
-                                        )
-                                      ],
-                                    )
-                                  ],
-                                ),
-                              ))
+                                      SizedBox(width: Get.width * 0.1813),
+                                      const Image(
+                                        image: AssetImage(AssetRes.msg),
+                                        height: 20,
+                                      ),
+                                      SizedBox(width: Get.width * 0.0293),
+                                      const Image(
+                                        image: AssetImage(AssetRes.timer),
+                                        height: 20,
+                                      )
+                                    ],
+                                  )
+                                ],
+                              ),
+                            ),
+                          )
                         ],
                       )
                     ],
@@ -437,7 +435,7 @@ Widget past() {
               top: 62,
               right: 47,
               child: InkWell(
-                onTap: () => Get.toNamed(PageRes.appointmentBookingScreen),
+                onTap: () => Get.toNamed(PageRes.detailsScreen),
                 child: Container(
                   height: 28,
                   width: 28,
@@ -607,7 +605,7 @@ Widget cancelled() {
               top: 62,
               right: 47,
               child: InkWell(
-                onTap: () => Get.toNamed(PageRes.appointmentBookingScreen),
+                onTap: () => Get.toNamed(PageRes.detailsScreen),
                 child: Container(
                   height: 28,
                   width: 28,

@@ -143,7 +143,7 @@ void main() {
       await tester.dragUntilVisible(
         nextWeekDateFinder,
         pageViewFinder,
-        Offset(-250, 0),
+        const Offset(-250, 0),
       );
 
       expect(nextWeekDateFinder, findsOneWidget);
@@ -198,7 +198,7 @@ void main() {
       await tester.dragUntilVisible(
         nextWeekDateFinder,
         pageViewFinder,
-        Offset(-250, 0),
+        const Offset(-250, 0),
       );
 
       expect(find.text("Week 54"), findsNothing);
@@ -230,7 +230,7 @@ void main() {
       await tester.dragUntilVisible(
         nextWeekDateFinder,
         pageViewFinder,
-        Offset(250, 0),
+        const Offset(250, 0),
       );
 
       expect(nextWeekDateFinder, findsOneWidget);

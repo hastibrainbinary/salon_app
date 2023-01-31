@@ -185,9 +185,8 @@ class LogInScreen extends StatelessWidget {
             commonButton(
                 onTap: () {
                   if (controller.validator()) {
-                    Get.toNamed(PageRes.dashBoardScreen);
+                    Get.offAllNamed(PageRes.dashBoardScreen);
                   }
-
                 },
                 title: Strings.logIn,
                 textColor: ColorRes.white,

@@ -320,7 +320,7 @@ Future logout(context) {
                     style: appTextStyle(
                       fontWeight: FontWeight.w400,
                       fontSize: 12,
-                      color: ColorRes.black.withOpacity(0.5),
+                      color: ColorRes.black,
                     ),
                   ),
                 ),
@@ -373,8 +373,8 @@ Future bookingConfirmed(context) {
                   image: AssetImage(AssetRes.confirmPayment),
                 ),
                 const SizedBox(height: 25),
-                InkWell(onTap:
-                  () {
+                InkWell(
+                  onTap: () {
                     Get.toNamed(PageRes.appointmentBookingScreen);
                   },
                   child: Text(

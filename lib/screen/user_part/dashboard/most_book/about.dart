@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:salon_app/screen/user_part/messages/messages_screen.dart';
 import 'package:salon_app/utils/app_style.dart';
 import 'package:salon_app/utils/asset_res.dart';
 import 'package:salon_app/utils/color_res.dart';
@@ -124,7 +125,6 @@ Widget about() {
           ),
         ),
       ),
-      SizedBox(height: Get.height * 0.0246),
       Padding(
         padding: const EdgeInsets.only(left: 40),
         child: Row(
@@ -327,22 +327,25 @@ Widget about() {
           ],
         ),
       ),
-      SizedBox(height: Get.height * 0.03),
+      SizedBox(height: Get.height * 0.0246),
       Padding(
         padding: const EdgeInsets.only(left: 40),
         child: Row(
           children: [
-            Container(
-              width: 50,
-              height: 50,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(8),
-                border: Border.all(color: ColorRes.indicator),
-              ),
-              child: const Padding(
-                padding: EdgeInsets.all(10.0),
-                child: Image(
-                  image: AssetImage(AssetRes.chat),
+            InkWell(
+              onTap: () => Get.toNamed(PageRes.messagesScreen),
+              child: Container(
+                width: 50,
+                height: 50,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(8),
+                  border: Border.all(color: ColorRes.indicator),
+                ),
+                child: const Padding(
+                  padding: EdgeInsets.all(10.0),
+                  child: Image(
+                    image: AssetImage(AssetRes.chat),
+                  ),
                 ),
               ),
             ),

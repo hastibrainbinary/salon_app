@@ -47,7 +47,7 @@ Widget containerWithTitleProfile(
         const Spacer(),
         Row(
           children: [
-            language==null?SizedBox():
+            language==null?const SizedBox():
             Text(language, style: appTextStyle(
                 color: ColorRes.black,
                 fontSize: 12,

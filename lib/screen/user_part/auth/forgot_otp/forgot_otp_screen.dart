@@ -77,7 +77,7 @@ class ForgotOtpScreen extends StatelessWidget {
                 .copyDecorationWith(color: ColorRes.white),
             focusedPinTheme: controller.defaultTheme.copyDecorationWith(
                 borderRadius: BorderRadius.circular(8), color: ColorRes.white),
-            onCompleted: (pin) => Get.toNamed(PageRes.newPasswordScreen),
+            onCompleted: (pin) => Get.offAllNamed(PageRes.newPasswordScreen),
           ),
           SizedBox(height: Get.height * 0.0431),
           Text(

@@ -24,6 +24,7 @@ class PageRes {
   static String resetPasswordsScreen = "/resetPasswordsScreen";
   static String inviteFriendScreen = "/inviteFriendScreen";
   static String privacyPolicyScreen = "/privacyPolicyScreen";
+  static String detailsScreen="/detailsScreen";
 
   static String messageDetailScreen = "/messageDetailScreen";
   static String paymentScreen = "/paymentScreen";

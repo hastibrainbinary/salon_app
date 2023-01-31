@@ -20,9 +20,7 @@ class ServiceScreen extends StatelessWidget {
             Stack(
               alignment: Alignment.center,
               children: [
-                Container(
-                  // height:
-                  //     Get.height > 800 ? Get.height * 0.3 : Get.height * 0.25,
+                SizedBox(
                   width: Get.width,
                   child: const Image(
                     image: AssetImage(AssetRes.mostBookBack),
@@ -75,54 +73,55 @@ class ServiceScreen extends StatelessWidget {
                                     width: 128,
                                     color: ColorRes.white,
                                     child: Column(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.spaceEvenly,
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.start,
-                                        children: [
-                                          InkWell(
-                                            onTap: () {
-                                              Get.back();
-                                              Get.toNamed(
-                                                  PageRes.seviceAddScreen);
-                                            },
-                                            child: Text(
-                                              Strings.addService,
-                                              style: appTextStyle(
-                                                  color: ColorRes.black,
-                                                  fontSize: 11,
-                                                  fontWeight: FontWeight.w400),
-                                            ),
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceEvenly,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        InkWell(
+                                          onTap: () {
+                                            Get.back();
+                                            Get.toNamed(
+                                                PageRes.seviceAddScreen);
+                                          },
+                                          child: Text(
+                                            Strings.addService,
+                                            style: appTextStyle(
+                                                color: ColorRes.black,
+                                                fontSize: 11,
+                                                fontWeight: FontWeight.w400),
                                           ),
-                                          InkWell(
-                                            onTap: () {
-                                              Get.back();
-                                              Get.toNamed(
-                                                  PageRes.deleteServiceScreen);
-                                            },
-                                            child: Text(
-                                              Strings.deleteService,
-                                              style: appTextStyle(
-                                                  color: ColorRes.black,
-                                                  fontSize: 11,
-                                                  fontWeight: FontWeight.w400),
-                                            ),
+                                        ),
+                                        InkWell(
+                                          onTap: () {
+                                            Get.back();
+                                            Get.toNamed(
+                                                PageRes.deleteServiceScreen);
+                                          },
+                                          child: Text(
+                                            Strings.deleteService,
+                                            style: appTextStyle(
+                                                color: ColorRes.black,
+                                                fontSize: 11,
+                                                fontWeight: FontWeight.w400),
                                           ),
-                                          InkWell(
-                                            onTap: (){
-                                              Get.back();
-                                              Get.toNamed(
-                                                  PageRes.editServiceScreen);
-                                            },
-                                            child: Text(
-                                              Strings.editService,
-                                              style: appTextStyle(
-                                                  color: ColorRes.black,
-                                                  fontSize: 11,
-                                                  fontWeight: FontWeight.w400),
-                                            ),
-                                          )
-                                        ]),
+                                        ),
+                                        InkWell(
+                                          onTap: () {
+                                            Get.back();
+                                            Get.toNamed(
+                                                PageRes.editServiceScreen);
+                                          },
+                                          child: Text(
+                                            Strings.editService,
+                                            style: appTextStyle(
+                                                color: ColorRes.black,
+                                                fontSize: 11,
+                                                fontWeight: FontWeight.w400),
+                                          ),
+                                        )
+                                      ],
+                                    ),
                                   ),
                                 ),
                               ),
@@ -138,122 +137,112 @@ class ServiceScreen extends StatelessWidget {
               ],
             ),
             Padding(
-                padding: EdgeInsets.only(
-                  top: Get.height * 0.25,
-                ),
-                child: Column(
-                  children: [
-                    Container(
-                      color: Colors.transparent,
-                      width: 320,
-                      height: 100,
-                      /*  decoration: BoxDecoration(
-                         border: Border.all()
-                        ),*/
+              padding: EdgeInsets.only(
+                top: Get.height * 0.25,
+              ),
+              child: Column(
+                children: [
+                  Container(
+                    color: Colors.transparent,
+                    width: 320,
+                    height: 100,
+                    child: ListView.separated(
+                      scrollDirection: Axis.horizontal,
+                      physics: const AlwaysScrollableScrollPhysics(),
+                      shrinkWrap: true,
+                      itemCount: 10,
+                      itemBuilder: (BuildContext context, int index) {
+                        return Column(
+                          children: [
+                            Container(
+                              height: 70,
+                              width: 70,
+                              padding: const EdgeInsets.all(16),
+                              decoration: BoxDecoration(
+                                color: ColorRes.white,
+                                borderRadius: BorderRadius.circular(70),
+                                boxShadow: [
+                                  BoxShadow(
+                                    color: const Color(0xff94674F)
+                                        .withOpacity(0.2),
+                                    offset: const Offset(0.0, 4),
+                                    blurRadius: 23.0,
+                                  ),
+                                ],
+                              ),
+                              child: const Image(
+                                image: AssetImage(AssetRes.hairCut),
+                              ),
+                            ),
+                            Text(
+                              "Hair cut",
+                              style: appTextStyle(
+                                  color: ColorRes.black,
+                                  fontSize: 10,
+                                  fontWeight: FontWeight.w400),
+                            )
+                          ],
+                        );
+                      },
+                      separatorBuilder: (BuildContext context, int index) {
+                        return const SizedBox(width: 12);
+                      },
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 30),
+                    child: SizedBox(
+                      height: Get.height * 0.56,
+                      width: Get.width,
                       child: ListView.separated(
-                        scrollDirection: Axis.horizontal,
-                        physics: const AlwaysScrollableScrollPhysics(),
-                        shrinkWrap: true,
-                        itemCount: 10,
-                        itemBuilder: (BuildContext context, int index) {
-                          return Column(
+                        itemCount: 8,
+                        physics: const BouncingScrollPhysics(),
+                        itemBuilder: (context, index) {
+                          return Row(
                             children: [
                               Container(
-                                height: 70,
-                                width: 70,
-                                padding: const EdgeInsets.all(16),
+                                height: 60,
+                                width: 60,
                                 decoration: BoxDecoration(
-                                    color: ColorRes.white,
-                                    borderRadius: BorderRadius.circular(70),
-                                    boxShadow: [
-                                      BoxShadow(
-                                        color: const Color(0xff94674F)
-                                            .withOpacity(0.2),
-                                        offset: const Offset(0.0, 4),
-                                        blurRadius: 23.0,
-                                      ),
-                                    ]),
+                                  borderRadius: BorderRadius.circular(10),
+                                ),
                                 child: const Image(
-                                  image: AssetImage(AssetRes.hairCut),
+                                  image: AssetImage(AssetRes.imageStyel),
                                 ),
                               ),
-
-                              /*  const CircleAvatar(
-                  backgroundColor: ColorRes.white,
-                  radius: 35,
-                  child: Image(
-                    image: AssetImage(AssetRes.hairCut),
-                    height: 45,
-                  ),
-                ),*/
-                              Text(
-                                "Hair cut",
-                                style: appTextStyle(
-                                    color: ColorRes.black,
-                                    fontSize: 10,
-                                    fontWeight: FontWeight.w400),
+                              SizedBox(width: Get.width * 0.0533),
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    "Hair Cut",
+                                    style: appTextStyle(
+                                        fontSize: 13,
+                                        fontWeight: FontWeight.w400,
+                                        color: ColorRes.black),
+                                  ),
+                                  Text(
+                                    "\$50.00",
+                                    style: appTextStyle(
+                                        color: ColorRes.black,
+                                        fontSize: 12,
+                                        fontWeight: FontWeight.w400),
+                                  )
+                                ],
                               )
                             ],
                           );
                         },
                         separatorBuilder: (BuildContext context, int index) {
-                          return const SizedBox(width: 12);
+                          return const SizedBox(height: 15);
                         },
                       ),
                     ),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 30),
-                      child: SizedBox(
-                        height: Get.height * 0.56,
-                        width: Get.width,
-                        child: ListView.separated(
-                          itemCount: 8,
-                          // shrinkWrap: true,
-                          physics: const BouncingScrollPhysics(),
-                          itemBuilder: (context, index) {
-                            return Row(
-                              children: [
-                                Container(
-                                  height: 60,
-                                  width: 60,
-                                  decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(10),
-                                  ),
-                                  child: const Image(
-                                      image: AssetImage(AssetRes.imageStyel)),
-                                ),
-                                SizedBox(width: Get.width * 0.0533),
-                                Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text(
-                                      "Hair Cut",
-                                      style: appTextStyle(
-                                          fontSize: 13,
-                                          fontWeight: FontWeight.w400,
-                                          color: ColorRes.black),
-                                    ),
-                                    Text(
-                                      "\$50.00",
-                                      style: appTextStyle(
-                                          color: ColorRes.black,
-                                          fontSize: 12,
-                                          fontWeight: FontWeight.w400),
-                                    )
-                                  ],
-                                )
-                              ],
-                            );
-                          },
-                          separatorBuilder: (BuildContext context, int index) {
-                            return const SizedBox(height: 15);
-                          },
-                        ),
-                      ),
-                    ),
-                    SizedBox(height: Get.height * 0.0369),
-                  ],
-                )),
+                  ),
+                  SizedBox(height: Get.height * 0.0369),
+                ],
+              ),
+            ),
           ],
         ),
       ),

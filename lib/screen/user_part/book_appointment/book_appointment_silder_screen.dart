@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_connect/http/src/utils/utils.dart';
@@ -571,7 +572,9 @@ Widget bookAppointMentSlider({required BuildContext context}) {
                 try {
                   bookAppointmentController.month.value = selected!;
                 } catch (e) {
-                  print(e);
+                  if (kDebugMode) {
+                    print(e);
+                  }
                 }
               },
               child: Container(

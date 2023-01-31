@@ -156,6 +156,57 @@ class BookingUserDetails extends StatelessWidget {
                           SizedBox(height: Get.height * 0.0246),
                           Padding(
                             padding: const EdgeInsets.only(left: 30),
+                            child: Row(
+                              children: [
+                                ...List.generate(
+                                  4,
+                                  (index) => Stack(
+                                    children: [
+                                      Container(
+                                        margin: (index == 3)
+                                            ? EdgeInsets.zero
+                                            : const EdgeInsets.only(right: 12),
+                                        height: 70,
+                                        width: 70,
+                                        decoration: BoxDecoration(
+                                          borderRadius:
+                                              BorderRadius.circular(8),
+                                        ),
+                                        child: Image.asset(AssetRes.personImg),
+                                      ),
+                                      (index == 3)
+                                          ? Container(
+                                              alignment: Alignment.center,
+                                              margin: (index == 3)
+                                                  ? EdgeInsets.zero
+                                                  : const EdgeInsets.only(
+                                                      right: 12),
+                                              height: 70,
+                                              width: 70,
+                                              decoration: BoxDecoration(
+                                                color: ColorRes.black
+                                                    .withOpacity(0.6),
+                                                borderRadius:
+                                                    BorderRadius.circular(8),
+                                              ),
+                                              child: Text(
+                                                "+10",
+                                                style: appTextStyle(
+                                                    fontSize: 16,
+                                                    fontWeight:
+                                                        FontWeight.w600),
+                                              ),
+                                            )
+                                          : const SizedBox(),
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                          SizedBox(height: Get.height * 0.0246),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 30),
                             child: Text(
                               Strings.reviews,
                               style: appTextStyle(

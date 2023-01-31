@@ -38,16 +38,16 @@ class SelectGenderScreen extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              InkWell(
+              Obx(() =>InkWell(
                 onTap: () => selectGenderController.onChangeGirl(),
                 child: Container(
                   width: 152,
                   height: 180,
                   decoration: BoxDecoration(
                     border: Border.all(
-                        color: selectGenderController.select.value == true
+                        color: selectGenderController.selected.value == true
                             ? ColorRes.indicator
-                            : ColorRes.black,
+                            : ColorRes.white,
                         width: 1.5),
                     borderRadius: BorderRadius.circular(12),
                     color: ColorRes.white,
@@ -85,56 +85,56 @@ class SelectGenderScreen extends StatelessWidget {
                     ],
                   ),
                 ),
-              ),
+              )),
               SizedBox(width: Get.width * 0.0533),
-              InkWell(
-                onTap: () => selectGenderController.onChangeMen(),
-                child: Container(
-                  width: 152,
-                  height: 180,
-                  decoration: BoxDecoration(
-                    border: Border.all(
-                        color: selectGenderController.select.value == true
-                            ? ColorRes.indicator
-                            : ColorRes.white,
-                        width: 1.5),
-                    borderRadius: BorderRadius.circular(12),
-                    color: ColorRes.white,
-                    boxShadow: [
-                      BoxShadow(
-                        color: const Color(0xff94674F).withOpacity(0.13),
-                        offset: const Offset(0.0, 0),
-                        blurRadius: 51.0,
-                      ),
-                    ],
-                  ),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Stack(
-                        children: [
-                          Container(
-                            height: 104,
-                            width: 104,
-                            decoration: BoxDecoration(
-                                color: ColorRes.gray,
-                                borderRadius: BorderRadius.circular(104)),
-                          ),
-                          const Positioned(
-                            bottom: 0,
-                            left: 7,
-                            child: Image(
-                              image: AssetImage(AssetRes.men),
-                              fit: BoxFit.cover,
-                              height: 90,
-                            ),
-                          )
-                        ],
-                      )
-                    ],
-                  ),
-                ),
-              ),
+             Obx(() =>  InkWell(
+               onTap: () => selectGenderController.onChangeMen(),
+               child: Container(
+                 width: 152,
+                 height: 180,
+                 decoration: BoxDecoration(
+                   border: Border.all(
+                       color: selectGenderController.selected2.value == true
+                           ? ColorRes.indicator
+                           : ColorRes.white,
+                       width: 1.5),
+                   borderRadius: BorderRadius.circular(12),
+                   color: ColorRes.white,
+                   boxShadow: [
+                     BoxShadow(
+                       color: const Color(0xff94674F).withOpacity(0.13),
+                       offset: const Offset(0.0, 0),
+                       blurRadius: 51.0,
+                     ),
+                   ],
+                 ),
+                 child: Column(
+                   mainAxisAlignment: MainAxisAlignment.center,
+                   children: [
+                     Stack(
+                       children: [
+                         Container(
+                           height: 104,
+                           width: 104,
+                           decoration: BoxDecoration(
+                               color: ColorRes.gray,
+                               borderRadius: BorderRadius.circular(104)),
+                         ),
+                         const Positioned(
+                           bottom: 0,
+                           left: 7,
+                           child: Image(
+                             image: AssetImage(AssetRes.men),
+                             fit: BoxFit.cover,
+                             height: 90,
+                           ),
+                         )
+                       ],
+                     )
+                   ],
+                 ),
+               ),
+             ),)
             ],
           ),
           SizedBox(height: Get.height * 0.1169),
