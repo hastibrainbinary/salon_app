@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:salon_app/common/common_btn.dart';
 import 'package:salon_app/screen/user_part/profile_user/payment/payment_controller.dart';
 import 'package:salon_app/utils/app_style.dart';
 import 'package:salon_app/utils/asset_res.dart';
@@ -237,9 +238,11 @@ class PaymentDetailsScreen extends StatelessWidget {
                           Row(
                             children: [
                               Container(
+                                alignment: Alignment.center,
                                 height: 40,
                                 width: 40,
                                 decoration: BoxDecoration(
+                                  color: ColorRes.white,
                                   borderRadius: BorderRadius.circular(3),
                                   border: Border.all(color: ColorRes.indicator),
                                 ),
@@ -249,8 +252,10 @@ class PaymentDetailsScreen extends StatelessWidget {
                                   child: TextFormField(
                                     controller:
                                         paymentController.monthController,
+                                    textAlign: TextAlign.center,
                                     decoration: InputDecoration(
                                       border: InputBorder.none,
+                                      isCollapsed: true,
                                       hintText: '06',
                                       fillColor: Colors.transparent,
                                       filled: true,
@@ -274,7 +279,7 @@ class PaymentDetailsScreen extends StatelessWidget {
                                 height: 40,
                                 width: 40,
                                 decoration: BoxDecoration(
-                                  color: ColorRes.black,
+                                  color: ColorRes.white,
                                   borderRadius: BorderRadius.circular(3),
                                   border: Border.all(color: ColorRes.indicator),
                                 ),
@@ -286,6 +291,7 @@ class PaymentDetailsScreen extends StatelessWidget {
                                     controller:
                                         paymentController.dateController,
                                     decoration: InputDecoration(
+                                      isCollapsed: true,
                                       border: InputBorder.none,
                                       hintText: '30',
                                       fillColor: Colors.transparent,
@@ -356,6 +362,13 @@ class PaymentDetailsScreen extends StatelessWidget {
                       ),
                     ],
                   ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(top: 40, bottom: 20),
+                  child: commonButton(
+                      title: Strings.addNewCard,
+                      textColor: ColorRes.white,
+                      backgroundColor: ColorRes.indicator),
                 ),
               ]),
             ),

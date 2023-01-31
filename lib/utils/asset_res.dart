@@ -32,10 +32,13 @@ class AssetRes {
   static const imageStyel = "${images}imageStyel.png";
   static const bookingUser = "${images}bookingUser.png";
   static const profileBack = "${images}profileBack.png";
-  static const privacyPolice ="${images}privacyPolice.png";
+  static const privacyPolice = "${images}privacyPolice.png";
   static const ringBack = "${images}ringBack.png";
-  static const adminBack="${images}adminBack.png";
-  static const phoneBoder="${images}phoneBoder.png";
+
+  static const adminBack = "${images}adminBack.png";
+  static const phoneBoder = "${images}phoneBoder.png";
+
+  static const personImg = "${images}person_eye.png";
 
   ///------------------------------icons------------------------------------------------------
   static const phoneIcon = '${icons}phoneIcon.png';
@@ -58,12 +61,12 @@ class AssetRes {
   static const pinIcon = "${icons}pin_icon.png";
   static const sendIcon = "${icons}send_icon.png";
   static const plusIcon = "${icons}plus_icon.png";
-  static const bankIcon="${icons}bankIcon.png";
-  static const pTime="${icons}pTime.png";
-  static const cutingK="${icons}cutingK.png";
-  static const cutH="${icons}cutH.png";
-  static const barber="${icons}barber.png";
-  static const plocation="${icons}plocation.png";
+  static const bankIcon = "${icons}bankIcon.png";
+  static const pTime = "${icons}pTime.png";
+  static const cutingK = "${icons}cutingK.png";
+  static const cutH = "${icons}cutH.png";
+  static const barber = "${icons}barber.png";
+  static const plocation = "${icons}plocation.png";
 
   static const gallery = "${icons}gallery.png";
   static const girl = "${icons}girl.png";
@@ -81,12 +84,11 @@ class AssetRes {
   static const photo = "${icons}photo.png";
   static const line = "${icons}line.png";
   static const card = "${icons}card.png";
-  static const payStore="${icons}payStore.png";
-  static const dCard="${icons}dCard.png";
-  static const gPay="${icons}gPay.png";
-  static const pe="${icons}pe.png";
-  static const payUpi="${icons}payUpi.png";
-
+  static const payStore = "${icons}payStore.png";
+  static const dCard = "${icons}dCard.png";
+  static const gPay = "${icons}gPay.png";
+  static const pe = "${icons}pe.png";
+  static const payUpi = "${icons}payUpi.png";
 
   ///____________________________ ADMIN PART -M _______________________________
 
@@ -112,7 +114,7 @@ class AssetRes {
   static const adminProfilePic = "${images}admin_dp.png";
   static const bookAppointment = "${images}book_appointment.png";
   static const cancelAppointment = "${images}cancel_appointment.png";
-  static const confirmPayment="${images}confirmPayment.png";
+  static const confirmPayment = "${images}confirmPayment.png";
 
   static const arrow = "${icons}arrow.png";
 

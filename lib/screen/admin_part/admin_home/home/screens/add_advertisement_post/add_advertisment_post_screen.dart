@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -9,10 +11,9 @@ import 'package:salon_app/utils/page_res.dart';
 import 'package:salon_app/utils/string.dart';
 
 class AddAdvertisementPostScreen extends StatelessWidget {
-   AddAdvertisementPostScreen({Key? key}) : super(key: key);
+  AddAdvertisementPostScreen({Key? key}) : super(key: key);
   final AddAdvertisementController addAdvertisementController =
-  Get.put(AddAdvertisementController());
-
+      Get.put(AddAdvertisementController());
 
   @override
   Widget build(BuildContext context) {
@@ -88,8 +89,7 @@ class AddAdvertisementPostScreen extends StatelessWidget {
                                         InkWell(
                                           onTap: () {
                                             Get.back();
-                                            Get.toNamed(
-                                                PageRes.addPostScreen);
+                                            Get.toNamed(PageRes.addPostScreen);
                                           },
                                           child: Text(
                                             Strings.addPost,
@@ -101,13 +101,14 @@ class AddAdvertisementPostScreen extends StatelessWidget {
                                         ),
                                         InkWell(
                                           onTap: () {
-                                            Get.toNamed(
-                                                PageRes.deletePostScreen);
-
                                             if (kDebugMode) {
                                               print(
                                                   "_____________________DELETE POST -M______________________");
                                             }
+                                            Get.back();
+
+                                            Get.toNamed(
+                                                PageRes.deletePostScreen);
                                           },
                                           child: Text(
                                             Strings.deletePost,
@@ -136,12 +137,36 @@ class AddAdvertisementPostScreen extends StatelessWidget {
             Padding(
               padding:
                   EdgeInsets.only(top: Get.height * 0.25, left: 25, right: 25),
-              child: Column(
-                children: const [
-                  Image(
-                    image: AssetImage(AssetRes.bener),
+              child: Obx(
+                () => SizedBox(
+                  height: Get.height * 0.78,
+                  child: SingleChildScrollView(
+                    physics: const BouncingScrollPhysics(),
+                    child: Column(
+                      children: [
+                        Container(
+                          height: 157,
+                          width: 325,
+                          child: Image.asset(AssetRes.bener, fit: BoxFit.cover),
+                        ),
+                        SizedBox(height: Get.height * 0.0369),
+                        ...List.generate(
+                            addAdvertisementController.posts.length, (index) {
+                          return Container(
+                            margin:
+                                EdgeInsets.only(bottom: Get.height * 0.0369),
+                            height: 157,
+                            width: 325,
+                            child: Image.file(
+                              File(addAdvertisementController.posts[index]),
+                              fit: BoxFit.cover,
+                            ),
+                          );
+                        }),
+                      ],
+                    ),
                   ),
-                ],
+                ),
               ),
             )
           ],

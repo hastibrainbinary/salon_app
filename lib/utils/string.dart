@@ -27,6 +27,7 @@ class Strings {
   static const advertisementPost = "Advertisement Post";
   static const addPost = "Add Post";
   static const deletePost = "Delete Post";
+
   static const date = "Date";
   static const date1 = "Date :";
   static const appointmentDetails = "Appointment Details";
@@ -122,6 +123,7 @@ class Strings {
   static const selectDate = "Select Date";
   static const cancelAppointment="Cancel Appointment";
 
+  // static const delete = "Delete";
   static const cVV = "CVV*";
 
   static const myAppointments = "My Appointments";
@@ -158,7 +160,10 @@ class Strings {
   static const hindi = "Hindi";
   static const spain = "Spain";
   static const selectPayment = "Select Payment Method";
+
   static const paymentU = "Payment :";
+
+  // static const payment1 = "Payment                 :";
 
   ///_________________________________________ admin part ___________________________________
   static const shopName = "Shop name";
@@ -242,6 +247,9 @@ class Strings {
 
   static const serviceName = "Service Name";
   static const price = "Price";
+
+  static const cancelPostTxt = "Are you sure,\nyou want to delete Post?";
+  static const yesDeletePost = "Yes, Delete post";
 
   ///__________________________________________ THE END ADMIN PART -M ________________________________________________
 

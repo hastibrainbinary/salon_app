@@ -385,12 +385,18 @@ Widget past() {
                                     SizedBox(height: Get.height * 0.0221),
                                     Row(
                                       children: [
-                                        Text(
-                                          Strings.book,
-                                          style: appTextStyle(
-                                              color: ColorRes.indicator,
-                                              fontSize: 11,
-                                              fontWeight: FontWeight.w500),
+                                        InkWell(
+                                          onTap: () {
+                                            Get.toNamed(
+                                                PageRes.bookAppointmentScreen);
+                                          },
+                                          child: Text(
+                                            Strings.book,
+                                            style: appTextStyle(
+                                                color: ColorRes.indicator,
+                                                fontSize: 11,
+                                                fontWeight: FontWeight.w500),
+                                          ),
                                         ),
                                         SizedBox(width: Get.width * 0.1813),
                                         const Image(

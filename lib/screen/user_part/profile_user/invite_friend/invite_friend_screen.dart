@@ -43,6 +43,7 @@ class InviteFriendScreen extends StatelessWidget {
           SizedBox(height: Get.height * 0.0246),
           Expanded(
             child: ListView.separated(
+                physics: const BouncingScrollPhysics(),
                 itemBuilder: (context, index) {
                   return Padding(
                     padding: const EdgeInsets.only(left: 25, right: 25),
@@ -77,7 +78,7 @@ class InviteFriendScreen extends StatelessWidget {
                             )
                           ],
                         ),
-                        SizedBox(width: Get.width * 0.1733),
+                        const Spacer(),
                         Container(
                           width: 85,
                           height: 33,
