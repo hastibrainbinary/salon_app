@@ -14,7 +14,7 @@ class PageRes {
   static String dashBoardScreen = "/dashBoardScreen";
   static String homeScreen = "/HomeScreen";
   static String mostBook = "/mostBook";
-  static String remindScreen="/remindScreen";
+  static String remindScreen = "/remindScreen";
 
   static String bookings = "/bookings";
   static String selectGender = "/selectGender";
@@ -30,11 +30,12 @@ class PageRes {
   static String paymentScreen = "/paymentScreen";
   static String callRingScreen = "/callRingScreen";
   static String languageScreen = "/languageScreen";
-  static String bookAppointmentSliderScree="/bookAppointmentSliderScree";
-  static String paymentMethodScreen="/paymentMethodScreen";
+  static String bookAppointmentSliderScree = "/bookAppointmentSliderScree";
+  static String paymentMethodScreen = "/paymentMethodScreen";
 
   ///_______________________________ ADMIN PART -M _____________________________
   static String adminSignUpScreen = "/adminSignUpScreen";
+  static String addProfileScreen = "/addProfileScreen";
   static String adminSignUpMobileScreen = "/adminSignUpMobileScreen";
   static String adminForgotOtpScreen = '/adminForgotOtpScreen';
   static String adminForgotPassword = "/adminForgotPassword";
@@ -49,16 +50,16 @@ class PageRes {
   static String adminMessagesScreen = "/messagesScreen";
   static String adminMessageDetailScreen = "/messageDetailScreen";
   static String addSeviceScreen = "/addSeviceScreen";
-  static String adminNotificationScreen="/adminNotificationScreen";
-  static String adminResetPasswordsScreen="/adminResetPasswordsScreen";
-  static String adminLanguageScreen="/adminLanguageScreen";
-  static String adminPrivacyPoliceScreen="/adminPrivacyPoliceScreen";
-  static String adminBankDetailsScreen="/adminBankDetailsScreen";
-  static String editBankDetailsScreen="/editBankDetailsScreen";
-     // static String bookings="/bookings";
+  static String adminNotificationScreen = "/adminNotificationScreen";
+  static String adminResetPasswordsScreen = "/adminResetPasswordsScreen";
+  static String adminLanguageScreen = "/adminLanguageScreen";
+  static String adminPrivacyPoliceScreen = "/adminPrivacyPoliceScreen";
+  static String adminBankDetailsScreen = "/adminBankDetailsScreen";
+  static String editBankDetailsScreen = "/editBankDetailsScreen";
+  // static String bookings="/bookings";
   static String mostBookDetailsScreen = "/mostBookDetailsScreen";
   static String bookingDetails = "/bookingDetails";
-  static String shopProfileScreen="/shopProfileScreen";
+  static String shopProfileScreen = "/shopProfileScreen";
 
   static String seviceAddScreen = "/seviceAddScreen";
 
@@ -69,15 +70,17 @@ class PageRes {
   static String appointmentBookingScreen = "/AppointmentBookingScreen";
   static String notificationUserScreen = "/notificationUserScreen";
   static String editProfileScreen = "/editProfileScreen";
-  static String addAdvertisementPostScreen="/addAdvertisementPostScreen";
-  static String addPostScreen="/addPostScreen";
-  static String deletePostScreen="/deletePostScreen";
-  static String staffDetailsScreen="/staffDetailsScreen";
-  static String adminAppointmentScreen="/adminAppointmentScreen";
-  static String adminStaffDetailsScreen="/adminStaffDetailsScreen";
-  static String deleteServiceScreen="/deleteServiceScreen";
-  static String editServiceScreen="/editServiceScreen";
-  static String adminDetailsStaffScreen="/adminDetailsStaffScreen";
-  static String cancelAppointmentScreen="/cancelAppointmentScreen";
-  static String adminEditProfileScreen="/adminEditProfileScreen";
+
+  static String addAdvertisementPostScreen = "/addAdvertisementPostScreen";
+  static String addPostScreen = "/addPostScreen";
+  static String deletePostScreen = "/deletePostScreen";
+  static String staffDetailsScreen = "/staffDetailsScreen";
+  static String adminAppointmentScreen = "/adminAppointmentScreen";
+  static String adminStaffDetailsScreen = "/adminStaffDetailsScreen";
+  static String deleteServiceScreen = "/deleteServiceScreen";
+  static String editServiceScreen = "/editServiceScreen";
+  static String adminDetailsStaffScreen = "/adminDetailsStaffScreen";
+  static String cancelAppointmentScreen = "/cancelAppointmentScreen";
+  static String adminEditProfileScreen = "/adminEditProfileScreen";
+  static String adminStaffEditProfileScreen = "/adminStaffEditProfileScreen";
 }

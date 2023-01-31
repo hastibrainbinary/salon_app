@@ -16,7 +16,10 @@ import 'package:salon_app/screen/admin_part/admin_home/home/screens/add_your_ban
 import 'package:salon_app/screen/admin_part/admin_home/home/screens/add_your_bank_account/edit_account/edit_account.dart';
 import 'package:salon_app/screen/admin_part/admin_home/home/screens/cancel_appointment_details/cancel_appointment_screen.dart';
 import 'package:salon_app/screen/admin_part/admin_home/home/screens/notifocation/notification_screen.dart';
+import 'package:salon_app/screen/admin_part/admin_home/home/screens/staff_details/add_profile/add_profile_screen.dart';
 import 'package:salon_app/screen/admin_part/admin_home/home/screens/staff_details/admin_details_staff_screen.dart';
+import 'package:salon_app/screen/admin_part/admin_home/home/screens/staff_details/edit_profile/edit_profile_controller.dart';
+import 'package:salon_app/screen/admin_part/admin_home/home/screens/staff_details/edit_profile/edit_profile_screen.dart';
 import 'package:salon_app/screen/admin_part/admin_home/home/screens/staff_details/staff_details_screen.dart';
 import 'package:salon_app/screen/admin_part/admin_shop_profile/bank_details/admin_bank_details_screen.dart';
 import 'package:salon_app/screen/admin_part/admin_shop_profile/edit_bank_details/edit_bank_details_screen.dart';
@@ -130,24 +133,23 @@ class MyApp extends StatelessWidget {
 
           GetPage(
               name: PageRes.appointmentBookingScreen,
-              page: () => const AppointmentBookingScreen()),
+              page: () => AppointmentBookingScreen()),
 
           GetPage(name: PageRes.messagesScreen, page: () => MessagesScreen()),
           GetPage(
               name: PageRes.notificationUserScreen,
               page: () => NotificationUserScreen()),
           GetPage(
-              name: PageRes.filterScreenUser,
-              page: () => const FilterScreenUser()),
+              name: PageRes.filterScreenUser, page: () => FilterScreenUser()),
           GetPage(
               name: PageRes.resetPasswordsScreen,
               page: () => ResetPasswordsScreen()),
           GetPage(
               name: PageRes.inviteFriendScreen,
-              page: () => const InviteFriendScreen()),
+              page: () => InviteFriendScreen()),
           GetPage(
               name: PageRes.privacyPolicyScreen,
-              page: () => const PrivacyPolicyScreen()),
+              page: () => PrivacyPolicyScreen()),
 
           GetPage(
               name: PageRes.editProfileScreen, page: () => EditProfileScreen()),
@@ -159,20 +161,16 @@ class MyApp extends StatelessWidget {
               name: PageRes.messageDetailScreen,
               page: () => MessageDetailScreen()),
 
-          GetPage(
-              name: PageRes.callRingScreen, page: () => const CallRingScreen()),
+          GetPage(name: PageRes.callRingScreen, page: () => CallRingScreen()),
           GetPage(name: PageRes.paymentScreen, page: () => PaymentScreen()),
-          GetPage(
-              name: PageRes.languageScreen, page: () => const LanguageScreen()),
+          GetPage(name: PageRes.languageScreen, page: () => LanguageScreen()),
           GetPage(
               name: PageRes.bookAppointmentSliderScree,
               page: () => BookAppointmentSliderScreen()),
           GetPage(
               name: PageRes.paymentMethodScreen,
               page: () => PaymentMethodScreen()),
-          GetPage(name: PageRes.remindScreen, page: () => const RemindScreen()),
-          GetPage(
-              name: PageRes.detailsScreen, page: () => const DetailsScreen()),
+          GetPage(name: PageRes.remindScreen, page: () => RemindScreen()),
 
           ///_____________________________________ ADMIN PART -M ____________________________________
           GetPage(
@@ -186,11 +184,10 @@ class MyApp extends StatelessWidget {
           GetPage(
               name: PageRes.adminMessageDetailScreen,
               page: () => AdminMessageDetailScreen()),
-          GetPage(
-              name: PageRes.addSeviceScreen, page: () => const ServiceScreen()),
+          GetPage(name: PageRes.addSeviceScreen, page: () => ServiceScreen()),
           GetPage(
               name: PageRes.notificationScreen,
-              page: () => const NotificationScreen()),
+              page: () => NotificationScreen()),
 
           GetPage(
               name: PageRes.adminProfileScreen,
@@ -235,7 +232,7 @@ class MyApp extends StatelessWidget {
               page: () => MostBookDetailsScreen()),
           // GetPage(name: PageRes.bookings, page: () => BookingScreen()),
 
-          GetPage(name: PageRes.filterScreen, page: () => const FilterScreen()),
+          GetPage(name: PageRes.filterScreen, page: () => FilterScreen()),
 
           GetPage(
               name: PageRes.bookingDetails, page: () => BookingUserDetails()),
@@ -243,14 +240,13 @@ class MyApp extends StatelessWidget {
               name: PageRes.bookAppointmentScreen,
               page: () => BookAppointmentScreen()),
           GetPage(
-              name: PageRes.shopProfileScreen,
-              page: () => const ShopProfileScreen()),
+              name: PageRes.shopProfileScreen, page: () => ShopProfileScreen()),
           GetPage(
               name: PageRes.adminResetPasswordsScreen,
               page: () => AdminResetPasswordsScreen()),
           GetPage(
               name: PageRes.adminLanguageScreen,
-              page: () => const AdminLanguageScreen()),
+              page: () => AdminLanguageScreen()),
           GetPage(
               name: PageRes.adminNotificationScreen,
               page: () => AdminNotificationScreen()),
@@ -271,28 +267,24 @@ class MyApp extends StatelessWidget {
               name: PageRes.deletePostScreen, page: () => DeletePostScreen()),
           GetPage(
               name: PageRes.staffDetailsScreen,
-              page: () => const StaffDetailsScreen()),
+              page: () => StaffDetailsScreen()),
           GetPage(
               name: PageRes.adminAppointmentScreen,
               page: () => AdminAppointmentScreen()),
           GetPage(
               name: PageRes.adminStaffDetailsScreen,
-              page: () => const AdminStaffDetailsScreen()),
+              page: () => AdminStaffDetailsScreen()),
           GetPage(
               name: PageRes.deleteServiceScreen,
-              page: () => const DeleteServiceScreen()),
+              page: () => DeleteServiceScreen()),
           GetPage(
-              name: PageRes.editServiceScreen,
-              page: () => const EditServiceScreen()),
+              name: PageRes.editServiceScreen, page: () => EditServiceScreen()),
           GetPage(
-              name: PageRes.adminDetailsStaffScreen,
-              page: () => const AdminDetailsStaffScreen()),
+              name: PageRes.adminDetailsStaffScreen, page: () => AdminDetailsStaffScreen()),
           GetPage(
-              name: PageRes.cancelAppointmentScreen,
-              page: () => const CancelAppointmentScreen()),
+              name: PageRes.cancelAppointmentScreen, page: () => CancelAppointmentScreen()),
           GetPage(
-              name: PageRes.adminEditProfileScreen,
-              page: () => AdminEditProfileScreen()),
+              name: PageRes.adminEditProfileScreen, page: () => AdminEditProfileScreen()),
         ]);
   }
 }
