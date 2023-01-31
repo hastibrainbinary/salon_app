@@ -38,12 +38,12 @@ class Strings {
   static const delete = "Delete";
   static const areYouSureDelete = "Are you sure,\nyou want to delete Service?";
   static const yesDeleteService = "Yes, Delete service";
-  static const name ="Name :";
-  static const emailID1 ="Email ID :";
-  static const mobileNumber ="Mobile Number :";
-  static const location2 ="Location :";
-  static const openingHours ="Opening Hours :";
-  static const about1 ="About :";
+  static const name = "Name :";
+  static const emailID1 = "Email ID :";
+  static const mobileNumber = "Mobile Number :";
+  static const location2 = "Location :";
+  static const openingHours = "Opening Hours :";
+  static const about1 = "About :";
 
   static const update = "Update";
   static const myCard = "My Card";
@@ -121,7 +121,7 @@ class Strings {
   static const nearbySalon = "Nearby Salon";
   static const todayBookings = "Today’s Bookings";
   static const selectDate = "Select Date";
-  static const cancelAppointment="Cancel Appointment";
+  static const cancelAppointment = "Cancel Appointment";
 
   // static const delete = "Delete";
   static const cVV = "CVV*";
@@ -190,7 +190,7 @@ class Strings {
 
   static const about = "About";
   static const reviews = "Reviews";
-    static const ourStaff = "Our Staff";
+  static const ourStaff = "Our Staff";
   static const lorem =
       "Lorem ipsum dolor sit amet, consectetur adipi scing elit. Morbi gravida posuere arcu sit amet pharetra. Vivamus et sagittis eros. Sed eu tristi que felis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nulla ipsum tellus, maxi mus in suscipit sit amet, consectetur ut nisi. Phasellus eleifend lacus at nisi molestie efficitur.";
   static const images = "Images";
@@ -250,6 +250,18 @@ class Strings {
 
   static const cancelPostTxt = "Are you sure,\nyou want to delete Post?";
   static const yesDeletePost = "Yes, Delete post";
+
+  static const addProfile = "Add profile";
+
+  static const deleteProfile = "Delete profile";
+
+  static const nameM = "Name";
+  static const slonName = "Salon Name";
+  static const experience = "Experience";
+  static const specialist = "Specialist";
+
+  static const areYouSureDeleteProfile =
+      "Are you sure,\nyou want to delete Profile?";
 
   ///__________________________________________ THE END ADMIN PART -M ________________________________________________
 

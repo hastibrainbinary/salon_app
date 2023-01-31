@@ -15,7 +15,10 @@ import 'package:salon_app/screen/admin_part/admin_home/home/screens/add_your_ban
 import 'package:salon_app/screen/admin_part/admin_home/home/screens/add_your_bank_account/edit_account/edit_account.dart';
 import 'package:salon_app/screen/admin_part/admin_home/home/screens/cancel_appointment_details/cancel_appointment_screen.dart';
 import 'package:salon_app/screen/admin_part/admin_home/home/screens/notifocation/notification_screen.dart';
+import 'package:salon_app/screen/admin_part/admin_home/home/screens/staff_details/add_profile/add_profile_screen.dart';
 import 'package:salon_app/screen/admin_part/admin_home/home/screens/staff_details/admin_details_staff_screen.dart';
+import 'package:salon_app/screen/admin_part/admin_home/home/screens/staff_details/edit_profile/edit_profile_controller.dart';
+import 'package:salon_app/screen/admin_part/admin_home/home/screens/staff_details/edit_profile/edit_profile_screen.dart';
 import 'package:salon_app/screen/admin_part/admin_home/home/screens/staff_details/staff_details_screen.dart';
 import 'package:salon_app/screen/admin_part/admin_shop_profile/bank_details/admin_bank_details_screen.dart';
 import 'package:salon_app/screen/admin_part/admin_shop_profile/edit_bank_details/edit_bank_details_screen.dart';
@@ -174,6 +177,12 @@ class MyApp extends StatelessWidget {
               name: PageRes.adminMessagesScreen,
               page: () => AdminMessagesScreen()),
 
+          GetPage(
+              name: PageRes.adminStaffEditProfileScreen,
+              page: () => AdminStaffEditProfileScreen()),
+
+          GetPage(
+              name: PageRes.addProfileScreen, page: () => AddProfileScreen()),
           /*    GetPage(
               name: PageRes.seviceAddScreen, page: () => AddServiceScreen()),*/
           GetPage(
@@ -275,11 +284,17 @@ class MyApp extends StatelessWidget {
           GetPage(
               name: PageRes.editServiceScreen, page: () => EditServiceScreen()),
           GetPage(
-              name: PageRes.adminDetailsStaffScreen, page: () => AdminDetailsStaffScreen()),
+              name: PageRes.adminDetailsStaffScreen,
+              page: () => AdminDetailsStaffScreen()),
           GetPage(
-              name: PageRes.cancelAppointmentScreen, page: () => CancelAppointmentScreen()),
+              name: PageRes.cancelAppointmentScreen,
+              page: () => CancelAppointmentScreen()),
           GetPage(
-              name: PageRes.adminEditProfileScreen, page: () => AdminEditProfileScreen()),
+              name: PageRes.adminEditProfileScreen,
+              page: () => AdminEditProfileScreen()),
+          GetPage(
+              name: PageRes.adminDetailsStaffScreen,
+              page: () => AdminDetailsStaffScreen()),
         ]);
   }
 }

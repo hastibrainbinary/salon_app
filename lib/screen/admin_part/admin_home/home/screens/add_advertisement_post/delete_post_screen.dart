@@ -9,6 +9,7 @@ import 'package:salon_app/screen/admin_part/commons/pick_img_dialogue.dart';
 import 'package:salon_app/utils/app_style.dart';
 import 'package:salon_app/utils/asset_res.dart';
 import 'package:salon_app/utils/color_res.dart';
+import 'package:salon_app/utils/page_res.dart';
 import 'package:salon_app/utils/string.dart';
 
 class DeletePostScreen extends StatelessWidget {
@@ -212,6 +213,11 @@ class DeletePostScreen extends StatelessWidget {
                                                           addAdvertisementController
                                                               .posts
                                                               .value[index]); */
+
+                                                  Get.back();
+                                                  Navigator.of(context)
+                                                      .pushReplacementNamed(PageRes
+                                                          .addAdvertisementPostScreen);
                                                 },
                                                 style: appTextStyle(
                                                     fontSize: 11,

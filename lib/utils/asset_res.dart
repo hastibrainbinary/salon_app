@@ -109,6 +109,7 @@ class AssetRes {
   static const cancelAppointmentIcon = "${icons}cancel_appointment_detail.png";
   static const staffDetailIcon = "${icons}staff_detail_icon.png";
   static const editIcon = "${icons}edit_icon.png";
+  static const adminPhotoIcon = "${icons}admin_photo_icon.png";
 
   ///____________________ images ___________________
   static const adminProfilePic = "${images}admin_dp.png";
