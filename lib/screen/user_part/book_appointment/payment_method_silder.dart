@@ -407,6 +407,7 @@ Widget summarySlider(context) {
               padding: const EdgeInsets.symmetric(horizontal: 25),
               child: Text(
                 Strings.reviewAndConfirm,
+                overflow: TextOverflow.ellipsis,
                 style: appTextStyle(
                     color: ColorRes.black,
                     fontWeight: FontWeight.w500,
@@ -416,7 +417,7 @@ Widget summarySlider(context) {
           ],
         ),
         SizedBox(height: Get.height * 0.0246),
-        /*  Container(
+        Container(
           height: 240,
           width: 325,
           decoration: BoxDecoration(
@@ -592,7 +593,7 @@ Widget summarySlider(context) {
                           fontWeight: FontWeight.w500),
                     ),
                     Text(
-                      " Pay at store \$100",
+                      " Pay at store\n \$100",
                       style: appTextStyle(
                           color: ColorRes.black.withOpacity(0.6),
                           fontWeight: FontWeight.w400,
@@ -603,8 +604,7 @@ Widget summarySlider(context) {
               ),
             ],
           ),
-        ),*/
-
+        ),
         SizedBox(height: Get.height * 0.0246),
         Row(
           children: [
@@ -624,17 +624,21 @@ Widget summarySlider(context) {
           children: [
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 25),
-              child: Text(
-                "Include comments or send hairstyle reference if you wish",
-                style: appTextStyle(
-                    color: ColorRes.black,
-                    fontWeight: FontWeight.w400,
-                    fontSize: 11),
+              child: Container(
+                width: Get.width - 50,
+                child: Text(
+                  "Include comments or send hairstyle reference if you wish",
+                  overflow: TextOverflow.ellipsis,
+                  style: appTextStyle(
+                      color: ColorRes.black,
+                      fontWeight: FontWeight.w400,
+                      fontSize: 11),
+                ),
               ),
             ),
           ],
         ),
-          SizedBox(height: Get.height * 0.0246),
+        SizedBox(height: Get.height * 0.0246),
         Container(
           height: 130,
           width: 325,
@@ -663,13 +667,12 @@ Widget summarySlider(context) {
         ),
         SizedBox(height: Get.height * 0.0492),
         commonButton(
-          onTap: (){
-            bookingConfirmed(context);
-          },
+            onTap: () {
+              bookingConfirmed(context);
+            },
             title: Strings.confirm,
             textColor: ColorRes.white,
             backgroundColor: ColorRes.indicator),
-
       ],
     ),
   );

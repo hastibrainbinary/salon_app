@@ -166,7 +166,7 @@ Widget bookServices() {
               SizedBox(width: Get.width * 0.2666),
               InkWell(
                 onTap: () {
-                  bookAppointmentController.ischooseServices.value = true;
+                  bookAppointmentController.ischooseServices.value = false;
                   bookAppointmentController.isappointment.value = true;
                   bookAppointmentController.ispayment.value = false;
                   bookAppointmentController.issummary.value = false;

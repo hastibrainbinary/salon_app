@@ -125,15 +125,62 @@ Widget about() {
         ),
       ),
       SizedBox(height: Get.height * 0.0246),
+      Padding(
+        padding: const EdgeInsets.only(left: 40),
+        child: Row(
+          children: [
+            Stack(
+              alignment: const Alignment(-1, 0),
+              children: [
+                Container(
+                  height: 30,
+                  width: 30,
+                  decoration: const BoxDecoration(
+                      shape: BoxShape.circle, color: ColorRes.black),
+                  child: Image.asset(AssetRes.adminProfilePic),
+                ),
+                Container(
+                  margin: const EdgeInsets.only(left: 20),
+                  height: 30,
+                  width: 30,
+                  decoration: const BoxDecoration(
+                      shape: BoxShape.circle, color: Colors.blue),
+                  child: Image.asset(AssetRes.staff),
+                ),
+                Container(
+                  margin: const EdgeInsets.only(left: 40),
+                  height: 30,
+                  width: 30,
+                  decoration: const BoxDecoration(
+                      shape: BoxShape.circle, color: Colors.amber),
+                  child: Image.asset(AssetRes.adminProfilePic),
+                ),
+                Container(
+                  alignment: Alignment.center,
+                  margin: const EdgeInsets.only(left: 60),
+                  height: 30,
+                  width: 30,
+                  decoration: const BoxDecoration(
+                      shape: BoxShape.circle, color: ColorRes.indicator),
+                  child: Text(
+                    "+3",
+                    style:
+                        appTextStyle(fontSize: 10, fontWeight: FontWeight.w500),
+                  ),
+                ),
+              ],
+            ),
+          ],
+        ),
+      ),
+      SizedBox(height: Get.height * 0.0246),
       Container(
         alignment: Alignment.centerLeft,
         margin: const EdgeInsets.only(left: 40),
         child: Text(
           Strings.about,
           style: appTextStyle(
-              color: ColorRes.black,
-              fontWeight: FontWeight.w500,
-              fontSize: 15),
+              color: ColorRes.black, fontWeight: FontWeight.w500, fontSize: 15),
         ),
       ),
       SizedBox(height: Get.height * 0.0246),
@@ -155,9 +202,7 @@ Widget about() {
         child: Text(
           Strings.ourStaff,
           style: appTextStyle(
-              color: ColorRes.black,
-              fontWeight: FontWeight.w500,
-              fontSize: 15),
+              color: ColorRes.black, fontWeight: FontWeight.w500, fontSize: 15),
         ),
       ),
       SizedBox(height: Get.height * 0.0246),
@@ -207,9 +252,7 @@ Widget about() {
         child: Text(
           Strings.images,
           style: appTextStyle(
-              color: ColorRes.black,
-              fontWeight: FontWeight.w500,
-              fontSize: 15),
+              color: ColorRes.black, fontWeight: FontWeight.w500, fontSize: 15),
         ),
       ),
       SizedBox(height: Get.height * 0.0246),
@@ -240,6 +283,51 @@ Widget about() {
         ),
       ),
       SizedBox(height: Get.height * 0.0246),
+      Padding(
+        padding: const EdgeInsets.only(left: 40),
+        child: Row(
+          children: [
+            ...List.generate(
+                4,
+                (index) => Stack(
+                      children: [
+                        Container(
+                          margin: (index == 3)
+                              ? EdgeInsets.zero
+                              : const EdgeInsets.only(right: 12),
+                          height: 70,
+                          width: 70,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(8),
+                          ),
+                          child: Image.asset(AssetRes.personImg),
+                        ),
+                        (index == 3)
+                            ? Container(
+                                alignment: Alignment.center,
+                                margin: (index == 3)
+                                    ? EdgeInsets.zero
+                                    : const EdgeInsets.only(right: 12),
+                                height: 70,
+                                width: 70,
+                                decoration: BoxDecoration(
+                                  color: ColorRes.black.withOpacity(0.6),
+                                  borderRadius: BorderRadius.circular(8),
+                                ),
+                                child: Text(
+                                  "+10",
+                                  style: appTextStyle(
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.w600),
+                                ),
+                              )
+                            : const SizedBox(),
+                      ],
+                    )),
+          ],
+        ),
+      ),
+      SizedBox(height: Get.height * 0.03),
       Padding(
         padding: const EdgeInsets.only(left: 40),
         child: Row(

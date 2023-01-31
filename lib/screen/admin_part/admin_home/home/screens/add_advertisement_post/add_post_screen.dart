@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:salon_app/screen/admin_part/admin_home/home/screens/add_advertisement_post/add_advertisement_post_controller.dart';
@@ -64,33 +66,92 @@ class AddPostScreen extends StatelessWidget {
               child: Padding(
                 padding: EdgeInsets.only(
                     top: Get.height * 0.25, left: 25, right: 25),
-                child: Column(
-                  children: [
-                    const Image(
-                      image: AssetImage(AssetRes.bener),
-                    ),
-                    SizedBox(height: Get.height * 0.0369),
-                    InkWell(
-                      onTap: () {
-                        pickImgBottomSheet(context, ontapCamera: () {
-                          addAdvertisementController.onTapCamera();
-                        }, ontapGallery: () {
-                          addAdvertisementController.onTapGallery();
-                        });
-                      },
-                      child: Container(
-                        height: 157,
-                        width: 325,
-                        decoration: BoxDecoration(
-                          color: ColorRes.black.withOpacity(0.1),
-                        ),
-                        child: Icon(
-                          Icons.add,
-                          color: ColorRes.black.withOpacity(0.5),
-                        ),
+                child: Obx(
+                  () => SizedBox(
+                    height: Get.height * 0.78,
+                    child: SingleChildScrollView(
+                      physics: const BouncingScrollPhysics(),
+                      child: Column(
+                        children: [
+                          Container(
+                            height: 157,
+                            width: 325,
+                            child:
+                                Image.asset(AssetRes.bener, fit: BoxFit.cover),
+                          ),
+                          SizedBox(height: Get.height * 0.0369),
+                          (addAdvertisementController.posts.value.isEmpty)
+                              ? InkWell(
+                                  onTap: () {
+                                    pickImgBottomSheet(context,
+                                        ontapCamera: () {
+                                      addAdvertisementController.onTapCamera();
+                                    }, ontapGallery: () {
+                                      addAdvertisementController.onTapGallery();
+                                    });
+                                  },
+                                  child: Container(
+                                    height: 157,
+                                    width: 325,
+                                    decoration: BoxDecoration(
+                                      color: ColorRes.black.withOpacity(0.1),
+                                    ),
+                                    child: Icon(
+                                      Icons.add,
+                                      color: ColorRes.black.withOpacity(0.5),
+                                    ),
+                                  ),
+                                )
+                              : Column(
+                                  children: [
+                                    ...List.generate(
+                                        addAdvertisementController
+                                            .posts.value.length, (index) {
+                                      return Container(
+                                        height: 157,
+                                        width: 325,
+                                        margin: EdgeInsets.only(
+                                            bottom: Get.height * 0.0369),
+                                        child: Image.file(
+                                          File(addAdvertisementController
+                                              .posts.value[index]),
+                                          fit: BoxFit.cover,
+                                        ),
+                                      );
+                                    }),
+                                  ],
+                                ),
+                          (addAdvertisementController.posts.value.isEmpty)
+                              ? const SizedBox()
+                              : InkWell(
+                                  onTap: () {
+                                    pickImgBottomSheet(context,
+                                        ontapCamera: () {
+                                      addAdvertisementController.onTapCamera();
+                                    }, ontapGallery: () {
+                                      addAdvertisementController.onTapGallery();
+                                    });
+                                  },
+                                  child: Container(
+                                    margin: const EdgeInsets.only(top: 80),
+                                    alignment: Alignment.center,
+                                    height: 50,
+                                    width: 260,
+                                    decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(5),
+                                        color: ColorRes.indicator),
+                                    child: Text(
+                                      Strings.addPost,
+                                      style: appTextStyle(
+                                          fontSize: 14,
+                                          fontWeight: FontWeight.w600),
+                                    ),
+                                  ),
+                                )
+                        ],
                       ),
-                    )
-                  ],
+                    ),
+                  ),
                 ),
               ),
             )

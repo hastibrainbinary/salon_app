@@ -832,8 +832,8 @@ Widget bookAppointMentSlider({required BuildContext context}) {
             SizedBox(width: Get.width * 0.2666),
             InkWell(
               onTap: () {
-                bookAppointmentController.ischooseServices.value = true;
-                bookAppointmentController.isappointment.value = true;
+                bookAppointmentController.ischooseServices.value = false;
+                bookAppointmentController.isappointment.value = false;
                 bookAppointmentController.ispayment.value = true;
                 bookAppointmentController.chooseServices.value = true;
                 bookAppointmentController.appointment.value = true;

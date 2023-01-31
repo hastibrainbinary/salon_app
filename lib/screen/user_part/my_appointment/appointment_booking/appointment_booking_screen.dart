@@ -13,51 +13,62 @@ class AppointmentBookingScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SingleChildScrollView(
-        child: Column(
-          children: [
-            Stack(
-              children: [
-                const Image(
-                  image: AssetImage(AssetRes.mostBookBack),
+      body: Column(
+        children: [
+          Stack(
+            children: [
+              const Image(
+                image: AssetImage(AssetRes.mostBookBack),
+              ),
+              Positioned(
+                top: 60,
+                left: 110,
+                child: Text(
+                  Strings.bookingDetails,
+                  style: appTextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.w500,
+                      color: ColorRes.white),
                 ),
-                Positioned(
-                  top: 60,
-                  left: 110,
-                  child: Text(
-                    Strings.bookingDetails,
-                    style: appTextStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeight.w500,
-                        color: ColorRes.white),
+              ),
+            ],
+          ),
+          SizedBox(height: Get.height * 0.0615),
+          SizedBox(
+            height: Get.height * 0.69,
+            width: Get.width,
+            child: SingleChildScrollView(
+              physics: const BouncingScrollPhysics(),
+              child: Column(
+                children: [
+                  bookAppointment("Booking ID :", " 5486"),
+                  SizedBox(height: Get.height * 0.0246),
+                  bookAppointment("Salon Name :", " Serenity salon"),
+                  SizedBox(height: Get.height * 0.0246),
+                  bookAppointment("Appointment Date :", " 3 July 2023"),
+                  SizedBox(height: Get.height * 0.0246),
+                  bookAppointment("Appointment Time :", " 04:00 PM"),
+                  SizedBox(height: Get.height * 0.0246),
+                  bookAppointment("Service :", " Hair cut & Beard trim"),
+                  SizedBox(height: Get.height * 0.0246),
+                  bookAppointment("Location :", " 1901 Thornier Cir.,"),
+                  SizedBox(height: Get.height * 0.0246),
+                  bookAppointment("Payment :", "  Pay at store\n  \$ 100"),
+                  SizedBox(height: Get.height * 0.0492),
+                  commonButton(
+                    title: Strings.done,
+                    textColor: ColorRes.white,
+                    backgroundColor: ColorRes.indicator,
+                    onTap: () {
+                      Get.toNamed(PageRes.remindScreen);
+                    },
                   ),
-                ),
-              ],
+                  SizedBox(height: Get.height * 0.0246),
+                ],
+              ),
             ),
-            SizedBox(height: Get.height * 0.0615),
-            bookAppointment("Booking ID :", " 5486"),
-            SizedBox(height: Get.height * 0.0246),
-            bookAppointment("Salon Name :", " Serenity salon"),
-            SizedBox(height: Get.height * 0.0246),
-            bookAppointment("Appointment Date :", " 3 July 2023"),
-            SizedBox(height: Get.height * 0.0246),
-            bookAppointment("Appointment Time :", " 04:00 PM"),
-            SizedBox(height: Get.height * 0.0246),
-            bookAppointment("Service :", " Hair cut & Beard trim"),
-            SizedBox(height: Get.height * 0.0246),
-            bookAppointment("Location :", " 1901 Thornier Cir.,"),
-            SizedBox(height: Get.height * 0.0246),
-            bookAppointment("Payment :", "  Pay at store\n  \$ 100"),
-            SizedBox(height: Get.height * 0.0492),
-            commonButton(
-                title: Strings.done, textColor: ColorRes.white, backgroundColor: ColorRes.indicator,onTap: () {
-
-                  Get.toNamed(PageRes. remindScreen);
-                },),
-            SizedBox(height: Get.height * 0.0246),
-
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
