@@ -25,7 +25,7 @@ class AddProfileScreen extends StatelessWidget {
             Stack(
               alignment: Alignment.center,
               children: [
-                Container(
+                SizedBox(
                   // height:
                   //     Get.height > 800 ? Get.height * 0.3 : Get.height * 0.25,
                   width: Get.width,
@@ -87,8 +87,12 @@ class AddProfileScreen extends StatelessWidget {
                           onTap: () {
                             pickImgBottomSheet(
                               context,
-                              ontapCamera: () {},
-                              ontapGallery: () {},
+                              onTapCamera: () {
+                                addProfileController.onTapCamera();
+                              },
+                              onTapGallery: () {
+                                addProfileController.onTapGallery();
+                              },
                             );
                           },
                           child: Container(
@@ -321,8 +325,15 @@ class AddProfileScreen extends StatelessWidget {
                           const Spacer(),
                           InkWell(
                             onTap: () {
-                              pickImgBottomSheet(context,
-                                  ontapCamera: () {}, ontapGallery: () {});
+                              pickImgBottomSheet(
+                                context,
+                                onTapCamera: () {
+                                  addProfileController.onTapCamera();
+                                },
+                                onTapGallery: () {
+                                  addProfileController.onTapGallery();
+                                },
+                              );
                             },
                             child: const Icon(
                               Icons.add,

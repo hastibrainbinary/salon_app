@@ -25,12 +25,17 @@ class AdminStaffDetailsScreen extends StatelessWidget {
                   fit: BoxFit.fill,
                 ),
               ),
-              const Positioned(
+          Positioned(
                 top: 40,
                 left: 38,
-                child: Icon(
-                  Icons.arrow_back_ios_new_rounded,
-                  color: ColorRes.black,
+                child: InkWell(
+                  onTap: (){
+                    Get.back();
+                  },
+                  child: const Icon(
+                    Icons.arrow_back_ios_new_rounded,
+                    color: ColorRes.black,
+                  ),
                 ),
               ),
               Column(
@@ -102,7 +107,7 @@ class AdminStaffDetailsScreen extends StatelessWidget {
                                 Row(
                                   children: [
                                     Text(
-                                      Strings.bookingId,
+                                      " ${Strings.bookingId} :",
                                       style: appTextStyle(
                                           color: ColorRes.black,
                                           fontWeight: FontWeight.w400,
@@ -122,7 +127,7 @@ class AdminStaffDetailsScreen extends StatelessWidget {
                                 Row(
                                   children: [
                                     Text(
-                                      Strings.date1,
+                                     " ${Strings.date} :",
                                       style: appTextStyle(
                                           color: ColorRes.black,
                                           fontWeight: FontWeight.w400,
@@ -142,7 +147,7 @@ class AdminStaffDetailsScreen extends StatelessWidget {
                                 Row(
                                   children: [
                                     Text(
-                                      Strings.time1,
+                                      "${Strings.time} : ",
                                       style: appTextStyle(
                                           color: ColorRes.black,
                                           fontWeight: FontWeight.w400,
@@ -162,7 +167,7 @@ class AdminStaffDetailsScreen extends StatelessWidget {
                                 Row(
                                   children: [
                                     Text(
-                                      Strings.services1,
+                                      " ${Strings.services1} :",
                                       style: appTextStyle(
                                           color: ColorRes.black,
                                           fontWeight: FontWeight.w400,
@@ -222,7 +227,7 @@ class AdminStaffDetailsScreen extends StatelessWidget {
                                 Row(
                                   children: [
                                     Text(
-                                      Strings.paymentU,
+                                      " ${Strings.payment} :",
                                       style: appTextStyle(
                                           color: ColorRes.black,
                                           fontWeight: FontWeight.w400,

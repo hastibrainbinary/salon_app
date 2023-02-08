@@ -48,9 +48,12 @@ class SignUpScreen extends StatelessWidget {
                     border: InputBorder.none,
                     prefixIcon: const Padding(
                       padding: EdgeInsets.all(14.0),
-                      child: Image(
-                        image: AssetImage(AssetRes.userIcon),
-                        color: ColorRes.indicator,
+                      child: Padding(
+                        padding: EdgeInsets.all(2),
+                        child: Image(
+                          image: AssetImage(AssetRes.userIcon),
+                          color: ColorRes.indicator,
+                        ),
                       ),
                     ),
                     hintText: 'User name',
@@ -115,9 +118,12 @@ class SignUpScreen extends StatelessWidget {
                     border: InputBorder.none,
                     prefixIcon: const Padding(
                       padding: EdgeInsets.all(14.0),
-                      child: Image(
-                        image: AssetImage(AssetRes.email),
-                        color: ColorRes.indicator,
+                      child: Padding(
+                        padding: EdgeInsets.all(2),
+                        child: Image(
+                          image: AssetImage(AssetRes.email),
+                          color: ColorRes.indicator,
+                        ),
                       ),
                     ),
                     hintText: 'Email',
@@ -183,9 +189,12 @@ class SignUpScreen extends StatelessWidget {
                     border: InputBorder.none,
                     prefixIcon: const Padding(
                       padding: EdgeInsets.all(14.0),
-                      child: Image(
-                        image: AssetImage(AssetRes.phoneIcon),
-                        color: ColorRes.indicator,
+                      child: Padding(
+                        padding: EdgeInsets.all(2),
+                        child: Image(
+                          image: AssetImage(AssetRes.phoneIcon),
+                          color: ColorRes.indicator,
+                        ),
                       ),
                     ),
                     hintText: 'Enter mobile number',
@@ -252,9 +261,12 @@ class SignUpScreen extends StatelessWidget {
                       border: InputBorder.none,
                       prefixIcon: const Padding(
                         padding: EdgeInsets.all(14.0),
-                        child: Image(
-                          image: AssetImage(AssetRes.password),
-                          color: ColorRes.indicator,
+                        child: Padding(
+                          padding: EdgeInsets.all(2),
+                          child: Image(
+                            image: AssetImage(AssetRes.password),
+                            color: ColorRes.indicator,
+                          ),
                         ),
                       ),
                       hintText: 'Password',
@@ -263,10 +275,12 @@ class SignUpScreen extends StatelessWidget {
                         icon: controller.show.value
                             ? const Icon(
                                 Icons.visibility_off_outlined,
+                                size: 16,
                                 color: ColorRes.indicator,
                               )
                             : const Icon(
                                 Icons.visibility,
+                                size: 16,
                                 color: ColorRes.indicator,
                               ),
                         onPressed: controller.chang,
@@ -334,9 +348,12 @@ class SignUpScreen extends StatelessWidget {
                       border: InputBorder.none,
                       prefixIcon: const Padding(
                         padding: EdgeInsets.all(14.0),
-                        child: Image(
-                          image: AssetImage(AssetRes.password),
-                          color: ColorRes.indicator,
+                        child: Padding(
+                          padding: EdgeInsets.all(2),
+                          child: Image(
+                            image: AssetImage(AssetRes.password),
+                            color: ColorRes.indicator,
+                          ),
                         ),
                       ),
                       hintText: 'Confirm password',
@@ -344,9 +361,9 @@ class SignUpScreen extends StatelessWidget {
                       suffixIcon: IconButton(
                         icon: controller.confirm.value
                             ? const Icon(Icons.visibility_off_outlined,
-                                color: ColorRes.indicator)
+                                size: 16, color: ColorRes.indicator)
                             : const Icon(Icons.visibility,
-                                color: ColorRes.indicator),
+                                size: 16, color: ColorRes.indicator),
                         onPressed: controller.reChange,
                       ),
                       filled: true,

@@ -12,7 +12,7 @@ Widget reviews() {
   return SingleChildScrollView(
     child: Column(
       children: [
-        Container(
+        SizedBox(
           height: 300,
           width: 315,
           child: ListView.separated(

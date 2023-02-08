@@ -46,11 +46,15 @@ class DashBoardScreen extends StatelessWidget {
                           color: ColorRes.indicator),
                       label: ""),
                   BottomNavigationBarItem(
-                      icon: Icon(
-                          dashBoardController.selectedIndex.value == 1
-                              ? Icons.location_on
-                              : Icons.location_on_outlined,
-                          color: ColorRes.indicator),
+                      icon: dashBoardController.selectedIndex.value == 1
+                          ? Image.asset(
+                        AssetRes.locationD,
+                        height: 20,
+                      )
+                          : Image.asset(
+                        AssetRes.locationIcon,
+                        height: 20,
+                      ),
                       label: ""),
                   BottomNavigationBarItem(
                       icon: dashBoardController.selectedIndex.value == 2

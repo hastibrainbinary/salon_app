@@ -62,7 +62,7 @@ class ShopProfileScreen extends StatelessWidget {
                   fontWeight: FontWeight.w500),
             ),
             SizedBox(
-              height: Get.height * 0.5,
+              height: Get.height * 0.48,
               child: SingleChildScrollView(
                 physics: const BouncingScrollPhysics(),
                 child: Column(

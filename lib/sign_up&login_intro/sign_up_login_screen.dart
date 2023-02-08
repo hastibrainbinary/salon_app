@@ -27,13 +27,29 @@ class SignUpLogIngScreen extends StatelessWidget {
             ),
           ),
           SizedBox(height: Get.height * 0.0985),
-          const Center(
-            child: Image(
-              image: AssetImage(AssetRes.logo1),
-              width: 137,
-              height: 72,
+          Center(
+            child: Text.rich(
+              TextSpan(
+                text: Strings.lO,
+                style: appTextStyle(
+                    fontWeight: FontWeight.w600,
+                    fontSize: 40,
+                    color: ColorRes.black),
+                 children:[
+                   TextSpan(
+                     text: Strings.go,
+                     style: appTextStyle(
+                         fontWeight: FontWeight.w600,
+                         fontSize: 40,
+                         color: ColorRes.indicator),
+
+                   )
+                 ]
+              ),
             ),
           ),
+
+
           SizedBox(height: Get.height * 0.0960),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 30.0),
@@ -222,7 +238,7 @@ class SignUpLogIngScreen extends StatelessWidget {
           ),
           SizedBox(height: Get.height * 0.0246),
           InkWell(
-            onTap: () => Get.toNamed(PageRes.homeScreen),
+            onTap: () => Get.toNamed(PageRes.dashBoardScreen),
             child: const Center(
               child: Text(
                 textAlign: TextAlign.center,

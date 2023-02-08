@@ -20,7 +20,7 @@ class CancelAppointmentScreen extends StatelessWidget {
             Stack(
               alignment: Alignment.center,
               children: [
-                Container(
+                SizedBox(
                   width: Get.width,
                   child: const Image(
                     image: AssetImage(AssetRes.mostBookBack),
@@ -110,7 +110,7 @@ class CancelAppointmentScreen extends StatelessWidget {
                                           Row(
                                             children: [
                                               Text(
-                                                Strings.time1,
+                                               " ${Strings.time} :",
                                                 style: appTextStyle(
                                                     color: ColorRes.black,
                                                     fontWeight: FontWeight.w400,
@@ -129,7 +129,7 @@ class CancelAppointmentScreen extends StatelessWidget {
                                           Row(
                                             children: [
                                               Text(
-                                                Strings.services1,
+                                              "${Strings.services} :",
                                                 style: appTextStyle(
                                                     color: ColorRes.black,
                                                     fontWeight: FontWeight.w400,

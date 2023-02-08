@@ -19,11 +19,25 @@ class SelectGenderScreen extends StatelessWidget {
       body: Column(
         children: [
           SizedBox(height: Get.height * 0.1810),
-          const Center(
-            child: Image(
-              image: AssetImage(AssetRes.logo1),
-              width: 69,
-              height: 38,
+          Center(
+            child: Text.rich(
+              TextSpan(
+                  text: Strings.lO,
+                  style: appTextStyle(
+                      fontWeight: FontWeight.w600,
+                      fontSize: 40,
+                      color: ColorRes.black),
+                  children:[
+                    TextSpan(
+                      text: Strings.go,
+                      style: appTextStyle(
+                          fontWeight: FontWeight.w600,
+                          fontSize: 40,
+                          color: ColorRes.indicator),
+
+                    )
+                  ]
+              ),
             ),
           ),
           SizedBox(height: Get.height * 0.1046),

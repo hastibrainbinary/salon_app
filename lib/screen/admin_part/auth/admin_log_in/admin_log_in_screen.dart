@@ -49,9 +49,12 @@ class AdminLogInScreen extends StatelessWidget {
                     border: InputBorder.none,
                     prefixIcon: const Padding(
                       padding: EdgeInsets.all(14.0),
-                      child: Image(
-                        image: AssetImage(AssetRes.email),
-                        color: ColorRes.indicator,
+                      child: Padding(
+                        padding: EdgeInsets.all(2.0),
+                        child: Image(
+                          image: AssetImage(AssetRes.email),
+                          color: ColorRes.indicator,
+                        ),
                       ),
                     ),
                     hintText: 'Enter email ID',
@@ -118,9 +121,12 @@ class AdminLogInScreen extends StatelessWidget {
                       border: InputBorder.none,
                       prefixIcon: const Padding(
                         padding: EdgeInsets.all(14.0),
-                        child: Image(
-                          image: AssetImage(AssetRes.password),
-                          color: ColorRes.indicator,
+                        child: Padding(
+                          padding: EdgeInsets.all(2.5),
+                          child: Image(
+                            image: AssetImage(AssetRes.password),
+                            color: ColorRes.indicator,
+                          ),
                         ),
                       ),
                       hintText: 'Password',
@@ -187,9 +193,7 @@ class AdminLogInScreen extends StatelessWidget {
             commonButton(
                 onTap: () {
                   if (controller.validator()) {
-                    /*   Get.toNamed(PageRes.dashBoardScreen); */
-
-                    ///_______________________ admin dashboard _____________________
+                    Get.toNamed(PageRes.adminDashBoardScreen);
                   }
                 },
                 title: Strings.logIn,
@@ -289,6 +293,7 @@ class AdminLogInScreen extends StatelessWidget {
                       fontSize: 15,
                       color: const Color(0xff555555)),
                 ),
+                SizedBox(width: Get.width * 0.0133),
                 InkWell(
                   onTap: () => Get.toNamed(PageRes.signUpScreen),
                   child: Text(

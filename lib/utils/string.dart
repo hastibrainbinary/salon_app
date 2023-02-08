@@ -8,10 +8,7 @@ class Strings {
   static const uPI = "UPI";
   static const reviewAndConfirm = "Review and Confirm";
   static const pickingTime = "Picking Time :";
-  static const barberShop = "Barber Shop :";
-  static const service1 = "Service             :";
-  static const barber1 = "Barber            :";
-  static const location1 = "Location          :";
+  static const barberShop = "Barber Shop";
   static const aConfirmationMessage =
       "A confirmation message has sent to your registered mobile number";
   static const bookingDetails = "Booking Details";
@@ -27,9 +24,10 @@ class Strings {
   static const advertisementPost = "Advertisement Post";
   static const addPost = "Add Post";
   static const deletePost = "Delete Post";
-
+  static const both = "Both";
+  static const all = "All";
+  static const open = "Open";
   static const date = "Date";
-  static const date1 = "Date :";
   static const appointmentDetails = "Appointment Details";
   static const staff = "Staff :";
   static const totalCharge = "Total charge :";
@@ -41,17 +39,18 @@ class Strings {
   static const name = "Name :";
   static const emailID1 = "Email ID :";
   static const mobileNumber = "Mobile Number :";
-  static const location2 = "Location :";
-  static const openingHours = "Opening Hours :";
-  static const about1 = "About :";
+  static const openingHours = "Opening Hours";
 
+  static const addStaff = "Add staff";
+  static const addImage = "Add image";
+  static const lO = "LO";
+  static const go = "GO";
   static const update = "Update";
   static const myCard = "My Card";
   static const addNewCard = "Add New Card";
   static const cardHolderName = "Card Holder Name*";
   static const expirationDate = "Expiration Date*";
   static const bookingConfirmed = "Booking Confirmed";
-
   static const getStarted = "Get Started";
   static const findNearBySalonsBookServices =
       "Find near by Salons &\nbook services";
@@ -117,20 +116,16 @@ class Strings {
   static const mostBookedSalons = "Most Booked Salons";
   static const viewAll = "view all";
   static const serenitySalon = "Serenity Salon";
-  static const open = "Open";
   static const nearbySalon = "Nearby Salon";
   static const todayBookings = "Today’s Bookings";
   static const selectDate = "Select Date";
   static const cancelAppointment = "Cancel Appointment";
-
-  // static const delete = "Delete";
   static const cVV = "CVV*";
-
   static const myAppointments = "My Appointments";
   static const upcoming = "Upcoming";
   static const past = "Past";
   static const cancelled = "Cancelled";
-  static const barber = "Barber:";
+  static const barber = "Barber";
   static const cancel = "Cancel";
   static const book = "Book";
   static const messages = "Messages";
@@ -141,7 +136,6 @@ class Strings {
   static const notification = "Notification";
   static const filter = "Filter";
   static const payment = "Payment";
-  static const payment1 = "Payment :";
   static const resetPassword = "Reset Password";
   static const language = "Language";
   static const privacyPolicy = "Privacy Policy";
@@ -161,23 +155,18 @@ class Strings {
   static const spain = "Spain";
   static const selectPayment = "Select Payment Method";
 
-  static const paymentU = "Payment :";
-
-  // static const payment1 = "Payment                 :";
-
   ///_________________________________________ admin part ___________________________________
   static const shopName = "Shop name";
   static const emailID = "Email ID";
   static const location = "Location";
   static const createAccount = "Create account";
-  static const addyourBankaccount = "Add your Bank account";
+  static const addYourBankAccount = "Add your Bank account";
   static const addService = "Add Service";
   static const addAdvertisementPost = "Add Advertisement Post";
   static const staffDetails = "Staff Details";
   static const cancelAppointmentDetails = "Cancel Appointment Details";
   static const todaySchedule = "Today Schedule";
   static const time = "Time";
-  static const time1 = "Time :";
   static const appointments = "Appointments";
   static const logout = "Logout";
   static const generalNotification = "General Notification";
@@ -185,9 +174,6 @@ class Strings {
   static const vibrate = "Vibrate";
   static const specialOffers = "Special Offers";
   static const appUpdates = "App Updates";
-
-  ///_________________________________________ admin part ___________________________________
-
   static const about = "About";
   static const reviews = "Reviews";
   static const ourStaff = "Our Staff";
@@ -221,16 +207,12 @@ class Strings {
   static const captureFromCamera = "capture from \n      camera";
   static const uploadFromGallery = "upload from  \n      gallery";
   static const selectGender = "Select Gender";
-  static const bookingId = "Booking ID :";
+  static const bookingId = "Booking ID";
   static const cancelAppointmentTxt =
       "Are you sure,\nyou want to cancel your\nappointment?";
   static const yesCancelAppointment = "Yes, Cancel appointment";
-
-  ///_________________________________________ ADMIN PART -M ___________________________________
-
   static const viewMore = "View more";
   static const viewLess = "View less";
-
   static const bankAccount = "Bank account";
   static const bookAppointmentNotification = "Rohan Surve Book Appointment.";
   static const cancelAppointmentNotification =
@@ -244,24 +226,23 @@ class Strings {
   static const service = "Service";
   static const services1 = "Service :";
   static const editService = "Edit Service";
-
   static const serviceName = "Service Name";
   static const price = "Price";
-
   static const cancelPostTxt = "Are you sure,\nyou want to delete Post?";
   static const yesDeletePost = "Yes, Delete post";
-
   static const addProfile = "Add profile";
-
   static const deleteProfile = "Delete profile";
-
   static const nameM = "Name";
   static const slonName = "Salon Name";
   static const experience = "Experience";
   static const specialist = "Specialist";
-
   static const areYouSureDeleteProfile =
       "Are you sure,\nyou want to delete Profile?";
+  static const addACard = "Add a card";
+  static const payAtStore = "Pay at store";
+  static const googlePay = "Google Pay";
+  static const phonePe = "Phone Pe";
+  static const payVia = "Pay via another UPI ID";
 
   ///__________________________________________ THE END ADMIN PART -M ________________________________________________
 

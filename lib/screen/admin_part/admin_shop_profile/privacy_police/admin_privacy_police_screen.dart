@@ -11,7 +11,7 @@ class AdminPrivacyPoliceScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body:  Column(
+      body: Column(
         children: [
           Stack(
             children: [
@@ -23,10 +23,15 @@ class AdminPrivacyPoliceScreen extends StatelessWidget {
                 left: 15,
                 child: Row(
                   children: [
-                    const Icon(Icons.arrow_back_ios_new_rounded,
-                        color: ColorRes.white),
+                    InkWell(
+                      onTap: () {
+                        Get.back();
+                      },
+                      child: const Icon(Icons.arrow_back_ios_new_rounded,
+                          color: ColorRes.white),
+                    ),
                     SizedBox(
-                      width: Get.width * 0.2533,
+                      width: Get.width * 0.2026,
                     ),
                     Text(
                       Strings.privacyPolicy,
@@ -34,7 +39,7 @@ class AdminPrivacyPoliceScreen extends StatelessWidget {
                           fontSize: 20,
                           fontWeight: FontWeight.w500,
                           color: ColorRes.white),
-                    )
+                    ),
                   ],
                 ),
               ),
@@ -58,9 +63,10 @@ class AdminPrivacyPoliceScreen extends StatelessWidget {
                 Text(
                   Strings.lorem,
                   style: appTextStyle(
-                      fontSize: 14,
-                      fontWeight: FontWeight.w400,
-                      color: ColorRes.black.withOpacity(0.7)),
+                    fontSize: 14,
+                    fontWeight: FontWeight.w400,
+                    color: ColorRes.black.withOpacity(0.7),
+                  ),
                 ),
               ],
             ),

@@ -53,7 +53,7 @@ class AppointmentBookingScreen extends StatelessWidget {
                   SizedBox(height: Get.height * 0.0246),
                   bookAppointment("Location :", " 1901 Thornier Cir.,"),
                   SizedBox(height: Get.height * 0.0246),
-                  bookAppointment("Payment :", "  Pay at store\n  \$ 100"),
+                  bookAppointment("Payment            :", "  Pay at store\n  \$ 100"),
                   SizedBox(height: Get.height * 0.0492),
                   commonButton(
                     title: Strings.done,

@@ -24,7 +24,7 @@ class AdminDashboardScreen extends StatelessWidget {
               ? AdminAppointmentScreen()
               : adminDashboardController.selectedIndex.value == 2
                   ? AdminMessagesScreen()
-                  : ShopProfileScreen()),
+                  : const ShopProfileScreen()),
       bottomNavigationBar: ClipRRect(
           borderRadius: const BorderRadius.only(
             topLeft: Radius.circular(30.0),

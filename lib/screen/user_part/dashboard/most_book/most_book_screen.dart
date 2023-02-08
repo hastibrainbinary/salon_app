@@ -131,11 +131,10 @@ class MostBookScreen extends StatelessWidget {
                                 const EdgeInsets.symmetric(horizontal: 9.0),
                             child: Row(
                               children: [
-                                const Icon(
-                                  Icons.location_on_outlined,
-                                  color: ColorRes.black,
-                                  size: 15,
-                                ),
+                                const Image(
+                                    image: AssetImage(AssetRes.locationIcon),
+                                    color: ColorRes.black,
+                                    height: 9),
                                 const SizedBox(width: 5),
                                 Text(
                                   "5 km",

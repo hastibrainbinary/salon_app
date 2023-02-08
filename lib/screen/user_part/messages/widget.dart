@@ -46,7 +46,7 @@ Widget messages() {
                       fontSize: 14),
                 ),
                 Text(
-                  "lorem ipsum dolore....",
+                  "lorem ipsum door....",
                   style: appTextStyle(
                       color: ColorRes.black.withOpacity(0.42),
                       fontWeight: FontWeight.w400,

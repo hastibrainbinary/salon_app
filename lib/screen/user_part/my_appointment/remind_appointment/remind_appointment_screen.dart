@@ -2,7 +2,6 @@ import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:salon_app/utils/app_style.dart';
-import 'package:salon_app/utils/asset_res.dart';
 import 'package:salon_app/utils/color_res.dart';
 import 'package:salon_app/utils/string.dart';
 
@@ -17,11 +16,25 @@ class RemindScreen extends StatelessWidget {
           padding: const EdgeInsets.only(top: 90),
           child: Column(
             children: [
-              const Center(
-                child: Image(
-                  image: AssetImage(AssetRes.logo1),
-                  width: 69,
-                  height: 38,
+              Center(
+                child: Text.rich(
+                  TextSpan(
+                      text: Strings.lO,
+                      style: appTextStyle(
+                          fontWeight: FontWeight.w600,
+                          fontSize: 40,
+                          color: ColorRes.black),
+                      children:[
+                        TextSpan(
+                          text: Strings.go,
+                          style: appTextStyle(
+                              fontWeight: FontWeight.w600,
+                              fontSize: 40,
+                              color: ColorRes.indicator),
+
+                        )
+                      ]
+                  ),
                 ),
               ),
               SizedBox(height: Get.height * 0.0603),
@@ -104,6 +117,7 @@ class RemindScreen extends StatelessWidget {
                                             fontWeight: FontWeight.w400,
                                             fontSize: 12),
                                       ),
+                                      SizedBox(height: Get.height*0.0061),
                                       Row(
                                         mainAxisAlignment:
                                             MainAxisAlignment.center,
@@ -116,11 +130,12 @@ class RemindScreen extends StatelessWidget {
                                                 fontSize: 23),
                                           ),
                                           Text(
+
                                             "min left",
                                             style: appTextStyle(
                                                 color: ColorRes.black,
-                                                fontWeight: FontWeight.w400,
-                                                fontSize: 12),
+                                                fontWeight: FontWeight.w500,
+                                                fontSize: 11),
                                           ),
                                         ],
                                       ),

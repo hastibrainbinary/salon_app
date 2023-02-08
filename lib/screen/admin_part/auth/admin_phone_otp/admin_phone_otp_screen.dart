@@ -4,7 +4,6 @@ import 'package:pinput/pinput.dart';
 import 'package:salon_app/screen/admin_part/auth/admin_phone_otp/admin_phone_otp_controller.dart';
 import 'package:salon_app/utils/app_style.dart';
 import 'package:salon_app/utils/color_res.dart';
-import 'package:salon_app/utils/page_res.dart';
 import 'package:salon_app/utils/string.dart';
 
 class AdminPhoneOtpScreen extends StatelessWidget {
@@ -65,6 +64,7 @@ class AdminPhoneOtpScreen extends StatelessWidget {
           ),
           SizedBox(height: Get.height * 0.0431),
           Pinput(
+            controller: controller.otpController,
             autofocus: true,
             keyboardType: TextInputType.number,
             length: 4,
@@ -75,9 +75,8 @@ class AdminPhoneOtpScreen extends StatelessWidget {
             ),
             defaultPinTheme: controller.defaultTheme
                 .copyDecorationWith(color: ColorRes.white),
-            focusedPinTheme: controller.defaultTheme.copyDecorationWith(
-                borderRadius: BorderRadius.circular(8), color: ColorRes.white),
-            onCompleted: (pin) => Get.offAndToNamed(PageRes.adminSignUpScreen),
+            focusedPinTheme: controller.defaultTheme,
+            onCompleted: (pin) => controller.validator(),
           ),
           SizedBox(height: Get.height * 0.0431),
           Text(

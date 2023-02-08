@@ -1,5 +1,4 @@
 import 'dart:io';
-
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -26,7 +25,7 @@ class AddAdvertisementPostScreen extends StatelessWidget {
             Stack(
               alignment: Alignment.center,
               children: [
-                Container(
+                SizedBox(
                   // height:
                   //     Get.height > 800 ? Get.height * 0.3 : Get.height * 0.25,
                   width: Get.width,
@@ -144,7 +143,7 @@ class AddAdvertisementPostScreen extends StatelessWidget {
                     physics: const BouncingScrollPhysics(),
                     child: Column(
                       children: [
-                        Container(
+                        SizedBox(
                           height: 157,
                           width: 325,
                           child: Image.asset(AssetRes.bener, fit: BoxFit.cover),

@@ -29,8 +29,13 @@ class ResetPasswordsScreen extends StatelessWidget {
                 left: 15,
                 child: Row(
                   children: [
-                    const Icon(Icons.arrow_back_ios_new_rounded,
-                        color: ColorRes.white),
+                    InkWell(
+                      onTap: (){
+                        Get.back();
+                      },
+                      child: const Icon(Icons.arrow_back_ios_new_rounded,
+                          color: ColorRes.white),
+                    ),
                     SizedBox(
                       width: Get.width * 0.2,
                     ),
@@ -70,7 +75,7 @@ class ResetPasswordsScreen extends StatelessWidget {
                         color: ColorRes.indicator,
                       ),
                     ),
-                    hintText: 'Confirm password',
+                    hintText: 'Current password',
                     fillColor: Colors.transparent,
                     suffixIcon: IconButton(
                       icon: resetPasswordController.confirm.value

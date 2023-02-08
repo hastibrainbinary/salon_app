@@ -1,7 +1,6 @@
 import 'dart:io';
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:salon_app/utils/asset_res.dart';
 
 class AddAdvertisementController extends GetxController {
   ImagePicker picker = ImagePicker();

@@ -25,7 +25,8 @@ class AdminMessagesScreen extends StatelessWidget {
                 // height: 160,
                 width: Get.width,
                 decoration: BoxDecoration(
-                    border: Border.all(color: Colors.transparent)),
+                  border: Border.all(color: Colors.transparent),
+                ),
               ),
               const Image(
                 image: AssetImage(AssetRes.mostBookBack),
@@ -142,11 +143,14 @@ class AdminMessagesScreen extends StatelessWidget {
                             width: 2),
                       ),
                     ),
-                    child: const Text(
+                    child: Text(
                       Strings.messages,
                       style: TextStyle(
                         color: ColorRes.indicator,
-                        fontWeight: FontWeight.w600,
+                        fontWeight: messagesController.isSelect.value ==
+                                Strings.messages
+                            ? FontWeight.w600
+                            : FontWeight.w400,
                         fontSize: 14,
                       ),
                     ),
@@ -170,11 +174,14 @@ class AdminMessagesScreen extends StatelessWidget {
                             width: 2),
                       ),
                     ),
-                    child: const Text(
+                    child: Text(
                       Strings.call,
                       style: TextStyle(
                         color: ColorRes.indicator,
-                        fontWeight: FontWeight.w600,
+                        fontWeight:
+                            messagesController.isSelect.value == Strings.call
+                                ? FontWeight.w600
+                                : FontWeight.w400,
                         fontSize: 14,
                       ),
                     ),
@@ -184,33 +191,35 @@ class AdminMessagesScreen extends StatelessWidget {
             ),
           ),
           SizedBox(height: Get.height * 0.0123),
-          Obx(() => messagesController.isSelect.value == Strings.messages
-              ? Expanded(
-                  child: ListView.separated(
-                      physics: const BouncingScrollPhysics(),
-                      itemBuilder: (context, index) {
-                        return InkWell(
-                            onTap: () {
-                              Get.toNamed(PageRes.messageDetailScreen);
-                            },
-                            child: messages());
-                      },
-                      separatorBuilder: (context, index) {
-                        return const SizedBox(height: 30);
-                      },
-                      itemCount: 9),
-                )
-              : Expanded(
-                  child: ListView.separated(
-                      physics: const BouncingScrollPhysics(),
-                      itemBuilder: (context, index) {
-                        return call();
-                      },
-                      separatorBuilder: (context, index) {
-                        return const SizedBox(height: 30);
-                      },
-                      itemCount: 9),
-                )),
+          Obx(
+            () => messagesController.isSelect.value == Strings.messages
+                ? Expanded(
+                    child: ListView.separated(
+                        physics: const BouncingScrollPhysics(),
+                        itemBuilder: (context, index) {
+                          return InkWell(
+                              onTap: () {
+                                Get.toNamed(PageRes.messageDetailScreen);
+                              },
+                              child: messages());
+                        },
+                        separatorBuilder: (context, index) {
+                          return const SizedBox(height: 30);
+                        },
+                        itemCount: 9),
+                  )
+                : Expanded(
+                    child: ListView.separated(
+                        physics: const BouncingScrollPhysics(),
+                        itemBuilder: (context, index) {
+                          return call();
+                        },
+                        separatorBuilder: (context, index) {
+                          return const SizedBox(height: 30);
+                        },
+                        itemCount: 9),
+                  ),
+          ),
         ],
       ),
     );

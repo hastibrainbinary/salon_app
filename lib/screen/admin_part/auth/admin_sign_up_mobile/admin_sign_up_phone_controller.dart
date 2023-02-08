@@ -10,7 +10,7 @@ class AdminSignUpMobileNumberController extends GetxController {
     if (phoneController.text.trim() == "") {
       phoneError.value = 'Please enter phoneNumber';
     } else {
-      if (phoneController.text.length == 12) {
+      if (phoneController.text.length == 10) {
         phoneError.value = "";
       } else {
         phoneError.value = "Invalid phone number";

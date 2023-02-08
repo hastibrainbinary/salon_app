@@ -12,8 +12,7 @@ class LocationScreen extends StatelessWidget {
           Container(
             decoration: const BoxDecoration(
               image: DecorationImage(
-                  image: AssetImage(AssetRes.selectImage),
-                  fit: BoxFit.fill),
+                  image: AssetImage(AssetRes.selectImage), fit: BoxFit.fill),
             ),
           ),
         ],

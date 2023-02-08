@@ -36,11 +36,23 @@ class ProfileScreen extends StatelessWidget {
                     ),
             ),
             SizedBox(height: Get.height * 0.0985),
-            const Center(
-              child: Image(
-                image: AssetImage(AssetRes.logo1),
-                width: 69,
-                height: 38,
+            Center(
+              child: Text.rich(
+                TextSpan(
+                    text: Strings.lO,
+                    style: appTextStyle(
+                        fontWeight: FontWeight.w600,
+                        fontSize: 40,
+                        color: ColorRes.black),
+                    children: [
+                      TextSpan(
+                        text: Strings.go,
+                        style: appTextStyle(
+                            fontWeight: FontWeight.w600,
+                            fontSize: 40,
+                            color: ColorRes.indicator),
+                      )
+                    ]),
               ),
             ),
             SizedBox(height: Get.height * 0.0738),
@@ -139,20 +151,22 @@ class ProfileScreen extends StatelessWidget {
                     ),
             ),
             SizedBox(height: Get.height * 0.0184),
-            Obx(() => (profileController.imgPath.value != "")
-                ? const SizedBox()
-                : InkWell(
-                    onTap: () => Get.toNamed(PageRes.selectGender),
-                    child: Center(
-                      child: Text(
-                        Strings.skip,
-                        style: appTextStyle(
-                            color: ColorRes.black.withOpacity(0.5),
-                            fontSize: 15,
-                            fontWeight: FontWeight.w500),
+            Obx(
+              () => (profileController.imgPath.value != "")
+                  ? const SizedBox()
+                  : InkWell(
+                      onTap: () => Get.toNamed(PageRes.selectGender),
+                      child: Center(
+                        child: Text(
+                          Strings.skip,
+                          style: appTextStyle(
+                              color: ColorRes.black.withOpacity(0.5),
+                              fontSize: 15,
+                              fontWeight: FontWeight.w500),
+                        ),
                       ),
                     ),
-                  )),
+            ),
           ],
         ),
       ),

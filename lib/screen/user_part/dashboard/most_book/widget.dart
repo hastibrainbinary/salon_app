@@ -8,7 +8,7 @@ import 'package:salon_app/utils/string.dart';
 Widget mostBookDetails() {
   return Scaffold(
     body: SingleChildScrollView(
-      child: Container(
+      child: SizedBox(
         height: Get.height,
         width: Get.width,
         child: Stack(

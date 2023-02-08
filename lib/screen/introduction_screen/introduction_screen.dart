@@ -35,7 +35,6 @@ class IntroductionScreen extends StatelessWidget {
               alignment: Alignment.bottomLeft,
               children: [
                 PageView.builder(
-                  // scrollDirection: Axis.horizontal,
                   controller: controller.pageController,
                   itemCount: 3,
                   itemBuilder: (context, i) {

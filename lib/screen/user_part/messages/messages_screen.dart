@@ -85,7 +85,7 @@ class MessagesScreen extends StatelessWidget {
                                 filled: true,
                                 hintStyle: appTextStyle(
                                   fontWeight: FontWeight.w400,
-                                  fontSize: 10,
+                                  fontSize: 12,
                                   color: ColorRes.indicator,
                                 ),
                               ),
@@ -141,11 +141,12 @@ class MessagesScreen extends StatelessWidget {
                             width: 2),
                       ),
                     ),
-                    child: const Text(
+                    child:  Text(
                       Strings.messages,
                       style: TextStyle(
                         color: ColorRes.indicator,
-                        fontWeight: FontWeight.w600,
+                        fontWeight:messagesController.isSelect.value ==
+                            Strings.messages?FontWeight.w600:FontWeight.w400,
                         fontSize: 14,
                       ),
                     ),
@@ -169,11 +170,12 @@ class MessagesScreen extends StatelessWidget {
                             width: 2),
                       ),
                     ),
-                    child: const Text(
+                    child:  Text(
                       Strings.call,
                       style: TextStyle(
                         color: ColorRes.indicator,
-                        fontWeight: FontWeight.w600,
+                        fontWeight:  messagesController.isSelect.value ==
+                            Strings.call?FontWeight.w600:FontWeight.w400,
                         fontSize: 14,
                       ),
                     ),

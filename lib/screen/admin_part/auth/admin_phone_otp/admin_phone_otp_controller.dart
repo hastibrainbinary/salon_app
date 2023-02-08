@@ -3,6 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 import 'package:pinput/pinput.dart';
 import 'package:salon_app/utils/color_res.dart';
+import 'package:salon_app/utils/page_res.dart';
 
 class AdminPhoneOtpController extends GetxController {
   TextEditingController otpController = TextEditingController();
@@ -34,21 +35,24 @@ class AdminPhoneOtpController extends GetxController {
 
   String otpError = "";
   otpValidation() {
-    if (otpController.text.trim() == "") {
+    if (otpController.text.isEmpty) {
       otpError = "Enter otp";
     } else {
-      if (otpController.text.trim().length >= 8) {
+      if (otpController.text.length != 4) {
         otpError = 'Invalid OTP code';
-      } else {
+      } /*else {
         otpError = "Enter  valid otp";
-      }
+      }*/
     }
   }
 
-  bool validator() {
+  validator() {
     otpValidation();
 
     if (otpError == "") {
+      Future.delayed(const Duration(seconds: 1), () {
+        Get.offAndToNamed(PageRes.adminSignUpScreen);
+      });
       return true;
     } else {
       return false;
@@ -67,4 +71,17 @@ class AdminPhoneOtpController extends GetxController {
       borderRadius: BorderRadius.circular(5),
     ),
   );
+
+  /* final defaultTextTheme = PinTheme(
+    width: 50,
+    height: 50,
+    margin: const EdgeInsets.symmetric(horizontal: 10),
+    textStyle:  TextStyle(
+        fontSize: 20, color: ColorRes.white, fontWeight: FontWeight.w600),
+    decoration: BoxDecoration(
+      color: ColorRes.indicator,
+      border: Border.all(color: ColorRes.indicator),
+      borderRadius: BorderRadius.circular(5),
+    ),
+  );*/
 }

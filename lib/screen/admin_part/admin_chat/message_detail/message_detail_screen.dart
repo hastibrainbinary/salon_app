@@ -153,10 +153,10 @@ class AdminMessageDetailScreen extends StatelessWidget {
                                         ),
                                       ),
                                     )
-                                  : Padding(
-                                      padding: const EdgeInsets.only(
+                                  : const Padding(
+                                      padding: EdgeInsets.only(
                                           right: 15, bottom: 10),
-                                      child: Container(
+                                      child: SizedBox(
                                         height: 25,
                                         width: 25,
                                       ),

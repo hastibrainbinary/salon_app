@@ -23,8 +23,13 @@ class FilterScreenUser extends StatelessWidget {
                 left: 15,
                 child: Row(
                   children: [
-                    const Icon(Icons.arrow_back_ios_new_rounded,
-                        color: ColorRes.white),
+                    InkWell(
+                      onTap: () {
+                        Get.back();
+                      },
+                      child: const Icon(Icons.arrow_back_ios_new_rounded,
+                          color: ColorRes.white),
+                    ),
                     SizedBox(
                       width: Get.width * 0.3466,
                     ),
@@ -41,7 +46,7 @@ class FilterScreenUser extends StatelessWidget {
             ],
           ),
           SizedBox(
-           height:560 ,
+            height: 560,
             child: SingleChildScrollView(
               child: Container(
                 decoration: const BoxDecoration(
@@ -67,12 +72,9 @@ class FilterScreenUser extends StatelessWidget {
                       ),
                     ),
                     SizedBox(height: Get.height * 0.0184),
-                    Container(
+                    SizedBox(
                       width: 320,
                       height: 100,
-                      /*  decoration: BoxDecoration(
-                         border: Border.all()
-                        ),*/
                       child: ListView.separated(
                         scrollDirection: Axis.horizontal,
                         physics: const AlwaysScrollableScrollPhysics(),
@@ -86,7 +88,8 @@ class FilterScreenUser extends StatelessWidget {
                                 width: 70,
                                 padding: const EdgeInsets.all(16),
                                 decoration: BoxDecoration(
-                                    border: Border.all(color: ColorRes.indicator),
+                                    border:
+                                        Border.all(color: ColorRes.indicator),
                                     color: ColorRes.white,
                                     borderRadius: BorderRadius.circular(70),
                                     boxShadow: [
@@ -101,6 +104,7 @@ class FilterScreenUser extends StatelessWidget {
                                   image: AssetImage(AssetRes.hairCut),
                                 ),
                               ),
+                              SizedBox(height: Get.height * 0.0123),
                               Text(
                                 "Hair cut",
                                 style: appTextStyle(
@@ -149,7 +153,7 @@ class FilterScreenUser extends StatelessWidget {
                                 const Icon(Icons.star,
                                     size: 22, color: ColorRes.star),
                                 Text(
-                                  "All",
+                                  Strings.all,
                                   style: appTextStyle(
                                       color: ColorRes.black,
                                       fontWeight: FontWeight.w400,
@@ -303,7 +307,7 @@ class FilterScreenUser extends StatelessWidget {
                               ],
                             ),
                           ),
-                          SizedBox(width: Get.width * 0.0266),
+                          SizedBox(width: Get.width * 0.0265),
                           Container(
                             padding: const EdgeInsets.symmetric(horizontal: 15),
                             height: 40,
@@ -366,7 +370,8 @@ class FilterScreenUser extends StatelessWidget {
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
                                 const Image(
-                                    image: AssetImage(AssetRes.female), height: 20),
+                                    image: AssetImage(AssetRes.female),
+                                    height: 20),
                                 SizedBox(width: Get.width * 0.032),
                                 Text(
                                   Strings.female,
@@ -392,7 +397,8 @@ class FilterScreenUser extends StatelessWidget {
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
                                 const Image(
-                                    image: AssetImage(AssetRes.male), height: 20),
+                                    image: AssetImage(AssetRes.male),
+                                    height: 20),
                                 SizedBox(width: Get.width * 0.032),
                                 Text(
                                   Strings.male,
@@ -420,7 +426,7 @@ class FilterScreenUser extends StatelessWidget {
                               children: [
                                 Center(
                                   child: Text(
-                                    "Both",
+                                    Strings.both,
                                     style: appTextStyle(
                                         color: ColorRes.black,
                                         fontWeight: FontWeight.w400,

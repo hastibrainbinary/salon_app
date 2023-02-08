@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:salon_app/screen/user_part/book_appointment/book_appointment_controller.dart';
-import 'package:salon_app/screen/user_part/book_appointment/book_appointment_silder_screen.dart';
-import 'package:salon_app/screen/user_part/book_appointment/payment_method_silder.dart';
+import 'package:salon_app/screen/user_part/book_appointment/book_appointment_slider_screen.dart';
+import 'package:salon_app/screen/user_part/book_appointment/payment_method_slider.dart';
 import 'package:salon_app/screen/user_part/book_appointment/widget.dart';
 import 'package:salon_app/utils/app_style.dart';
 import 'package:salon_app/utils/asset_res.dart';
 import 'package:salon_app/utils/color_res.dart';
-
 import 'package:salon_app/utils/string.dart';
 
 class BookAppointmentScreen extends StatelessWidget {
@@ -17,13 +16,14 @@ class BookAppointmentScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    bookAppointmentController.ischooseServices.value = true;
-    bookAppointmentController.isappointment.value = false;
-    bookAppointmentController.ispayment.value = false;
-    bookAppointmentController.issummary.value = false;
+    bookAppointmentController.isChooseServices.value = true;
+    bookAppointmentController.isAppointment.value = false;
+    bookAppointmentController.isPayment.value = false;
+    bookAppointmentController.isSummary.value = false;
     bookAppointmentController.appointment.value = false;
 
     return Scaffold(
+      backgroundColor: ColorRes.backgroundColor,
       body: Column(
         children: [
           Column(
@@ -46,15 +46,20 @@ class BookAppointmentScreen extends StatelessWidget {
                             bookAppointmentController.appointment.value = false;
                             bookAppointmentController.payment.value = false;
                             bookAppointmentController.summary.value = false;
-                            bookAppointmentController.ischooseServices.value =
+                            bookAppointmentController.isChooseServices.value =
                                 false;
-                            bookAppointmentController.isappointment.value =
+                            bookAppointmentController.isAppointment.value =
                                 false;
-                            bookAppointmentController.ispayment.value = false;
-                            bookAppointmentController.issummary.value = false;
+                            bookAppointmentController.isPayment.value = false;
+                            bookAppointmentController.isSummary.value = false;
                           },
-                          child: const Icon(Icons.arrow_back_ios_new_rounded,
-                              color: ColorRes.white),
+                          child: InkWell(
+                            onTap: () {
+                              Get.back();
+                            },
+                            child: const Icon(Icons.arrow_back_ios_new_rounded,
+                                color: ColorRes.white),
+                          ),
                         ),
                         const SizedBox(width: 50),
                         Text(
@@ -114,10 +119,11 @@ class BookAppointmentScreen extends StatelessWidget {
                       height: 16,
                       width: 16,
                       decoration: BoxDecoration(
-                          color: bookAppointmentController.payment.value == true
-                              ? ColorRes.indicator
-                              : ColorRes.gray,
-                          borderRadius: BorderRadius.circular(16)),
+                        color: bookAppointmentController.payment.value == true
+                            ? ColorRes.indicator
+                            : ColorRes.gray,
+                        borderRadius: BorderRadius.circular(16),
+                      ),
                     ),
                     Container(
                       width: 69,
@@ -132,10 +138,11 @@ class BookAppointmentScreen extends StatelessWidget {
                       height: 16,
                       width: 16,
                       decoration: BoxDecoration(
-                          color: bookAppointmentController.summary.value == true
-                              ? ColorRes.indicator
-                              : ColorRes.gray,
-                          borderRadius: BorderRadius.circular(16)),
+                        color: bookAppointmentController.summary.value == true
+                            ? ColorRes.indicator
+                            : ColorRes.gray,
+                        borderRadius: BorderRadius.circular(16),
+                      ),
                     ),
                   ],
                 ),
@@ -150,19 +157,19 @@ class BookAppointmentScreen extends StatelessWidget {
                       Strings.chooseService,
                       style: appTextStyle(
                           color: bookAppointmentController
-                                      .ischooseServices.value ==
+                                      .isChooseServices.value ==
                                   true
                               ? ColorRes.indicator
                               : ColorRes.gray,
                           fontWeight: FontWeight.w400,
                           fontSize: 10),
                     ),
-                    // SizedBox(width: Get.width * 0.0293),
+
                     Text(
                       Strings.appointment,
                       style: appTextStyle(
                           color:
-                              bookAppointmentController.isappointment.value ==
+                              bookAppointmentController.isAppointment.value ==
                                       true
                                   ? ColorRes.indicator
                                   : ColorRes.gray,
@@ -174,18 +181,18 @@ class BookAppointmentScreen extends StatelessWidget {
                       Strings.payment,
                       style: appTextStyle(
                           color:
-                              bookAppointmentController.ispayment.value == true
+                              bookAppointmentController.isPayment.value == true
                                   ? ColorRes.indicator
                                   : ColorRes.gray,
                           fontWeight: FontWeight.w400,
                           fontSize: 10),
                     ),
-                    // SizedBox(width: Get.width * 0.096),
+
                     Text(
                       Strings.summary,
                       style: appTextStyle(
                           color:
-                              bookAppointmentController.issummary.value == true
+                              bookAppointmentController.isSummary.value == true
                                   ? ColorRes.indicator
                                   : ColorRes.gray,
                           fontWeight: FontWeight.w400,
@@ -201,17 +208,17 @@ class BookAppointmentScreen extends StatelessWidget {
           SizedBox(
             height: Get.height * 0.6,
             child: SingleChildScrollView(
-              physics: BouncingScrollPhysics(),
+              physics: const BouncingScrollPhysics(),
               child: Obx(
-                () => (bookAppointmentController.issummary.value == true)
+                () => (bookAppointmentController.isSummary.value == true)
                     ? summarySlider(context)
-                    : (bookAppointmentController.ispayment.value == true)
+                    : (bookAppointmentController.isPayment.value == true)
                         ? paymentMethodSlider()
-                        : (bookAppointmentController.isappointment.value ==
+                        : (bookAppointmentController.isAppointment.value ==
                                 true)
-                            ? bookAppointMentSlider(context: context)
+                            ? bookAppointmentSlider(context: context)
                             : ((bookAppointmentController
-                                        .ischooseServices.value ==
+                                        .isChooseServices.value ==
                                     true))
                                 ? Column(
                                     children: [
@@ -292,13 +299,20 @@ class BookAppointmentScreen extends StatelessWidget {
                                                                 width: 2),
                                                           ),
                                                         ),
-                                                        child: const Text(
+                                                        child: Text(
                                                           Strings.about,
                                                           style: TextStyle(
                                                             color: ColorRes
                                                                 .indicator,
-                                                            fontWeight:
-                                                                FontWeight.w600,
+                                                            fontWeight: bookAppointmentController
+                                                                        .isSelect
+                                                                        .value ==
+                                                                    Strings
+                                                                        .about
+                                                                ? FontWeight
+                                                                    .w600
+                                                                : FontWeight
+                                                                    .w200,
                                                             fontSize: 14,
                                                           ),
                                                         ),
@@ -333,13 +347,20 @@ class BookAppointmentScreen extends StatelessWidget {
                                                                 width: 2),
                                                           ),
                                                         ),
-                                                        child: const Text(
+                                                        child: Text(
                                                           Strings.services,
                                                           style: TextStyle(
                                                             color: ColorRes
                                                                 .indicator,
-                                                            fontWeight:
-                                                                FontWeight.w600,
+                                                            fontWeight: bookAppointmentController
+                                                                        .isSelect
+                                                                        .value ==
+                                                                    Strings
+                                                                        .services
+                                                                ? FontWeight
+                                                                    .w600
+                                                                : FontWeight
+                                                                    .w400,
                                                             fontSize: 14,
                                                           ),
                                                         ),
@@ -374,13 +395,20 @@ class BookAppointmentScreen extends StatelessWidget {
                                                                 width: 2),
                                                           ),
                                                         ),
-                                                        child: const Text(
+                                                        child: Text(
                                                           Strings.reviews,
                                                           style: TextStyle(
                                                             color: ColorRes
                                                                 .indicator,
-                                                            fontWeight:
-                                                                FontWeight.w600,
+                                                            fontWeight: bookAppointmentController
+                                                                        .isSelect
+                                                                        .value ==
+                                                                    Strings
+                                                                        .reviews
+                                                                ? FontWeight
+                                                                    .w600
+                                                                : FontWeight
+                                                                    .w400,
                                                             fontSize: 14,
                                                           ),
                                                         ),
@@ -395,13 +423,13 @@ class BookAppointmentScreen extends StatelessWidget {
                                                 () => bookAppointmentController
                                                             .isSelect.value ==
                                                         Strings.about
-                                                    ? const Text("about")
+                                                    ? about()
                                                     : bookAppointmentController
                                                                 .isSelect
                                                                 .value ==
                                                             Strings.services
                                                         ? bookServices()
-                                                        : const Text("reviews"),
+                                                        : reviews(),
                                               ),
                                             ],
                                           ),

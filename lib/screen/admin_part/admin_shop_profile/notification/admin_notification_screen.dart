@@ -9,8 +9,8 @@ import 'package:salon_app/utils/string.dart';
 
 class AdminNotificationScreen extends StatelessWidget {
   AdminNotificationScreen({Key? key}) : super(key: key);
-final  AdminNotificationUserController adminNotificationUserController =
-  Get.put(AdminNotificationUserController());
+  final AdminNotificationUserController adminNotificationUserController =
+      Get.put(AdminNotificationUserController());
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,8 +26,13 @@ final  AdminNotificationUserController adminNotificationUserController =
                 left: 15,
                 child: Row(
                   children: [
-                    const Icon(Icons.arrow_back_ios_new_rounded,
-                        color: ColorRes.white),
+                    InkWell(
+                      onTap: () {
+                        Get.back();
+                      },
+                      child: const Icon(Icons.arrow_back_ios_new_rounded,
+                          color: ColorRes.white),
+                    ),
                     SizedBox(
                       width: Get.width * 0.2666,
                     ),
@@ -59,7 +64,7 @@ final  AdminNotificationUserController adminNotificationUserController =
                     ),
                     const Spacer(),
                     Obx(
-                          () => FlutterSwitch(
+                      () => FlutterSwitch(
                         height: 22,
                         width: 38,
                         value: adminNotificationUserController
@@ -84,14 +89,15 @@ final  AdminNotificationUserController adminNotificationUserController =
                     ),
                     const Spacer(),
                     Obx(
-                          () => FlutterSwitch(
+                      () => FlutterSwitch(
                         height: 22,
                         width: 38,
-                        value: adminNotificationUserController.isSwitchedSound.value,
+                        value: adminNotificationUserController
+                            .isSwitchedSound.value,
                         activeColor: ColorRes.indicator,
                         toggleSize: 16,
-                        onToggle: (value) =>
-                            adminNotificationUserController.onchangeSound(value),
+                        onToggle: (value) => adminNotificationUserController
+                            .onchangeSound(value),
                       ),
                     ),
                   ],
@@ -108,15 +114,15 @@ final  AdminNotificationUserController adminNotificationUserController =
                     ),
                     const Spacer(),
                     Obx(
-                          () => FlutterSwitch(
+                      () => FlutterSwitch(
                         height: 22,
                         width: 38,
-                        value:
-                        adminNotificationUserController.isSwitchedVibrate.value,
+                        value: adminNotificationUserController
+                            .isSwitchedVibrate.value,
                         activeColor: ColorRes.indicator,
                         toggleSize: 16,
-                        onToggle: (value) =>
-                            adminNotificationUserController.onchangeVibrate(value),
+                        onToggle: (value) => adminNotificationUserController
+                            .onchangeVibrate(value),
                       ),
                     ),
                   ],
@@ -133,7 +139,7 @@ final  AdminNotificationUserController adminNotificationUserController =
                     ),
                     const Spacer(),
                     Obx(
-                          () => FlutterSwitch(
+                      () => FlutterSwitch(
                         height: 22,
                         width: 38,
                         value: adminNotificationUserController
@@ -158,7 +164,7 @@ final  AdminNotificationUserController adminNotificationUserController =
                     ),
                     const Spacer(),
                     Obx(
-                          () => FlutterSwitch(
+                      () => FlutterSwitch(
                         height: 22,
                         width: 38,
                         value: adminNotificationUserController
@@ -176,7 +182,6 @@ final  AdminNotificationUserController adminNotificationUserController =
           )
         ],
       ),
-
     );
   }
 }

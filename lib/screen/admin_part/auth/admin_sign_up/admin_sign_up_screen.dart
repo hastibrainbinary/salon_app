@@ -3,7 +3,6 @@ import 'package:get/get.dart';
 import 'package:salon_app/common/alert.dart';
 import 'package:salon_app/common/common_btn.dart';
 import 'package:salon_app/screen/admin_part/auth/admin_sign_up/admin_sign_up_controller.dart';
-
 import 'package:salon_app/utils/app_style.dart';
 import 'package:salon_app/utils/asset_res.dart';
 import 'package:salon_app/utils/color_res.dart';
@@ -49,9 +48,12 @@ class AdminSignUpScreen extends StatelessWidget {
                     border: InputBorder.none,
                     prefixIcon: const Padding(
                       padding: EdgeInsets.all(14.0),
-                      child: Image(
-                        image: AssetImage(AssetRes.userIcon),
-                        color: ColorRes.indicator,
+                      child: Padding(
+                        padding: EdgeInsets.all(2.5),
+                        child: Image(
+                          image: AssetImage(AssetRes.userIcon),
+                          color: ColorRes.indicator,
+                        ),
                       ),
                     ),
                     hintText: 'Shop name',
@@ -116,9 +118,12 @@ class AdminSignUpScreen extends StatelessWidget {
                     border: InputBorder.none,
                     prefixIcon: const Padding(
                       padding: EdgeInsets.all(14.0),
-                      child: Image(
-                        image: AssetImage(AssetRes.email),
-                        color: ColorRes.indicator,
+                      child: Padding(
+                        padding: EdgeInsets.all(2.5),
+                        child: Image(
+                          image: AssetImage(AssetRes.email),
+                          color: ColorRes.indicator,
+                        ),
                       ),
                     ),
                     hintText: 'Email ID',
@@ -184,9 +189,12 @@ class AdminSignUpScreen extends StatelessWidget {
                     border: InputBorder.none,
                     prefixIcon: const Padding(
                       padding: EdgeInsets.all(14.0),
-                      child: Image(
-                        image: AssetImage(AssetRes.phoneIcon),
-                        color: ColorRes.indicator,
+                      child: Padding(
+                        padding: EdgeInsets.all(2.5),
+                        child: Image(
+                          image: AssetImage(AssetRes.phoneIcon),
+                          color: ColorRes.indicator,
+                        ),
                       ),
                     ),
                     hintText: 'Enter mobile number',
@@ -252,9 +260,12 @@ class AdminSignUpScreen extends StatelessWidget {
                     border: InputBorder.none,
                     prefixIcon: const Padding(
                       padding: EdgeInsets.all(14.0),
-                      child: Image(
-                        image: AssetImage(AssetRes.locationIcon),
-                        color: ColorRes.indicator,
+                      child: Padding(
+                          padding: EdgeInsets.all(2.0),
+                        child: Image(
+                          image: AssetImage(AssetRes.locationIcon),
+                          color: ColorRes.indicator,
+                        ),
                       ),
                     ),
                     hintText: 'Location',
@@ -321,9 +332,12 @@ class AdminSignUpScreen extends StatelessWidget {
                       border: InputBorder.none,
                       prefixIcon: const Padding(
                         padding: EdgeInsets.all(14.0),
-                        child: Image(
-                          image: AssetImage(AssetRes.password),
-                          color: ColorRes.indicator,
+                        child: Padding(
+                          padding: EdgeInsets.all(2.5),
+                          child: Image(
+                            image: AssetImage(AssetRes.password),
+                            color: ColorRes.indicator,
+                          ),
                         ),
                       ),
                       hintText: 'Password',
@@ -405,9 +419,12 @@ class AdminSignUpScreen extends StatelessWidget {
                       border: InputBorder.none,
                       prefixIcon: const Padding(
                         padding: EdgeInsets.all(14.0),
-                        child: Image(
-                          image: AssetImage(AssetRes.password),
-                          color: ColorRes.indicator,
+                        child: Padding(
+                          padding: EdgeInsets.all(2.5),
+                          child: Image(
+                            image: AssetImage(AssetRes.password),
+                            color: ColorRes.indicator,
+                          ),
                         ),
                       ),
                       hintText: 'Confirm password',

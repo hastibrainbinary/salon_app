@@ -1,5 +1,4 @@
 import 'dart:io';
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:salon_app/screen/admin_part/admin_home/home/screens/add_advertisement_post/add_advertisement_post_controller.dart';
@@ -25,7 +24,7 @@ class AddPostScreen extends StatelessWidget {
             Stack(
               alignment: Alignment.center,
               children: [
-                Container(
+                SizedBox(
                   // height:
                   //     Get.height > 800 ? Get.height * 0.3 : Get.height * 0.25,
                   width: Get.width,
@@ -73,20 +72,21 @@ class AddPostScreen extends StatelessWidget {
                       physics: const BouncingScrollPhysics(),
                       child: Column(
                         children: [
-                          Container(
+                          SizedBox(
                             height: 157,
                             width: 325,
                             child:
                                 Image.asset(AssetRes.bener, fit: BoxFit.cover),
                           ),
                           SizedBox(height: Get.height * 0.0369),
+                          // ignore: invalid_use_of_protected_member
                           (addAdvertisementController.posts.value.isEmpty)
                               ? InkWell(
                                   onTap: () {
                                     pickImgBottomSheet(context,
-                                        ontapCamera: () {
+                                        onTapCamera: () {
                                       addAdvertisementController.onTapCamera();
-                                    }, ontapGallery: () {
+                                    }, onTapGallery: () {
                                       addAdvertisementController.onTapGallery();
                                     });
                                   },
@@ -106,6 +106,7 @@ class AddPostScreen extends StatelessWidget {
                                   children: [
                                     ...List.generate(
                                         addAdvertisementController
+                                            // ignore: invalid_use_of_protected_member
                                             .posts.value.length, (index) {
                                       return Container(
                                         height: 157,
@@ -114,6 +115,7 @@ class AddPostScreen extends StatelessWidget {
                                             bottom: Get.height * 0.0369),
                                         child: Image.file(
                                           File(addAdvertisementController
+                                              // ignore: invalid_use_of_protected_member
                                               .posts.value[index]),
                                           fit: BoxFit.cover,
                                         ),
@@ -121,14 +123,15 @@ class AddPostScreen extends StatelessWidget {
                                     }),
                                   ],
                                 ),
+                          // ignore: invalid_use_of_protected_member
                           (addAdvertisementController.posts.value.isEmpty)
                               ? const SizedBox()
                               : InkWell(
                                   onTap: () {
                                     pickImgBottomSheet(context,
-                                        ontapCamera: () {
+                                        onTapCamera: () {
                                       addAdvertisementController.onTapCamera();
-                                    }, ontapGallery: () {
+                                    }, onTapGallery: () {
                                       addAdvertisementController.onTapGallery();
                                     });
                                   },

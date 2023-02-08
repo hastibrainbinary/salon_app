@@ -129,8 +129,9 @@ class HomeScreen extends StatelessWidget {
                               ],
                             ),
                             child: const Center(
-                                child: Icon(Icons.search_outlined,
-                                    color: ColorRes.indicator)),
+                              child: Icon(Icons.search_outlined,
+                                  color: ColorRes.indicator),
+                            ),
                           ),
                         ],
                       ),
@@ -148,7 +149,7 @@ class HomeScreen extends StatelessWidget {
                             fontSize: 16),
                       ),
                     ),
-                    SizedBox(height: Get.height * 0.0246),
+                    SizedBox(height: Get.height * 0.0266),
                     Container(
                       width: 320,
                       height: 100,
@@ -172,6 +173,7 @@ class HomeScreen extends StatelessWidget {
                                   height: 45,
                                 ),
                               ),
+                              SizedBox(height: Get.height * 0.0123),
                               Text(
                                 "Hair cut",
                                 style: appTextStyle(
@@ -192,26 +194,29 @@ class HomeScreen extends StatelessWidget {
               ],
             ),
             SizedBox(height: Get.height * 0.0307),
-            SizedBox(
-              width: 325,
-              height: 157,
-              child: PageView.builder(
-                onPageChanged: (value) {
-                  controller.selectIndicator.value = value;
-                },
-                controller: homePageController,
-                itemCount: 3,
-                itemBuilder: (context, index) {
-                  return Container(
-                    height: 157,
-                    width: 325,
-                    decoration: const BoxDecoration(
-                      image: DecorationImage(
-                        image: AssetImage(AssetRes.bener),
+            Padding(
+              padding: const EdgeInsets.only(right: 25, left: 25),
+              child: SizedBox(
+                width: 325,
+                height: 157,
+                child: PageView.builder(
+                  onPageChanged: (value) {
+                    controller.selectIndicator.value = value;
+                  },
+                  controller: homePageController,
+                  itemCount: 3,
+                  itemBuilder: (context, index) {
+                    return Container(
+                      height: 157,
+                      width: 325,
+                      decoration: const BoxDecoration(
+                        image: DecorationImage(
+                          image: AssetImage(AssetRes.bener),
+                        ),
                       ),
-                    ),
-                  );
-                },
+                    );
+                  },
+                ),
               ),
             ),
             const SizedBox(height: 20),

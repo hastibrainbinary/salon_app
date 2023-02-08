@@ -25,11 +25,24 @@ class AdminSignUpMobileNumberScreen extends StatelessWidget {
           child: Column(
             children: [
               SizedBox(height: Get.height * 0.1157),
-              const Center(
-                child: Image(
-                  image: AssetImage(AssetRes.logo1),
-                  width: 69,
-                  height: 36,
+              Center(
+                child: Text.rich(
+                  TextSpan(
+                    text: Strings.lO,
+                    style: appTextStyle(
+                        fontWeight: FontWeight.w600,
+                        fontSize: 40,
+                        color: ColorRes.black),
+                    children: [
+                      TextSpan(
+                        text: Strings.go,
+                        style: appTextStyle(
+                            fontWeight: FontWeight.w600,
+                            fontSize: 40,
+                            color: ColorRes.indicator),
+                      )
+                    ],
+                  ),
                 ),
               ),
               SizedBox(height: Get.height * 0.0615),
@@ -61,9 +74,12 @@ class AdminSignUpMobileNumberScreen extends StatelessWidget {
                       border: InputBorder.none,
                       prefixIcon: const Padding(
                         padding: EdgeInsets.all(14.0),
-                        child: Image(
-                          image: AssetImage(AssetRes.phoneIcon),
-                          color: ColorRes.indicator,
+                        child: Padding(
+                          padding: EdgeInsets.all(2),
+                          child: Image(
+                            image: AssetImage(AssetRes.phoneIcon),
+                            color: ColorRes.indicator,
+                          ),
                         ),
                       ),
                       hintText: 'Enter mobile number',

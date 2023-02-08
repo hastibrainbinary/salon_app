@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 
 class AdminSignUpController extends GetxController {
-  TextEditingController phoneController = TextEditingController(text: "+91 ");
+  TextEditingController phoneController = TextEditingController();
   TextEditingController emailController = TextEditingController();
   TextEditingController userNameController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
@@ -52,7 +52,7 @@ class AdminSignUpController extends GetxController {
     if (phoneController.text.trim() == "") {
       phoneError.value = 'Please enter phoneNumber';
     } else {
-      if (phoneController.text.length == 13) {
+      if (phoneController.text.length == 10) {
         phoneError.value = "";
       } else {
         phoneError.value = "Invalid phone number";

@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:salon_app/utils/app_style.dart';
 import 'package:salon_app/utils/asset_res.dart';
 import 'package:salon_app/utils/color_res.dart';
+import 'package:salon_app/utils/page_res.dart';
 import 'package:salon_app/utils/string.dart';
 
 class EditServiceScreen extends StatelessWidget {
@@ -19,7 +20,7 @@ class EditServiceScreen extends StatelessWidget {
             Stack(
               alignment: Alignment.center,
               children: [
-                Container(
+                SizedBox(
                   // height:
                   //     Get.height > 800 ? Get.height * 0.3 : Get.height * 0.25,
                   width: Get.width,
@@ -97,6 +98,7 @@ class EditServiceScreen extends StatelessWidget {
                                     image: AssetImage(AssetRes.hairCut),
                                   ),
                                 ),
+                                SizedBox(height: Get.height*0.0123),
                                 Text(
                                   "Hair cut",
                                   style: appTextStyle(
@@ -174,20 +176,23 @@ class EditServiceScreen extends StatelessWidget {
                         ),
                       ),
                       SizedBox(height: Get.height * 0.0369),
-                      Container(
-                        width: 153,
-                        height: 45,
-                        decoration: BoxDecoration(
-                          color: ColorRes.indicator,
-                          borderRadius: BorderRadius.circular(8),
-                        ),
-                        child: Center(
-                          child: Text(
-                            Strings.open,
-                            style: appTextStyle(
-                                color: ColorRes.white,
-                                fontWeight: FontWeight.w600,
-                                fontSize: 14),
+                      InkWell(
+                        onTap: () => Get.toNamed(PageRes.editOpenScreen),
+                        child: Container(
+                          width: 153,
+                          height: 45,
+                          decoration: BoxDecoration(
+                            color: ColorRes.indicator,
+                            borderRadius: BorderRadius.circular(8),
+                          ),
+                          child: Center(
+                            child: Text(
+                              Strings.open,
+                              style: appTextStyle(
+                                  color: ColorRes.white,
+                                  fontWeight: FontWeight.w600,
+                                  fontSize: 14),
+                            ),
                           ),
                         ),
                       ),

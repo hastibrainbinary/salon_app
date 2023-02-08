@@ -12,6 +12,7 @@ class ColorRes {
   static const star = Color(0xffF8B60E);
 
   static const green = Color(0xff11800F);
+  static const backgroundColor = Color(0xffF8F8F8);
 
   ///_____________________ M _______________________
   static const color94674F = Color(0xff94674F);

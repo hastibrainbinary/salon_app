@@ -82,7 +82,7 @@ class ServiceScreen extends StatelessWidget {
                                           onTap: () {
                                             Get.back();
                                             Get.toNamed(
-                                                PageRes.seviceAddScreen);
+                                                PageRes.serviceAddScreen);
                                           },
                                           child: Text(
                                             Strings.addService,
@@ -174,6 +174,7 @@ class ServiceScreen extends StatelessWidget {
                                 image: AssetImage(AssetRes.hairCut),
                               ),
                             ),
+                            SizedBox(height: Get.height * 0.0123),
                             Text(
                               "Hair cut",
                               style: appTextStyle(

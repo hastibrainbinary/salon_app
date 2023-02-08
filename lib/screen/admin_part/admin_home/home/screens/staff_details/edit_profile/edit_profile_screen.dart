@@ -25,9 +25,7 @@ class AdminStaffEditProfileScreen extends StatelessWidget {
             Stack(
               alignment: Alignment.center,
               children: [
-                Container(
-                  // height:
-                  //     Get.height > 800 ? Get.height * 0.3 : Get.height * 0.25,
+                SizedBox(
                   width: Get.width,
                   child: const Image(
                     image: AssetImage(AssetRes.mostBookBack),
@@ -105,8 +103,12 @@ class AdminStaffEditProfileScreen extends StatelessWidget {
                               onTap: () {
                                 pickImgBottomSheet(
                                   context,
-                                  ontapCamera: () {},
-                                  ontapGallery: () {},
+                                  onTapCamera: () {
+                                    editProfileController.onTapCamera();
+                                  },
+                                  onTapGallery: () {
+                                    editProfileController.onTapGallery();
+                                  },
                                 );
                               },
                               child: Container(
@@ -342,8 +344,15 @@ class AdminStaffEditProfileScreen extends StatelessWidget {
                           const Spacer(),
                           InkWell(
                             onTap: () {
-                              pickImgBottomSheet(context,
-                                  ontapCamera: () {}, ontapGallery: () {});
+                              pickImgBottomSheet(
+                                context,
+                                onTapCamera: () {
+                                  editProfileController.onTapCamera();
+                                },
+                                onTapGallery: () {
+                                  editProfileController.onTapGallery();
+                                },
+                              );
                             },
                             child: const Icon(
                               Icons.add,

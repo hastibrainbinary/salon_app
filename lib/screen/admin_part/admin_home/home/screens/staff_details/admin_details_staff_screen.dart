@@ -24,7 +24,7 @@ class AdminDetailsStaffScreen extends StatelessWidget {
               Stack(
                 alignment: const Alignment(0, -0.85),
                 children: [
-                  Container(
+                  SizedBox(
                     // height:
                     //     Get.height > 800 ? Get.height * 0.3 : Get.height * 0.25,
                     width: Get.width,
@@ -433,12 +433,12 @@ class AdminDetailsStaffScreen extends StatelessWidget {
                           ),
                           Padding(
                             padding: const EdgeInsets.only(left: 30, right: 30),
-                            child: Container(
-                              // height: 300,
+                            child: SizedBox(
+
                               width: Get.width,
                               child: ListView.separated(
                                   shrinkWrap: true,
-                                  physics: NeverScrollableScrollPhysics(),
+                                  physics: const NeverScrollableScrollPhysics(),
                                   itemBuilder: (context, index) {
                                     return Container(
                                       height: 170,

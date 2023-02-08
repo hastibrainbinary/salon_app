@@ -31,6 +31,7 @@ Widget mostBook() {
                     fontSize: 10),
               ),
             ),
+            const SizedBox(width: 4)
           ],
         ),
       ),
@@ -62,8 +63,8 @@ Widget mostBook() {
                               image: AssetImage(AssetRes.mostBook),
                             ),
                             Positioned(
-                              top: 65,
-                              left: 75,
+                              top: 63,
+                              left: 74,
                               child: Container(
                                 height: 18,
                                 width: 50,
@@ -72,7 +73,8 @@ Widget mostBook() {
                                 decoration: const BoxDecoration(
                                   color: ColorRes.indicator,
                                   borderRadius: BorderRadius.only(
-                                      bottomRight: Radius.circular(8)),
+                                    bottomRight: Radius.circular(8),
+                                  ),
                                 ),
                                 alignment: Alignment.center,
                                 child: Row(
@@ -85,7 +87,7 @@ Widget mostBook() {
                                       color: ColorRes.indicator,
                                     ),
                                     Text(
-                                      "Open",
+                                      Strings.open,
                                       style: TextStyle(
                                           color: ColorRes.white, fontSize: 12),
                                     ),
@@ -113,11 +115,10 @@ Widget mostBook() {
                         padding: const EdgeInsets.symmetric(horizontal: 9.0),
                         child: Row(
                           children: [
-                            const Icon(
-                              Icons.location_on_outlined,
-                              color: ColorRes.black,
-                              size: 15,
-                            ),
+                            const Image(
+                                image: AssetImage(AssetRes.locationIcon),
+                                color: ColorRes.black,
+                                height: 9),
                             const SizedBox(width: 5),
                             Text(
                               "5 km",
@@ -167,8 +168,8 @@ Widget mostBook() {
                               image: AssetImage(AssetRes.mostBook),
                             ),
                             Positioned(
-                              top: 65,
-                              left: 75,
+                              top: 63,
+                              left: 74,
                               child: Container(
                                 height: 18,
                                 width: 50,
@@ -177,7 +178,8 @@ Widget mostBook() {
                                 decoration: const BoxDecoration(
                                   color: ColorRes.indicator,
                                   borderRadius: BorderRadius.only(
-                                      bottomRight: Radius.circular(8)),
+                                    bottomRight: Radius.circular(8),
+                                  ),
                                 ),
                                 alignment: Alignment.center,
                                 child: Row(
@@ -190,7 +192,7 @@ Widget mostBook() {
                                       color: ColorRes.indicator,
                                     ),
                                     Text(
-                                      "Open",
+                                      Strings.open,
                                       style: TextStyle(
                                           color: ColorRes.white, fontSize: 12),
                                     ),
@@ -218,11 +220,10 @@ Widget mostBook() {
                         padding: const EdgeInsets.symmetric(horizontal: 9.0),
                         child: Row(
                           children: [
-                            const Icon(
-                              Icons.location_on_outlined,
-                              color: ColorRes.black,
-                              size: 15,
-                            ),
+                            const Image(
+                                image: AssetImage(AssetRes.locationIcon),
+                                color: ColorRes.black,
+                                height: 9),
                             const SizedBox(width: 5),
                             Text(
                               "5 km",
@@ -281,6 +282,7 @@ Widget nearbySalon() {
                   fontWeight: FontWeight.w500,
                   fontSize: 10),
             ),
+            const SizedBox(width: 4)
           ],
         ),
       ),
@@ -312,8 +314,8 @@ Widget nearbySalon() {
                               image: AssetImage(AssetRes.nearbySalon),
                             ),
                             Positioned(
-                              top: 65,
-                              left: 75,
+                              top: 63,
+                              left: 74,
                               child: Container(
                                 height: 18,
                                 width: 50,
@@ -322,7 +324,8 @@ Widget nearbySalon() {
                                 decoration: const BoxDecoration(
                                   color: ColorRes.indicator,
                                   borderRadius: BorderRadius.only(
-                                      bottomRight: Radius.circular(8)),
+                                    bottomRight: Radius.circular(8),
+                                  ),
                                 ),
                                 alignment: Alignment.center,
                                 child: Row(
@@ -363,11 +366,10 @@ Widget nearbySalon() {
                         padding: const EdgeInsets.symmetric(horizontal: 9.0),
                         child: Row(
                           children: [
-                            const Icon(
-                              Icons.location_on_outlined,
-                              color: ColorRes.black,
-                              size: 15,
-                            ),
+                            const Image(
+                                image: AssetImage(AssetRes.locationIcon),
+                                color: ColorRes.black,
+                                height: 9),
                             const SizedBox(width: 5),
                             Text(
                               "5 km",
@@ -417,8 +419,8 @@ Widget nearbySalon() {
                               image: AssetImage(AssetRes.nearbySalon),
                             ),
                             Positioned(
-                              top: 65,
-                              left: 75,
+                              top: 63,
+                              left: 74,
                               child: Container(
                                 height: 18,
                                 width: 50,
@@ -427,7 +429,8 @@ Widget nearbySalon() {
                                 decoration: const BoxDecoration(
                                   color: ColorRes.indicator,
                                   borderRadius: BorderRadius.only(
-                                      bottomRight: Radius.circular(8)),
+                                    bottomRight: Radius.circular(8),
+                                  ),
                                 ),
                                 alignment: Alignment.center,
                                 child: Row(
@@ -440,7 +443,7 @@ Widget nearbySalon() {
                                       color: ColorRes.indicator,
                                     ),
                                     Text(
-                                      "Open",
+                                      Strings.open,
                                       style: TextStyle(
                                           color: ColorRes.white, fontSize: 12),
                                     ),
@@ -468,11 +471,10 @@ Widget nearbySalon() {
                         padding: const EdgeInsets.symmetric(horizontal: 9.0),
                         child: Row(
                           children: [
-                            const Icon(
-                              Icons.location_on_outlined,
-                              color: ColorRes.black,
-                              size: 15,
-                            ),
+                            const Image(
+                                image: AssetImage(AssetRes.locationIcon),
+                                color: ColorRes.black,
+                                height: 9),
                             const SizedBox(width: 5),
                             Text(
                               "5 km",

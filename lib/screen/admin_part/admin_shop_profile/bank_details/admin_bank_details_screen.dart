@@ -28,8 +28,13 @@ class AdminBankDetailsScreen extends StatelessWidget {
                 left: 15,
                 child: Row(
                   children: [
-                    const Icon(Icons.arrow_back_ios_new_rounded,
-                        color: ColorRes.white),
+                    InkWell(
+                      onTap: (){
+                        Get.back();
+                      },
+                      child: const Icon(Icons.arrow_back_ios_new_rounded,
+                          color: ColorRes.white),
+                    ),
                     SizedBox(
                       width: Get.width * 0.2026,
                     ),

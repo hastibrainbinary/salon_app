@@ -10,6 +10,7 @@ class AddYourBankAccountController extends GetxController {
   Rx<TextEditingController> reEnterAccountNumberController =
       TextEditingController().obs;
 
+
   RxBool isAccount = true.obs;
   onchangeAccount(value) {
     isAccount.value = value;

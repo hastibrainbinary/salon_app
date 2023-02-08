@@ -27,8 +27,13 @@ class BookingScreen extends StatelessWidget {
                   left: 20,
                   child: Row(
                     children: [
-                      const Icon(Icons.arrow_back_ios_new_rounded,
-                          color: ColorRes.white),
+                      InkWell(
+                        onTap: () {
+                          Get.back();
+                        },
+                        child: const Icon(Icons.arrow_back_ios_new_rounded,
+                            color: ColorRes.white),
+                      ),
                       const SizedBox(width: 50),
                       Text(
                         Strings.todayBookings,

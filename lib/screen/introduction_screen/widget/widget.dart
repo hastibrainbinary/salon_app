@@ -6,16 +6,25 @@ import 'package:salon_app/utils/app_style.dart';
 IntroductionController controller = Get.put(IntroductionController());
 Widget indicator(bool isActive, Color activeIndicatorColor) {
   return SizedBox(
-    width: 10,
+    width: isActive ? 15 : 10,
     height: 5,
     child: AnimatedContainer(
+      margin: const EdgeInsets.symmetric(horizontal: 2),
       duration: const Duration(milliseconds: 150),
-      width: 17,
-      decoration: BoxDecoration(
-        // borderRadius: BorderRadius.circular(10),
-        shape: BoxShape.circle,
-        color: isActive ? activeIndicatorColor : Colors.grey,
-      ),
+      width: isActive ? 25 : 17,
+      height: 5,
+      decoration: isActive
+          ? BoxDecoration(
+              // shape: BoxShape.circle,
+              borderRadius: const BorderRadius.all(
+                Radius.circular(10),
+              ),
+              color: isActive ? activeIndicatorColor : Colors.grey,
+            )
+          : BoxDecoration(
+              shape: BoxShape.circle,
+              color: isActive ? activeIndicatorColor : Colors.grey,
+            ),
     ),
   );
 }
@@ -26,6 +35,50 @@ Widget pageViewPart(BuildContext context,
     required String description,
     required Color textColor}) {
   return Stack(
+    alignment: Alignment.bottomCenter,
+    children: [
+      Container(
+        foregroundDecoration: BoxDecoration(
+          borderRadius: const BorderRadius.all(
+            Radius.circular(12.0),
+          ),
+          gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: [
+              Colors.black.withOpacity(.0),
+              Colors.black.withOpacity(1),
+            ],
+          ),
+        ),
+        decoration: BoxDecoration(
+          borderRadius: const BorderRadius.all(
+            Radius.circular(12.0),
+          ),
+          image: DecorationImage(image: AssetImage(image), fit: BoxFit.cover),
+        ),
+      ),
+      Column(
+        children: [
+          const Spacer(),
+          Text(
+            textAlign: TextAlign.center,
+            title,
+            style: appTextStyle(
+                fontSize: 26, fontWeight: FontWeight.w600, color: textColor),
+          ),
+          Text(description,
+              style: appTextStyle(
+                  fontSize: 13, fontWeight: FontWeight.w400, color: textColor),
+              textAlign: TextAlign.center),
+          SizedBox(
+            height: Get.height * 0.12,
+          )
+        ],
+      ),
+    ],
+  );
+  /*Stack(
     alignment: Alignment.bottomCenter,
     children: [
       Image.asset(
@@ -53,7 +106,8 @@ Widget pageViewPart(BuildContext context,
         ],
       ),
 
-      /* Positioned(
+      */
+  /* Positioned(
         top: 500,
         // left: 20,
         right: 20,
@@ -64,7 +118,9 @@ Widget pageViewPart(BuildContext context,
               fontSize: 26, fontWeight: FontWeight.w600, color: textColor),
         ),
       ), */
-      /* Positioned(
+  /*
+      */
+  /* Positioned(
         top: 580,
         left: 15,
         right: 15,
@@ -73,6 +129,7 @@ Widget pageViewPart(BuildContext context,
                 fontSize: 13, fontWeight: FontWeight.w400, color: textColor),
             textAlign: TextAlign.center),
       ), */
+  /*
     ],
-  );
+  )*/
 }

@@ -24,7 +24,7 @@ class ProfileUserScreen extends StatelessWidget {
         child: Column(
           children: [
             Stack(
-              alignment: Alignment(-0.015, Get.height * 0.0075),
+              alignment: Alignment(-0.015, Get.height * 0.0078),
               children: [
                 const Image(
                   image: AssetImage(AssetRes.profileBack),
@@ -66,7 +66,7 @@ class ProfileUserScreen extends StatelessWidget {
                   fontWeight: FontWeight.w500),
             ),
             SizedBox(
-              height: Get.height * 0.5,
+              height: Get.height * 0.48,
               child: SingleChildScrollView(
                 physics: const BouncingScrollPhysics(),
                 child: Column(

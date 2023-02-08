@@ -21,7 +21,7 @@ class DeleteServiceScreen extends StatelessWidget {
             Stack(
               alignment: Alignment.center,
               children: [
-                Container(
+                SizedBox(
                   // height:
                   //     Get.height > 800 ? Get.height * 0.3 : Get.height * 0.25,
                   width: Get.width,
@@ -60,8 +60,7 @@ class DeleteServiceScreen extends StatelessWidget {
             Padding(
               padding: EdgeInsets.only(
                 top: Get.height * 0.25,
-                // left: Get.width * 0.055,
-                // right: Get.width * 0.055,
+
               ),
               child: SizedBox(
                 height: Get.height * 0.8,
@@ -93,12 +92,14 @@ class DeleteServiceScreen extends StatelessWidget {
                                               .withOpacity(0.2),
                                           offset: const Offset(0.0, 4),
                                           blurRadius: 23.0,
+                                          spreadRadius: 0,
                                         ),
                                       ]),
                                   child: const Image(
                                     image: AssetImage(AssetRes.hairCut),
                                   ),
                                 ),
+                                SizedBox(height: Get.height * 0.0123),
                                 Text(
                                   "Hair cut",
                                   style: appTextStyle(
@@ -164,8 +165,9 @@ class DeleteServiceScreen extends StatelessWidget {
                                         Border.all(color: ColorRes.indicator),
                                   ),
                                   child: const Center(
-                                      child: Icon(Icons.check,
-                                          color: ColorRes.indicator, size: 15)),
+                                    child: Icon(Icons.check,
+                                        color: ColorRes.indicator, size: 15),
+                                  ),
                                 ),
                               ],
                             );
@@ -193,7 +195,6 @@ class DeleteServiceScreen extends StatelessWidget {
                                   Container(
                                     alignment: Alignment.center,
                                     height: 194,
-                                    // width: 301,
                                     decoration: BoxDecoration(
                                         color: ColorRes.white,
                                         borderRadius: BorderRadius.circular(5)),

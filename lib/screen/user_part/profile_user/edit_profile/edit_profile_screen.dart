@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:salon_app/common/common_btn.dart';
-import 'package:salon_app/screen/user_part/profile_user/edit_profile/edit_profile_contoller.dart';
+import 'package:salon_app/screen/user_part/profile_user/edit_profile/edit_profile_controller.dart';
 import 'package:salon_app/utils/app_style.dart';
 import 'package:salon_app/utils/asset_res.dart';
 import 'package:salon_app/utils/color_res.dart';

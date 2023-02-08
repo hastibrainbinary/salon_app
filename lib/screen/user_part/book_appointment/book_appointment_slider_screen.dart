@@ -1,7 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_connect/http/src/utils/utils.dart';
 import 'package:month_picker_dialog_2/month_picker_dialog_2.dart';
 import 'package:salon_app/screen/user_part/book_appointment/book_appointment_controller.dart';
 import 'package:salon_app/utils/app_style.dart';
@@ -9,10 +8,10 @@ import 'package:salon_app/utils/asset_res.dart';
 import 'package:salon_app/utils/color_res.dart';
 import 'package:salon_app/utils/page_res.dart';
 import 'package:salon_app/utils/string.dart';
-import 'package:status_change/status_change.dart';
 import 'package:weekly_date_picker/weekly_date_picker.dart';
 import 'package:intl/intl.dart';
 
+// ignore: must_be_immutable
 class BookAppointmentSliderScreen extends StatelessWidget {
   BookAppointmentSliderScreen({Key? key}) : super(key: key);
   BookAppointmentController bookAppointmentController =
@@ -33,8 +32,13 @@ class BookAppointmentSliderScreen extends StatelessWidget {
                 left: 15,
                 child: Row(
                   children: [
-                    const Icon(Icons.arrow_back_ios_new_rounded,
-                        color: ColorRes.white),
+                    InkWell(
+                      onTap: () {
+                        Get.back();
+                      },
+                      child: const Icon(Icons.arrow_back_ios_new_rounded,
+                          color: ColorRes.white),
+                    ),
                     const SizedBox(width: 50),
                     Text(
                       Strings.bookAppointment,
@@ -42,7 +46,7 @@ class BookAppointmentSliderScreen extends StatelessWidget {
                           fontSize: 20,
                           fontWeight: FontWeight.w500,
                           color: ColorRes.white),
-                    )
+                    ),
                   ],
                 ),
               ),
@@ -57,8 +61,9 @@ class BookAppointmentSliderScreen extends StatelessWidget {
                   height: 16,
                   width: 16,
                   decoration: BoxDecoration(
-                      color: ColorRes.indicator,
-                      borderRadius: BorderRadius.circular(16)),
+                    color: ColorRes.indicator,
+                    borderRadius: BorderRadius.circular(16),
+                  ),
                 ),
                 Container(
                   width: 69,
@@ -72,11 +77,11 @@ class BookAppointmentSliderScreen extends StatelessWidget {
                 InkWell(
                   onTap: () {
                     bookAppointmentController.appointment.value = true;
-                    bookAppointmentController.isappointment.value = true;
-                    bookAppointmentController.ischooseServices.value = true;
-                    bookAppointmentController.ispayment.value = true;
+                    bookAppointmentController.isAppointment.value = true;
+                    bookAppointmentController.isChooseServices.value = true;
+                    bookAppointmentController.isPayment.value = true;
                     bookAppointmentController.payment.value = true;
-                    bookAppointmentController.issummary.value = false;
+                    bookAppointmentController.isSummary.value = false;
 
                     Get.toNamed(PageRes.paymentMethodScreen);
                   },
@@ -101,20 +106,21 @@ class BookAppointmentSliderScreen extends StatelessWidget {
                 ),
                 InkWell(
                   onTap: () {
-                    bookAppointmentController.isappointment.value = false;
-                    bookAppointmentController.ischooseServices.value = false;
-                    bookAppointmentController.ispayment.value = true;
-                    bookAppointmentController.issummary.value = false;
+                    bookAppointmentController.isAppointment.value = false;
+                    bookAppointmentController.isChooseServices.value = false;
+                    bookAppointmentController.isPayment.value = true;
+                    bookAppointmentController.isSummary.value = false;
                     bookAppointmentController.payment.value = true;
                   },
                   child: Container(
                     height: 16,
                     width: 16,
                     decoration: BoxDecoration(
-                        color: bookAppointmentController.payment.value
-                            ? ColorRes.indicator
-                            : ColorRes.gray,
-                        borderRadius: BorderRadius.circular(16)),
+                      color: bookAppointmentController.payment.value
+                          ? ColorRes.indicator
+                          : ColorRes.gray,
+                      borderRadius: BorderRadius.circular(16),
+                    ),
                   ),
                 ),
                 Container(
@@ -129,19 +135,20 @@ class BookAppointmentSliderScreen extends StatelessWidget {
                 InkWell(
                   onTap: () {
                     bookAppointmentController.summary.value = true;
-                    bookAppointmentController.isappointment.value = false;
-                    bookAppointmentController.ischooseServices.value = false;
-                    bookAppointmentController.ispayment.value = false;
-                    bookAppointmentController.issummary.value = true;
+                    bookAppointmentController.isAppointment.value = false;
+                    bookAppointmentController.isChooseServices.value = false;
+                    bookAppointmentController.isPayment.value = false;
+                    bookAppointmentController.isSummary.value = true;
                   },
                   child: Container(
                     height: 16,
                     width: 16,
                     decoration: BoxDecoration(
-                        color: bookAppointmentController.summary.value
-                            ? ColorRes.indicator
-                            : ColorRes.gray,
-                        borderRadius: BorderRadius.circular(16)),
+                      color: bookAppointmentController.summary.value
+                          ? ColorRes.indicator
+                          : ColorRes.gray,
+                      borderRadius: BorderRadius.circular(16),
+                    ),
                   ),
                 ),
               ],
@@ -156,7 +163,7 @@ class BookAppointmentSliderScreen extends StatelessWidget {
                 Text(
                   Strings.chooseService,
                   style: appTextStyle(
-                      color: bookAppointmentController.ischooseServices.value ==
+                      color: bookAppointmentController.isChooseServices.value ==
                               true
                           ? ColorRes.indicator
                           : ColorRes.gray,
@@ -168,7 +175,7 @@ class BookAppointmentSliderScreen extends StatelessWidget {
                   Strings.appointment,
                   style: appTextStyle(
                       color:
-                          bookAppointmentController.isappointment.value == true
+                          bookAppointmentController.isAppointment.value == true
                               ? ColorRes.indicator
                               : ColorRes.gray,
                       fontWeight: FontWeight.w400,
@@ -178,7 +185,7 @@ class BookAppointmentSliderScreen extends StatelessWidget {
                 Text(
                   Strings.payment,
                   style: appTextStyle(
-                      color: bookAppointmentController.ispayment.value == true
+                      color: bookAppointmentController.isPayment.value == true
                           ? ColorRes.indicator
                           : ColorRes.gray,
                       fontWeight: FontWeight.w400,
@@ -188,7 +195,7 @@ class BookAppointmentSliderScreen extends StatelessWidget {
                 Text(
                   Strings.summary,
                   style: appTextStyle(
-                      color: bookAppointmentController.issummary.value == true
+                      color: bookAppointmentController.isSummary.value == true
                           ? ColorRes.indicator
                           : ColorRes.gray,
                       fontWeight: FontWeight.w400,
@@ -338,8 +345,9 @@ class BookAppointmentSliderScreen extends StatelessWidget {
                     width: 153,
                     height: 45,
                     decoration: BoxDecoration(
-                        color: ColorRes.indicator,
-                        borderRadius: BorderRadius.circular(8)),
+                      color: ColorRes.indicator,
+                      borderRadius: BorderRadius.circular(8),
+                    ),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -371,184 +379,9 @@ class BookAppointmentSliderScreen extends StatelessWidget {
 BookAppointmentController bookAppointmentController =
     Get.put(BookAppointmentController());
 
-Widget bookAppointMentSlider({required BuildContext context}) {
+Widget bookAppointmentSlider({required BuildContext context}) {
   return Column(
     children: [
-      /*  Stack(
-        children: [
-          const Image(
-            image: AssetImage(AssetRes.mostBookBack),
-          ),
-          Positioned(
-            top: 60,
-            left: 15,
-            child: Row(
-              children: [
-                const Icon(Icons.arrow_back_ios_new_rounded,
-                    color: ColorRes.white),
-                const SizedBox(width: 50),
-                Text(
-                  Strings.bookAppointment,
-                  style: appTextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.w500,
-                      color: ColorRes.white),
-                )
-              ],
-            ),
-          ),
-        ],
-      ),
-      SizedBox(height: Get.height * 0.0431),
-      Obx(
-        () => Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Container(
-              height: 16,
-              width: 16,
-              decoration: BoxDecoration(
-                  color: ColorRes.indicator,
-                  borderRadius: BorderRadius.circular(16)),
-            ),
-            Container(
-              width: 69,
-              height: 4,
-              decoration: BoxDecoration(
-                color: bookAppointmentController.appointment.value == true
-                    ? ColorRes.indicator
-                    : ColorRes.gray,
-              ),
-            ),
-            InkWell(
-              onTap: () {
-                bookAppointmentController.appointment.value = true;
-                bookAppointmentController.isappointment.value = true;
-                bookAppointmentController.ischooseServices.value = true;
-                bookAppointmentController.ispayment.value = true;
-                bookAppointmentController.payment.value = true;
-                bookAppointmentController.issummary.value = false;
-  
-                Get.toNamed(PageRes.paymentMethodScreen);
-              },
-              child: Container(
-                height: 16,
-                width: 16,
-                decoration: BoxDecoration(
-                    color: bookAppointmentController.appointment.value
-                        ? ColorRes.indicator
-                        : ColorRes.gray,
-                    borderRadius: BorderRadius.circular(16)),
-              ),
-            ),
-            Container(
-              width: 69,
-              height: 4,
-              decoration: BoxDecoration(
-                color: bookAppointmentController.payment.value == true
-                    ? ColorRes.indicator
-                    : ColorRes.gray,
-              ),
-            ),
-            InkWell(
-              onTap: () {
-                bookAppointmentController.isappointment.value = false;
-                bookAppointmentController.ischooseServices.value = false;
-                bookAppointmentController.ispayment.value = true;
-                bookAppointmentController.issummary.value = false;
-                bookAppointmentController.payment.value = true;
-              },
-              child: Container(
-                height: 16,
-                width: 16,
-                decoration: BoxDecoration(
-                    color: bookAppointmentController.payment.value
-                        ? ColorRes.indicator
-                        : ColorRes.gray,
-                    borderRadius: BorderRadius.circular(16)),
-              ),
-            ),
-            Container(
-              width: 69,
-              height: 4,
-              decoration: BoxDecoration(
-                color: bookAppointmentController.summary.value == true
-                    ? ColorRes.indicator
-                    : ColorRes.gray,
-              ),
-            ),
-            InkWell(
-              onTap: () {
-                bookAppointmentController.summary.value = true;
-                bookAppointmentController.isappointment.value = false;
-                bookAppointmentController.ischooseServices.value = false;
-                bookAppointmentController.ispayment.value = false;
-                bookAppointmentController.issummary.value = true;
-              },
-              child: Container(
-                height: 16,
-                width: 16,
-                decoration: BoxDecoration(
-                    color: bookAppointmentController.summary.value
-                        ? ColorRes.indicator
-                        : ColorRes.gray,
-                    borderRadius: BorderRadius.circular(16)),
-              ),
-            ),
-          ],
-        ),
-      ),
-      SizedBox(height: Get.height * 0.0123),
-      Obx(
-        () => Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            SizedBox(width: Get.width * 0.055),
-            Text(
-              Strings.chooseService,
-              style: appTextStyle(
-                  color:
-                      bookAppointmentController.ischooseServices.value == true
-                          ? ColorRes.indicator
-                          : ColorRes.gray,
-                  fontWeight: FontWeight.w400,
-                  fontSize: 10),
-            ),
-  
-            Text(
-              Strings.appointment,
-              style: appTextStyle(
-                  color: bookAppointmentController.isappointment.value == true
-                      ? ColorRes.indicator
-                      : ColorRes.gray,
-                  fontWeight: FontWeight.w400,
-                  fontSize: 10),
-            ),
-            // SizedBox(width: Get.width * 0.072),
-            Text(
-              Strings.payment,
-              style: appTextStyle(
-                  color: bookAppointmentController.ispayment.value == true
-                      ? ColorRes.indicator
-                      : ColorRes.gray,
-                  fontWeight: FontWeight.w400,
-                  fontSize: 10),
-            ),
-            // SizedBox(width: Get.width * 0.096),
-            Text(
-              Strings.summary,
-              style: appTextStyle(
-                  color: bookAppointmentController.issummary.value == true
-                      ? ColorRes.indicator
-                      : ColorRes.gray,
-                  fontWeight: FontWeight.w400,
-                  fontSize: 10),
-            ),
-            SizedBox(width: Get.width * 0.055),
-          ],
-        ),
-      ),
-      SizedBox(height: Get.height * 0.0369), */
       Padding(
         padding: const EdgeInsets.only(left: 25, right: 20),
         child: Row(
@@ -579,25 +412,24 @@ Widget bookAppointMentSlider({required BuildContext context}) {
               },
               child: Container(
                 color: Colors.transparent,
-                child: Row(children: [
-                  Obx(
-                    () => Text(
-                      DateFormat.MMMM()
-                          .format(bookAppointmentController.month.value)
-                          .toString(),
-                      style: appTextStyle(
-                          color: ColorRes.indicator,
-                          fontSize: 12,
-                          fontWeight: FontWeight.w500),
+                child: Row(
+                  children: [
+                    Obx(
+                      () => Text(
+                        DateFormat.MMMM()
+                            .format(bookAppointmentController.month.value)
+                            .toString(),
+                        style: appTextStyle(
+                            color: ColorRes.indicator,
+                            fontSize: 12,
+                            fontWeight: FontWeight.w500),
+                      ),
                     ),
-                  ),
-                  const Icon(Icons.keyboard_arrow_down_rounded, size: 15),
-                ]),
+                    const Icon(Icons.keyboard_arrow_down_rounded, size: 15),
+                  ],
+                ),
               ),
             ),
-            // SizedBox(
-            //   width: 25,
-            // )
           ],
         ),
       ),
@@ -609,12 +441,9 @@ Widget bookAppointMentSlider({required BuildContext context}) {
         child: WeeklyDatePicker(
             enableWeeknumberText: false,
             daysInWeek: 7,
-
-            // weekdays: [],
             selectedBackgroundColor: ColorRes.white,
             selectedDigitColor: ColorRes.indicator,
             digitsColor: ColorRes.white,
-            // backgroundColor: ColorRes.indicator,
             selectedDay: DateTime.now(), // DateTime
             changeDay: (value) {}),
       ),
@@ -715,47 +544,46 @@ Widget bookAppointMentSlider({required BuildContext context}) {
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: List.generate(
-                  4,
-                  (index) => Padding(
-                        padding: const EdgeInsets.only(bottom: 10),
-                        child: Stack(
-                          alignment: Alignment(-1.2, 0),
-                          children: [
-                            Container(
-                              alignment: Alignment.centerRight,
-                              padding: EdgeInsets.only(right: 20),
-                              height: 35,
-                              width: 144,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(8),
-                                color: index == 0
-                                    ? ColorRes.indicator
-                                    : ColorRes.white,
-                                border: index == 0
-                                    ? Border.all(style: BorderStyle.none)
-                                    : Border.all(color: ColorRes.indicator),
-                              ),
-                              child: Text(
-                                "Robert Fox",
-                                style: appTextStyle(
-                                    fontSize: 12,
-                                    fontWeight: FontWeight.w500,
-                                    color: index == 0
-                                        ? ColorRes.white
-                                        : ColorRes.black),
-                              ),
-                            ),
-                            Container(
-                              height: 40,
-                              width: 40,
-                              child: Image.asset(
-                                AssetRes.adminProfilePic,
-                                fit: BoxFit.cover,
-                              ),
-                            )
-                          ],
+                4,
+                (index) => Padding(
+                  padding: const EdgeInsets.only(bottom: 10),
+                  child: Stack(
+                    alignment: const Alignment(-1.2, 0),
+                    children: [
+                      Container(
+                        alignment: Alignment.centerRight,
+                        padding: const EdgeInsets.only(right: 20),
+                        height: 35,
+                        width: 144,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(8),
+                          color:
+                              index == 0 ? ColorRes.indicator : ColorRes.white,
+                          border: index == 0
+                              ? Border.all(style: BorderStyle.none)
+                              : Border.all(color: ColorRes.indicator),
                         ),
-                      )),
+                        child: Text(
+                          "Robert Fox",
+                          style: appTextStyle(
+                              fontSize: 12,
+                              fontWeight: FontWeight.w500,
+                              color:
+                                  index == 0 ? ColorRes.white : ColorRes.black),
+                        ),
+                      ),
+                      SizedBox(
+                        height: 40,
+                        width: 40,
+                        child: Image.asset(
+                          AssetRes.adminProfilePic,
+                          fit: BoxFit.cover,
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+              ),
             ),
           ],
         ),
@@ -769,13 +597,12 @@ Widget bookAppointMentSlider({required BuildContext context}) {
               height: 18,
               width: 18,
               decoration: BoxDecoration(
-                // borderRadius: BorderRadius.circular(22),
                 shape: BoxShape.circle,
                 border: Border.all(color: ColorRes.indicator),
               ),
               child: const Center(
-                  child:
-                      Icon(Icons.check, color: ColorRes.indicator, size: 15)),
+                child: Icon(Icons.check, color: ColorRes.indicator, size: 15),
+              ),
             ),
             SizedBox(
               width: Get.width * 0.03,
@@ -800,6 +627,7 @@ Widget bookAppointMentSlider({required BuildContext context}) {
               color: const Color(0xff94674F).withOpacity(0.2),
               offset: const Offset(0.0, 4),
               blurRadius: 23.0,
+              spreadRadius: 0,
             )
           ],
           borderRadius: const BorderRadius.only(
@@ -835,9 +663,9 @@ Widget bookAppointMentSlider({required BuildContext context}) {
             SizedBox(width: Get.width * 0.2666),
             InkWell(
               onTap: () {
-                bookAppointmentController.ischooseServices.value = false;
-                bookAppointmentController.isappointment.value = false;
-                bookAppointmentController.ispayment.value = true;
+                bookAppointmentController.isChooseServices.value = false;
+                bookAppointmentController.isAppointment.value = false;
+                bookAppointmentController.isPayment.value = true;
                 bookAppointmentController.chooseServices.value = true;
                 bookAppointmentController.appointment.value = true;
                 bookAppointmentController.payment.value = true;

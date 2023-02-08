@@ -4,7 +4,6 @@ import 'package:get/get.dart';
 import 'package:intl/intl.dart';
 import 'package:month_picker_dialog_2/month_picker_dialog_2.dart';
 import 'package:salon_app/screen/admin_part/admin_appointment/admin_appointment_controller.dart';
-import 'package:salon_app/screen/user_part/bookings/widget.dart';
 import 'package:salon_app/utils/app_style.dart';
 import 'package:salon_app/utils/asset_res.dart';
 import 'package:salon_app/utils/color_res.dart';
@@ -28,9 +27,7 @@ class AdminAppointmentScreen extends StatelessWidget {
             Stack(
               alignment: Alignment.center,
               children: [
-                Container(
-                  // height:
-                  //     Get.height > 800 ? Get.height * 0.3 : Get.height * 0.25,
+                SizedBox(
                   width: Get.width,
                   child: const Image(
                     image: AssetImage(AssetRes.mostBookBack),
@@ -237,8 +234,8 @@ class AdminAppointmentScreen extends StatelessWidget {
                               physics: const NeverScrollableScrollPhysics(),
                               itemBuilder: (context, index) {
                                 return InkWell(
-                                  onTap: () =>
-                                      Get.toNamed(PageRes.adminStaffDetailsScreen),
+                                  onTap: () => Get.toNamed(
+                                      PageRes.adminStaffDetailsScreen),
                                   child: Row(
                                     children: [
                                       const CircleAvatar(

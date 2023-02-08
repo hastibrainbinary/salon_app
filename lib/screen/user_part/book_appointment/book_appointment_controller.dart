@@ -9,13 +9,13 @@ class BookAppointmentController extends GetxController {
   RxBool appointment = false.obs;
   RxBool payment = false.obs;
   RxBool summary = false.obs;
-  RxBool ischooseServices = false.obs;
-  RxBool isappointment = false.obs;
-  RxBool ispayment = false.obs;
-  RxBool issummary = false.obs;
+  RxBool isChooseServices = false.obs;
+  RxBool isAppointment = false.obs;
+  RxBool isPayment = false.obs;
+  RxBool isSummary = false.obs;
 
-  RxBool ischooseServicesScreen = true.obs;
-  RxBool isappointmentScreen = false.obs;
+  RxBool isChooseServicesScreen = true.obs;
+  RxBool isAppointmentScreen = false.obs;
 
   RxBool isServiceNext = false.obs;
   RxBool isAppointmentNext = false.obs;

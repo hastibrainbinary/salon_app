@@ -1,24 +1,24 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:salon_app/screen/admin_part/admin_appointment/admin_appointment_screen.dart';
-import 'package:salon_app/screen/admin_part/admin_appointment/admin_staff_details_Screen.dart';
+import 'package:salon_app/screen/admin_part/admin_appointment/admin_staff_details_screen.dart';
 import 'package:salon_app/screen/admin_part/admin_chat/message_detail/message_detail_screen.dart';
 import 'package:salon_app/screen/admin_part/admin_chat/messages_screen.dart';
 import 'package:salon_app/screen/admin_part/admin_home/admin_dashboard_screen.dart';
-import 'package:salon_app/screen/admin_part/admin_home/home/screens/add_advertisement_post/add_advertisment_post_screen.dart';
+import 'package:salon_app/screen/admin_part/admin_home/home/screens/add_advertisement_post/add_advertisement_post_screen.dart';
 import 'package:salon_app/screen/admin_part/admin_home/home/screens/add_advertisement_post/add_post_screen.dart';
 import 'package:salon_app/screen/admin_part/admin_home/home/screens/add_advertisement_post/delete_post_screen.dart';
 import 'package:salon_app/screen/admin_part/admin_home/home/screens/add_service/screens/add_service/add_service_screen.dart';
 import 'package:salon_app/screen/admin_part/admin_home/home/screens/add_service/screens/delete_service/delete_service_screen.dart';
+import 'package:salon_app/screen/admin_part/admin_home/home/screens/add_service/screens/edit_service/edit_service_open_screen.dart';
 import 'package:salon_app/screen/admin_part/admin_home/home/screens/add_service/screens/edit_service/edit_service_screen.dart';
 import 'package:salon_app/screen/admin_part/admin_home/home/screens/add_service/service_screen.dart';
 import 'package:salon_app/screen/admin_part/admin_home/home/screens/add_your_bank_account/add_your_bank_account_screen.dart';
 import 'package:salon_app/screen/admin_part/admin_home/home/screens/add_your_bank_account/edit_account/edit_account.dart';
 import 'package:salon_app/screen/admin_part/admin_home/home/screens/cancel_appointment_details/cancel_appointment_screen.dart';
-import 'package:salon_app/screen/admin_part/admin_home/home/screens/notifocation/notification_screen.dart';
+import 'package:salon_app/screen/admin_part/admin_home/home/screens/notification/notification_screen.dart';
 import 'package:salon_app/screen/admin_part/admin_home/home/screens/staff_details/add_profile/add_profile_screen.dart';
 import 'package:salon_app/screen/admin_part/admin_home/home/screens/staff_details/admin_details_staff_screen.dart';
-import 'package:salon_app/screen/admin_part/admin_home/home/screens/staff_details/edit_profile/edit_profile_controller.dart';
 import 'package:salon_app/screen/admin_part/admin_home/home/screens/staff_details/edit_profile/edit_profile_screen.dart';
 import 'package:salon_app/screen/admin_part/admin_home/home/screens/staff_details/staff_details_screen.dart';
 import 'package:salon_app/screen/admin_part/admin_shop_profile/bank_details/admin_bank_details_screen.dart';
@@ -26,7 +26,7 @@ import 'package:salon_app/screen/admin_part/admin_shop_profile/edit_bank_details
 import 'package:salon_app/screen/admin_part/admin_shop_profile/edit_profile/admin_edit_Profile_Screen.dart';
 import 'package:salon_app/screen/admin_part/admin_shop_profile/language/admin_language_screen.dart';
 import 'package:salon_app/screen/admin_part/admin_shop_profile/notification/admin_notification_screen.dart';
-import 'package:salon_app/screen/admin_part/admin_shop_profile/privacy_police/admin_privacy_police_Screen.dart';
+import 'package:salon_app/screen/admin_part/admin_shop_profile/privacy_police/admin_privacy_police_screen.dart';
 import 'package:salon_app/screen/admin_part/admin_shop_profile/reset_password/admin_reset_password_screen.dart';
 import 'package:salon_app/screen/admin_part/admin_shop_profile/shop_profile/shop_profile_screen.dart';
 import 'package:salon_app/screen/admin_part/auth/admin_forgot_otp/admin_forgot_otp_screen.dart';
@@ -49,32 +49,32 @@ import 'package:salon_app/screen/user_part/auth/phone_otp/phone_otp_screen.dart'
 import 'package:salon_app/screen/user_part/auth/sign_up/sign_up_screen.dart';
 import 'package:salon_app/screen/user_part/auth/sign_up_mobile/sign_up_phone.dart';
 import 'package:salon_app/screen/user_part/book_appointment/book_appointment_screen.dart';
-import 'package:salon_app/screen/user_part/book_appointment/payment_method_silder.dart';
+import 'package:salon_app/screen/user_part/book_appointment/payment_method_slider.dart';
 import 'package:salon_app/screen/user_part/bookings/booking_user_details/booking_user_screen.dart';
 import 'package:salon_app/screen/user_part/call/call_ring_screen.dart';
 import 'package:salon_app/screen/user_part/dashboard/dashboard_screen.dart';
-import 'package:salon_app/screen/user_part/dashboard/home/filtter_screen.dart';
+import 'package:salon_app/screen/user_part/dashboard/home/filter_screen.dart';
 import 'package:salon_app/screen/user_part/dashboard/home/home_screen.dart';
 import 'package:salon_app/screen/user_part/dashboard/most_book/most_book_details_screen.dart';
 import 'package:salon_app/screen/user_part/dashboard/most_book/most_book_screen.dart';
 import 'package:salon_app/screen/user_part/messages/message_detail/message_detail_screen.dart';
 import 'package:salon_app/screen/user_part/my_appointment/appointment_booking/appointment_booking_screen.dart';
+import 'package:salon_app/screen/user_part/my_appointment/details_screen.dart';
 import 'package:salon_app/screen/user_part/my_appointment/remind_appointment/remind_appointment_screen.dart';
 import 'package:salon_app/screen/user_part/nearby_salons/nearby_salons_screen.dart';
 import 'package:salon_app/screen/user_part/profile/profile_screen.dart';
 import 'package:salon_app/screen/user_part/profile_user/filter/filter_screen_user.dart';
 import 'package:salon_app/screen/user_part/profile_user/invite_friend/invite_friend_screen.dart';
-import 'package:salon_app/screen/user_part/profile_user/notificationU/notification_user_Screen.dart';
-import 'package:salon_app/screen/user_part/profile_user/payment/payment_screeen.dart';
+import 'package:salon_app/screen/user_part/profile_user/notificationU/notification_user_screen.dart';
+import 'package:salon_app/screen/user_part/profile_user/payment/payment_screen.dart';
 import 'package:salon_app/screen/user_part/profile_user/privacy_policy/privacy_policy_screen.dart';
 import 'package:salon_app/screen/user_part/profile_user/reset_password_user/reset_password_user_screen.dart';
 import 'package:salon_app/screen/user_part/select_gender/select_gender_screen.dart';
 import 'package:salon_app/sign_up&login_intro/sign_up_login_screen.dart';
 import 'package:salon_app/utils/page_res.dart';
 import 'package:salon_app/screen/user_part/bookings/booking_screen.dart';
-import 'screen/user_part/book_appointment/book_appointment_silder_screen.dart';
+import 'screen/user_part/book_appointment/book_appointment_slider_screen.dart';
 import 'screen/user_part/messages/messages_screen.dart';
-import 'screen/user_part/my_appointment/details_screen.dart';
 import 'screen/user_part/profile_user/edit_profile/edit_profile_screen.dart';
 import 'screen/user_part/profile_user/language/language_screen.dart';
 
@@ -133,23 +133,24 @@ class MyApp extends StatelessWidget {
 
           GetPage(
               name: PageRes.appointmentBookingScreen,
-              page: () => AppointmentBookingScreen()),
+              page: () => const AppointmentBookingScreen()),
 
           GetPage(name: PageRes.messagesScreen, page: () => MessagesScreen()),
           GetPage(
               name: PageRes.notificationUserScreen,
               page: () => NotificationUserScreen()),
           GetPage(
-              name: PageRes.filterScreenUser, page: () => FilterScreenUser()),
+              name: PageRes.filterScreenUser,
+              page: () => const FilterScreenUser()),
           GetPage(
               name: PageRes.resetPasswordsScreen,
               page: () => ResetPasswordsScreen()),
           GetPage(
               name: PageRes.inviteFriendScreen,
-              page: () => InviteFriendScreen()),
+              page: () => const InviteFriendScreen()),
           GetPage(
               name: PageRes.privacyPolicyScreen,
-              page: () => PrivacyPolicyScreen()),
+              page: () => const PrivacyPolicyScreen()),
 
           GetPage(
               name: PageRes.editProfileScreen, page: () => EditProfileScreen()),
@@ -161,16 +162,20 @@ class MyApp extends StatelessWidget {
               name: PageRes.messageDetailScreen,
               page: () => MessageDetailScreen()),
 
-          GetPage(name: PageRes.callRingScreen, page: () => CallRingScreen()),
+          GetPage(
+              name: PageRes.callRingScreen, page: () => const CallRingScreen()),
           GetPage(name: PageRes.paymentScreen, page: () => PaymentScreen()),
-          GetPage(name: PageRes.languageScreen, page: () => LanguageScreen()),
+          GetPage(
+              name: PageRes.languageScreen, page: () => const LanguageScreen()),
           GetPage(
               name: PageRes.bookAppointmentSliderScree,
               page: () => BookAppointmentSliderScreen()),
           GetPage(
               name: PageRes.paymentMethodScreen,
               page: () => PaymentMethodScreen()),
-          GetPage(name: PageRes.remindScreen, page: () => RemindScreen()),
+          GetPage(name: PageRes.remindScreen, page: () => const RemindScreen()),
+          GetPage(
+              name: PageRes.detailsScreen, page: () => const DetailsScreen()),
 
           ///_____________________________________ ADMIN PART -M ____________________________________
           GetPage(
@@ -180,14 +185,16 @@ class MyApp extends StatelessWidget {
               page: () => AdminMessagesScreen()),
 
           GetPage(
-              name: PageRes.seviceAddScreen, page: () => AddServiceScreen()),
+              name: PageRes.serviceAddScreen, page: () => AddServiceScreen()),
           GetPage(
               name: PageRes.adminMessageDetailScreen,
               page: () => AdminMessageDetailScreen()),
-          GetPage(name: PageRes.addSeviceScreen, page: () => ServiceScreen()),
+          GetPage(
+              name: PageRes.addServiceScreen,
+              page: () => const ServiceScreen()),
           GetPage(
               name: PageRes.notificationScreen,
-              page: () => NotificationScreen()),
+              page: () => const NotificationScreen()),
 
           GetPage(
               name: PageRes.adminProfileScreen,
@@ -232,7 +239,7 @@ class MyApp extends StatelessWidget {
               page: () => MostBookDetailsScreen()),
           // GetPage(name: PageRes.bookings, page: () => BookingScreen()),
 
-          GetPage(name: PageRes.filterScreen, page: () => FilterScreen()),
+          GetPage(name: PageRes.filterScreen, page: () => const FilterScreen()),
 
           GetPage(
               name: PageRes.bookingDetails, page: () => BookingUserDetails()),
@@ -240,13 +247,14 @@ class MyApp extends StatelessWidget {
               name: PageRes.bookAppointmentScreen,
               page: () => BookAppointmentScreen()),
           GetPage(
-              name: PageRes.shopProfileScreen, page: () => ShopProfileScreen()),
+              name: PageRes.shopProfileScreen,
+              page: () => const ShopProfileScreen()),
           GetPage(
               name: PageRes.adminResetPasswordsScreen,
               page: () => AdminResetPasswordsScreen()),
           GetPage(
               name: PageRes.adminLanguageScreen,
-              page: () => AdminLanguageScreen()),
+              page: () => const AdminLanguageScreen()),
           GetPage(
               name: PageRes.adminNotificationScreen,
               page: () => AdminNotificationScreen()),
@@ -258,7 +266,7 @@ class MyApp extends StatelessWidget {
               page: () => EditBankDetailsScreen()),
           GetPage(
               name: PageRes.adminPrivacyPoliceScreen,
-              page: () => AdminPrivacyPoliceScreen()),
+              page: () => const AdminPrivacyPoliceScreen()),
           GetPage(
               name: PageRes.addAdvertisementPostScreen,
               page: () => AddAdvertisementPostScreen()),
@@ -267,24 +275,34 @@ class MyApp extends StatelessWidget {
               name: PageRes.deletePostScreen, page: () => DeletePostScreen()),
           GetPage(
               name: PageRes.staffDetailsScreen,
-              page: () => StaffDetailsScreen()),
+              page: () => const StaffDetailsScreen()),
           GetPage(
               name: PageRes.adminAppointmentScreen,
               page: () => AdminAppointmentScreen()),
           GetPage(
               name: PageRes.adminStaffDetailsScreen,
-              page: () => AdminStaffDetailsScreen()),
+              page: () => const AdminStaffDetailsScreen()),
           GetPage(
               name: PageRes.deleteServiceScreen,
-              page: () => DeleteServiceScreen()),
+              page: () => const DeleteServiceScreen()),
           GetPage(
-              name: PageRes.editServiceScreen, page: () => EditServiceScreen()),
+              name: PageRes.editServiceScreen,
+              page: () => const EditServiceScreen()),
           GetPage(
-              name: PageRes.adminDetailsStaffScreen, page: () => AdminDetailsStaffScreen()),
+              name: PageRes.adminDetailsStaffScreen,
+              page: () => const AdminDetailsStaffScreen()),
           GetPage(
-              name: PageRes.cancelAppointmentScreen, page: () => CancelAppointmentScreen()),
+              name: PageRes.cancelAppointmentScreen,
+              page: () => const CancelAppointmentScreen()),
           GetPage(
-              name: PageRes.adminEditProfileScreen, page: () => AdminEditProfileScreen()),
+              name: PageRes.adminEditProfileScreen,
+              page: () => AdminEditProfileScreen()),
+          GetPage(name: PageRes.editOpenScreen, page: () => EditOpenScreen()),
+          GetPage(
+              name: PageRes.addProfileScreen, page: () => AddProfileScreen()),
+          GetPage(
+              name: PageRes.adminStaffEditProfileScreen,
+              page: () => AdminStaffEditProfileScreen()),
         ]);
   }
 }

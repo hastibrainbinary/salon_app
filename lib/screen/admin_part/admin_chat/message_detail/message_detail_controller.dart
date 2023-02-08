@@ -7,12 +7,12 @@ class AdminMessageDetailController extends GetxController {
     {
       "type": "admin",
       "msg":
-          "Lorem Ipsum è un testo segnapostoutilizzato nel settore della tipografia della stampa."
+          "Lorem Ipsum è un test segnapostoutilizzato nel store della tipping della stamp."
     },
     {
       "type": "user",
       "msg":
-          "Lorem Ipsum è un testo segnapostoutilizzato nel settore della tipografia della stampa."
+          "Lorem Ipsum è un test segnapostoutilizzato nel store della tipping della stamp."
     },
     {"type": "user", "msg": "Lorem ipsum"},
   ];

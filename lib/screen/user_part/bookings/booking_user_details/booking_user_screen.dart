@@ -217,7 +217,7 @@ class BookingUserDetails extends StatelessWidget {
                           ),
                           Padding(
                             padding: const EdgeInsets.only(left: 30),
-                            child: Container(
+                            child: SizedBox(
                               height: 300,
                               width: 315,
                               child: ListView.separated(

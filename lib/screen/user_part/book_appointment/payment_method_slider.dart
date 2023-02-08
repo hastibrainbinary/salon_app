@@ -9,6 +9,7 @@ import 'package:salon_app/utils/color_res.dart';
 import 'package:salon_app/utils/page_res.dart';
 import 'package:salon_app/utils/string.dart';
 
+// ignore: must_be_immutable
 class PaymentMethodScreen extends StatelessWidget {
   PaymentMethodScreen({Key? key}) : super(key: key);
   BookAppointmentController bookAppointmentController =
@@ -17,6 +18,7 @@ class PaymentMethodScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       body: Column(
         children: [
           Stack(
@@ -29,8 +31,13 @@ class PaymentMethodScreen extends StatelessWidget {
                 left: 15,
                 child: Row(
                   children: [
-                    const Icon(Icons.arrow_back_ios_new_rounded,
-                        color: ColorRes.white),
+                    InkWell(
+                      onTap: () {
+                        Get.back();
+                      },
+                      child: const Icon(Icons.arrow_back_ios_new_rounded,
+                          color: ColorRes.white),
+                    ),
                     const SizedBox(width: 50),
                     Text(
                       Strings.payment,
@@ -68,10 +75,10 @@ class PaymentMethodScreen extends StatelessWidget {
                 InkWell(
                   onTap: () {
                     bookAppointmentController.appointment.value = true;
-                    bookAppointmentController.isappointment.value = true;
-                    bookAppointmentController.ischooseServices.value = true;
-                    bookAppointmentController.ispayment.value = true;
-                    bookAppointmentController.issummary.value = false;
+                    bookAppointmentController.isAppointment.value = true;
+                    bookAppointmentController.isChooseServices.value = true;
+                    bookAppointmentController.isPayment.value = true;
+                    bookAppointmentController.isSummary.value = false;
 
                     Get.toNamed(PageRes.paymentMethodScreen);
                   },
@@ -79,10 +86,11 @@ class PaymentMethodScreen extends StatelessWidget {
                     height: 16,
                     width: 16,
                     decoration: BoxDecoration(
-                        color: bookAppointmentController.appointment.value
-                            ? ColorRes.indicator
-                            : ColorRes.gray,
-                        borderRadius: BorderRadius.circular(16)),
+                      color: bookAppointmentController.appointment.value
+                          ? ColorRes.indicator
+                          : ColorRes.gray,
+                      borderRadius: BorderRadius.circular(16),
+                    ),
                   ),
                 ),
                 Container(
@@ -96,20 +104,21 @@ class PaymentMethodScreen extends StatelessWidget {
                 ),
                 InkWell(
                   onTap: () {
-                    bookAppointmentController.isappointment.value = false;
-                    bookAppointmentController.ischooseServices.value = false;
-                    bookAppointmentController.ispayment.value = true;
-                    bookAppointmentController.issummary.value = false;
+                    bookAppointmentController.isAppointment.value = false;
+                    bookAppointmentController.isChooseServices.value = false;
+                    bookAppointmentController.isPayment.value = true;
+                    bookAppointmentController.isSummary.value = false;
                     bookAppointmentController.payment.value = true;
                   },
                   child: Container(
                     height: 16,
                     width: 16,
                     decoration: BoxDecoration(
-                        color: bookAppointmentController.payment.value
-                            ? ColorRes.indicator
-                            : ColorRes.gray,
-                        borderRadius: BorderRadius.circular(16)),
+                      color: bookAppointmentController.payment.value
+                          ? ColorRes.indicator
+                          : ColorRes.gray,
+                      borderRadius: BorderRadius.circular(16),
+                    ),
                   ),
                 ),
                 Container(
@@ -124,10 +133,10 @@ class PaymentMethodScreen extends StatelessWidget {
                 InkWell(
                   onTap: () {
                     bookAppointmentController.summary.value = true;
-                    bookAppointmentController.isappointment.value = false;
-                    bookAppointmentController.ischooseServices.value = false;
-                    bookAppointmentController.ispayment.value = false;
-                    bookAppointmentController.issummary.value = true;
+                    bookAppointmentController.isAppointment.value = false;
+                    bookAppointmentController.isChooseServices.value = false;
+                    bookAppointmentController.isPayment.value = false;
+                    bookAppointmentController.isSummary.value = true;
                   },
                   child: Container(
                     height: 16,
@@ -151,7 +160,7 @@ class PaymentMethodScreen extends StatelessWidget {
                 Text(
                   Strings.chooseService,
                   style: appTextStyle(
-                      color: bookAppointmentController.ischooseServices.value ==
+                      color: bookAppointmentController.isChooseServices.value ==
                               true
                           ? ColorRes.indicator
                           : ColorRes.gray,
@@ -163,7 +172,7 @@ class PaymentMethodScreen extends StatelessWidget {
                   Strings.appointment,
                   style: appTextStyle(
                       color:
-                          bookAppointmentController.isappointment.value == true
+                          bookAppointmentController.isAppointment.value == true
                               ? ColorRes.indicator
                               : ColorRes.gray,
                       fontWeight: FontWeight.w400,
@@ -173,7 +182,7 @@ class PaymentMethodScreen extends StatelessWidget {
                 Text(
                   Strings.payment,
                   style: appTextStyle(
-                      color: bookAppointmentController.ispayment.value == true
+                      color: bookAppointmentController.isPayment.value == true
                           ? ColorRes.indicator
                           : ColorRes.gray,
                       fontWeight: FontWeight.w400,
@@ -183,7 +192,7 @@ class PaymentMethodScreen extends StatelessWidget {
                 Text(
                   Strings.summary,
                   style: appTextStyle(
-                      color: bookAppointmentController.issummary.value == true
+                      color: bookAppointmentController.isSummary.value == true
                           ? ColorRes.indicator
                           : ColorRes.gray,
                       fontWeight: FontWeight.w400,
@@ -237,10 +246,10 @@ Widget paymentMethodSlider() {
       SizedBox(height: Get.height * 0.0246),
       InkWell(
         onTap: () {
-          bookAppointmentController.ischooseServices.value = false;
-          bookAppointmentController.isappointment.value = false;
-          bookAppointmentController.ispayment.value = false;
-          bookAppointmentController.issummary.value = true;
+          bookAppointmentController.isChooseServices.value = false;
+          bookAppointmentController.isAppointment.value = false;
+          bookAppointmentController.isPayment.value = false;
+          bookAppointmentController.isSummary.value = true;
           bookAppointmentController.chooseServices.value = true;
           bookAppointmentController.appointment.value = true;
           bookAppointmentController.payment.value = true;
@@ -250,10 +259,13 @@ Widget paymentMethodSlider() {
           children: [
             const Padding(
               padding: EdgeInsets.symmetric(horizontal: 25),
-              child: Image(image: AssetImage(AssetRes.payStore), height: 25),
+              child: Image(
+                image: AssetImage(AssetRes.payStore),
+                height: 15,
+              ),
             ),
             Text(
-              "Pay at store",
+              Strings.payAtStore,
               style: appTextStyle(
                   color: ColorRes.black,
                   fontSize: 14,
@@ -279,6 +291,7 @@ Widget paymentMethodSlider() {
           ),
         ],
       ),
+      SizedBox(height: Get.height * 0.0184),
       Row(
         children: [
           const Padding(
@@ -289,7 +302,7 @@ Widget paymentMethodSlider() {
             ),
           ),
           Text(
-            "Add a card",
+            Strings.addACard,
             style: appTextStyle(
                 fontWeight: FontWeight.w400,
                 color: ColorRes.black,
@@ -329,7 +342,7 @@ Widget paymentMethodSlider() {
             ),
           ),
           Text(
-            "Google Pay",
+            Strings.googlePay,
             style: appTextStyle(
                 fontWeight: FontWeight.w400,
                 color: ColorRes.black,
@@ -352,7 +365,7 @@ Widget paymentMethodSlider() {
             ),
           ),
           Text(
-            "Phone Pe",
+            Strings.phonePe,
             style: appTextStyle(
                 fontWeight: FontWeight.w400,
                 color: ColorRes.black,
@@ -378,7 +391,7 @@ Widget paymentMethodSlider() {
             ),
           ),
           Text(
-            "Pay via another UPI ID",
+            Strings.payVia,
             style: appTextStyle(
                 fontWeight: FontWeight.w400,
                 color: ColorRes.black,
@@ -404,7 +417,7 @@ Widget summarySlider(context) {
         Row(
           children: [
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 25),
+              padding: const EdgeInsets.symmetric(horizontal: 22),
               child: Text(
                 Strings.reviewAndConfirm,
                 overflow: TextOverflow.ellipsis,
@@ -427,6 +440,7 @@ Widget summarySlider(context) {
                 color: const Color(0xff94674F).withOpacity(0.2),
                 offset: const Offset(0.0, 4),
                 blurRadius: 23.0,
+                spreadRadius: 0,
               ),
             ],
             borderRadius: BorderRadius.circular(10),
@@ -438,7 +452,7 @@ Widget summarySlider(context) {
                 children: [
                   const Image(
                     image: AssetImage(AssetRes.pTime),
-                    height: 25,
+                    height: 20,
                   ),
                   SizedBox(width: Get.width * 0.0213),
                   Text(
@@ -468,7 +482,7 @@ Widget summarySlider(context) {
                   ),
                   SizedBox(width: Get.width * 0.0213),
                   Text(
-                    Strings.barberShop,
+                    "${Strings.barberShop} :",
                     style: appTextStyle(
                         color: ColorRes.indicator,
                         fontSize: 13,
@@ -494,7 +508,7 @@ Widget summarySlider(context) {
                   ),
                   SizedBox(width: Get.width * 0.0213),
                   Text(
-                    Strings.service1,
+                    " ${Strings.service}           :",
                     style: appTextStyle(
                         color: ColorRes.indicator,
                         fontSize: 13,
@@ -520,7 +534,7 @@ Widget summarySlider(context) {
                   ),
                   SizedBox(width: Get.width * 0.0213),
                   Text(
-                    Strings.barber1,
+                    " ${Strings.barber}            :",
                     style: appTextStyle(
                         color: ColorRes.indicator,
                         fontSize: 13,
@@ -541,12 +555,12 @@ Widget summarySlider(context) {
               child: Row(
                 children: [
                   const Image(
-                    image: AssetImage(AssetRes.plocation),
-                    height: 25,
+                    image: AssetImage(AssetRes.locationIcon),
+                    height: 20,
                   ),
                   SizedBox(width: Get.width * 0.0213),
                   Text(
-                    Strings.location1,
+                    "${Strings.location}            :",
                     style: appTextStyle(
                         color: ColorRes.indicator,
                         fontSize: 13,
@@ -586,7 +600,7 @@ Widget summarySlider(context) {
                 child: Row(
                   children: [
                     Text(
-                      Strings.payment1,
+                      " ${Strings.payment}                     :",
                       style: appTextStyle(
                           color: ColorRes.indicator,
                           fontSize: 13,
@@ -620,17 +634,18 @@ Widget summarySlider(context) {
             ),
           ],
         ),
+        SizedBox(height: Get.height * 0.0061),
         Row(
           children: [
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 25),
-              child: Container(
+              child: SizedBox(
                 width: Get.width - 50,
                 child: Text(
                   "Include comments or send hairstyle reference if you wish",
                   overflow: TextOverflow.ellipsis,
                   style: appTextStyle(
-                      color: ColorRes.black,
+                      color: ColorRes.black.withOpacity(0.5),
                       fontWeight: FontWeight.w400,
                       fontSize: 11),
                 ),
@@ -650,15 +665,24 @@ Widget summarySlider(context) {
             shadowColor: ColorRes.indicator,
             borderRadius: BorderRadius.circular(12),
             child: TextFormField(
+              keyboardType: TextInputType.multiline,
               controller: bookAppointmentController.typeMsgController,
               decoration: InputDecoration(
                 border: InputBorder.none,
                 hintText: 'Type message....',
                 fillColor: Colors.transparent,
                 filled: true,
+                suffixIcon: Transform.rotate(
+                  angle: 4,
+                  child: const Icon(
+                    Icons.attach_file_outlined,
+                    size: 16,
+                    color: ColorRes.indicator,
+                  ),
+                ),
                 hintStyle: appTextStyle(
-                  fontWeight: FontWeight.w500,
-                  fontSize: 15,
+                  fontWeight: FontWeight.w400,
+                  fontSize: 11,
                   color: ColorRes.indicator,
                 ),
               ),

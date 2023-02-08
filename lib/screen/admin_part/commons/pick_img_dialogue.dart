@@ -6,7 +6,7 @@ import 'package:salon_app/utils/color_res.dart';
 import 'package:salon_app/utils/string.dart';
 
 Future pickImgBottomSheet(context,
-    {required VoidCallback ontapCamera, required VoidCallback ontapGallery}) {
+    {required VoidCallback onTapCamera, required VoidCallback onTapGallery}) {
   return showModalBottomSheet(
     context: context,
     barrierColor: ColorRes.black.withOpacity(0.8),
@@ -60,7 +60,7 @@ Future pickImgBottomSheet(context,
                 Column(
                   children: [
                     InkWell(
-                      onTap: ontapCamera,
+                      onTap: onTapCamera,
                       child: Container(
                         height: 70,
                         width: 70,
@@ -91,7 +91,7 @@ Future pickImgBottomSheet(context,
                 Column(
                   children: [
                     InkWell(
-                      onTap: ontapGallery,
+                      onTap: onTapGallery,
                       child: Container(
                         height: 70,
                         width: 70,

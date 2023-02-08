@@ -42,6 +42,7 @@ class AssetRes {
 
   ///------------------------------icons------------------------------------------------------
   static const phoneIcon = '${icons}phoneIcon.png';
+  static const locationD='${icons}locationD.png';
   static const userIcon = '${icons}userIcon.png';
   static const email = '${icons}email.png';
   static const password = '${icons}password.png';

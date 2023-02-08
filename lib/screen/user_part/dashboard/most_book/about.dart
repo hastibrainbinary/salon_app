@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:salon_app/screen/user_part/messages/messages_screen.dart';
 import 'package:salon_app/utils/app_style.dart';
 import 'package:salon_app/utils/asset_res.dart';
 import 'package:salon_app/utils/color_res.dart';
@@ -11,7 +10,7 @@ Widget about() {
   return Column(
     children: [
       Padding(
-        padding: const EdgeInsets.only(left: 30),
+        padding: const EdgeInsets.only(left: 29),
         child: Row(
           children: [
             const Icon(
@@ -80,11 +79,10 @@ Widget about() {
         padding: const EdgeInsets.only(left: 30),
         child: Row(
           children: [
-            const Icon(
-              Icons.location_on,
-              size: 25,
-              color: ColorRes.indicator,
-            ),
+            const Image(
+                image: AssetImage(AssetRes.location),
+                color: ColorRes.indicator,
+                height: 17),
             SizedBox(width: Get.width * 0.0266),
             Text(
               Strings.location,
@@ -101,9 +99,10 @@ Widget about() {
       Container(
         margin: const EdgeInsets.only(left: 66),
         alignment: Alignment.centerLeft,
-        child: Text(
+        child: const Text(
           "1901 Thornridge Cir. Shiloh, Hawaii ",
-          style: appTextStyle(
+          style: TextStyle(
+            decoration: TextDecoration.underline,
             color: ColorRes.black,
             fontSize: 14,
             fontWeight: FontWeight.w400,
@@ -115,7 +114,7 @@ Widget about() {
         onTap: () => Get.toNamed(PageRes.bookings),
         child: Container(
           alignment: Alignment.centerLeft,
-          margin: const EdgeInsets.only(left: 40),
+          margin: const EdgeInsets.only(left: 37),
           child: Text(
             Strings.todayBookings,
             style: appTextStyle(
@@ -125,6 +124,7 @@ Widget about() {
           ),
         ),
       ),
+      SizedBox(height: Get.height * 0.0123),
       Padding(
         padding: const EdgeInsets.only(left: 40),
         child: Row(
@@ -176,7 +176,7 @@ Widget about() {
       SizedBox(height: Get.height * 0.0246),
       Container(
         alignment: Alignment.centerLeft,
-        margin: const EdgeInsets.only(left: 40),
+        margin: const EdgeInsets.only(left: 38),
         child: Text(
           Strings.about,
           style: appTextStyle(
@@ -198,7 +198,7 @@ Widget about() {
       SizedBox(height: Get.height * 0.0246),
       Container(
         alignment: Alignment.centerLeft,
-        margin: const EdgeInsets.only(left: 40),
+        margin: const EdgeInsets.only(left: 38),
         child: Text(
           Strings.ourStaff,
           style: appTextStyle(
@@ -248,7 +248,7 @@ Widget about() {
       ),
       Container(
         alignment: Alignment.centerLeft,
-        margin: const EdgeInsets.only(left: 40),
+        margin: const EdgeInsets.only(left: 38),
         child: Text(
           Strings.images,
           style: appTextStyle(
@@ -288,42 +288,42 @@ Widget about() {
         child: Row(
           children: [
             ...List.generate(
-                4,
-                (index) => Stack(
-                      children: [
-                        Container(
+              4,
+              (index) => Stack(
+                children: [
+                  Container(
+                    margin: (index == 3)
+                        ? EdgeInsets.zero
+                        : const EdgeInsets.only(right: 12),
+                    height: 70,
+                    width: 70,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(8),
+                    ),
+                    child: Image.asset(AssetRes.personImg),
+                  ),
+                  (index == 3)
+                      ? Container(
+                          alignment: Alignment.center,
                           margin: (index == 3)
                               ? EdgeInsets.zero
                               : const EdgeInsets.only(right: 12),
                           height: 70,
                           width: 70,
                           decoration: BoxDecoration(
+                            color: ColorRes.black.withOpacity(0.6),
                             borderRadius: BorderRadius.circular(8),
                           ),
-                          child: Image.asset(AssetRes.personImg),
-                        ),
-                        (index == 3)
-                            ? Container(
-                                alignment: Alignment.center,
-                                margin: (index == 3)
-                                    ? EdgeInsets.zero
-                                    : const EdgeInsets.only(right: 12),
-                                height: 70,
-                                width: 70,
-                                decoration: BoxDecoration(
-                                  color: ColorRes.black.withOpacity(0.6),
-                                  borderRadius: BorderRadius.circular(8),
-                                ),
-                                child: Text(
-                                  "+10",
-                                  style: appTextStyle(
-                                      fontSize: 16,
-                                      fontWeight: FontWeight.w600),
-                                ),
-                              )
-                            : const SizedBox(),
-                      ],
-                    )),
+                          child: Text(
+                            "+10",
+                            style: appTextStyle(
+                                fontSize: 16, fontWeight: FontWeight.w600),
+                          ),
+                        )
+                      : const SizedBox(),
+                ],
+              ),
+            ),
           ],
         ),
       ),

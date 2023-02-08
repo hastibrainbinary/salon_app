@@ -52,9 +52,12 @@ class NewPasswordScreen extends StatelessWidget {
                         border: InputBorder.none,
                         prefixIcon: const Padding(
                           padding: EdgeInsets.all(14.0),
-                          child: Image(
-                            image: AssetImage(AssetRes.password),
-                            color: ColorRes.indicator,
+                          child: Padding(
+                            padding: EdgeInsets.all(2),
+                            child: Image(
+                              image: AssetImage(AssetRes.password),
+                              color: ColorRes.indicator,
+                            ),
                           ),
                         ),
                         hintText: 'Password',
@@ -63,10 +66,12 @@ class NewPasswordScreen extends StatelessWidget {
                           icon: controller.show.value
                               ? const Icon(
                                   Icons.visibility_off_outlined,
+                                  size: 17,
                                   color: ColorRes.indicator,
                                 )
                               : const Icon(
                                   Icons.visibility,
+                                  size: 17,
                                   color: ColorRes.indicator,
                                 ),
                           onPressed: controller.chang,
@@ -134,9 +139,12 @@ class NewPasswordScreen extends StatelessWidget {
                         border: InputBorder.none,
                         prefixIcon: const Padding(
                           padding: EdgeInsets.all(14.0),
-                          child: Image(
-                            image: AssetImage(AssetRes.password),
-                            color: ColorRes.indicator,
+                          child: Padding(
+                            padding: EdgeInsets.all(2),
+                            child: Image(
+                              image: AssetImage(AssetRes.password),
+                              color: ColorRes.indicator,
+                            ),
                           ),
                         ),
                         hintText: 'Confirm password',
@@ -144,9 +152,9 @@ class NewPasswordScreen extends StatelessWidget {
                         suffixIcon: IconButton(
                           icon: controller.confirm.value
                               ? const Icon(Icons.visibility_off_outlined,
-                                  color: ColorRes.indicator)
+                                  size: 17, color: ColorRes.indicator)
                               : const Icon(Icons.visibility,
-                                  color: ColorRes.indicator),
+                                  size: 17, color: ColorRes.indicator),
                           onPressed: controller.reChange,
                         ),
                         filled: true,

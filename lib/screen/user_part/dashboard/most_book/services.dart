@@ -3,12 +3,13 @@ import 'package:get/get.dart';
 import 'package:salon_app/utils/app_style.dart';
 import 'package:salon_app/utils/asset_res.dart';
 import 'package:salon_app/utils/color_res.dart';
+import 'package:salon_app/utils/page_res.dart';
 import 'package:salon_app/utils/string.dart';
 
 Widget services() {
   return Column(
     children: [
-      Container(
+      SizedBox(
         width: 320,
         height: 100,
         /*  decoration: BoxDecoration(
@@ -27,28 +28,22 @@ Widget services() {
                   width: 70,
                   padding: const EdgeInsets.all(16),
                   decoration: BoxDecoration(
-                      color: ColorRes.white,
-                      borderRadius: BorderRadius.circular(70),
-                      boxShadow: [
-                        BoxShadow(
-                          color: const Color(0xff94674F).withOpacity(0.2),
-                          offset: const Offset(0.0, 4),
-                          blurRadius: 23.0,
-                        ),
-                      ]),
+                    color: ColorRes.white,
+                    borderRadius: BorderRadius.circular(70),
+                    boxShadow: [
+                      BoxShadow(
+                        color: const Color(0xff94674F).withOpacity(0.2),
+                        offset: const Offset(0.0, 4),
+                        blurRadius: 23.0,
+                        spreadRadius: 0,
+                      ),
+                    ],
+                  ),
                   child: const Image(
                     image: AssetImage(AssetRes.hairCut),
                   ),
                 ),
-
-                /*  const CircleAvatar(
-                  backgroundColor: ColorRes.white,
-                  radius: 35,
-                  child: Image(
-                    image: AssetImage(AssetRes.hairCut),
-                    height: 45,
-                  ),
-                ),*/
+                SizedBox(height: Get.height * 0.0123),
                 Text(
                   "Hair cut",
                   style: appTextStyle(
@@ -78,7 +73,9 @@ Widget services() {
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
                   ),
-                  child: const Image(image: AssetImage(AssetRes.imageStyel)),
+                  child: const Image(
+                    image: AssetImage(AssetRes.imageStyel),
+                  ),
                 ),
                 SizedBox(width: Get.width * 0.0533),
                 Column(
@@ -128,28 +125,32 @@ Widget services() {
               ),
             ),
             SizedBox(width: Get.width * 0.0533),
-            Container(
-              height: 50,
-              width: 245,
-              decoration: BoxDecoration(
+            InkWell(
+              onTap: () => Get.toNamed(PageRes.bookAppointmentScreen),
+              child: Container(
+                height: 50,
+                width: 245,
+                decoration: BoxDecoration(
                   color: ColorRes.indicator,
-                  borderRadius: BorderRadius.circular(8)),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                    Strings.bookAppointment,
-                    style: appTextStyle(
-                        color: ColorRes.white,
-                        fontSize: 15,
-                        fontWeight: FontWeight.w600),
-                  ),
-                  SizedBox(width: Get.width * 0.0186),
-                  const Image(
-                    image: AssetImage(AssetRes.arrow),
-                    height: 15,
-                  )
-                ],
+                  borderRadius: BorderRadius.circular(8),
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      Strings.bookAppointment,
+                      style: appTextStyle(
+                          color: ColorRes.white,
+                          fontSize: 15,
+                          fontWeight: FontWeight.w600),
+                    ),
+                    SizedBox(width: Get.width * 0.0186),
+                    const Image(
+                      image: AssetImage(AssetRes.arrow),
+                      height: 15,
+                    )
+                  ],
+                ),
               ),
             )
           ],

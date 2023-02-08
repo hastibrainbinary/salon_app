@@ -73,7 +73,7 @@ class NearBySalonScreen extends StatelessWidget {
                                 filled: true,
                                 hintStyle: appTextStyle(
                                   fontWeight: FontWeight.w400,
-                                  fontSize: 10,
+                                  fontSize: 12,
                                   color: ColorRes.indicator,
                                 ),
                               ),
@@ -196,10 +196,10 @@ class NearBySalonScreen extends StatelessWidget {
                                 const EdgeInsets.symmetric(horizontal: 9.0),
                             child: Row(
                               children: [
-                                const Icon(
-                                  Icons.location_on_outlined,
+                                const Image(
+                                  image: AssetImage(AssetRes.locationIcon),
+                                  height: 12,
                                   color: ColorRes.black,
-                                  size: 15,
                                 ),
                                 const SizedBox(width: 5),
                                 Text(

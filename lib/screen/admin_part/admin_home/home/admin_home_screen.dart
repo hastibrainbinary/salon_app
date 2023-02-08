@@ -10,13 +10,13 @@ import 'package:salon_app/utils/color_res.dart';
 import 'package:salon_app/utils/page_res.dart';
 import 'package:salon_app/utils/string.dart';
 
+// ignore: must_be_immutable
 class AdminHomeScreen extends StatelessWidget {
   AdminHomeScreen({super.key, this.args});
   dynamic args;
   final AdminHomeController adminHomeController =
       Get.put(AdminHomeController());
 
-////_____________ ADMIN HOME COPY TO PRIYA"S CODE ___________________________///
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,7 +28,7 @@ class AdminHomeScreen extends StatelessWidget {
           physics: const BouncingScrollPhysics(),
           child: Stack(
             children: [
-              Container(
+              SizedBox(
                 height: Get.height > 800 ? Get.height * 0.3 : Get.height * 0.25,
                 width: Get.width,
                 child: const Image(
@@ -39,15 +39,13 @@ class AdminHomeScreen extends StatelessWidget {
               Column(
                 children: [
                   SizedBox(
-                    height: Get.height * 0.072,
+                    height: Get.height * 0.075,
                   ),
                   Column(
                     children: [
                       Padding(
                         padding: EdgeInsets.only(
-                            // left: 25, right: 25
-                            left: Get.width * 0.055,
-                            right: Get.width * 0.055),
+                            left: Get.width * 0.055, right: Get.width * 0.055),
                         child: Row(
                           children: [
                             (args != "")
@@ -122,20 +120,19 @@ class AdminHomeScreen extends StatelessWidget {
                       Column(
                         children: [
                           containerWithTitle(
-                              title: Strings.addyourBankaccount,
+                              title: Strings.addYourBankAccount,
                               icon: AssetRes.addBankAccountIcon,
                               onTap: () {
                                 Get.toNamed(PageRes.addYourBankAccountScreen);
                               }),
                           const SizedBox(
                             height: 20,
-                            // Get.height * 0.02,
                           ),
                           containerWithTitle(
                               title: Strings.addService,
                               icon: AssetRes.addServiceIcon,
                               onTap: () {
-                                Get.toNamed(PageRes.addSeviceScreen);
+                                Get.toNamed(PageRes.addServiceScreen);
                               }),
                           const SizedBox(
                             height: 20,
@@ -148,7 +145,6 @@ class AdminHomeScreen extends StatelessWidget {
                               }),
                           const SizedBox(
                             height: 20,
-                            // Get.height * 0.02,
                           ),
                           containerWithTitle(
                               title: Strings.staffDetails,
@@ -158,7 +154,6 @@ class AdminHomeScreen extends StatelessWidget {
                               }),
                           const SizedBox(
                             height: 20,
-                            // Get.height * 0.02,
                           ),
                           containerWithTitle(
                               title: Strings.cancelAppointmentDetails,
@@ -168,11 +163,9 @@ class AdminHomeScreen extends StatelessWidget {
                               }),
                           const SizedBox(
                             height: 25,
-                            // Get.height * 0.02,
                           ),
                           Padding(
                             padding: EdgeInsets.only(
-                                // left: 25, right: 25
                                 left: Get.width * 0.055,
                                 right: Get.width * 0.055),
                             child: Row(
@@ -196,7 +189,6 @@ class AdminHomeScreen extends StatelessWidget {
                               children: [
                                 Padding(
                                   padding: EdgeInsets.only(
-                                      // left: 25, right: 25
                                       left: Get.width * 0.055,
                                       right: Get.width * 0.055),
                                   child: Row(
@@ -208,7 +200,7 @@ class AdminHomeScreen extends StatelessWidget {
                                             fontSize: 15,
                                             fontWeight: FontWeight.w500),
                                       ),
-                                      SizedBox(
+                                      const SizedBox(
                                         width: 58,
                                       ),
                                       Text(
@@ -222,256 +214,215 @@ class AdminHomeScreen extends StatelessWidget {
                                   ),
                                 ),
                                 ...List.generate(
-                                    (adminHomeController.isViewMore.value ==
-                                            true)
-                                        ? 10
-                                        : 5,
-                                    (index) => Container(
-                                          padding: EdgeInsets.only(
-                                              // left: 25, right: 25
-                                              left: Get.width * 0.055,
-                                              right: Get.width * 0.055),
-                                          color: (index == 3)
-                                              ? ColorRes.color94674F
-                                                  .withOpacity(0.2)
-                                              : Colors.transparent,
-                                          child: Row(
+                                  (adminHomeController.isViewMore.value == true)
+                                      ? 10
+                                      : 5,
+                                  (index) => Container(
+                                    padding: EdgeInsets.only(
+                                        left: Get.width * 0.055,
+                                        right: Get.width * 0.055),
+                                    color: (index == 3)
+                                        ? ColorRes.color94674F.withOpacity(0.2)
+                                        : Colors.transparent,
+                                    child: Row(
+                                      children: [
+                                        Text(
+                                          "09:00 AM",
+                                          style: appTextStyle(
+                                              fontSize: 13,
+                                              fontWeight: FontWeight.w400,
+                                              color: (index == 2)
+                                                  ? ColorRes.red
+                                                  : (index > 2)
+                                                      ? ColorRes.black
+                                                      : ColorRes.black
+                                                          .withOpacity(0.5)),
+                                        ),
+                                        SizedBox(
+                                          width: Get.width * 0.05,
+                                        ),
+                                        (index > 2)
+                                            ? Container(
+                                                height: 78,
+                                                width: Get.width * 0.002,
+                                                color: ColorRes.black
+                                                    .withOpacity(0.3),
+                                              )
+                                            : Dash(
+                                                direction: Axis.vertical,
+                                                length: 75,
+                                                dashLength: 3,
+                                                dashColor: (index == 2)
+                                                    ? Colors.red
+                                                    : ColorRes.black
+                                                        .withOpacity(0.5),
+                                              ),
+                                        SizedBox(
+                                          width: Get.width * 0.05,
+                                        ),
+                                        Padding(
+                                          padding: const EdgeInsets.only(
+                                              top: 10, bottom: 10),
+                                          child: Column(
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.start,
                                             children: [
                                               Text(
-                                                "09:00 AM",
+                                                "Rohan Survey",
                                                 style: appTextStyle(
-                                                    fontSize: 13,
-                                                    fontWeight: FontWeight.w400,
-                                                    color: (index == 2)
-                                                        ? ColorRes.red
-                                                        : (index > 2)
-                                                            ? ColorRes.black
-                                                            : ColorRes.black
-                                                                .withOpacity(
-                                                                    0.5)),
-                                              ),
-                                              SizedBox(
-                                                width: Get.width * 0.05,
+                                                  fontSize: 13,
+                                                  fontWeight: FontWeight.w400,
+                                                  color: (index == 2)
+                                                      ? ColorRes.red
+                                                      : (index > 2)
+                                                          ? ColorRes.black
+                                                          : ColorRes.black
+                                                              .withOpacity(0.5),
+                                                ),
                                               ),
                                               (index > 2)
-                                                  ? Container(
-                                                      height: 78,
-                                                      width: Get.width * 0.002,
-                                                      color: ColorRes.black
-                                                          .withOpacity(0.3),
-                                                    )
-                                                  : Dash(
-                                                      direction: Axis.vertical,
-                                                      length: 75,
-                                                      dashLength: 3,
-                                                      dashColor: (index == 2)
-                                                          ? Colors.red
-                                                          : ColorRes.black
-                                                              .withOpacity(
-                                                                  0.5)),
-                                              SizedBox(
-                                                width: Get.width * 0.05,
-                                              ),
-                                              Padding(
-                                                padding: const EdgeInsets.only(
-                                                    top: 10, bottom: 10),
-                                                child: Column(
-                                                  crossAxisAlignment:
-                                                      CrossAxisAlignment.start,
-                                                  children: [
-                                                    Text("Rohan Surve",
-                                                        style: appTextStyle(
+                                                  ? Row(
+                                                      children: [
+                                                        Text("Service : ",
+                                                            style: appTextStyle(
+                                                                fontSize: 13,
+                                                                fontWeight:
+                                                                    FontWeight
+                                                                        .w400,
+                                                                color: ColorRes
+                                                                    .black)),
+                                                        Text(
+                                                          "Hair Cutting",
+                                                          style: appTextStyle(
                                                             fontSize: 13,
                                                             fontWeight:
                                                                 FontWeight.w400,
-                                                            color: (index == 2)
-                                                                ? ColorRes.red
-                                                                : (index > 2)
-                                                                    ? ColorRes
-                                                                        .black
-                                                                    : ColorRes
-                                                                        .black
-                                                                        .withOpacity(
-                                                                            0.5))),
-                                                    (index > 2)
-                                                        ? Row(
-                                                            children: [
-                                                              Text("Service : ",
-                                                                  style: appTextStyle(
-                                                                      fontSize:
-                                                                          13,
-                                                                      fontWeight:
-                                                                          FontWeight
-                                                                              .w400,
-                                                                      color: ColorRes
-                                                                          .black)),
-                                                              Text(
-                                                                  "Hair Cutting",
-                                                                  style: appTextStyle(
-                                                                      fontSize:
-                                                                          13,
-                                                                      fontWeight:
-                                                                          FontWeight
-                                                                              .w400,
-                                                                      color: ColorRes
-                                                                          .black
-                                                                          .withOpacity(
-                                                                              0.5))),
-                                                            ],
-                                                          )
-                                                        : Text(
-                                                            "Service : Hair Cutting",
+                                                            color: ColorRes
+                                                                .black
+                                                                .withOpacity(
+                                                                    0.5),
+                                                          ),
+                                                        ),
+                                                      ],
+                                                    )
+                                                  : Text(
+                                                      "Service : Hair Cutting",
+                                                      style: appTextStyle(
+                                                        fontSize: 13,
+                                                        fontWeight:
+                                                            FontWeight.w400,
+                                                        color: (index == 2)
+                                                            ? ColorRes.red
+                                                            : ColorRes.black
+                                                                .withOpacity(
+                                                                    0.5),
+                                                      ),
+                                                    ),
+                                              (index > 2)
+                                                  ? Row(
+                                                      children: [
+                                                        Text("Staff : ",
                                                             style: appTextStyle(
                                                                 fontSize: 13,
                                                                 fontWeight:
                                                                     FontWeight
                                                                         .w400,
-                                                                color: (index ==
-                                                                        2)
-                                                                    ? ColorRes
-                                                                        .red
-                                                                    : ColorRes
-                                                                        .black
-                                                                        .withOpacity(
-                                                                            0.5))),
-                                                    (index > 2)
-                                                        ? Row(
-                                                            children: [
-                                                              Text("Staff : ",
-                                                                  style: appTextStyle(
-                                                                      fontSize:
-                                                                          13,
-                                                                      fontWeight:
-                                                                          FontWeight
-                                                                              .w400,
-                                                                      color: ColorRes
-                                                                          .black)),
-                                                              Text("Robert Fox",
-                                                                  style: appTextStyle(
-                                                                      fontSize:
-                                                                          13,
-                                                                      fontWeight:
-                                                                          FontWeight
-                                                                              .w400,
-                                                                      color: ColorRes
-                                                                          .black
-                                                                          .withOpacity(
-                                                                              0.5))),
-                                                            ],
-                                                          )
-                                                        : Text(
-                                                            "Staff : Robert Fox",
+                                                                color: ColorRes
+                                                                    .black)),
+                                                        Text("Robert Fox",
                                                             style: appTextStyle(
                                                                 fontSize: 13,
                                                                 fontWeight:
                                                                     FontWeight
                                                                         .w400,
-                                                                color: (index ==
-                                                                        2)
-                                                                    ? ColorRes
-                                                                        .red
-                                                                    : ColorRes
-                                                                        .black
-                                                                        .withOpacity(
-                                                                            0.5))),
-                                                  ],
-                                                ),
-                                              )
+                                                                color: ColorRes
+                                                                    .black
+                                                                    .withOpacity(
+                                                                        0.5))),
+                                                      ],
+                                                    )
+                                                  : Text(
+                                                      "Staff : Robert Fox",
+                                                      style: appTextStyle(
+                                                        fontSize: 13,
+                                                        fontWeight:
+                                                            FontWeight.w400,
+                                                        color: (index == 2)
+                                                            ? ColorRes.red
+                                                            : ColorRes.black
+                                                                .withOpacity(
+                                                                    0.5),
+                                                      ),
+                                                    ),
                                             ],
                                           ),
-                                        )),
+                                        )
+                                      ],
+                                    ),
+                                  ),
+                                ),
                                 SizedBox(
                                   height: Get.height * 0.02,
                                 ),
                                 InkWell(
-                                    onTap: () {
-                                      adminHomeController.onTapViewMore();
-                                    },
-                                    child: (adminHomeController
-                                                .isViewMore.value ==
-                                            true)
-                                        ? Row(
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.center,
-                                            mainAxisSize: MainAxisSize.min,
-                                            children: [
-                                              Text(
-                                                Strings.viewLess,
-                                                style: appTextStyle(
-                                                  color: ColorRes.color94674F,
-                                                  fontSize: 12,
-                                                  fontWeight: FontWeight.w600,
-                                                ),
-                                              ),
-                                              SizedBox(
-                                                width: Get.width * 0.005,
-                                              ),
-                                              const Icon(
-                                                Icons.keyboard_arrow_up_rounded,
+                                  onTap: () {
+                                    adminHomeController.onTapViewMore();
+                                  },
+                                  child: (adminHomeController
+                                              .isViewMore.value ==
+                                          true)
+                                      ? Row(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.center,
+                                          mainAxisSize: MainAxisSize.min,
+                                          children: [
+                                            Text(
+                                              Strings.viewLess,
+                                              style: appTextStyle(
                                                 color: ColorRes.color94674F,
-                                                size: 10,
-                                              )
-                                            ],
-                                          )
-                                        : Row(
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.center,
-                                            mainAxisSize: MainAxisSize.min,
-                                            children: [
-                                              Text(
-                                                Strings.viewMore,
-                                                style: appTextStyle(
-                                                  color: ColorRes.color94674F,
-                                                  fontSize: 12,
-                                                  fontWeight: FontWeight.w600,
-                                                ),
+                                                fontSize: 12,
+                                                fontWeight: FontWeight.w600,
                                               ),
-                                              SizedBox(
-                                                width: Get.width * 0.005,
-                                              ),
-                                              const Icon(
-                                                Icons
-                                                    .keyboard_arrow_down_rounded,
+                                            ),
+                                            SizedBox(
+                                              width: Get.width * 0.005,
+                                            ),
+                                            const Icon(
+                                              Icons.keyboard_arrow_up_rounded,
+                                              color: ColorRes.color94674F,
+                                              size: 10,
+                                            )
+                                          ],
+                                        )
+                                      : Row(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.center,
+                                          mainAxisSize: MainAxisSize.min,
+                                          children: [
+                                            Text(
+                                              Strings.viewMore,
+                                              style: appTextStyle(
                                                 color: ColorRes.color94674F,
-                                                size: 10,
-                                              )
-                                            ],
-                                          )),
+                                                fontSize: 12,
+                                                fontWeight: FontWeight.w600,
+                                              ),
+                                            ),
+                                            SizedBox(
+                                              width: Get.width * 0.005,
+                                            ),
+                                            const Icon(
+                                              Icons.keyboard_arrow_down_rounded,
+                                              color: ColorRes.color94674F,
+                                              size: 10,
+                                            )
+                                          ],
+                                        ),
+                                ),
                               ],
                             ),
                           ),
                         ],
                       ),
-                      // SizedBox(
-                      //   // flex: 1,
-                      //   height: 500,
-                      //   // height: Get.height,
-                      //   width: Get.width,
-                      //   child: ListView.builder(
-                      //       shrinkWrap: true,
-                      //       physics: NeverScrollableScrollPhysics(),
-                      //       itemCount: 10,
-                      //       itemBuilder: (context, index) {
-                      //         return Row(
-                      //           children: [
-                      //             Text("09:00 AM"),
-                      //             VerticalDivider(
-                      //               color: ColorRes.black,
-                      //               thickness: 1,
-                      //             ),
-                      //             Column(
-                      //               crossAxisAlignment:
-                      //                   CrossAxisAlignment.start,
-                      //               children: [
-                      //                 Text("Rohan Surve"),
-                      //                 Text("Service : Hair Cutting"),
-                      //                 Text("Staff : Robert Fox"),
-                      //               ],
-                      //             )
-                      //           ],
-                      //         );
-                      //       }),
-                      // ),
                     ],
                   ),
                 ],

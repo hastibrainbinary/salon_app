@@ -1,5 +1,5 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_switch/flutter_switch.dart';
 import 'package:get/get.dart';
 import 'package:salon_app/common/common_btn.dart';
 import 'package:salon_app/screen/admin_part/admin_home/home/screens/add_your_bank_account/edit_account/edit_account_controller.dart';
@@ -20,63 +20,64 @@ class EditBankAccountScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: SizedBox(
-      height: Get.height,
-      width: Get.width,
-      child: Stack(
-        children: [
-          Stack(
-            alignment: Alignment.center,
-            children: [
-              Container(
-                // height:
-                //     Get.height > 800 ? Get.height * 0.3 : Get.height * 0.289,
-                width: Get.width,
-                child: const Image(
-                  image: AssetImage(AssetRes.mostBookBack),
-                  fit: BoxFit.fill,
+      body: SizedBox(
+        height: Get.height,
+        width: Get.width,
+        child: Stack(
+          children: [
+            Stack(
+              alignment: Alignment.center,
+              children: [
+                SizedBox(
+                  // height:
+                  //     Get.height > 800 ? Get.height * 0.3 : Get.height * 0.289,
+                  width: Get.width,
+                  child: const Image(
+                    image: AssetImage(AssetRes.mostBookBack),
+                    fit: BoxFit.fill,
+                  ),
                 ),
-              ),
-              Padding(
-                padding: EdgeInsets.only(
-                    left: Get.width * 0.055, right: Get.width * 0.055),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    InkWell(
-                      onTap: () {
-                        Get.back();
-                      },
-                      child: const Icon(Icons.arrow_back_ios_new_rounded,
-                          color: ColorRes.white, size: 20),
-                    ),
-                    const Spacer(),
-                    Text(
-                      Strings.editBankAccount,
-                      style: appTextStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeight.w500,
+                Padding(
+                  padding: EdgeInsets.only(
+                      left: Get.width * 0.055, right: Get.width * 0.055),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      InkWell(
+                        onTap: () {
+                          Get.back();
+                        },
+                        child: const Icon(Icons.arrow_back_ios_new_rounded,
+                            color: ColorRes.white, size: 20),
                       ),
-                    ),
-                    const Spacer(),
-                    Visibility(
-                      visible: false,
-                      maintainState: true,
-                      maintainAnimation: true,
-                      maintainSize: true,
-                      child: SizedBox(
+                      const Spacer(),
+                      Text(
+                        Strings.editBankAccount,
+                        style: appTextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                      const Spacer(),
+                      Visibility(
+                        visible: false,
+                        maintainState: true,
+                        maintainAnimation: true,
+                        maintainSize: true,
+                        child: SizedBox(
                           height: 20,
                           width: 20,
                           child: Image.asset(
                             AssetRes.editIcon,
-                          )),
-                    ),
-                  ],
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
-              ),
-            ],
-          ),
-          Padding(
+              ],
+            ),
+            Padding(
               padding: EdgeInsets.only(
                 top: Get.height * 0.25,
                 left: Get.width * 0.055,
@@ -257,22 +258,26 @@ class EditBankAccountScreen extends StatelessWidget {
                     ),
                     Row(
                       children: [
-                        Text(
-                          Strings.businessBankAccount,
-                          style: appTextStyle(
-                              fontSize: 15,
-                              fontWeight: FontWeight.w500,
-                              color: ColorRes.black),
+                        Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 10),
+                          child: Text(
+                            Strings.businessBank,
+                            style: appTextStyle(
+                                color: ColorRes.black,
+                                fontWeight: FontWeight.w500,
+                                fontSize: 15),
+                          ),
                         ),
-                        const Spacer(),
-                        Transform.scale(
-                          scale: 0.6,
-                          child: CupertinoSwitch(
-                            activeColor: ColorRes.color94674F,
+                        SizedBox(width: Get.width * 0.208),
+                        Obx(
+                          () => FlutterSwitch(
+                            height: 23,
+                            width: 39,
                             value: editYourBankAccountController.isSwitch.value,
-                            onChanged: (v) {
-                              editYourBankAccountController.onSwitchChange(v);
-                            },
+                            activeColor: ColorRes.indicator,
+                            toggleSize: 16,
+                            onToggle: (value) => editYourBankAccountController
+                                .onSwitchChange(value),
                           ),
                         ),
                       ],
@@ -289,9 +294,11 @@ class EditBankAccountScreen extends StatelessWidget {
                         backgroundColor: ColorRes.indicator),
                   ],
                 ),
-              )),
-        ],
+              ),
+            ),
+          ],
+        ),
       ),
-    ));
+    );
   }
 }

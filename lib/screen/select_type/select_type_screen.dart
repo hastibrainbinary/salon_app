@@ -19,7 +19,7 @@ class SelectTypeScreen extends StatelessWidget {
             Stack(
               children: [
                 Container(
-                  height: Get.height,
+                  height: Get.height+100,
                   width: Get.width,
                   decoration: const BoxDecoration(
                     image: DecorationImage(

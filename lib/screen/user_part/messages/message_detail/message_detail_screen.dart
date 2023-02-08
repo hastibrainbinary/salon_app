@@ -91,7 +91,7 @@ class MessageDetailScreen extends StatelessWidget {
                 ),
                 const Spacer(),
                 InkWell(
-                   onTap: () => Get.toNamed(PageRes.callRingScreen),
+                    onTap: () => Get.toNamed(PageRes.callRingScreen),
                     child: SizedBox(
                       height: 20,
                       width: 20,
@@ -113,103 +113,104 @@ class MessageDetailScreen extends StatelessWidget {
               height: Get.height * 0.035,
             ),
             Expanded(
-                child: ListView.builder(
-                    padding: const EdgeInsets.all(0),
-                    physics: const BouncingScrollPhysics(),
-                    itemCount: messageDetailController.messages.length,
-                    itemBuilder: (context, index) {
-                      if ((messageDetailController.messages[index]['type'] ==
-                          "admin")) {
-                        messageDetailController.admins.add(
-                            messageDetailController.messages[index]['msg']);
-                      }
-                      return Row(
-                        crossAxisAlignment: CrossAxisAlignment.end,
-                        mainAxisAlignment:
-                            (messageDetailController.messages[index]['type'] ==
+              child: ListView.builder(
+                padding: const EdgeInsets.all(0),
+                physics: const BouncingScrollPhysics(),
+                itemCount: messageDetailController.messages.length,
+                itemBuilder: (context, index) {
+                  if ((messageDetailController.messages[index]['type'] ==
+                      "admin")) {
+                    messageDetailController.admins
+                        .add(messageDetailController.messages[index]['msg']);
+                  }
+                  return Row(
+                    crossAxisAlignment: CrossAxisAlignment.end,
+                    mainAxisAlignment: (messageDetailController.messages[index]
+                                ['type'] ==
+                            "user")
+                        ? MainAxisAlignment.end
+                        : MainAxisAlignment.start,
+                    children: [
+                      ((messageDetailController.messages[index]['type'] ==
+                              "admin"))
+                          ? (index == 1)
+                              ? Padding(
+                                  padding: const EdgeInsets.only(
+                                      right: 15, bottom: 10),
+                                  child: ClipRRect(
+                                    borderRadius: BorderRadius.circular(99),
+                                    child: Container(
+                                      height: 25,
+                                      width: 25,
+                                      decoration: const BoxDecoration(
+                                        color: Colors.blue,
+                                      ),
+                                      child: Image.asset(
+                                        AssetRes.detailsScreen,
+                                        fit: BoxFit.cover,
+                                      ),
+                                    ),
+                                  ),
+                                )
+                              : const Padding(
+                                  padding:
+                                      EdgeInsets.only(right: 15, bottom: 10),
+                                  child: SizedBox(
+                                    height: 25,
+                                    width: 25,
+                                  ),
+                                )
+                          : const SizedBox(),
+                      Container(
+                        margin: const EdgeInsets.only(bottom: 10),
+                        padding: const EdgeInsets.all(10),
+                        constraints: BoxConstraints(
+                          maxWidth: Get.width / 1.6,
+                        ),
+                        decoration: BoxDecoration(
+                            borderRadius: (messageDetailController
+                                        .messages[index]['type'] ==
                                     "user")
-                                ? MainAxisAlignment.end
-                                : MainAxisAlignment.start,
-                        children: [
-                          ((messageDetailController.messages[index]['type'] ==
-                                  "admin"))
-                              ? (index == 1)
-                                  ? Padding(
-                                      padding: const EdgeInsets.only(
-                                          right: 15, bottom: 10),
-                                      child: ClipRRect(
-                                        borderRadius: BorderRadius.circular(99),
-                                        child: Container(
-                                          height: 25,
-                                          width: 25,
-                                          decoration: const BoxDecoration(
-                                            color: Colors.blue,
-                                          ),
-                                          child: Image.asset(
-                                            AssetRes.detailsScreen,
-                                            fit: BoxFit.cover,
-                                          ),
-                                        ),
-                                      ),
-                                    )
-                                  : Padding(
-                                      padding: const EdgeInsets.only(
-                                          right: 15, bottom: 10),
-                                      child: Container(
-                                        height: 25,
-                                        width: 25,
-                                      ),
-                                    )
-                              : const SizedBox(),
-                          Container(
-                            margin: const EdgeInsets.only(bottom: 10),
-                            padding: const EdgeInsets.all(10),
-                            // width: 223,
-                            constraints: BoxConstraints(
-                              maxWidth: Get.width / 1.6,
-                            ),
-                            decoration: BoxDecoration(
-                                borderRadius: (messageDetailController
-                                            .messages[index]['type'] ==
-                                        "user")
-                                    ? BorderRadius.only(
-                                        topRight: (index % 2 == 1)
-                                            ? const Radius.circular(0)
-                                            : const Radius.circular(10),
-                                        topLeft: const Radius.circular(10),
-                                        bottomLeft: const Radius.circular(10),
-                                        bottomRight: (index % 2 == 0)
-                                            ? const Radius.circular(0)
-                                            : const Radius.circular(10))
-                                    : BorderRadius.only(
-                                        topLeft: (index % 2 == 1)
-                                            ? const Radius.circular(0)
-                                            : const Radius.circular(10),
-                                        topRight: const Radius.circular(10),
-                                        bottomRight: const Radius.circular(10),
-                                        bottomLeft: (index % 2 == 0)
-                                            ? const Radius.circular(0)
-                                            : const Radius.circular(10)),
-                                color: (messageDetailController.messages[index]
-                                            ['type'] ==
-                                        "user")
-                                    ? ColorRes.indicator.withOpacity(0.85)
-                                    : ColorRes.gray.withOpacity(0.5)),
-                            child: Text(
-                              "${messageDetailController.messages[index]['msg']}",
-                              style: appTextStyle(
-                                  color: (messageDetailController
-                                              .messages[index]['type'] ==
-                                          "user")
-                                      ? ColorRes.white
-                                      : ColorRes.black,
-                                  fontSize: 11,
-                                  fontWeight: FontWeight.w400),
-                            ),
-                          ),
-                        ],
-                      );
-                    })),
+                                ? BorderRadius.only(
+                                    topRight: (index % 2 == 1)
+                                        ? const Radius.circular(0)
+                                        : const Radius.circular(10),
+                                    topLeft: const Radius.circular(10),
+                                    bottomLeft: const Radius.circular(10),
+                                    bottomRight: (index % 2 == 0)
+                                        ? const Radius.circular(0)
+                                        : const Radius.circular(10))
+                                : BorderRadius.only(
+                                    topLeft: (index % 2 == 1)
+                                        ? const Radius.circular(0)
+                                        : const Radius.circular(10),
+                                    topRight: const Radius.circular(10),
+                                    bottomRight: const Radius.circular(10),
+                                    bottomLeft: (index % 2 == 0)
+                                        ? const Radius.circular(0)
+                                        : const Radius.circular(10)),
+                            color: (messageDetailController.messages[index]
+                                        ['type'] ==
+                                    "user")
+                                ? ColorRes.indicator.withOpacity(0.85)
+                                : ColorRes.gray.withOpacity(0.5)),
+                        child: Text(
+                          "${messageDetailController.messages[index]['msg']}",
+                          style: appTextStyle(
+                              color: (messageDetailController.messages[index]
+                                          ['type'] ==
+                                      "user")
+                                  ? ColorRes.white
+                                  : ColorRes.black,
+                              fontSize: 11,
+                              fontWeight: FontWeight.w400),
+                        ),
+                      ),
+                    ],
+                  );
+                },
+              ),
+            ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -229,7 +230,6 @@ class MessageDetailScreen extends StatelessWidget {
                     border: Border.all(color: ColorRes.indicator),
                   ),
                   child: TextFormField(
-                    // controller: controller.passwordController,
                     decoration: InputDecoration(
                         isCollapsed: true,
                         border: InputBorder.none,

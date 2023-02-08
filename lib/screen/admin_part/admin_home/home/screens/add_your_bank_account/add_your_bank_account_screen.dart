@@ -25,7 +25,7 @@ class AddYourBankAccountScreen extends StatelessWidget {
           Stack(
             alignment: Alignment.center,
             children: [
-              Container(
+              SizedBox(
                 // height:
                 //     Get.height > 800 ? Get.height * 0.3 : Get.height * 0.289,
                 width: Get.width,

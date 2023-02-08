@@ -31,12 +31,17 @@ class MostBookDetailsScreen extends StatelessWidget {
                   fit: BoxFit.fill,
                 ),
               ),
-              const Positioned(
+              Positioned(
                 top: 40,
                 left: 38,
-                child: Icon(
-                  Icons.arrow_back_ios_new_rounded,
-                  color: ColorRes.black,
+                child: InkWell(
+                  onTap: () {
+                    Get.back();
+                  },
+                  child: const Icon(
+                    Icons.arrow_back_ios_new_rounded,
+                    color: ColorRes.black,
+                  ),
                 ),
               ),
               Column(
@@ -112,11 +117,15 @@ class MostBookDetailsScreen extends StatelessWidget {
                                             width: 2),
                                       ),
                                     ),
-                                    child: const Text(
+                                    child: Text(
                                       Strings.about,
                                       style: TextStyle(
                                         color: ColorRes.indicator,
-                                        fontWeight: FontWeight.w600,
+                                        fontWeight:
+                                            mostBookController.isSelect.value ==
+                                                    Strings.about
+                                                ? FontWeight.w600
+                                                : FontWeight.w400,
                                         fontSize: 14,
                                       ),
                                     ),
@@ -142,11 +151,15 @@ class MostBookDetailsScreen extends StatelessWidget {
                                             width: 2),
                                       ),
                                     ),
-                                    child: const Text(
+                                    child: Text(
                                       Strings.services,
                                       style: TextStyle(
                                         color: ColorRes.indicator,
-                                        fontWeight: FontWeight.w600,
+                                        fontWeight:
+                                            mostBookController.isSelect.value ==
+                                                    Strings.services
+                                                ? FontWeight.w600
+                                                : FontWeight.w400,
                                         fontSize: 14,
                                       ),
                                     ),
@@ -172,11 +185,15 @@ class MostBookDetailsScreen extends StatelessWidget {
                                             width: 2),
                                       ),
                                     ),
-                                    child: const Text(
+                                    child: Text(
                                       Strings.reviews,
                                       style: TextStyle(
                                         color: ColorRes.indicator,
-                                        fontWeight: FontWeight.w600,
+                                        fontWeight:
+                                            mostBookController.isSelect.value ==
+                                                    Strings.reviews
+                                                ? FontWeight.w600
+                                                : FontWeight.w400,
                                         fontSize: 14,
                                       ),
                                     ),

@@ -26,7 +26,7 @@ class InviteFriendScreen extends StatelessWidget {
                     const Icon(Icons.arrow_back_ios_new_rounded,
                         color: ColorRes.white),
                     SizedBox(
-                      width: Get.width * 0.2533,
+                      width: Get.width * 0.2026,
                     ),
                     Text(
                       Strings.inviteFriends,
@@ -53,10 +53,11 @@ class InviteFriendScreen extends StatelessWidget {
                           height: 50,
                           width: 50,
                           decoration: BoxDecoration(
-                              image: const DecorationImage(
-                                  image: AssetImage(AssetRes.detailsScreen),
-                                  fit: BoxFit.cover),
-                              borderRadius: BorderRadius.circular(50)),
+                            image: const DecorationImage(
+                                image: AssetImage(AssetRes.detailsScreen),
+                                fit: BoxFit.cover),
+                            borderRadius: BorderRadius.circular(50),
+                          ),
                         ),
                         SizedBox(width: Get.width * 0.04),
                         Column(

@@ -37,11 +37,23 @@ class AdminProfileScreen extends StatelessWidget {
                     ),
             ),
             SizedBox(height: Get.height * 0.0985),
-            const Center(
-              child: Image(
-                image: AssetImage(AssetRes.logo1),
-                width: 69,
-                height: 38,
+            Center(
+              child: Text.rich(
+                TextSpan(
+                    text: Strings.lO,
+                    style: appTextStyle(
+                        fontWeight: FontWeight.w600,
+                        fontSize: 40,
+                        color: ColorRes.black),
+                    children: [
+                      TextSpan(
+                        text: Strings.go,
+                        style: appTextStyle(
+                            fontWeight: FontWeight.w600,
+                            fontSize: 40,
+                            color: ColorRes.indicator),
+                      )
+                    ]),
               ),
             ),
             SizedBox(height: Get.height * 0.0738),
@@ -74,7 +86,6 @@ class AdminProfileScreen extends StatelessWidget {
                       ? Padding(
                           padding: const EdgeInsets.all(21),
                           child: ClipRRect(
-                            // margin: const EdgeInsets.all(21),
                             borderRadius: BorderRadius.circular(226),
                             child: Container(
                               height: 226,
